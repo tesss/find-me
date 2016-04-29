@@ -1,0 +1,68 @@
+I ITERATION
+
+Watch:
+As application (widget? with nearest waypont)
+Save data in properties (8kb = (4b + 4b + 15b + 2b) ~ 300 locations), 4 arrays
+Confirm or discard batch of imported locations
+Loading screen with gps
+Errors with limit
+
+UI
+Locations (sort by distance to current or by name)
+City (1 char for type)
+Oregon (longitude, latitude, name, type) > 250 km NW
+Save persisted
+Lviv
+River
+...
+Custom
+Find... (finds by name or type)
+ List of sorted items 
+Settings
+Sort By (distance, name)
+Distance Limit (1...1000km)
+Batches
+4.29 - Chornogora (position in stack)
+Save persisted
+Delete (move position in stack) maybe after saving
+Mobile
+Xamarin
+Map (OSM) - call api (overpass api)
+Check available memory of 8kb
+Search (by name with address or type) +add into batch (add point on map, diff colors for diff types), click on point - get info, delete. Search + add coordinates - automatically add point, if in buffer - paste
+Touch and pinch to change location finder (field to input value) > select location
+Types (check some)
+City
+Street
+Other in commercial
+Location on the map (check all or some of them) > add into batch
+View batch (delete location)
+Import (check limit while importing), progress
+Settings
+Sort by
+Batches log (data, name, saving after close app)
+Info about author and licence OSM
+Share (receive)
+
+II ITERATION
+
+Watch:
+Point direction and distance on start screen
+Widget for thouse who doesn't support persisted locations
+Show point on map and start activity
+Settings
+Select some point
+Select type
+Select the nearest
+Mobile
+Download offline data
+
+
+DEVELOPING
+Storage - 
+batch[id, date, name, data]
+data[latitude, longitude, name, type-enum]
+
+Enumerable function with handler through all storage
+
+
