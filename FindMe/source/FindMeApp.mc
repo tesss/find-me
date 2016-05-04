@@ -4,16 +4,21 @@ using Toybox.Position as Pos;
 using Toybox.System;
 using Data;
 using Comm;
+using Toybox.Math;
 using _;
+
+// only arrays without objects
+// 4*5 = 59.4kb
+// 300 loc = 35.7kb memory
+// ~400 items in array - limit;
 
 class FindMeApp extends App.AppBase {
 	var bridge;
 	var dataStorage;
-	
+
     function onStart() {
-    	dataStorage = new Data.DataStorage();
     	bridge = new Comm.Bridge();
-    	Data.updateCurrentLocation();
+    	dataStorage = new Data.DataStorage();
     }
 
     function onStop() {
@@ -36,8 +41,14 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
 	}
 
     function onKey() {
-    	var batch = bridge.parseBatch(i);
-	    dataStorage.addBatch(batch);
+    	dataStorage.updateCurrentLocation();
+    	var data = bridge.parseMail(i);
+	    dataStorage.addBatch(data[0]);
+	    dataStorage.addLocations(data[1]);
+	    //var t = dataStorage.getTypesList();
+	    //var t = dataStorage.getBatchesList();
+	    //_.p(dataStorage.getBatches().toString());
+	    _.p(dataStorage.getLocations().toString());
 	    i++;
     }
 

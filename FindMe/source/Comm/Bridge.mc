@@ -1,7 +1,6 @@
-using Toybox.Application as App;
-using Toybox.System as Sys;
 using Toybox.Communications as Comm;
-using Toybox.Time as Time;
+using Toybox.Time;
+using Toybox.Math;
 using Data;
 using _;
 
@@ -12,77 +11,20 @@ module Comm {
 	        Comm.setMailboxListener( method(:onMail) );
 	    }
 	    
-	    function parseBatch(mail){
+	    function parseMail(mail){
 	    	// mock
-	    	var batch = new Data.Batch("Test Batch " + mail, Time.now());
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	batch.locations.list.add(new Data.Location("Loc1", "City", 37.6, 50, 0));
-	    	batch.locations.list.add(new Data.Location("Loc12", "Forest", 10, 60, 1000));
-	    	batch.locations.list.add(new Data.Location("Loc13", "Mountain", -20, -10, 8000));
-	    	
-	    	return batch;
+	    	var batch = new Data.Batch(mail, "Test Batch #" + mail, Time.now().value());
+	    	var l = 100;
+	    	var locations = new Data.Locations(new[l],new[l],new[l],new[l],new[l]);
+	    	var types = ["city", "lake", "river", "mountain", "spring", "bus_station"];
+	    	for(var i = 0; i < l; i++){
+	    		locations.names[i] = "Location #" + i;
+	    		locations.latitudes[i] = Math.rand() % 90;
+	    		locations.longitudes[i] = Math.rand() % 180;
+	    		locations.types[i] = Math.rand() % Data.DataStorage.types.size();
+	    		locations.batches[i] = mail;
+	    	}
+	    	return [batch, locations];
 	    }
 	    
 	    function onMail(mailIter)
