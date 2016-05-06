@@ -7,14 +7,9 @@ using Comm;
 using Toybox.Math;
 using _;
 
-// only arrays without objects
-// 4*5 = 59.4kb
-// 300 loc = 35.7kb memory
-// ~400 items in array - limit;
-
 class FindMeApp extends App.AppBase {
-	var bridge;
-	var dataStorage;
+	hidden var bridge;
+	hidden var dataStorage;
 
     function onStart() {
     	bridge = new Comm.Bridge();
@@ -31,9 +26,9 @@ class FindMeApp extends App.AppBase {
 }
 
 class FindMeDelegate extends Ui.BehaviorDelegate {
-	var bridge;
-	var dataStorage;
-	var i = 0;
+	hidden var bridge;
+	hidden var dataStorage;
+	hidden var i = 0;
 
 	function initialize(_bridge, _dataStorage){
 		bridge = _bridge;
@@ -41,15 +36,25 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
 	}
 
     function onKey() {
-    	dataStorage.updateCurrentLocation();
     	var data = bridge.parseMail(i);
+    	dataStorage.updateCurrentLocation();
 	    dataStorage.addBatch(data[0]);
 	    dataStorage.addLocations(data[1]);
-	    //var t = dataStorage.getTypesList();
-	    //var t = dataStorage.getBatchesList();
+	    data = null;
+	    var types = dataStorage.getTypesList();
+	    for(var i = 0; i < types.size(); i++){
+	    	if(i == 0){
+	    		_.p("All");
+	    	} else {
+	    		_.p(Data.DataStorage.TYPES[i - 1]);
+	    	}
+	    	for(var j = 0; j < types[i].size(); j++){
+	    		_.p(types[i][j]);
+	    	}
+	    }
 	    //_.p(dataStorage.getBatches().toString());
-	    _.p(dataStorage.getLocations().toString());
-	    i++;
+	    //_.p(dataStorage.getLocations().toString(dataStorage.currentLocation));
+	    //i++;
     }
 
 }

@@ -88,12 +88,15 @@ module Data
 			var index = insertIndex(array, value, comparer);
 			return insertAt(array, value, index);
 		}
-		
+
 		static function insertAt(array, value, index){
 			var result = new[array.size() + 1];
-			result[index] = value;
 			for(var i = array.size(); i > index; i--){
 		        result[i] = array[i-1];
+		    }
+		    result[index] = value;
+		    for(var i = index-1; i >= 0; i--){
+		    	result[i] = array[i];
 		    }
 		    return result;
 		}
@@ -129,6 +132,14 @@ module Data
 			}
 			for(var i = 0; i < array2.size(); i++){
 				result[array1.size() + i] = array2[i];
+			}
+			return result;
+		}
+		
+		static function sortByIndex(array, indexes, getter){
+			var result = new[indexes.size()];
+			for(var i = 0; i < indexes.size(); i++){
+				result[i] = array[getter.invoke(indexes[i])];
 			}
 			return result;
 		}

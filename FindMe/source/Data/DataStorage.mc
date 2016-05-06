@@ -7,37 +7,47 @@ using _;
 
 module Data{
 	class DataStorage {
-		static const types = ["city", "lake", "river", "mountain", "spring", "bus_station"];
-		
-		var currentLocation;
-		function updateCurrentLocation(){ // update in timer
-			currentLocation = Position.getInfo();
-		}
+		static const TYPES = ["City", "Lake", "River", "Mountain", "Spring", "Bus Station"];
 		
 		var app = null;
 		
 		function initialize(){
 			app = Application.getApp().weak();
+			
+			clearProp(LOC_NAME); clearProp(LOC_LAT); clearProp(LOC_LON); clearProp(LOC_TYPE); clearProp(LOC_BATCH);
+			clearProp(BATCH_ID); clearProp(BATCH_NAME); clearProp(BATCH_DATE);
+			
 			initProp(LOC_NAME); initProp(LOC_LAT); initProp(LOC_LON); initProp(LOC_TYPE); initProp(LOC_BATCH);
 			initProp(BATCH_ID); initProp(BATCH_NAME); initProp(BATCH_DATE);
 			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
 		}
 		
-		// props //
+		var currentLocation;
+		function updateCurrentLocation(){ // update in timer
+			var info = Position.getInfo();
+			if(info.accuracy == Position.QUALITY_NOT_AVAILABLE){
+				currentLocation = null;
+			} else {
+				currentLocation = info.position.toRadians();
+			}
+		}
+		
+		// props
 		
 		hidden function getApp(){ return app.get(); }		
 		hidden function getProp(key){ return getApp().getProperty(key); }		
 		hidden function setProp(key, value){ getApp().setProperty(key, value); }		
 		hidden function initProp(key){ if(getProp(key) == null){ setProp(key, []); } }
+		hidden function clearProp(key){ setProp(key, null); }
 		
-		// options //
+		// options
 		
 		function getSortBy(){ return getProp(SORT); }	
 		function setSortBy(sortBy){ setProp(SORT, sortBy); setLocations(sortLocations(getLocations(), sortBy)); }	
 		function getDistance(){return getProp(DISTANCE);}
 		function setDistance(distance){ setProp(DISTANCE, distance); }
 		
-		// locations //
+		// locations
 		
 		function getLocations(){
 			return new Locations(getProp(LOC_NAME), getProp(LOC_LAT), getProp(LOC_LON), getProp(LOC_TYPE), getProp(LOC_BATCH));
@@ -55,21 +65,36 @@ module Data{
 		function getTypesList(){
 			var locations = getLocations();
 			var types = {};
+			var all = new[locations.types.size()];
 			for(var i = 0; i < locations.types.size(); i++){
 				var type = locations.types[i];
-				var location = [locations.names[i], locations.latitudes[i], locations.longitudes[i]];
+				var location = [i, locations.names[i], locations.latitudes[i], locations.longitudes[i]];
+				all[i] = location;
 				var typeLocations = types.get(type);
 				if(typeLocations == null){
-					typeLocations = [];
+					typeLocations = [location];
 					types.put(type, typeLocations);
+				} else {
+					types.put(type, ArrayExt.insertAt(typeLocations, location, typeLocations.size()));
 				}
-				ArrayExt.insertAt(typeLocations, location, typeLocations.size());
+				typeLocations = null;
 			}
 			locations = null;
-			return types.values();
+			var keys = types.keys();
+			var values = types.values();
+			types = null;
+			var indexes = new[keys.size()];
+			for(var i = 0; i < indexes.size(); i++){
+				indexes[i] = [i, keys[i]];
+			}
+			keys = null;
+			indexes = ArrayExt.sort(indexes, method(:numberComparer)); 
+			values = ArrayExt.sortByIndex(values, indexes, method(:indexGetter));
+			indexes = null;
+			return ArrayExt.insertAt(values, all, 0);
 		}
 		
-		// batches //
+		// batches
 		
 		function getBatches(){
 			return new Batches(getProp(BATCH_ID), getProp(BATCH_NAME), getProp(BATCH_DATE));
@@ -81,7 +106,7 @@ module Data{
 			setProp(BATCH_DATE, batches.dates);
 		}
 		
-		function getBatchesList(){
+		function getBatchesList(){ // return just names and indexes
 			var batches = getBatches();
 			var batchRel = {};
 			for(var i = 0; i < batches.ids.size(); i++){
@@ -112,12 +137,12 @@ module Data{
 		// show error if too much
 		function addLocations(newLocations){
 			var locations = getLocations();
-			var sortBy = getSortBy();
 			locations.names = ArrayExt.union(locations.names, newLocations.names);
 			locations.latitudes = ArrayExt.union(locations.latitudes, newLocations.latitudes);
 			locations.longitudes = ArrayExt.union(locations.longitudes, newLocations.longitudes);
 			locations.types = ArrayExt.union(locations.types, newLocations.types);
 			locations.batches = ArrayExt.union(locations.batches, newLocations.batches);
+			locations = sortLocations(locations, getSortBy());
 			setLocations(locations);
 			locations = null;
 		}
@@ -131,82 +156,77 @@ module Data{
 			batches = null;
 		}
 		
-		// sorting //
+		// sorting
 		
-		hidden function sortLocations(locations, sortBy){
+		function sortLocations(locations, sortBy){
 			var method = null;
 			var arrayToSort = null;
-			if(sortBy == SORTBY_NAME){
+			if(sortBy == SORTBY_NAME || currentLocation == null){
 				method = method(:nameComparer);
 				arrayToSort = locations.names;
 			} else if(sortBy == SORTBY_DISTANCE){
-				method = method(:distanceComparer);
+				method = method(:numberComparer);
 				arrayToSort = new[locations.latitudes.size()];
 				for(var i = 0; i < arrayToSort.size(); i++){
-					arrayToSort[i] = new Location(null, locations.latitudes[i], locations.longitudes[i], null, null);
+					arrayToSort[i] = distance(locations.latitudes[i], locations.longitudes[i], currentLocation[0], currentLocation[1]);
 				}
 			}
 			if(method != null){
-				var sortArray = new[arrayToSort.size()];
-				for(var i = 0; i < sortArray.size(); i++){
-					sortArray[i] = new SortItem(i, arrayToSort[i]);
+				var indexes = new[arrayToSort.size()];
+				for(var i = 0; i < indexes.size(); i++){
+					indexes[i] = [i, arrayToSort[i]];
 				}
 				arrayToSort = null;
-				sortArray = ArrayExt.sort(sortArray, method);
-				for(var i = 0; i < sortArray.size(); i++){
-					var key = sortArray[i].key;
-					ArrayExt.swap(locations.names, i, key);
-					ArrayExt.swap(locations.latitudes, i, key);
-					ArrayExt.swap(locations.longitudes, i, key);
-					ArrayExt.swap(locations.types, i, key);
-					ArrayExt.swap(locations.batches, i, key);
-				}
-				sortArray = null;
+				indexes = ArrayExt.sort(indexes, method);
+				locations.names = ArrayExt.sortByIndex(locations.names, indexes, method(:indexGetter));
+				locations.latitudes = ArrayExt.sortByIndex(locations.latitudes, indexes, method(:indexGetter));
+				locations.longitudes = ArrayExt.sortByIndex(locations.longitudes, indexes, method(:indexGetter));
+				locations.types = ArrayExt.sortByIndex(locations.types, indexes, method(:indexGetter));
+				locations.batches = ArrayExt.sortByIndex(locations.batches, indexes, method(:indexGetter));
+				indexes = null;
 			}
 			return locations;
 		}
 		
-		hidden class SortItem {
-			var key;
-			var value;
-			
-			function initialize(_key, _value){
-				key = _key;
-				value = _value;
-			}
+		function nameComparer(a, b){
+			return a[1].hashCode() - b[1].hashCode(); // implement comparing by string
 		}
 		
-		hidden function nameComparer(a, b){
-			return a.value.length() - b.value.length(); // implement comparing by string
+		function numberComparer(a, b){
+			return a[1] - b[1];
 		}
 		
-		hidden function distanceComparer(a, b){
-			return distance(a.latitude, a.longitude, b.latitude, b.longitude);
+		function indexGetter(index){
+			return index[0];
 		}
 		
-		static function distance(latitude1, longitude1, latitude2, longitude2){
-			if(latitude2 == null && longitude2 == null){
-				if(currentLocations.accuracy == Position.QUALITY_NOT_AVAILABLE){
-					return 0;
-				}
-				var degrees = currentLocation.toDegrees();
-				latitude2 = degrees[0];
-				longitude2 = degrees[1];
-			}
-			var lat1 = Math.toRadians(latitude1);
-			var lat2 = Math.toRadians(latitude2);
-			var lon1 = Math.toRadians(longitude1);
-			var lon2 = Math.toRadians(longitude2);
-			var f1 = lat1;
-			var f2 = pos[0];
-			var df = Math.toRadians((lat2 - lat1));
-			var dy = Math.toRadians((lon2 - lon1));
-			var a = Math.sin(df/2)*Math.sin(df/2) + Math.cos(f1)*Math.cos(f2)*Math.sin(dy/2)*Math.sin(dy/2);
-			var c = 2 * Math.atan(Math.sqrt(a), Math.sqrt(1-a));
-			var d = r * c;
-			_.p("D:" + d);
-			return d;
+		function find(str){
 		}
+		
+		// deleting
+		
+		function deleteBatch(i){
+		}
+		
+		function deleteLocation(i){
+		}
+		
+		// persisted
+		
+		function saveLocationPersisted(i){
+		}
+		
+		function saveBatchPersisted(i){
+		}
+	}
+	
+	const r = 6371;
+	function distance(lat1, lon1, lat2, lon2){ // return in san
+		var dLat = lat2 - lat1;
+		var dLon = lon2 - lon1;
+		var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+		        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
+		return 2 * r * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 	}
 		
 	class Location {
@@ -216,7 +236,7 @@ module Data{
 		var type;
 		var batch;
 		
-		function initialize(_name, _latitude, _longitude, _type, _batche){
+		function initialize(_name, _latitude, _longitude, _type, _batch){
 			name = _name;
 			latitude = _latitude;
 			longitude = _longitude;
@@ -231,6 +251,10 @@ module Data{
 		var longitudes;
 		var types;
 		var batches;
+		
+		function get(i){
+			return new Location(names[i], latitudes[i], longitudes[i], types[i], batches[i]);
+		}
 		
 		function size(){
 			if(names == null){
@@ -247,10 +271,16 @@ module Data{
 			batches = _batches;
 		}
 		
-		function toString(){
+		function toString(loc){
 			var str = "";
-			for(var i = 0; i < size(); i++){
-				str = str + names[i] + " " + latitudes[i] + " " + longitudes[i] + " " + types[i] + " " + batches[i] + "\n";
+			if(loc != null){
+				for(var i = 0; i < size(); i++){
+					str = str + names[i] + " " + latitudes[i] + " " + longitudes[i] + " " + types[i] + " " + batches[i] + " " + distance(latitudes[i], longitudes[i], loc[0], loc[1]) + "\n";
+				}
+			} else {
+				for(var i = 0; i < size(); i++){
+					str = str + names[i] + " " + latitudes[i] + " " + longitudes[i] + " " + types[i] + " " + batches[i] + "\n";
+				}
 			}
 			return str;
 		}
@@ -277,6 +307,10 @@ module Data{
 			ids = _ids;
 			names = _names;
 			dates = _dates;
+		}
+		
+		function get(i){
+			return new Batch(ids[i], names[i], dates[i]);
 		}
 		
 		function size(){

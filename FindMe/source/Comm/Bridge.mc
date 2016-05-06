@@ -6,22 +6,24 @@ using _;
 
 module Comm {
 	class Bridge {
-		function initialize()
+		hidden var dataStorage;
+	
+		function initialize(_dataStorage)
 	    {
+	    	dataStorage = _dataStorage;
 	        Comm.setMailboxListener( method(:onMail) );
 	    }
 	    
 	    function parseMail(mail){
 	    	// mock
-	    	var batch = new Data.Batch(mail, "Test Batch #" + mail, Time.now().value());
-	    	var l = 100;
-	    	var locations = new Data.Locations(new[l],new[l],new[l],new[l],new[l]);
-	    	var types = ["city", "lake", "river", "mountain", "spring", "bus_station"];
+	    	var batch = new Data.DataStorage.Batch(mail, "Test Batch #" + mail, Time.now().value());
+	    	var l = 5;
+	    	var locations = new Data.DataStorage.Locations(new[l],new[l],new[l],new[l],new[l]);
 	    	for(var i = 0; i < l; i++){
 	    		locations.names[i] = "Location #" + i;
-	    		locations.latitudes[i] = Math.rand() % 90;
-	    		locations.longitudes[i] = Math.rand() % 180;
-	    		locations.types[i] = Math.rand() % Data.DataStorage.types.size();
+	    		locations.latitudes[i] = (Math.rand() % 150) * 0.01;
+	    		locations.longitudes[i] = (Math.rand() % 314) * 0.01;
+	    		locations.types[i] = Math.rand() % Data.DataStorage.TYPES.size();
 	    		locations.batches[i] = mail;
 	    	}
 	    	return [batch, locations];
@@ -34,7 +36,7 @@ module Comm {
 	        {
 	            mail = mailIter.next();
 	            var batch = parseBatch(mail);
-	            Data.DataStorage.addBatch(batch);
+	            dataStorage.addBatch(batch);
 	        }
 	        Comm.emptyMailbox();
 	    }
