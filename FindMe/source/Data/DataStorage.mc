@@ -108,30 +108,11 @@ module Data{
 		
 		function getBatchesList(){ // return just names and indexes
 			var batches = getBatches();
-			var batchRel = {};
+			var batchesList = new[batches.ids.size()];
 			for(var i = 0; i < batches.ids.size(); i++){
-				batchRel.put(batches.ids[i], batches.names[i]);
+				batchesList[i] = [i, batches.ids[i], batches.names[i], batches.dates[i]];
 			}
-			batches = {};
-			var locations = getLocations();	
-			locations.types = null;
-			var distance = getDistance();
-			for(var i = 0; i < locations.batches.size(); i++){
-				var batchId = locations.batches[i];
-				var batchName = batchRel.get(batchId);
-				if(distance == null || distance(locations.latitudes[i], locations.longitudes[i]) <= distance){				
-					var location = [locations.names[i], locations.latitudes[i], locations.longitudes[i]];
-					var batchLocations = batches.get(batchName);
-					if(batchLocations == null){
-						batchLocations = [];
-						batches.put(batchName, batchLocations);
-					}
-					ArrayExt.insertAt(batchLocations, location, batchLocations.size());
-				}
-			}						
-			batchRel = null;
-			locations = null;
-			return batches.values();
+			return batchesList;
 		}
 		
 		// show error if too much
@@ -189,7 +170,9 @@ module Data{
 		}
 		
 		function nameComparer(a, b){
-			return a[1].hashCode() - b[1].hashCode(); // implement comparing by string
+			var h1 = a[1].substring(0, 2).hashCode();
+			var h2 = b[1].substring(0, 2).hashCode();
+			return h1 - h2;
 		}
 		
 		function numberComparer(a, b){
