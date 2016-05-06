@@ -101,6 +101,17 @@ module Data
 		    return result;
 		}
 		
+		static function removeAt(array, index){
+			var result = new[array.size() - 1];
+			for(var i = 0; i < index; i++){
+				result[i] = array[i];
+			}
+			for(var i = index; i < result.size(); i++){
+				result[i] = array[i + 1];
+			}
+			return result;
+		}
+		
 		static function indexOf(array, value, comparer){
 			var minIndex = 0;
 		    var maxIndex = array.size() - 1;

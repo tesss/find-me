@@ -3,6 +3,7 @@ using Toybox.Application;
 using Toybox.Math;
 using Toybox.Time;
 using Toybox.Position;
+using Toybox.PersistedLocations;
 using _;
 
 module Data{
@@ -44,7 +45,7 @@ module Data{
 		
 		function getSortBy(){ return getProp(SORT); }	
 		function setSortBy(sortBy){ setProp(SORT, sortBy); setLocations(sortLocations(getLocations(), sortBy)); }	
-		function getDistance(){return getProp(DISTANCE);}
+		function getDistance(){return getProp(DISTANCE);} // in meters
 		function setDistance(distance){ setProp(DISTANCE, distance); }
 		
 		// locations
@@ -65,10 +66,20 @@ module Data{
 		function getTypesList(){
 			var locations = getLocations();
 			var types = {};
-			var all = new[locations.types.size()];
-			for(var i = 0; i < locations.types.size(); i++){
+			var all = new[locations.size()];
+			var lat = null;
+			var lon = null;
+			var distance = getDistance();
+			if(currentLocation != null && distance != null){
+				lat = currentLocation[0];
+				lon = currentLocation[1];
+			}
+			for(var i = 0; i < locations.size(); i++){
 				var type = locations.types[i];
-				var location = [i, locations.names[i], locations.latitudes[i], locations.longitudes[i]];
+				var location = locations.get(i, lat, lon);
+				if(currentLocation != null && location[6] > distance){
+					continue;
+				}
 				all[i] = location;
 				var typeLocations = types.get(type);
 				if(typeLocations == null){
@@ -106,11 +117,11 @@ module Data{
 			setProp(BATCH_DATE, batches.dates);
 		}
 		
-		function getBatchesList(){ // return just names and indexes
+		function getBatchesList(){
 			var batches = getBatches();
-			var batchesList = new[batches.ids.size()];
-			for(var i = 0; i < batches.ids.size(); i++){
-				batchesList[i] = [i, batches.ids[i], batches.names[i], batches.dates[i]];
+			var batchesList = new[batches.size()];
+			for(var i = 0; i < batches.size(); i++){
+				batchesList[i] = batches.get(i);
 			}
 			return batchesList;
 		}
@@ -147,7 +158,7 @@ module Data{
 				arrayToSort = locations.names;
 			} else if(sortBy == SORTBY_DISTANCE){
 				method = method(:numberComparer);
-				arrayToSort = new[locations.latitudes.size()];
+				arrayToSort = new[locations.size()];
 				for(var i = 0; i < arrayToSort.size(); i++){
 					arrayToSort[i] = distance(locations.latitudes[i], locations.longitudes[i], currentLocation[0], currentLocation[1]);
 				}
@@ -179,139 +190,108 @@ module Data{
 			return a[1] - b[1];
 		}
 		
+		function distanceComparer(a, b){
+			return a[6] - b[6];
+		}
+		
 		function indexGetter(index){
 			return index[0];
 		}
 		
 		function find(str){
+			str = str.toLower();
+			var types = {};
+			for(var i = 0; i < TYPES.size(); i++){
+				if(TYPES[i].toLower().find(str) != null){
+					types.put(i, i);
+				}
+			}
+			var locations = getLocations();
+			var locationsList = {};
+			var lat = null;
+			var lon = null;
+			var distance = getDistance();
+			if(currentLocation != null){
+				lat = currentLocation[0];
+				lon = currentLocation[1];
+			}
+			for(var i = 0; i < locations.size(); i++){
+				if(str == "" || locations.names[i].toLower().find(str) != null || types.hasKey(locations.types[i])){
+					var location = locations.get(i, lat, lon);
+					if(distance == null || currentLocation == null || (currentLocation != null && location[6] <= distance)){
+						locationsList.put(i, location);
+					}
+				}
+			}
+			locations = null;
+			types = null;
+			locationsList = locationsList.values();
+			var method;
+			if(currentLocation != null){
+				method = method(:distanceComparer);
+			} else {
+				method = method(:nameComparer);
+			}
+			return ArrayExt.sort(locationsList, method);
+		}
+		
+		function addLocation(){
 		}
 		
 		// deleting
 		
 		function deleteBatch(i){
+			var batches = getBatches();
+			var batchId = batches.ids[i];
+			batches.remove(i);
+			setBatches(batches);
+			batches = null;
+			var locations = getLocations();
+			for(var i = 0; i < locations.size(); i++){
+				if(locations.batches[i] == batchId){
+					locations.remove(i);
+					i--;
+				}
+			}
+			setLocations(locations);
+			locations = null;
 		}
 		
 		function deleteLocation(i){
+			var locations = getLocations();
+			locations.remove(i);
+			setLocations(locations);
+			locations = null;
 		}
 		
 		// persisted
 		
-		function saveLocationPersisted(i){
+		function saveLocationPersisted(i){ // check if has persisted
+			var locations = getLocations();
+			PersistedLocations.persistLocation(new Position.Location({:latitude => locations.latitudes[i], :longitude => locations.longitudes[i], :format => :radians}));
 		}
 		
 		function saveBatchPersisted(i){
+			var batches = getBatches();
+			var batchId = batches.ids[i];
+			batches = null;
+			var locations = getLocations();
+			for(var i = 0; i < locations.size(); i++){
+				if(locations.batches[i] == batchId){
+					PersistedLocations.persistLocation(new Position.Location({:latitude => locations.latitudes[i], :longitude => locations.longitudes[i], :format => :radians}));
+				}
+			}
 		}
 	}
 	
 	const r = 6371;
-	function distance(lat1, lon1, lat2, lon2){ // return in san
+	
+	function distance(lat1, lon1, lat2, lon2){ // return in km or miles (meters)
 		var dLat = lat2 - lat1;
 		var dLon = lon2 - lon1;
 		var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
 		        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
 		return 2 * r * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-	}
-		
-	class Location {
-		var name;
-		var latitude;
-		var longitude;
-		var type;
-		var batch;
-		
-		function initialize(_name, _latitude, _longitude, _type, _batch){
-			name = _name;
-			latitude = _latitude;
-			longitude = _longitude;
-			type = _type;
-			batch = _batch;
-		}
-	}
-	
-	class Locations {
-		var names;
-		var latitudes;
-		var longitudes;
-		var types;
-		var batches;
-		
-		function get(i){
-			return new Location(names[i], latitudes[i], longitudes[i], types[i], batches[i]);
-		}
-		
-		function size(){
-			if(names == null){
-				return 0;
-			}
-			return names.size();
-		}
-		
-		function initialize(_names, _latitudes, _longitudes, _types, _batches){
-			names = _names;
-			latitudes = _latitudes;
-			longitudes = _longitudes;
-			types = _types;
-			batches = _batches;
-		}
-		
-		function toString(loc){
-			var str = "";
-			if(loc != null){
-				for(var i = 0; i < size(); i++){
-					str = str + names[i] + " " + latitudes[i] + " " + longitudes[i] + " " + types[i] + " " + batches[i] + " " + distance(latitudes[i], longitudes[i], loc[0], loc[1]) + "\n";
-				}
-			} else {
-				for(var i = 0; i < size(); i++){
-					str = str + names[i] + " " + latitudes[i] + " " + longitudes[i] + " " + types[i] + " " + batches[i] + "\n";
-				}
-			}
-			return str;
-		}
-	}
-	
-	class Batch {
-		var id;
-		var name;
-		var date;
-		
-		function initialize(_id, _name, _date){
-			id = _id;
-			name = _name;
-			date = _date;
-		}
-	}
-	
-	class Batches {
-		var ids;
-		var names;
-		var dates;
-		
-		function initialize(_ids, _names, _dates){
-			ids = _ids;
-			names = _names;
-			dates = _dates;
-		}
-		
-		function get(i){
-			return new Batch(ids[i], names[i], dates[i]);
-		}
-		
-		function size(){
-			if(ids == null){
-				return 0;
-			}
-			return ids.size();
-		}
-		
-		function toString(){
-			var str = "";
-			for(var i = 0; i < size(); i++){
-				var date = Time.Gregorian.info(new Time.Moment(dates[i]), Time.FORMAT_SHORT);
-				var dateStr = date.hour + ":" + date.min + ":" + date.sec;
-				str = str + ids[i] + " " + names[i] + " " + dateStr + "\n";
-			}
-			return str;
-		}
 	}
 	
 	enum {
