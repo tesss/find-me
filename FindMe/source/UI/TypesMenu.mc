@@ -1,11 +1,14 @@
 using Toybox.WatchUi as Ui;
 using Data;
+using _;
 
 module UI{
 	class TypesMenu extends Ui.Menu {
+		hidden var dataStorage;
 		hidden var types;
 		
-		function initialize(_types){
+		function initialize(_dataStorage, _types){
+			dataStorage = _dataStorage;
 			types = _types;
 			setTitle("Types");
 			for(var i = 0; i < types.size(); i++){
@@ -21,6 +24,7 @@ module UI{
 	}
 	
 	class TypesMenuDelegate extends Ui.MenuInputDelegate {
+		hidden var dataStorage;
 		hidden var types;
 		
 		hidden function getIndex(symbol){
@@ -32,13 +36,14 @@ module UI{
 			return null;
 		}
 	
-		function initialize(_types){
+		function initialize(_dataStorage, _types){
+			dataStorage = _dataStorage;
 			types = _types;
 		}
 	
 	    function onMenuItem(item) {
 	    	var locations = types[getIndex(item)];
-	    	Ui.pushView( new LocationsMenu(locations), new LocationsMenuDelegate(locations), Ui.SLIDE_DOWN );
+	    	Ui.pushView( new LocationView(dataStorage, locations, 0), null, Ui.SLIDE_DOWN );
 	    }
     }
 }

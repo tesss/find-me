@@ -1,5 +1,6 @@
 using Toybox.WatchUi as Ui;
 using Data;
+using _;
 
 module UI{
 	class LocationsMenu extends Ui.Menu {

@@ -8,7 +8,7 @@ using Data;
 using Comm;
 using UI;
 using _;
-
+	
 class FindMeApp extends App.AppBase {
 	hidden var bridge;
 	hidden var dataStorage;
@@ -16,8 +16,10 @@ class FindMeApp extends App.AppBase {
 	hidden var i = 0;
 
     function onStart() {
-    	bridge = new Comm.Bridge();
     	dataStorage = new Data.DataStorage();
+		bridge = new Comm.Bridge();
+		dataStorage.updateCurrentLocation();
+		
     	var data = bridge.parseMail(i);
 		dataStorage.addBatch(data[0]);
 	    dataStorage.addLocations(data[1]);
@@ -35,10 +37,9 @@ class FindMeApp extends App.AppBase {
 
 class FindMeDelegate extends Ui.BehaviorDelegate {
 	hidden var bridge;
-	hidden var dataStorage;
 	hidden var i = 0;
 
-	function initialize(_bridge, _dataStorage){
+	function initialize(_bridge){
 		bridge = _bridge;
 		dataStorage = _dataStorage;
 	}
