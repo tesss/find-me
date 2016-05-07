@@ -6,22 +6,29 @@ using Toybox.Time;
 using Toybox.Math;
 using Data;
 using Comm;
+using UI;
 using _;
 
 class FindMeApp extends App.AppBase {
 	hidden var bridge;
 	hidden var dataStorage;
+	
+	hidden var i = 0;
 
     function onStart() {
     	bridge = new Comm.Bridge();
     	dataStorage = new Data.DataStorage();
+    	var data = bridge.parseMail(i);
+		dataStorage.addBatch(data[0]);
+	    dataStorage.addLocations(data[1]);
+	    data = null;
     }
 
     function onStop() {
     }
 
     function getInitialView() {
-        return [ new FindMeView(), new FindMeDelegate(bridge, dataStorage) ];
+        return [new UI.MainView(dataStorage)];
     }
 
 }
@@ -34,18 +41,21 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
 	function initialize(_bridge, _dataStorage){
 		bridge = _bridge;
 		dataStorage = _dataStorage;
-		var data = bridge.parseMail(i);
-		dataStorage.addBatch(data[0]);
-	    dataStorage.addLocations(data[1]);
-	    data = null;
 	}
-	var types;
-	// optimise for 300 locations
+
     function onKey() {
-    	//var data = bridge.parseMail(i);
+    	
+
+    }
+	
+	function printTypes(types){
+		// optimise for 300 locations
+		//var data = bridge.parseMail(i);
     	// transaction while saving
     	// id - generated max
-    	//dataStorage.setDistance(7000);
+    	// optimise for 300 locations
+    	
+		//dataStorage.setDistance(7000);
 	    //dataStorage.addBatch(data[0]);
 	    //dataStorage.addLocations(data[1]);
 	    //data = null;
@@ -56,19 +66,17 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
 	    //dataStorage.saveLocationPersisted(0);
 	    //dataStorage.saveBatchPersisted(0);
 	    dataStorage.updateCurrentLocation();
-	    types = dataStorage.getTypesList();
-	    var typeIndex = 1;
-	    var locationIndex = 0;
+	    //var typeIndex = 1;
+	    //var locationIndex = 0;
 	    //var sorted = dataStorage.sortLocationsList(types[typeIndex], Data.SORTBY_DISTANCE, types[typeIndex][locationIndex][0]);
 	    //_.p("INDEX: " + sorted[1]);
 	    //types[typeIndex] = sorted[0];
+	    dataStorage.addLocation();
+	    types = dataStorage.getTypesList();
 	    printTypes(types);
 	    //_.p(dataStorage.getBatches().toString());
 	    //_.p(dataStorage.getLocations().toString(dataStorage.currentLocation));
 	    i++;
-    }
-	
-	function printTypes(types){
 		for(var i = 0; i < types.size(); i++){
 	    	if(i == 0){
 	     		_.p("All");
