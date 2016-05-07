@@ -112,7 +112,16 @@ module Data
 			return result;
 		}
 		
-		static function indexOf(array, value, comparer){
+		static function indexOf(array, value, predicate){
+			for(var i = 0; i < array.size(); i++){
+				if(predicate.invoke(array[i], value)){
+					return i;
+				}
+			}
+			return null;
+		}
+		
+		static function indexOfBinary(array, value, comparer){
 			var minIndex = 0;
 		    var maxIndex = array.size() - 1;
 		    var currentIndex;

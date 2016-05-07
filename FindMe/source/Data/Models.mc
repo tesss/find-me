@@ -1,20 +1,4 @@
 module Data {
-	class Location {
-		var name;
-		var latitude;
-		var longitude;
-		var type;
-		var batch;
-		
-		function initialize(_name, _latitude, _longitude, _type, _batch){
-			name = _name;
-			latitude = _latitude;
-			longitude = _longitude;
-			type = _type;
-			batch = _batch;
-		}
-	}
-	
 	class Locations {
 		var names;
 		var latitudes;
@@ -22,11 +6,12 @@ module Data {
 		var types;
 		var batches;
 		
-		function get(i, lat, lon){
+		function get(i, lat, lon){ // bearing
+			var distance = null;
 			if(lat != null && lon != null){
-				return [i, names[i], latitudes[i], longitudes[i], types[i], batches[i], distance(latitudes[i], longitudes[i], lat, lon)];
+				distance = distance(latitudes[i], longitudes[i], lat, lon);
 			}
-			return [i, names[i], latitudes[i], longitudes[i], types[i], batches[i]];
+			return [i, names[i], latitudes[i], longitudes[i], types[i], batches[i], distance];
 		}
 		
 		function remove(i){
@@ -67,18 +52,6 @@ module Data {
 				}
 			}
 			return str;
-		}
-	}
-	
-	class Batch {
-		var id;
-		var name;
-		var date;
-		
-		function initialize(_id, _name, _date){
-			id = _id;
-			name = _name;
-			date = _date;
 		}
 	}
 	

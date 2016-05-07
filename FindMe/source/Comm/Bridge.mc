@@ -16,8 +16,8 @@ module Comm {
 	    
 	    function parseMail(mail){
 	    	// mock
-	    	var batch = new Data.DataStorage.Batch(mail, "Batch #" + mail, Time.now().value());
-	    	var l = 5;
+	    	var batch = [mail, "Batch #" + mail, Time.now().value()];
+	    	var l = 20;
 	    	var locations = new Data.DataStorage.Locations(new[l],new[l],new[l],new[l],new[l]);
 	    	for(var i = 0; i < l; i++){
 	    		locations.names[i] = Math.rand()%9 + "Location #" + i;
