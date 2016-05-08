@@ -11,6 +11,7 @@
         	<iq:uses-permission id="Communications"/>
         	<iq:uses-permission id="Positioning"/>
         	<iq:uses-permission id="PersistedLocations"/>
+        	<iq:uses-permission id="Sensor"/>
         </iq:permissions>
 
         <iq:languages>

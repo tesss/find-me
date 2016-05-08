@@ -4,12 +4,12 @@ using _;
 
 module UI{
 	class TypesMenu extends Ui.Menu {
-		hidden var dataStorage;
 		hidden var types;
+		hidden var dataStorage;
 		
-		function initialize(_dataStorage, _types){
-			dataStorage = _dataStorage;
+		function initialize(_types, _dataStorage){
 			types = _types;
+			dataStorage = _dataStorage;
 			setTitle("Types");
 			for(var i = 0; i < types.size(); i++){
 				if(i == 0){
@@ -24,8 +24,8 @@ module UI{
 	}
 	
 	class TypesMenuDelegate extends Ui.MenuInputDelegate {
-		hidden var dataStorage;
 		hidden var types;
+		hidden var dataStorage;
 		
 		hidden function getIndex(symbol){
 			for(var i = 0; i < types.size(); i++){
@@ -36,14 +36,15 @@ module UI{
 			return null;
 		}
 	
-		function initialize(_dataStorage, _types){
-			dataStorage = _dataStorage;
+		function initialize(_types, _dataStorage){
 			types = _types;
+			dataStorage = _dataStorage;
 		}
 	
 	    function onMenuItem(item) {
 	    	var locations = types[getIndex(item)];
-	    	Ui.pushView( new LocationView(dataStorage, locations, 0), null, Ui.SLIDE_DOWN );
+	    	var model = new LocationsViewModel(locations, dataStorage);
+	    	Ui.pushView(new LocationView(model, dataStorage), new LocationDelegate(model), Ui.SLIDE_DOWN);
 	    }
     }
 }

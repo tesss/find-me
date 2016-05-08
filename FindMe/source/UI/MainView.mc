@@ -12,7 +12,7 @@ module UI{
 		
 	    function openTypesMenu(types) {
 	    	// show info if no elements
-	        Ui.pushView( new TypesMenu(dataStorage, types), new TypesMenuDelegate(dataStorage, types), Ui.SLIDE_DOWN );
+	        Ui.pushView(new TypesMenu(types, dataStorage), new TypesMenuDelegate(types, dataStorage), Ui.SLIDE_DOWN);
 	    }
 	}
 }

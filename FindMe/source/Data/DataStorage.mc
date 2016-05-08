@@ -15,6 +15,8 @@ module Data{
 		function initialize(){
 			app = Application.getApp().weak();
 			
+			deviceSettings = System.getDeviceSettings();
+			
 			clearProp(KEY_LOC_NAME); clearProp(KEY_LOC_LAT); clearProp(KEY_LOC_LON); clearProp(KEY_LOC_TYPE); clearProp(KEY_LOC_BATCH);
 			clearProp(KEY_BATCH_ID); clearProp(KEY_BATCH_NAME); clearProp(KEY_BATCH_DATE);
 			clearProp(KEY_SORT);
@@ -26,7 +28,7 @@ module Data{
 		}
 		
 		var currentLocation;
-		function updateCurrentLocation(){ // update in timer
+		function updateCurrentLocation(){ // update in timer, frequency in settings
 			var info = Position.getInfo();
 			if(info.accuracy == Position.QUALITY_NOT_AVAILABLE){
 				currentLocation = null;
@@ -34,6 +36,8 @@ module Data{
 				currentLocation = info.position.toRadians();
 			}
 		}
+		
+		var deviceSettings;
 		
 		// props
 		
@@ -104,9 +108,8 @@ module Data{
 			values = ArrayExt.sortByIndex(values, indexes, method(:indexGetter));
 			indexes = null;
 			values = ArrayExt.insertAt(values, all, 0);
-			var sortBy = getSortBy();
 			for(var i = 0; i < values.size(); i++){
-				values[i] = sortLocationsList(values[i], sortBy, null)[0];
+				values[i] = sortLocationsList(values[i], null)[0];
 			}
 			return values;
 		}
@@ -152,7 +155,7 @@ module Data{
 			locations.longitudes = ArrayExt.union(locations.longitudes, newLocations.longitudes);
 			locations.types = ArrayExt.union(locations.types, newLocations.types);
 			locations.batches = ArrayExt.union(locations.batches, newLocations.batches);
-			locations = sortLocations(locations, getSortBy());
+			locations = sortLocations(locations);
 			setLocations(locations);
 			locations = null;
 		}
@@ -168,7 +171,8 @@ module Data{
 		
 		// sorting
 		
-		function sortLocations(locations, sortBy){
+		function sortLocations(locations){
+			var sortBy = getSortBy();
 			var method = null;
 			var arrayToSort = null;
 			if(sortBy == SORTBY_NAME || currentLocation == null){
@@ -198,7 +202,8 @@ module Data{
 			return locations;
 		}
 		
-		function sortLocationsList(locations, sortBy, id){ // on load
+		function sortLocationsList(locations, id){ // on load
+			var sortBy = getSortBy();
 			if(currentLocation != null && sortBy == SORTBY_DISTANCE){
 				for(var i = 0; i < locations.size(); i++){
 					locations[i][LOC_DIST] = distance(locations[i][LOC_LAT], locations[i][LOC_LON], currentLocation[LAT], currentLocation[LON]);
@@ -322,12 +327,20 @@ module Data{
 	
 	const r = 6371;
 	
-	function distance(lat1, lon1, lat2, lon2){ // return in km or miles (meters)
+	function distance(lat1, lon1, lat2, lon2){
 		var dLat = lat2 - lat1;
 		var dLon = lon2 - lon1;
 		var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
 		        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
 		return 2 * r * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+	}
+	
+	function bearing(lat1, lon1, lat2, lon2){
+		var dLon = lon2 - lon1;
+		var y = Math.sin(dLon) * Math.cos(lat2);
+		var x = Math.cos(lat1) * Math.sin(lat2) - 
+				Math.sin(lon1) * Math.cos(lon2) * Math.cos(dLon);
+		return Math.toDegrees(Math.atan2(y, x));
 	}
 	
 	enum {
