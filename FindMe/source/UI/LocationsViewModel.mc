@@ -6,13 +6,13 @@ module UI{
 		hidden var index;
 		hidden var dataStorage;
 		
-		var animNext;
+		var fullRefresh;
 		
 		function initialize(_locations, _dataStorage){
 			locations = _locations;
 			dataStorage = _dataStorage;
 			index = 0;
-			animNext = true;
+			fullRefresh = true;
 		}
 		
 		function get(){
@@ -24,7 +24,7 @@ module UI{
 			if(index == locations.size()){
 				index = 0;
 			}
-			animNext = true;
+			fullRefresh = true;
 		}
 		
 		function prev(){
@@ -32,7 +32,7 @@ module UI{
 			if(index == -1){
 				index = locations.size() - 1;
 			}
-			animNext = false;
+			fullRefresh = true;
 		}
 		
 		function showArrows(){

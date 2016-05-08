@@ -2,8 +2,10 @@ using Toybox.System;
 using Toybox.Application;
 using Toybox.Math;
 using Toybox.Time;
+using Toybox.Timer;
 using Toybox.Position;
 using Toybox.PersistedLocations;
+using Toybox.WatchUi as Ui;
 using _;
 
 module Data{
@@ -11,33 +13,52 @@ module Data{
 		static const TYPES = ["City", "Lake", "River", "Mountain", "Spring", "Bus Station", "Custom"];
 		
 		var app = null;
+		var deviceSettings;
+		var timer;
+		var gpsInProgress;
+		var currentLocation;
 		
 		function initialize(){
 			app = Application.getApp().weak();
+			timer = new Timer.Timer();
 			
 			deviceSettings = System.getDeviceSettings();
 			
 			clearProp(KEY_LOC_NAME); clearProp(KEY_LOC_LAT); clearProp(KEY_LOC_LON); clearProp(KEY_LOC_TYPE); clearProp(KEY_LOC_BATCH);
 			clearProp(KEY_BATCH_ID); clearProp(KEY_BATCH_NAME); clearProp(KEY_BATCH_DATE);
-			clearProp(KEY_SORT);
-			clearProp(KEY_DISTANCE);
+			clearProp(KEY_SORT); clearProp(KEY_DISTANCE); clearProp(KEY_INTERVAL);
 			
 			initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE); initProp(KEY_LOC_BATCH);
 			initProp(KEY_BATCH_ID); initProp(KEY_BATCH_NAME); initProp(KEY_BATCH_DATE);
 			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
+			if(getInterval() == null){ setInterval(1000); }
 		}
 		
-		var currentLocation;
-		function updateCurrentLocation(){ // update in timer, frequency in settings
-			var info = Position.getInfo();
+		hidden function startTimer(){
+			if(timer != null){
+				timer.stop();
+			}
+			timer.start(method(:onTimer), getInterval(), true);
+		}
+		
+		function onTimer(){
+			if(gpsInProgress){
+				currentLocation = null;
+				Ui.requestUpdate();
+			}
+			gpsInProgress = true;
+			Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
+		}
+		
+		function updateCurrentLocation(info){
+			gpsInProgress = false;
 			if(info.accuracy == Position.QUALITY_NOT_AVAILABLE){
 				currentLocation = null;
 			} else {
 				currentLocation = info.position.toRadians();
 			}
+			Ui.requestUpdate();
 		}
-		
-		var deviceSettings;
 		
 		// props
 		
@@ -51,8 +72,10 @@ module Data{
 		
 		function getSortBy(){ return getProp(KEY_SORT); }	
 		function setSortBy(sortBy){ setProp(KEY_SORT, sortBy); setLocations(sortLocations(getLocations(), sortBy)); }	
-		function getDistance(){return getProp(KEY_DISTANCE);} // in meters
+		function getDistance(){ return getProp(KEY_DISTANCE); }
 		function setDistance(distance){ setProp(KEY_DISTANCE, distance); }
+		function getInterval(){ return getProp(KEY_INTERVAL); }
+		function setInterval(interval){ setProp(KEY_INTERVAL, interval); startTimer(); }
 		
 		// locations
 		
@@ -356,6 +379,7 @@ module Data{
 	enum {
 		KEY_SORT,
 		KEY_DISTANCE,
+		KEY_INTERVAL,
 		
 		KEY_LOC_LAT,
 		KEY_LOC_LON,

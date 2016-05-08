@@ -1,9 +1,5 @@
 using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
-using Toybox.Position as Pos;
-using Toybox.System;
-using Toybox.Time;
-using Toybox.Math;
 using Data;
 using Comm;
 using UI;
@@ -18,7 +14,6 @@ class FindMeApp extends App.AppBase {
     function onStart() {
     	dataStorage = new Data.DataStorage();
 		bridge = new Comm.Bridge();
-		dataStorage.updateCurrentLocation();
 		
     	var data = bridge.parseMail(i);
 		dataStorage.addBatch(data[0]);
