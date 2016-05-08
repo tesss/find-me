@@ -15,8 +15,11 @@ module UI{
 	const DSIZE = 30;
 	
 	function setColor(dc, fcolor, bcolor){
+		if(fcolor == null){
+			fcolor = UI.COLOR_PRIMARY;
+		}
 		if(bcolor == null){
-			bcolor = COLOR_BACKGROUND;
+			bcolor = UI.COLOR_BACKGROUND;
 		}
 		dc.setColor(fcolor, bcolor);
 	}
@@ -50,6 +53,8 @@ module UI{
 	class LocationView extends Ui.View{
 		hidden var model;
 		hidden var dataStorage;
+		hidden var animInProgress;
+		hidden var locationRoundDrawable;
 	
 		function initialize(_model, _dataStorage){
 			model = _model;
@@ -57,9 +62,14 @@ module UI{
 		}
 	
 		function onUpdate(dc){
+			if(animInProgress){
+				UI.setColor(dc, null);
+				dc.clear();
+				locationRoundDrawable.draw(dc);
+				return;
+			}
 			var location = model.get();
 			if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_ROUND){
-				//onUpdateRound(location, dc);
 				var distance = null;
 				var bearing = null;
 				if(dataStorage.currentLocation != null){
@@ -69,29 +79,42 @@ module UI{
 					bearing = Math.toRadians(bearing) - info.heading;
 				}
 				distance = getDistanceStr(distance);
+				var w = dc.getWidth();
+				var h = dc.getHeight();
 				var options = {
 					:distance => distance,
 					:bearing => bearing,
-					:height => dc.getHeight(),
-					:width => dc.getWidth()
+					:width => w,
+					:height => h
 				};
 				if(model.animNext == null){
-					new LocationRoundDrawable(options).draw(dc);
-					dc.draw(new LocationRoundDrawable(options));
+					locationRoundDrawable = new LocationRoundDrawable(options);
+					locationRoundDrawable.draw(dc);
 				} else {
 					options.put(:name, location[Data.LOC_NAME]);
 					options.put(:type, Data.DataStorage.TYPES[location[Data.LOC_TYPE]]);
 					options.put(:showArrows, model.showArrows());
+					locationRoundDrawable = new LocationRoundDrawable(options);
 					if(model.animNext){
-						Ui.animate(new LocationRoundDrawable(options).draw(dc), locX, Ui.ANIM_TYPE_EASE_IN, -, stop, period, callback)
-						; // animation
 						model.animNext = null;
+						locationRoundDrawable.draw(dc);
+						return;
+						animInProgress = true;
+						Ui.animate(locationRoundDrawable, :locY, Ui.ANIM_TYPE_EASE_IN, -h, 0, 1, method(:animCallback));
+	
 					} else {
-						new LocationRoundDrawable(options).draw(dc);
 						model.animNext = null;
+						locationRoundDrawable.draw(dc);
+						return;
+						animInProgress = true;
+						Ui.animate(locationRoundDrawable, :locY, Ui.ANIM_TYPE_EASE_IN, h, 0, 1, method(:animCallback));
 					}
 				}
 			}
+		}
+		
+		function animCallback(){
+			animInProgress = false;
 		}
 	}
 	
