@@ -7,11 +7,11 @@ using Data;
 using _;
 
 module UI{
-	const COLOR_BACKGROUND = 0xFFFFFF;
-	const COLOR_PRIMARY = 0x000000;
+	const COLOR_BACKGROUND = 0x000000;
+	const COLOR_PRIMARY = 0xFFFFFF;
 	const COLOR_SECONDARY = 0xAAAAAA;
-	const COLOR_LOWLIGHT = 0xAAAAAA;
-	const COLOR_HIGHLIGHT = 0xAA0000;
+	const COLOR_LOWLIGHT = 0x555555;
+	const COLOR_HIGHLIGHT = 0xFFAA00;
 	const DSIZE = 30;
 	
 	function setColor(dc, fcolor, bcolor){
