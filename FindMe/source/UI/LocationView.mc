@@ -3,6 +3,7 @@ using Toybox.WatchUi as Ui;
 using Toybox.Graphics;
 using Toybox.Math;
 using Toybox.Sensor;
+using Toybox.Position;
 using Data;
 using _;
 
@@ -12,7 +13,6 @@ module UI{
 	const COLOR_SECONDARY = 0xAAAAAA;
 	const COLOR_LOWLIGHT = 0x555555;
 	const COLOR_HIGHLIGHT = 0xFFAA00;
-	const DSIZE = 30;
 	
 	function setColor(dc, fcolor, bcolor){
 		if(fcolor == null){
@@ -34,15 +34,7 @@ module UI{
 	class LocationView extends Ui.View{
 		hidden var model;
 		hidden var dataStorage;
-		
-		hidden var w;
-		hidden var h;
-		hidden var wc;
-		hidden var hc;
-		hidden var hc3;
-		
-		hidden var clearingCircle;
-		
+		hidden var drawModel;
 		hidden var heading;
 	
 		function initialize(_model, _dataStorage){
@@ -56,9 +48,18 @@ module UI{
 			Ui.requestUpdate();
 		}
 		
-		hidden function getDistanceStr(distance){
+		hidden function getLocationStr(location){
+			// format from settings
+			return new Position.Location({
+				:latitude => location[Data.LOC_LAT], 
+				:longitude => location[Data.LOC_LON], 
+				:format => :radians}).toGeoString(Position.GEO_DEG);
+		}
+		
+		hidden function getDistanceStr(location, distance){
 			if(distance == null || heading == null){
 				return "...";
+				return getLocationStr(location);
 			}
 			var isMetric = dataStorage.deviceSettings.distanceUnits == System.UNIT_METRIC;
 			if(distance < 1){
@@ -75,17 +76,7 @@ module UI{
 			}
 		}
 		
-		hidden function clear(dc){
-			setColor(dc, COLOR_BACKGROUND);
-			if(clearingCircle != null){
-				dc.fillCircle(clearingCircle[0], clearingCircle[1], clearingCircle[2]);
-			}
-		}
-		
-		hidden function drawDynamic(location, dc){
-			clear(dc);
-			dc.fillRectangle(0, hc3 * 5, w, 30);
-			
+		hidden function drawDynamic(location, drawModel, dc){
 			var distance = null;
 			var bearing = null;			
 			if(dataStorage.currentLocation != null){
@@ -96,46 +87,32 @@ module UI{
 				heading = Sensor.getInfo().heading;
 			}
 			
-			var distanceStr = getDistanceStr(distance);
+			var distanceStr = getDistanceStr(location, distance);
 			setColor(dc, COLOR_HIGHLIGHT);
-			dc.drawText(wc, hc3 * 5 - 5, Graphics.FONT_SMALL, distanceStr, Graphics.TEXT_JUSTIFY_CENTER);
+			dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_SMALL, distanceStr, Graphics.TEXT_JUSTIFY_CENTER);
 			
 			if(bearing == null || heading == null){
+				// Forerunner 920xt - location doesn't show
 				setColor(dc, COLOR_SECONDARY);
-				dc.drawText(wc, hc3 * 3, Graphics.FONT_MEDIUM, "...", Graphics.TEXT_JUSTIFY_CENTER);
+				dc.drawText(drawModel.bearing[0], drawModel.bearing[1], Graphics.FONT_TINY, getLocationStr(location), Graphics.TEXT_JUSTIFY_CENTER);
+				setColor(dc, COLOR_LOWLIGHT);
+				dc.drawLine(drawModel.line1Dis[0], drawModel.line1Dis[1], drawModel.line1Dis[2], drawModel.line1Dis[3]);
+				dc.drawLine(drawModel.line2Dis[0], drawModel.line2Dis[1], drawModel.line2Dis[2], drawModel.line2Dis[3]);
 			} else {
 				bearing = Math.toRadians(bearing) - heading;
-				
-				var t1 = 0.9;
-				var t2 = 0.5;
-				var t3 = 0.65;
-				var r = DSIZE;
-				var c = [wc, hc + r * t3];
-				
-				var p1 = [c[0], c[1] - r];
-				var p2 = [c[0] + r * t1, c[1] + r];
-				var p3 = [c[0] - r * t1, c[1] + r];
-				var p4 = [c[0], c[1] + r * t2];
-				c = [(p1[0] + p2[0] + p3[0]) / 3, (p1[1] + p2[1] + p3[1]) / 3];
-				
-				if(clearingCircle == null){
-					clearingCircle = [c[0], c[1], c[1] - p1[1] + 1];
-				}
-				clear(dc);
+				setColor(dc, COLOR_LOWLIGHT);
+				dc.drawLine(drawModel.line1[0], drawModel.line1[1], drawModel.line1[2], drawModel.line1[3]);
+				dc.drawLine(drawModel.line2[0], drawModel.line2[1], drawModel.line2[2], drawModel.line2[3]);
 				setColor(dc, COLOR_SECONDARY);
-				
-				p1 = rotate(p1, c, bearing);
-				p2 = rotate(p2, c, bearing);
-				p3 = rotate(p3, c, bearing);
-				p4 = rotate(p4, c, bearing);
-				
-				dc.fillPolygon([p1, p2, p4, p3]);
-				
-				setColor(dc, COLOR_SECONDARY);
-				dc.drawLine(p1[0], p1[1], p2[0], p2[1]);
-				dc.drawLine(p2[0], p2[1], p4[0], p4[1]);
-				dc.drawLine(p4[0], p4[1], p3[0], p3[1]);
-				dc.drawLine(p3[0], p3[1], p1[0], p1[1]);
+				drawModel.direction[0] = rotate(drawModel.direction[0], drawModel.directionCenter, bearing);
+				drawModel.direction[1] = rotate(drawModel.direction[1], drawModel.directionCenter, bearing);
+				drawModel.direction[2] = rotate(drawModel.direction[2], drawModel.directionCenter, bearing);
+				drawModel.direction[3] = rotate(drawModel.direction[3], drawModel.directionCenter, bearing);
+				dc.fillPolygon(drawModel.direction);	
+				dc.drawLine(drawModel.direction[0][0], drawModel.direction[0][1], drawModel.direction[1][0], drawModel.direction[1][1]);
+				dc.drawLine(drawModel.direction[1][0], drawModel.direction[1][1], drawModel.direction[2][0], drawModel.direction[2][1]);
+				dc.drawLine(drawModel.direction[2][0], drawModel.direction[2][1], drawModel.direction[3][0], drawModel.direction[3][1]);
+				dc.drawLine(drawModel.direction[3][0], drawModel.direction[3][1], drawModel.direction[0][0], drawModel.direction[0][1]);
 			}
 		}
 		
@@ -146,52 +123,150 @@ module UI{
 			];
 		}
 		
-		hidden function onUpdateRound(location, dc){
-			if(model.fullRefresh){
-				setColor(dc, COLOR_PRIMARY);
-				dc.clear();
-				
-				w = dc.getWidth();
-				h = dc.getHeight();
-				wc = w / 2;
-				hc = h / 2;
-				hc3 = hc / 3;
-				
-				dc.drawText(wc, hc3, Graphics.FONT_MEDIUM, location[Data.LOC_NAME], Graphics.TEXT_JUSTIFY_CENTER);
-				
+		hidden function draw(location, drawModel, dc){
+			setColor(dc, COLOR_PRIMARY);
+			dc.clear();
+			
+			dc.drawText(drawModel.name[0], drawModel.name[1], Graphics.FONT_MEDIUM, location[Data.LOC_NAME], Graphics.TEXT_JUSTIFY_CENTER);
+			
+			setColor(dc, COLOR_LOWLIGHT);
+			
+			setColor(dc, COLOR_SECONDARY);
+			dc.drawText(drawModel.type[0], drawModel.type[1], Graphics.FONT_XTINY, 
+				Data.DataStorage.TYPES[location[Data.LOC_TYPE]], Graphics.TEXT_JUSTIFY_CENTER);
+			model.fullRefresh = false;
+			
+			if(model.showArrows()){
 				setColor(dc, COLOR_LOWLIGHT);
+				dc.fillPolygon(drawModel.arrow1);
+				dc.fillPolygon(drawModel.arrow2);
+			}
+			drawDynamic(location, drawModel, dc);
+		}
+		
+		function getDrawModel(dc){
+			if(drawModel == null){
+				var w = dc.getWidth();
+				var h = dc.getHeight();
+				var wc = w / 2;
+				var hc = h / 2;
+				var hc3 = hc / 3;
 				var padding = 20;
-				dc.drawLine(padding, hc + DSIZE, wc - DSIZE - padding, hc);
-				dc.drawLine(wc + DSIZE + padding, hc, w - padding, hc + DSIZE);
-				
-				setColor(dc, COLOR_SECONDARY);
-				dc.drawText(wc, hc3 * 2, Graphics.FONT_TINY, Data.DataStorage.TYPES[location[Data.LOC_TYPE]], Graphics.TEXT_JUSTIFY_CENTER);
-				model.fullRefresh = false;
-				
-				if(model.showArrows()){
-					setColor(dc, COLOR_LOWLIGHT);
-					var r = 5;
-					var t1 = 1.5;
-					var t2 = 1;
-					var p1 = [wc, t2];
-					var p2 = [wc + r * t1, r + t2];
-					var p3 = [wc - r * t1, r + t2];
-					dc.fillPolygon([p1, p2, p3]);
-					p1 = [wc, h - t2];
-					p2 = [wc + r * t1, h - r - t2];
-					p3 = [wc - r * t1, h - r - t2];
-					dc.fillPolygon([p1, p2, p3]);
+				var p;
+				var c;
+				var ar = 5;
+				var a1 = 1.5;
+				var a2 = 1;
+				var r = 30;
+				drawModel = new LocationDrawModel();
+				drawModel.line1 = [padding, hc + r, wc - r - padding, hc];
+				drawModel.line2 = [wc + r + padding, hc, w - padding, hc + r];
+				drawModel.line1Dis = [padding, hc + r, wc - r - padding, hc + 2*r];
+				drawModel.line2Dis = [wc + r + padding, hc + 2*r, w - padding, hc + r];
+				drawModel.arrow1 = [[wc, a2], [wc + ar * a1, ar + a2], [wc - ar * a1, ar + a2]];
+				drawModel.arrow2 = [[wc, h - a2], [wc + ar * a1, h - ar - a2], [wc - ar * a1, h - ar - a2]];
+				var type = getScreenType(w, h);
+				if(type == :round){
+					var c = [wc, hc + r * 0.6];
+					drawModel.name = [wc, hc3];
+					drawModel.type = [wc, hc3 * 2];
+					drawModel.distance = [wc, hc3 * 5 - 5];
+					drawModel.bearing = [wc, hc3 * 3];
+					drawModel.direction = getDirectionArrow(c, r);
+					drawModel.directionCenter = c;
+				} else if (type == :square){
+					if(dataStorage.deviceSettings.inputButtons & System.BUTTON_INPUT_UP == 0){
+						drawModel.arrow1 = [[a2, hc], [ar + a2, hc - ar * a1], [ar + a2, hc + ar * a1]];
+						drawModel.arrow2 = [[w - a2, hc], [w - ar - a2, hc - ar * a1], [w - ar - a2, hc + ar * a1]];
+						p = 0;
+						c = [wc, hc];
+					} else {
+						p = ar + a2;
+						c = [wc, hc + 3];
+					}
+					drawModel.name = [wc, p];
+					drawModel.type = [wc, hc3 + p];
+					drawModel.distance = [wc, h - dc.getFontHeight(Graphics.FONT_SMALL) - p];
+					drawModel.bearing = [wc, hc - dc.getFontHeight(Graphics.FONT_TINY)/2];
+					drawModel.direction = getDirectionArrow(c, r);
+					drawModel.directionCenter = c;
+				} else if (type == :tall){
+					c = [wc, hc];
+					p = 15;
+					padding = 5;
+					drawModel.name = [wc, p];
+					drawModel.type = [wc, hc3 + p];
+					drawModel.line1 = [padding, hc + r, wc - r - p, hc];
+					drawModel.line2 = [wc + r + p, hc, w - padding, hc + r];
+					drawModel.line1Dis = [padding, hc + r, wc - r - p, hc + 2 * r];
+					drawModel.line2Dis = [wc + r + p, hc + 2*r, w - padding, hc + r];
+					drawModel.distance = [wc, h - dc.getFontHeight(Graphics.FONT_SMALL) - p];
+					drawModel.bearing = [wc, hc - dc.getFontHeight(Graphics.FONT_TINY)/2];
+					drawModel.direction = getDirectionArrow(c, r);
+					drawModel.directionCenter = c;
+				} else if (type == :semiround){
+					c = [wc, hc + 5];
+					p = 15;
+					drawModel.name = [wc, hc3 - p];
+					drawModel.type = [wc, hc3 * 2 - p];
+					drawModel.distance = [wc, hc3 * 5 - 5];
+					drawModel.bearing = [wc, hc3 * 3];
+					drawModel.direction = getDirectionArrow(c, r);
+					drawModel.directionCenter = c;
 				}
 			}
-			drawDynamic(location, dc);
+			return drawModel;
+		}
+		
+		hidden function getDirectionArrow(c, r){
+			var d1 = 0.9;
+			var d2 = 0.5;
+			var p1 = [c[0], c[1] - r];
+			var p2 = [c[0] + r * d1, c[1] + r];
+			var p3 = [c[0], c[1] + r * d2];
+			var p4 = [c[0] - r * d1, c[1] + r];
+			c[0] = (p1[0] + p2[0] + p4[0]) / 3;
+			c[1] = (p1[1] + p2[1] + p4[1]) / 3;
+			return [p1, p2, p3, p4];
+		}
+		
+		hidden function getScreenType(w, h){
+			if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_ROUND){
+				return :round;
+			}
+			if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_RECTANGLE){
+				if(w > h){
+					return :square;
+				} else {
+					return :tall;
+				}
+			}
+			if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_SEMI_ROUND){
+				return :semiround;
+			}
+			return null;
 		}
 	
 		function onUpdate(dc){
 			var location = model.get();
-			if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_ROUND){
-				onUpdateRound(location, dc);
-			}
+			draw(location, getDrawModel(dc), dc);
 		}
+	}
+	
+	class LocationDrawModel {
+		var name;
+		var type;
+		var line1;
+		var line2;
+		var line1Dis;
+		var line2Dis;
+		var arrow1;
+		var arrow2;
+		var triangle;
+		var distance;
+		var bearing;
+		var direction;
+		var directionCenter;
 	}
 	
 	class LocationDelegate extends Ui.BehaviorDelegate{

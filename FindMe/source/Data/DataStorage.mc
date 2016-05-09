@@ -31,23 +31,34 @@ module Data{
 			initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE); initProp(KEY_LOC_BATCH);
 			initProp(KEY_BATCH_ID); initProp(KEY_BATCH_NAME); initProp(KEY_BATCH_DATE);
 			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
-			if(getInterval() == null){ setInterval(1000); }
+			if(getInterval() == null){ setInterval(0); }
 		}
 		
-		hidden function startTimer(){
-			if(timer != null){
-				timer.stop();
+		hidden function startTimer(interval){
+			timer.stop();
+			if(interval <= 0){
+				onTimer(interval);
+			} else {
+				timer.start(method(:onTimer), interval, false);
 			}
-			timer.start(method(:onTimer), getInterval(), true);
 		}
 		
-		function onTimer(){
-			if(gpsInProgress){
+		function onTimer(interval){
+			if(interval == -1){
+				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 				currentLocation = null;
 				Ui.requestUpdate();
+			} else if(interval == 0){
+				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
+			} else {
+				if(gpsInProgress){
+					currentLocation = null;
+					Ui.requestUpdate();
+				} else {
+					gpsInProgress = true;
+					Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
+				}
 			}
-			gpsInProgress = true;
-			Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
 		}
 		
 		function updateCurrentLocation(info){
@@ -57,7 +68,6 @@ module Data{
 			} else {
 				currentLocation = info.position.toRadians();
 			}
-			Ui.requestUpdate();
 		}
 		
 		// props
@@ -75,7 +85,7 @@ module Data{
 		function getDistance(){ return getProp(KEY_DISTANCE); }
 		function setDistance(distance){ setProp(KEY_DISTANCE, distance); }
 		function getInterval(){ return getProp(KEY_INTERVAL); }
-		function setInterval(interval){ setProp(KEY_INTERVAL, interval); startTimer(); }
+		function setInterval(interval){ setProp(KEY_INTERVAL, interval); startTimer(interval); }
 		
 		// locations
 		
