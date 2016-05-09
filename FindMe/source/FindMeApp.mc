@@ -25,7 +25,7 @@ class FindMeApp extends App.AppBase {
     }
 
     function getInitialView() {
-        return [new UI.MainView(dataStorage)];
+        return [new UI.MainView(dataStorage), new UI.MainDelegate(dataStorage)];
     }
 
 }

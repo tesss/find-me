@@ -44,7 +44,11 @@ module UI{
 	    function onMenuItem(item) {
 	    	var locations = types[getIndex(item)];
 	    	var model = new LocationsViewModel(locations, dataStorage);
-	    	Ui.pushView(new LocationView(model, dataStorage), new LocationDelegate(model), Ui.SLIDE_DOWN);
+	    	Ui.pushView(new LocationView(model, dataStorage), new LocationDelegate(model), TRANSITION);
 	    }
+	    
+	    function onMenu(){
+			Ui.pushView(new MainMenu(dataStorage), new MainMenuDelegate(dataStorage), TRANSITION);
+		}
     }
 }
