@@ -7,7 +7,8 @@ module UI{
 		function initialize(_dataStorage){
 			dataStorage = _dataStorage;
 			setTitle("find^me");
-			addItem("Add");
+			addItem("Locations", :types);
+			addItem("Add", :add);
 			addItem("Find", :find);
 			addItem("Batches", :batches);
 			addItem("Sorting", :sortby);
@@ -22,6 +23,14 @@ module UI{
 		
 		function initialize(_dataStorage){
 			dataStorage = _dataStorage;
+		}
+		
+		function onMenuItem(item){
+			if(item == :types){
+				var types = dataStorage.getTypesList();
+				Ui.pushView(new TypesMenu(types, dataStorage), new TypesMenuDelegate(types, dataStorage), transition);
+			} else {
+			}
 		}
 	}
 }

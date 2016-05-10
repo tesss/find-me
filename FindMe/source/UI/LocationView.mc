@@ -165,8 +165,7 @@ module UI{
 				drawModel.line2Dis = [wc + r + padding, hc + 2*r, w - padding, hc + r];
 				drawModel.arrow1 = [[wc, a2], [wc + ar * a1, ar + a2], [wc - ar * a1, ar + a2]];
 				drawModel.arrow2 = [[wc, h - a2], [wc + ar * a1, h - ar - a2], [wc - ar * a1, h - ar - a2]];
-				var type = getScreenType(w, h);
-				if(type == :round){
+				if(screenType == :round){
 					var c = [wc, hc + r * 0.6];
 					drawModel.name = [wc, hc3];
 					drawModel.type = [wc, hc3 * 2];
@@ -174,7 +173,7 @@ module UI{
 					drawModel.bearing = [wc, hc3 * 3];
 					drawModel.direction = getDirectionArrow(c, r);
 					drawModel.directionCenter = c;
-				} else if (type == :square){
+				} else if (screenType == :square){
 					if(dataStorage.deviceSettings.inputButtons & System.BUTTON_INPUT_UP == 0){
 						drawModel.arrow1 = [[a2, hc], [ar + a2, hc - ar * a1], [ar + a2, hc + ar * a1]];
 						drawModel.arrow2 = [[w - a2, hc], [w - ar - a2, hc - ar * a1], [w - ar - a2, hc + ar * a1]];
@@ -190,7 +189,7 @@ module UI{
 					drawModel.bearing = [wc, hc - dc.getFontHeight(Graphics.FONT_TINY)/2];
 					drawModel.direction = getDirectionArrow(c, r);
 					drawModel.directionCenter = c;
-				} else if (type == :tall){
+				} else if (screenType == :tall){
 					c = [wc, hc];
 					p = 15;
 					padding = 5;
@@ -228,23 +227,6 @@ module UI{
 			c[0] = (p1[0] + p2[0] + p4[0]) / 3;
 			c[1] = (p1[1] + p2[1] + p4[1]) / 3;
 			return [p1, p2, p3, p4];
-		}
-		
-		hidden function getScreenType(w, h){
-			if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_ROUND){
-				return :round;
-			}
-			if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_RECTANGLE){
-				if(w > h){
-					return :square;
-				} else {
-					return :tall;
-				}
-			}
-			if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_SEMI_ROUND){
-				return :semiround;
-			}
-			return null;
 		}
 	
 		function onUpdate(dc){
