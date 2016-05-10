@@ -6,6 +6,7 @@ using Toybox.Timer;
 using Toybox.Position;
 using Toybox.PersistedLocations;
 using Toybox.WatchUi as Ui;
+using Toybox.ActivityRecording;
 using _;
 
 module Data{
@@ -27,13 +28,39 @@ module Data{
 			
 			clearProp(KEY_LOC_NAME); clearProp(KEY_LOC_LAT); clearProp(KEY_LOC_LON); clearProp(KEY_LOC_TYPE); clearProp(KEY_LOC_BATCH);
 			clearProp(KEY_BATCH_ID); clearProp(KEY_BATCH_NAME); clearProp(KEY_BATCH_DATE);
-			clearProp(KEY_SORT); clearProp(KEY_DISTANCE); clearProp(KEY_INTERVAL);
+			clearProp(KEY_SORT); clearProp(KEY_DISTANCE); clearProp(KEY_INTERVAL); clearProp(KEY_FORMAT); clearProp(KEY_ACT_TYPE);
 			
 			initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE); initProp(KEY_LOC_BATCH);
 			initProp(KEY_BATCH_ID); initProp(KEY_BATCH_NAME); initProp(KEY_BATCH_DATE);
+			
 			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
 			if(getInterval() == null){ setInterval(0); }
+			if(getFormat() == null){ setFormat(Position.GEO_DEG); }
+			if(getActivityType() == null){ setActivityType(ActivityRecording.SPORT_GENERIC); }
 		}
+		
+		// props
+		
+		hidden function getApp(){ return app.get(); }		
+		hidden function getProp(key){ return getApp().getProperty(key); }		
+		hidden function setProp(key, value){ getApp().setProperty(key, value); }		
+		hidden function initProp(key){ if(getProp(key) == null){ setProp(key, []); } }
+		hidden function clearProp(key){ setProp(key, null); }
+		
+		// options
+		
+		function getSortBy(){ return getProp(KEY_SORT); }	
+		function setSortBy(sortBy){ setProp(KEY_SORT, sortBy); setLocations(sortLocations(getLocations(), sortBy)); }	
+		function getDistance(){ return getProp(KEY_DISTANCE); }
+		function setDistance(distance){ setProp(KEY_DISTANCE, distance); }
+		function getInterval(){ return getProp(KEY_INTERVAL); }
+		function setInterval(interval){ setProp(KEY_INTERVAL, interval); startTimer(interval); }
+		function getFormat(){ return getProp(KEY_FORMAT); }
+		function setFormat(format){ setProp(KEY_FORMAT, format); }
+		function getActivityType(){ return getProp(KEY_ACT_TYPE); }
+		function setActivityType(activityType){ return setProp(KEY_ACT_TYPE, activityType); }
+		
+		// locations
 		
 		hidden function startTimer(interval){
 			timer.stop();
@@ -70,25 +97,6 @@ module Data{
 				currentLocation = info.position.toRadians();
 			}
 		}
-		
-		// props
-		
-		hidden function getApp(){ return app.get(); }		
-		hidden function getProp(key){ return getApp().getProperty(key); }		
-		hidden function setProp(key, value){ getApp().setProperty(key, value); }		
-		hidden function initProp(key){ if(getProp(key) == null){ setProp(key, []); } }
-		hidden function clearProp(key){ setProp(key, null); }
-		
-		// options
-		
-		function getSortBy(){ return getProp(KEY_SORT); }	
-		function setSortBy(sortBy){ setProp(KEY_SORT, sortBy); setLocations(sortLocations(getLocations(), sortBy)); }	
-		function getDistance(){ return getProp(KEY_DISTANCE); }
-		function setDistance(distance){ setProp(KEY_DISTANCE, distance); }
-		function getInterval(){ return getProp(KEY_INTERVAL); }
-		function setInterval(interval){ setProp(KEY_INTERVAL, interval); startTimer(interval); }
-		
-		// locations
 		
 		function getLocations(){
 			return new Locations(getProp(KEY_LOC_NAME), getProp(KEY_LOC_LAT), getProp(KEY_LOC_LON), getProp(KEY_LOC_TYPE), getProp(KEY_LOC_BATCH));
@@ -397,6 +405,8 @@ module Data{
 		KEY_SORT,
 		KEY_DISTANCE,
 		KEY_INTERVAL,
+		KEY_FORMAT,
+		KEY_ACT_TYPE,
 		
 		KEY_LOC_LAT,
 		KEY_LOC_LON,

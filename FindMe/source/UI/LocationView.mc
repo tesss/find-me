@@ -30,6 +30,33 @@ module UI{
 			(point[1] - center[1]) * Math.cos(angle) + (point[0] - center[0]) * Math.sin(angle) + center[1]
 		];
 	}
+	
+	function getLocationStr(location, dataStorage){
+		// format from settings
+		return new Position.Location({
+			:latitude => location[Data.LOC_LAT], 
+			:longitude => location[Data.LOC_LON], 
+			:format => :radians}).toGeoString(dataStorage.getFormat());
+	}
+	
+	function getDistanceStr(location, distance){
+		if(distance == null || heading == null){
+			return "...";
+		}
+		var isMetric = dataStorage.deviceSettings.distanceUnits == System.UNIT_METRIC;
+		if(distance < 1){
+			var meters = distance * 1000;
+			if(isMetric){
+				return meters.toNumber() + " m";
+			}
+			return (meters * 3.2808).toNumber() + " ft";
+		} else {
+			if(isMetric){
+				return distance.format("%.2f") + " km";
+			}
+			return (distance * 0.621371).format("%.2f") + " mi";
+		}
+	}
 
 	class LocationView extends Ui.View{
 		hidden var model;
@@ -46,34 +73,6 @@ module UI{
 		function onSensor(info){
 			heading = info.heading;
 			Ui.requestUpdate();
-		}
-		
-		hidden function getLocationStr(location){
-			// format from settings
-			return new Position.Location({
-				:latitude => location[Data.LOC_LAT], 
-				:longitude => location[Data.LOC_LON], 
-				:format => :radians}).toGeoString(Position.GEO_DEG);
-		}
-		
-		hidden function getDistanceStr(location, distance){
-			if(distance == null || heading == null){
-				return "...";
-				return getLocationStr(location);
-			}
-			var isMetric = dataStorage.deviceSettings.distanceUnits == System.UNIT_METRIC;
-			if(distance < 1){
-				var meters = distance * 1000;
-				if(isMetric){
-					return meters.toNumber() + " m";
-				}
-				return (meters * 3.2808).toNumber() + " ft";
-			} else {
-				if(isMetric){
-					return distance.format("%.2f") + " km";
-				}
-				return (distance * 0.621371).format("%.2f") + " mi";
-			}
 		}
 		
 		hidden function drawDynamic(location, drawModel, dc){
@@ -94,7 +93,7 @@ module UI{
 			if(bearing == null || heading == null){
 				// Forerunner 920xt - location doesn't show
 				setColor(dc, COLOR_SECONDARY);
-				dc.drawText(drawModel.bearing[0], drawModel.bearing[1], Graphics.FONT_TINY, getLocationStr(location), Graphics.TEXT_JUSTIFY_CENTER);
+				dc.drawText(drawModel.bearing[0], drawModel.bearing[1], Graphics.FONT_TINY, getLocationStr(location, dataStorage), Graphics.TEXT_JUSTIFY_CENTER);
 				setColor(dc, COLOR_LOWLIGHT);
 				dc.drawLine(drawModel.line1Dis[0], drawModel.line1Dis[1], drawModel.line1Dis[2], drawModel.line1Dis[3]);
 				dc.drawLine(drawModel.line2Dis[0], drawModel.line2Dis[1], drawModel.line2Dis[2], drawModel.line2Dis[3]);

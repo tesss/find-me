@@ -17,7 +17,7 @@ module UI{
 			addItem("Coordinates format", :format);
 			addItem("Activity type", :format);
 			addItem("Clear All", :clear);
-			addItem("About", :about);
+			addItem("About", :about); // with connection status
 		}
 	}
 	

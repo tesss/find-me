@@ -36,7 +36,7 @@ module UI{
 		}
 		
 		hidden function newSession(){
-			return ActivityRecording.createSession({:name => "FindMe " + Data.dateStr(Time.Time.now().value())}); // add activity type
+			return ActivityRecording.createSession({:name => "FindMe " + Data.dateStr(Time.Time.now().value()), :sport => model.dataStorage.getActivityType()}); // add activity type
 		}
 	
 	    function onMenuItem(item) {
@@ -51,7 +51,8 @@ module UI{
 	    			dataStorage.session = newSession();
 	    			dataStorage.session.start(); // check for error
 	    		}
-	    	} else {
+	    	} else if(item == :coord){
+	    		Ui.pushView(new CoordinatesView(getLocationStr(model.get(), dataStorage)), new CoordinatesDelegate(), transition);
 	    	}
 	    }
     }

@@ -46,6 +46,7 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
     }
 	
 	function printTypes(types){
+		// check version
 		// optimise for 300 locations
 		//var data = bridge.parseMail(i);
     	// transaction while saving
