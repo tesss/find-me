@@ -1,4 +1,5 @@
 using Toybox.WatchUi as Ui;
+using Toybox.System;
 
 module UI{
 	var transition;
@@ -6,6 +7,7 @@ module UI{
 
 	class MainView extends Ui.View {
 		hidden var dataStorage;
+		hidden var firstLoad;
 	
 		function initialize(_dataStorage){
 			dataStorage = _dataStorage;
@@ -15,10 +17,24 @@ module UI{
 			if(screenType == :square && dataStorage.deviceSettings.inputButtons & System.BUTTON_INPUT_UP == 0){
 				transition = Ui.SLIDE_RIGHT;
 			}
+			firstLoad = true;
+			
 			Ui.pushView(new MainMenu(dataStorage), new MainMenuDelegate(dataStorage), transition);
 			// show info if no elements
 			var types = dataStorage.getTypesList();
 			Ui.pushView(new TypesMenu(types, dataStorage), new TypesMenuDelegate(types, dataStorage), transition);
+		}
+		
+		function onShow(){
+			if(firstLoad){
+				firstLoad = false;
+			} else {
+				if(dataStorage.session != null && dataStorage.session.isRecording()){
+					Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(dataStorage, true), transition);
+				} else {
+					System.exit();
+				}
+			}
 		}
 	}
 	

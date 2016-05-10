@@ -4,7 +4,7 @@ module UI{
 	class LocationsViewModel{
 		hidden var locations;
 		hidden var index;
-		hidden var dataStorage;
+		var dataStorage;
 		
 		var fullRefresh;
 		

@@ -267,5 +267,9 @@ module UI{
 			model.prev();
 			Ui.requestUpdate();
 		}
+		
+		function onSelect(){
+			Ui.pushView(new LocationMenu(model), new LocationMenuDelegate(model), transition);
+		}
 	}
 }

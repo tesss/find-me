@@ -1,3 +1,4 @@
+
 using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 using Data;
@@ -52,7 +53,10 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
     	// optimise for 300 locations
     	// start activity from location menu
     	// play sound when import performed or vibrate
-    	// show find only for supported devices
+    	// add with picker
+    	// show find only for supported devices (possible with picker)
+    	// coordinates from location menu
+    	// delete all
     	
 		//dataStorage.setDistance(7000);
 	    //dataStorage.addBatch(data[0]);

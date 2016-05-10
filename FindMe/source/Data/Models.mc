@@ -89,8 +89,7 @@ module Data {
 		function toString(){
 			var str = "";
 			for(var i = 0; i < size(); i++){
-				var date = Time.Gregorian.info(new Time.Moment(dates[i]), Time.FORMAT_SHORT);
-				var dateStr = date.hour + ":" + date.min + ":" + date.sec;
+				var dateStr = dateStr(dates[i]);
 				str = str + ids[i] + " " + names[i] + " " + dateStr + "\n";
 			}
 			return str;

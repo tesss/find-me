@@ -17,6 +17,7 @@ module Data{
 		var timer;
 		var gpsInProgress;
 		var currentLocation;
+		var session;
 		
 		function initialize(){
 			app = Application.getApp().weak();
@@ -374,6 +375,12 @@ module Data{
 		var x = Math.cos(lat1) * Math.sin(lat2) - 
 				Math.sin(lon1) * Math.cos(lon2) * Math.cos(dLon);
 		return Math.toDegrees(Math.atan2(y, x));
+	}
+	
+	function dateStr(moment){
+		var date = Time.Gregorian.info(new Time.Moment(moment), Time.FORMAT_SHORT);
+		var dateStr = date.day + "." + date.month + "." + date.year + " " + date.hour + ":" + date.min + ":" + date.sec;
+		return dateStr;
 	}
 	
 	enum {

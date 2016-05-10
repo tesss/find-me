@@ -14,6 +14,9 @@ module UI{
 			addItem("Sorting", :sortby);
 			addItem("Distance Filter", :distance);
 			addItem("GPS interval", :interval);
+			addItem("Coordinates format", :format);
+			addItem("Activity type", :format);
+			addItem("Clear All", :clear);
 			addItem("About", :about);
 		}
 	}
