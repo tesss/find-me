@@ -6,7 +6,8 @@ module UI{
 		
 		function initialize(_dataStorage){
 			dataStorage = _dataStorage;
-			setTitle("find°me");
+			setTitle("find^me");
+			addItem("Add");
 			addItem("Find", :find);
 			addItem("Batches", :batches);
 			addItem("Sorting", :sortby);
