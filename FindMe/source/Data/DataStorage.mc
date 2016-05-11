@@ -113,11 +113,11 @@ module Data{
 		}
 		
 		hidden function setLocations(locations){
-			setProp(KEY_LOC_NAME, locations.names);
 			setProp(KEY_LOC_LAT, locations.latitudes);
 			setProp(KEY_LOC_LON, locations.longitudes);
 			setProp(KEY_LOC_TYPE, locations.types);
 			setProp(KEY_LOC_BATCH, locations.batches);
+			setProp(KEY_LOC_NAME, locations.names);
 		}
 		
 		// validate in import
@@ -209,7 +209,6 @@ module Data{
 			locations.batches = ArrayExt.union(locations.batches, newLocations.batches);
 			locations = sortLocations(locations);
 			setLocations(locations);
-			locations = null;
 		}
 		
 		function addBatch(batch){

@@ -11,6 +11,7 @@ module UI{
 			addItem("Add", :add);
 			addItem("Find", :find);
 			addItem("Batches", :batches);
+			
 			addItem("Sorting", :sortby);
 			addItem("Distance Filter", :distance);
 			addItem("GPS interval", :interval);
@@ -31,7 +32,8 @@ module UI{
 		function onMenuItem(item){
 			if(item == :types){
 				pushTypesMenu(dataStorage);
-			} else {
+			} else if(item == :add) {
+				Ui.pushView(new LocationPicker(dataStorage.getFormat()), new LocationPickerDelegate(), transition);
 			}
 		}
 	}

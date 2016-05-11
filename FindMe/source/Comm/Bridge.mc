@@ -17,10 +17,15 @@ module Comm {
 	    function parseMail(mail){
 	    	// mock
 	    	var batch = [mail, "Batch #" + mail, Time.now().value()];
-	    	var l = 50;
+	    	var l = 100;
 	    	var locations = new Data.DataStorage.Locations(new[l],new[l],new[l],new[l],new[l]);
 	    	for(var i = 0; i < l; i++){
-	    		locations.names[i] = "Brighton Beach " + i;
+	    		if(i < 10){
+	    			locations.names[i] = "IIEiger Wall 0" + i;
+	    		} else {
+	    			locations.names[i] = "IIEiger Wall " + i;
+	    		}
+	    		
 	    		locations.latitudes[i] = (Math.rand() % 150) * 0.01;
 	    		locations.longitudes[i] = (Math.rand() % 314) * 0.01;
 	    		locations.types[i] = Math.rand() % Data.DataStorage.TYPES.size();

@@ -45,18 +45,16 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
     }
 	
 	function printTypes(types){
-		// cache types
-		// check version
-		// optimise for 300 locations
-		//var data = bridge.parseMail(i);
-    	// transaction while saving
-    	// id - generated max
-    	// optimise for 300 locations
-    	// play sound when import performed or vibrate
-    	// add with picker
+		// limit - 100 locations
+		// check sdk version
+		// transaction while saving
+		// id - generated max
+		// play sound when import performed and activity or vibrate
+		// add with picker
     	// show find only for supported devices (possible with picker)
     	// delete all
-    	
+		
+		//var data = bridge.parseMail(i);    	
 		//dataStorage.setDistance(7000);
 	    //dataStorage.addBatch(data[0]);
 	    //dataStorage.addLocations(data[1]);
