@@ -8,12 +8,6 @@ using Data;
 using _;
 
 module UI{
-	const COLOR_BACKGROUND = 0x000000;
-	const COLOR_PRIMARY = 0xFFFFFF;
-	const COLOR_SECONDARY = 0xAAAAAA;
-	const COLOR_LOWLIGHT = 0x555555;
-	const COLOR_HIGHLIGHT = 0xFFAA00;
-	
 	function setColor(dc, fcolor, bcolor){
 		if(fcolor == null){
 			fcolor = COLOR_PRIMARY;
@@ -64,9 +58,9 @@ module UI{
 		hidden var drawModel;
 		hidden var heading;
 	
-		function initialize(_model, _dataStorage){
+		function initialize(_model){
 			model = _model;
-			dataStorage = _dataStorage;
+			dataStorage = model.dataStorage;
 			Sensor.enableSensorEvents(method(:onSensor));
 		}
 		
@@ -230,7 +224,9 @@ module UI{
 	
 		function onUpdate(dc){
 			var location = model.get();
-			draw(location, getDrawModel(dc), dc);
+			if(location != null){
+				draw(location, getDrawModel(dc), dc);
+			}
 		}
 	}
 	
@@ -258,17 +254,17 @@ module UI{
 		}
 		
 		function onNextPage(){
-			model.next();
+			model.get().next();
 			Ui.requestUpdate();
 		}
 		
 		function onPreviousPage(){
-			model.prev();
+			model.get().prev();
 			Ui.requestUpdate();
 		}
 		
 		function onSelect(){
-			Ui.pushView(new LocationMenu(model), new LocationMenuDelegate(model), transition);
+			Ui.pushView(new LocationMenu(model.get()), new LocationMenuDelegate(model), transition);
 		}
 	}
 }

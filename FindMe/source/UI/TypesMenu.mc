@@ -4,31 +4,23 @@ using _;
 
 module UI{
 	class TypesMenu extends Ui.Menu {
-		hidden var types;
-		hidden var dataStorage;
-		
-		function initialize(_types, _dataStorage){
-			types = _types;
-			dataStorage = _dataStorage;
+		function initialize(model){
 			setTitle("Types");
-			for(var i = 0; i < types.size(); i++){
-				if(i == 0){
-	     			addItem("All", i);
-		    	} else {
-		    		var key = types[i][0][Data.LOC_TYPE];
-		    		var type = Data.DataStorage.TYPES[key];
-		    		addItem(type, i);
-		    	}
+			for(var i = 0; i < model.size(); i++){
+				addItem(model.getTypeName(i), i);
 			}
 		}
 	}
 	
 	class TypesMenuDelegate extends Ui.MenuInputDelegate {
-		hidden var types;
-		hidden var dataStorage;
+		hidden var model;
+	
+		function initialize(_model){
+			model = _model;
+		}
 		
 		hidden function getIndex(symbol){
-			for(var i = 0; i < types.size(); i++){
+			for(var i = 0; i < model.size(); i++){
 				if(i == symbol){
 					return i;
 				}
@@ -36,19 +28,9 @@ module UI{
 			return null;
 		}
 	
-		function initialize(_types, _dataStorage){
-			types = _types;
-			dataStorage = _dataStorage;
-		}
-	
 	    function onMenuItem(item) {
-	    	var locations = types[getIndex(item)];
-	    	var model = new LocationsViewModel(locations, dataStorage);
-	    	Ui.pushView(new LocationView(model, dataStorage), new LocationDelegate(model), transition);
+	    	model.index = getIndex(item);
+	    	Ui.pushView(new LocationView(model.get()), new LocationDelegate(model), transition);
 	    }
-	    
-	    function onMenu(){
-			Ui.pushView(new MainMenu(dataStorage), new MainMenuDelegate(dataStorage), transition);
-		}
     }
 }

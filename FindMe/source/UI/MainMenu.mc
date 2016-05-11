@@ -6,7 +6,7 @@ module UI{
 		
 		function initialize(_dataStorage){
 			dataStorage = _dataStorage;
-			setTitle("find^me");
+			setTitle("Find Me");
 			addItem("Locations", :types);
 			addItem("Add", :add);
 			addItem("Find", :find);
@@ -14,7 +14,7 @@ module UI{
 			addItem("Sorting", :sortby);
 			addItem("Distance Filter", :distance);
 			addItem("GPS interval", :interval);
-			addItem("Coordinates format", :format);
+			addItem("GEO format", :format);
 			addItem("Activity type", :format);
 			addItem("Clear All", :clear);
 			addItem("About", :about); // with connection status
@@ -30,8 +30,7 @@ module UI{
 		
 		function onMenuItem(item){
 			if(item == :types){
-				var types = dataStorage.getTypesList();
-				Ui.pushView(new TypesMenu(types, dataStorage), new TypesMenuDelegate(types, dataStorage), transition);
+				pushTypesMenu(dataStorage);
 			} else {
 			}
 		}

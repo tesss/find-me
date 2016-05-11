@@ -46,13 +46,28 @@ module UI{
 	    			dataStorage.session = newSession();
 	    			dataStorage.session.start();
 	    		} else if(dataStorage.session.isRecording()){
-	    			Ui.pushView(new Ui.Confirmation("Stop & save activity?"), new ActivityConfirmationDelegate(dataStorage), transition);
+	    			Ui.pushView(new Ui.Confirmation("Stop & save activity?"), new ActivityConfirmationDelegate(dataStorage), noTransition);
 	    		} else {
 	    			dataStorage.session = newSession();
 	    			dataStorage.session.start(); // check for error
 	    		}
 	    	} else if(item == :coord){
-	    		Ui.pushView(new CoordinatesView(getLocationStr(model.get(), dataStorage)), new CoordinatesDelegate(), transition);
+	    		Ui.pushView(new InfoView(getLocationStr(model.get().get(), dataStorage)), new InfoDelegate(), transition);
+	    	} else if(item == :persisted){
+	    		dataStorage.saveLocationPersisted(model.get().get()[dataStorage.LOC_ID]);
+	    		Ui.pushView(new InfoView("Saved successfully"), new InfoDelegate(), transition);
+	    	} else if(item == :delete){
+	    		var fullRefresh = model.delete();
+	    		if(fullRefresh){
+	    			var types = dataStorage.getTypesList();
+	    			var model = new TypesViewModel(types, dataStorage);
+	    			Ui.popView(noTransition);
+					Ui.popView(noTransition);
+					Ui.popView(noTransition);
+					pushTypesMenu(dataStorage);
+	    		}
+	    		Ui.pushView(new InfoView("Deleted"), new InfoDelegate(!fullRefresh), transition);
+	    		// deleted not all items
 	    	}
 	    }
     }

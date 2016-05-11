@@ -26,7 +26,7 @@ class FindMeApp extends App.AppBase {
     }
 
     function getInitialView() {
-        return [new UI.MainView(dataStorage), new UI.MainDelegate(dataStorage)];
+        return [new UI.MainView(dataStorage)];
     }
 
 }
@@ -46,6 +46,9 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
     }
 	
 	function printTypes(types){
+		// show info after saving activity
+		// sort in timer
+		// cache types
 		// check version
 		// optimise for 300 locations
 		//var data = bridge.parseMail(i);

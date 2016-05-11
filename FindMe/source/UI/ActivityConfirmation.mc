@@ -16,7 +16,7 @@ module UI{
 				dataStorage.session.stop();
 				dataStorage.session.save();
 				dataStorage.session = null;
-				Ui.popView(transition);
+				Ui.popView(noTransition);
 			} else {
 				if(exit){
 					dataStorage.session.stop();
