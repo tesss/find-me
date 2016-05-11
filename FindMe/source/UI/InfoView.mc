@@ -1,5 +1,6 @@
 using Toybox.Graphics;
 using Toybox.WatchUi as Ui;
+using Toybox.System;
 
 module UI{
 	class InfoView extends Ui.View{
@@ -31,22 +32,28 @@ module UI{
 	
 	class InfoDelegate extends Ui.BehaviorDelegate {
 		hidden var pop;
+		hidden var exit;
 		
-		function initialize(_pop){
-			if(_pop == null){
-				pop = true;
-			} else {
-				pop = _pop;
-			}
+		function initialize(_pop, _exit){
+			pop = _pop == null || _pop;
+			exit = _exit == true;
 		}
 	
 		function onBack(){
+			if(exit){
+				System.exit();
+				return;
+			}
 			if(pop){
 				Ui.popView(noTransition);
 			}
 		}
 		
 		function onSelect(){
+			if(exit){
+				System.exit();
+				return;
+			}
 			Ui.popView(noTransition);
 			if(pop){
 				Ui.popView(noTransition);

@@ -18,7 +18,9 @@ class FindMeApp extends App.AppBase {
 		
     	var data = bridge.parseMail(i);
 		dataStorage.addBatch(data[0]);
+		data[0] = null;
 	    dataStorage.addLocations(data[1]);
+	    data[1] = null;
 	    data = null;
     }
 
@@ -46,8 +48,6 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
     }
 	
 	function printTypes(types){
-		// show info after saving activity
-		// sort in timer
 		// cache types
 		// check version
 		// optimise for 300 locations
@@ -55,11 +55,9 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
     	// transaction while saving
     	// id - generated max
     	// optimise for 300 locations
-    	// start activity from location menu
     	// play sound when import performed or vibrate
     	// add with picker
     	// show find only for supported devices (possible with picker)
-    	// coordinates from location menu
     	// delete all
     	
 		//dataStorage.setDistance(7000);

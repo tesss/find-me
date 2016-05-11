@@ -4,7 +4,10 @@ using _;
 
 module UI{
 	class TypesMenu extends Ui.Menu {
-		function initialize(model){
+		hidden var model;
+		
+		function initialize(_model){
+			model = _model;
 			setTitle("Types");
 			for(var i = 0; i < model.size(); i++){
 				addItem(model.getTypeName(i), i);

@@ -60,7 +60,7 @@ module UI{
 	
 		function initialize(_model){
 			model = _model;
-			dataStorage = model.dataStorage;
+			dataStorage = model.getDataStorage();
 			Sensor.enableSensorEvents(method(:onSensor));
 		}
 		
@@ -227,6 +227,20 @@ module UI{
 			if(location != null){
 				draw(location, getDrawModel(dc), dc);
 			}
+		}
+		
+		function sort(){
+			model.sort();
+		}
+		
+		function onShow(){
+			var dataStorage = model.getDataStorage();
+			dataStorage.timerCallback = method(:sort);
+		}
+		
+		function onHide(){
+			var dataStorage = model.getDataStorage();
+			dataStorage.timerCallback = null;
 		}
 	}
 	

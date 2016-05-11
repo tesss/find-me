@@ -47,6 +47,7 @@ module UI{
 				firstLoad = false;
 			} else {
 				if(dataStorage.session != null && dataStorage.session.isRecording()){
+					firstLoad = true;
 					Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(dataStorage, true), noTransition);
 				} else {
 					System.exit();

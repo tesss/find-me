@@ -8,7 +8,7 @@ module UI{
 		
 		function initialize(_dataStorage, _exit){
 			dataStorage = _dataStorage;
-			exit = _exit;
+			exit = _exit == true;
 		}
 		
 		function onResponse(response){
@@ -16,16 +16,18 @@ module UI{
 				dataStorage.session.stop();
 				dataStorage.session.save();
 				dataStorage.session = null;
-				Ui.popView(noTransition);
-			} else {
-				if(exit){
-					dataStorage.session.stop();
-					dataStorage.session.discard();
+				if(!exit){
+					Ui.popView(noTransition);
 				}
-				//dataStorage.session.discard();
-			}
-			if(exit){
-				System.exit();
+				Ui.pushView(new InfoView("Activity saved"), new InfoDelegate(false, exit), transition);
+			} else {
+				dataStorage.session.stop();
+				dataStorage.session.discard();
+				dataStorage.session = null;
+				if(!exit){
+					Ui.popView(noTransition);
+				}
+				Ui.pushView(new InfoView("Activity discarded"), new InfoDelegate(false, exit), transition);
 			}
 		}
 	}

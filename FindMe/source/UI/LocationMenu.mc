@@ -11,10 +11,10 @@ module UI{
 		function initialize(_model){
 			model = _model;
 			setTitle("Location");
-			if(model.dataStorage.session == null){
+			if(model.getDataStorage().session == null){
 				addItem("Start Activity", :activity);
 			} else {
-				if(model.dataStorage.session.isRecording){
+				if(model.getDataStorage().session.isRecording){
 					addItem("Stop Activity", :activity);
 				} else {
 					addItem("Start Activity", :activity);
@@ -36,17 +36,17 @@ module UI{
 		}
 		
 		hidden function newSession(){
-			return ActivityRecording.createSession({:name => "FindMe " + Data.dateStr(Time.Time.now().value()), :sport => model.dataStorage.getActivityType()}); // add activity type
+			return ActivityRecording.createSession({:name => "FindMe " + Data.dateStr(Time.Time.now().value()), :sport => model.getDataStorage().getActivityType()}); // add activity type
 		}
 	
 	    function onMenuItem(item) {
-	    	var dataStorage = model.dataStorage;
+	    	var dataStorage = model.getDataStorage();
 	    	if(item == :activity){
 	    		if(dataStorage.session == null){
 	    			dataStorage.session = newSession();
 	    			dataStorage.session.start();
 	    		} else if(dataStorage.session.isRecording()){
-	    			Ui.pushView(new Ui.Confirmation("Stop & save activity?"), new ActivityConfirmationDelegate(dataStorage), noTransition);
+	    			Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(dataStorage), noTransition);
 	    		} else {
 	    			dataStorage.session = newSession();
 	    			dataStorage.session.start(); // check for error

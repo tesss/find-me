@@ -12,7 +12,11 @@ module UI{
 			for(var i = 0; i < types.size(); i++){
 				types[i] = new LocationsViewModel(_types[i], _dataStorage);
 			}
-			dataStorage = _dataStorage;
+			dataStorage = _dataStorage.weak();
+		}
+		
+		function getDataStorage(){
+			return dataStorage.get();
 		}
 		
 		function size(){
@@ -38,8 +42,8 @@ module UI{
 		function delete(){
 			var locationsModel = get();
 			var locationIndex = locationsModel.index;
-			var currentId = locationsModel.get()[dataStorage.LOC_ID];
-			dataStorage.deleteLocation(currentId);
+			var currentId = locationsModel.get()[Data.DataStorage.LOC_ID];
+			getDataStorage().deleteLocation(currentId);
 			locationsModel.locations = Data.ArrayExt.removeAt(locationsModel.locations, locationIndex);
 			var all = get(0);
 			for(var i = 0; i < all.size(); i++){
@@ -85,9 +89,13 @@ module UI{
 		
 		function initialize(_locations, _dataStorage){
 			locations = _locations;
-			dataStorage = _dataStorage;
+			dataStorage = _dataStorage.weak();
 			index = 0;
 			fullRefresh = true;
+		}
+		
+		function getDataStorage(){
+			return dataStorage.get();
 		}
 		
 		function size(){
@@ -125,7 +133,7 @@ module UI{
 		}
 		
 		function sort(){
-			var sorted = dataStorage.sortLocationsList(locations, get()[Data.LOC_ID]);
+			var sorted = getDataStorage().sortLocationsList(locations, get()[Data.LOC_ID]);
 			locations = sorted[0];
 			index = sorted[1];
 		}

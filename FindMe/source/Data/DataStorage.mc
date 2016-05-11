@@ -19,6 +19,7 @@ module Data{
 		var gpsInProgress;
 		var currentLocation;
 		var session;
+		var timerCallback;
 		
 		function initialize(){
 			app = Application.getApp().weak();
@@ -60,7 +61,13 @@ module Data{
 		function getActivityType(){ return getProp(KEY_ACT_TYPE); }
 		function setActivityType(activityType){ return setProp(KEY_ACT_TYPE, activityType); }
 		
-		// locations
+		// timer
+		
+		hidden function invokeTimerCallback(){
+			if(timerCallback != null){
+				timerCallback.invoke();
+			}
+		}
 		
 		hidden function startTimer(interval){
 			timer.stop();
@@ -96,7 +103,10 @@ module Data{
 			} else {
 				currentLocation = info.position.toRadians();
 			}
+			invokeTimerCallback();
 		}
+		
+		// timer
 		
 		function getLocations(){
 			return new Locations(getProp(KEY_LOC_NAME), getProp(KEY_LOC_LAT), getProp(KEY_LOC_LON), getProp(KEY_LOC_TYPE), getProp(KEY_LOC_BATCH));
@@ -184,9 +194,9 @@ module Data{
 				}
 				location = [0, Math.toDegrees(currentLocation[LAT]) + ", " + Math.toDegrees(currentLocation[LON]), currentLocation[LAT], currentLocation[LON], TYPES.size() - 1, -1];
 			}
-			var locations = getLocations();
 			var newLocations = new Locations([location[LOC_NAME]], [location[LOC_LAT]], [location[LOC_LON]], [location[LOC_TYPE]], [location[LOC_BATCH]]);
 			addLocations(newLocations);
+			newLocations = null;
 		}
 		
 		// show error if too much
