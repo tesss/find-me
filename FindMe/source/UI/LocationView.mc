@@ -235,12 +235,9 @@ module UI{
 		
 		function onShow(){
 			var dataStorage = model.getDataStorage();
-			dataStorage.timerCallback = method(:sort);
-		}
-		
-		function onHide(){
-			var dataStorage = model.getDataStorage();
-			dataStorage.timerCallback = null;
+			if(dataStorage.getSortBy() == Data.SORTBY_DISTANCE){
+				dataStorage.timerCallback = method(:sort).weak();
+			}
 		}
 	}
 	

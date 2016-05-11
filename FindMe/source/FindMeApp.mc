@@ -18,10 +18,7 @@ class FindMeApp extends App.AppBase {
 		
     	var data = bridge.parseMail(i);
 		dataStorage.addBatch(data[0]);
-		data[0] = null;
 	    dataStorage.addLocations(data[1]);
-	    data[1] = null;
-	    data = null;
     }
 
     function onStop() {

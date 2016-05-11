@@ -64,8 +64,8 @@ module Data{
 		// timer
 		
 		hidden function invokeTimerCallback(){
-			if(timerCallback != null){
-				timerCallback.invoke();
+			if(timerCallback != null && timerCallback.stillAlive()){
+				timerCallback.get().invoke();
 			}
 		}
 		
