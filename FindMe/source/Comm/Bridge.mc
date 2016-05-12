@@ -31,6 +31,11 @@ module Comm {
 	    		locations.types[i] = Math.rand() % Data.DataStorage.TYPES.size();
 	    		locations.batches[i] = mail;
 	    	}
+	    	locations.set(0, "Franka", 0.8698, 0.4192, 0, null);
+	    	locations.set(1, "Shevshenka 36", 0.869790, 0.419443518, 0, null);
+	    	locations.set(2, "Hrushevsky", 0.869793, 0.419437057, 0, null);
+	    	locations.set(3, "Tram Stop", 0.869768, 0.4194759129, 0, null);
+	    	
 	    	return [batch, locations];
 	    }
 	    

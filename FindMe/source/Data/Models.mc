@@ -6,12 +6,20 @@ module Data {
 		var types;
 		var batches;
 		
-		function get(i, lat, lon){ // bearing
+		function get(i, lat, lon){
 			var distance = null;
 			if(lat != null && lon != null){
 				distance = distance(latitudes[i], longitudes[i], lat, lon);
 			}
 			return [i, names[i], latitudes[i], longitudes[i], types[i], batches[i], distance];
+		}
+		
+		function set(i, name, latitude, longitude, type, batch){
+			names[i] = name;
+			latitudes[i] = latitude;
+			longitudes[i] = longitude;
+			types[i] = type;
+			batches[i] = batch;
 		}
 		
 		function remove(i){
@@ -68,6 +76,12 @@ module Data {
 		
 		function get(i){
 			return [i, ids[i], names[i], dates[i]];
+		}
+		
+		function set(i, id, name, date){
+			ids[i] = id;
+			names[i] = name;
+			dates[i] = date;
 		}
 		
 		function remove(i){

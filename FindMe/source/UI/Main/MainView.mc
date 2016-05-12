@@ -5,6 +5,7 @@ module UI{
 	var transition;
 	var noTransition;
 	var screenType;
+	var types;
 	
 	const COLOR_BACKGROUND = 0x000000;
 	const COLOR_PRIMARY = 0xFFFFFF;
@@ -13,7 +14,7 @@ module UI{
 	const COLOR_HIGHLIGHT = 0xFFAA00;
 	
 	function pushTypesMenu(dataStorage){
-		var types = dataStorage.getTypesList();
+		types = dataStorage.getTypesList();
 		if(types.size() <= 1){
 			// show add locations
 			Ui.pushView(new InfoView("No locations"), new InfoDelegate(false), noTransition);
@@ -50,7 +51,7 @@ module UI{
 					firstLoad = true;
 					Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(dataStorage, true), noTransition);
 				} else {
-					System.exit();
+					Ui.popView(noTransition);
 				}
 			}
 		}

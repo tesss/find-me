@@ -33,10 +33,7 @@ module UI{
 			:format => :radians}).toGeoString(dataStorage.getFormat());
 	}
 	
-	function getDistanceStr(location, distance){
-		if(distance == null || heading == null){
-			return "...";
-		}
+	function getDistanceStr(distance){
 		var isMetric = dataStorage.deviceSettings.distanceUnits == System.UNIT_METRIC;
 		if(distance < 1){
 			var meters = distance * 1000;
@@ -56,56 +53,67 @@ module UI{
 		hidden var model;
 		hidden var dataStorage;
 		hidden var drawModel;
-		hidden var heading;
+		hidden var dots;
 	
 		function initialize(_model){
 			model = _model;
 			dataStorage = model.getDataStorage();
+			dots = "";
+			
 			Sensor.enableSensorEvents(method(:onSensor));
 		}
 		
 		function onSensor(info){
-			heading = info.heading;
 			Ui.requestUpdate();
 		}
 		
 		hidden function drawDynamic(location, drawModel, dc){
-			var distance = null;
-			var bearing = null;			
-			if(dataStorage.currentLocation != null){
-				distance = Data.distance(location[Data.LOC_LAT], location[Data.LOC_LON], dataStorage.currentLocation[Data.LAT], dataStorage.currentLocation[Data.LON]);
-				bearing = Data.bearing(location[Data.LOC_LAT], location[Data.LOC_LON], dataStorage.currentLocation[Data.LAT], dataStorage.currentLocation[Data.LON]);
-			}
-			if(heading == null){
-				heading = Sensor.getInfo().heading;
-			}
-			
-			var distanceStr = getDistanceStr(location, distance);
-			setColor(dc, COLOR_HIGHLIGHT);
-			dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_SMALL, distanceStr, Graphics.TEXT_JUSTIFY_CENTER);
-			
-			if(bearing == null || heading == null){
+			if(dataStorage.currentLocation == null || dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
 				// Forerunner 920xt - location doesn't show
 				setColor(dc, COLOR_SECONDARY);
 				dc.drawText(drawModel.bearing[0], drawModel.bearing[1], Graphics.FONT_TINY, getLocationStr(location, dataStorage), Graphics.TEXT_JUSTIFY_CENTER);
+				
 				setColor(dc, COLOR_LOWLIGHT);
 				dc.drawLine(drawModel.line1Dis[0], drawModel.line1Dis[1], drawModel.line1Dis[2], drawModel.line1Dis[3]);
 				dc.drawLine(drawModel.line2Dis[0], drawModel.line2Dis[1], drawModel.line2Dis[2], drawModel.line2Dis[3]);
+				
+				if(dots.length() < 3){
+					dots = dots + ".";
+				} else {
+					dots = "";
+				}
+				setColor(dc, COLOR_HIGHLIGHT);
+				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_XTINY, "GPS" + dots, Graphics.TEXT_JUSTIFY_CENTER);
 			} else {
-				bearing = Math.toRadians(bearing) - heading;
+				var distance = Data.distance(
+					location[Data.LOC_LAT], 
+					location[Data.LOC_LON], 
+					dataStorage.currentLocation[Data.LAT], 
+					dataStorage.currentLocation[Data.LON]);
+				var bearing = Data.bearing(
+					dataStorage.currentLocation[Data.LAT], 
+					dataStorage.currentLocation[Data.LON], 
+					location[Data.LOC_LAT], 
+					location[Data.LOC_LON]) - dataStorage.currentLocation[Data.HEADING];
+				dots = "";
+
 				setColor(dc, COLOR_LOWLIGHT);
 				dc.drawLine(drawModel.line1[0], drawModel.line1[1], drawModel.line1[2], drawModel.line1[3]);
 				dc.drawLine(drawModel.line2[0], drawModel.line2[1], drawModel.line2[2], drawModel.line2[3]);
+				
 				setColor(dc, COLOR_SECONDARY);
-				drawModel.direction[0] = rotate(drawModel.direction[0], drawModel.directionCenter, bearing);
-				drawModel.direction[1] = rotate(drawModel.direction[1], drawModel.directionCenter, bearing);
-				drawModel.direction[2] = rotate(drawModel.direction[2], drawModel.directionCenter, bearing);
-				drawModel.direction[3] = rotate(drawModel.direction[3], drawModel.directionCenter, bearing);
-				dc.fillPolygon(drawModel.direction);	
-				dc.drawLine(drawModel.direction[0][0], drawModel.direction[0][1], drawModel.direction[1][0], drawModel.direction[1][1]);
-				dc.drawLine(drawModel.direction[1][0], drawModel.direction[1][1], drawModel.direction[2][0], drawModel.direction[2][1]);
-				dc.drawLine(drawModel.direction[2][0], drawModel.direction[2][1], drawModel.direction[3][0], drawModel.direction[3][1]);
-				dc.drawLine(drawModel.direction[3][0], drawModel.direction[3][1], drawModel.direction[0][0], drawModel.direction[0][1]);
+				var p1 = rotate(drawModel.direction[0], drawModel.directionCenter, bearing);
+				var p2 = rotate(drawModel.direction[1], drawModel.directionCenter, bearing);
+				var p3 = rotate(drawModel.direction[2], drawModel.directionCenter, bearing);
+				var p4 = rotate(drawModel.direction[3], drawModel.directionCenter, bearing);
+				dc.fillPolygon([p1, p2, p3, p4]);	
+				dc.drawLine(p1[0], p1[1], p2[0], p2[1]);
+				dc.drawLine(p2[0], p2[1], p3[0], p3[1]);
+				dc.drawLine(p3[0], p3[1], p4[0], p4[1]);
+				dc.drawLine(p4[0], p4[1], p1[0], p1[1]);
+				
+				setColor(dc, COLOR_HIGHLIGHT);
+				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_SMALL, getDistanceStr(distance), Graphics.TEXT_JUSTIFY_CENTER);
 			}
 		}
 		

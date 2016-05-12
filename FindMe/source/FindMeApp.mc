@@ -45,7 +45,8 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
     }
 	
 	function printTypes(types){
-		// limit - 100 locations
+		// show gps status
+		// limit - 100 locations - creshes on device
 		// check sdk version
 		// transaction while saving
 		// id - generated max

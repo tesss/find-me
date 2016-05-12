@@ -16,7 +16,6 @@ module Data{
 		var app = null;
 		var deviceSettings;
 		var timer;
-		var gpsInProgress;
 		var currentLocation;
 		var session;
 		var timerCallback;
@@ -74,7 +73,7 @@ module Data{
 			if(interval <= 0){
 				onTimer(interval);
 			} else {
-				timer.start(method(:onTimer), interval, false);
+				timer.start(method(:onTimer), interval, true);
 			}
 		}
 		
@@ -82,27 +81,16 @@ module Data{
 			if(interval == -1){
 				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 				currentLocation = null;
-				Ui.requestUpdate();
 			} else if(interval == 0){
 				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
 			} else {
-				if(gpsInProgress){
-					currentLocation = null;
-					Ui.requestUpdate();
-				} else {
-					gpsInProgress = true;
-					Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
-				}
+				Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
 			}
 		}
 		
 		function updateCurrentLocation(info){
-			gpsInProgress = false;
-			if(info.accuracy == Position.QUALITY_NOT_AVAILABLE){
-				currentLocation = null;
-			} else {
-				currentLocation = info.position.toRadians();
-			}
+			var radians = info.position.toRadians();
+			currentLocation = [radians[0], radians[1], info.heading, info.accuracy];
 			invokeTimerCallback();
 		}
 		
@@ -192,7 +180,7 @@ module Data{
 				if(currentLocation == null){
 					return;
 				}
-				location = [0, Math.toDegrees(currentLocation[LAT]) + ", " + Math.toDegrees(currentLocation[LON]), currentLocation[LAT], currentLocation[LON], TYPES.size() - 1, -1];
+				location = [0, toDegrees(currentLocation[LAT]) + ", " + Math.toDegrees(currentLocation[LON]), currentLocation[LAT], currentLocation[LON], TYPES.size() - 1, -1];
 			}
 			var newLocations = new Locations([location[LOC_NAME]], [location[LOC_LAT]], [location[LOC_LON]], [location[LOC_TYPE]], [location[LOC_BATCH]]);
 			addLocations(newLocations);
@@ -360,7 +348,12 @@ module Data{
 		
 		function saveLocationPersisted(i){ // check if has persisted
 			var locations = getLocations();
-			PersistedLocations.persistLocation(new Position.Location({:latitude => locations.latitudes[i], :longitude => locations.longitudes[i], :format => :radians}));
+			PersistedLocations.persistLocation(new Position.Location({
+				:latitude => locations.latitudes[i], 
+				:longitude => locations.longitudes[i], 
+				:format => :radians}), {
+				:name => locations.names[i]
+			});
 		}
 		
 		function saveBatchPersisted(i){
@@ -374,78 +367,5 @@ module Data{
 				}
 			}
 		}
-	}
-	
-	const r = 6371;
-	
-	function distance(lat1, lon1, lat2, lon2){
-		var dLat = lat2 - lat1;
-		var dLon = lon2 - lon1;
-		var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-		        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
-		return 2 * r * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-	}
-	
-	function bearing(lat1, lon1, lat2, lon2){
-		var dLon = lon2 - lon1;
-		var y = Math.sin(dLon) * Math.cos(lat2);
-		var x = Math.cos(lat1) * Math.sin(lat2) - 
-				Math.sin(lon1) * Math.cos(lon2) * Math.cos(dLon);
-		return Math.toDegrees(Math.atan2(y, x));
-	}
-	
-	function dateStr(moment){
-		var date = Time.Gregorian.info(new Time.Moment(moment), Time.FORMAT_SHORT);
-		var dateStr = date.day + "." + date.month + "." + date.year + " " + date.hour + ":" + date.min + ":" + date.sec;
-		return dateStr;
-	}
-	
-	enum {
-		SORTBY_NAME,
-		SORTBY_DISTANCE
-	}
-	
-	enum {
-		LAT,
-		LON
-	}
-	
-	enum {
-		KEY_SORT,
-		KEY_DISTANCE,
-		KEY_INTERVAL,
-		KEY_FORMAT,
-		KEY_ACT_TYPE,
-		
-		KEY_LOC_LAT,
-		KEY_LOC_LON,
-		KEY_LOC_NAME,
-		KEY_LOC_TYPE,
-		KEY_LOC_BATCH,
-		
-		KEY_BATCH_ID,
-		KEY_BATCH_NAME,
-		KEY_BATCH_DATE
-	}
-	
-	enum {
-		KEY,
-		VALUE
-	}
-	
-	enum {
-		LOC_ID,
-		LOC_NAME,
-		LOC_LAT,
-		LOC_LON,
-		LOC_TYPE,
-		LOC_BATCH,
-		LOC_DIST
-	}
-	
-	enum {
-		BATCH_ID,
-		BATCH_NAME,
-		BATCH_DATE
 	}
 }
