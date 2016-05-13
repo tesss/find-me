@@ -4,25 +4,26 @@ using Toybox.System;
 using Data;
 
 module UI{
+	const PICKER_FONT = 6;
+	const PICKER_JUSTIFICATION = 2;
+
 	class LocationPicker extends Ui.Picker {
 		var format;
-		const FONT = Graphics.FONT_SMALL;
-		const JUSTIFICATION = Graphics.TEXT_JUSTIFY_CENTER;
 	
 		function initialize(_format){
 			format = _format;
 			var separator = new Ui.Text({
 				:text => "-",
-				:font => FONT, 
-				:justification => JUSTIFICATION
+				:font => PICKER_FONT
+				//:justification => PICKER_JUSTIFICATION
 			});
 			setOptions({
 				:title => new Ui.Text({
-					:text => "Add Location",
-					:font => FONT, 
-					:justification => JUSTIFICATION
+					:text => "New",
+					:font => Graphics.FONT_MEDIUM,
+					:justification => Graphics.TEXT_JUSTIFY_LEFT
 				}), 
-				:pattern => [separator]
+				:pattern => [new DegreeFactory(true), separator, new DegreeFactory(false)]
 			});
 		}
 	}
@@ -42,8 +43,8 @@ module UI{
 			return new Ui.Text({
 				:text => index.toString(),
 				:color => color, 
-				:font => Graphics.FONT_SMALL, 
-				:justification => Graphics.TEXT_JUSTIFY_CENTER
+				:font => PICKER_FONT,
+				:justification => PICKER_JUSTIFICATION
 			});
 		}
 		
