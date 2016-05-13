@@ -1,8 +1,18 @@
 using Toybox.Graphics;
 using Toybox.WatchUi as Ui;
 using Toybox.System;
+using Toybox.Lang;
 
 module UI{
+	function pushInfoView(_str, _transition, _pop, _exit){
+		if(_transition == null){
+			_transition = transition;
+		}
+		_pop = _pop == null || _pop instanceof Lang.Method || _pop;
+		_exit = _exit == true;
+		Ui.pushView(new InfoView(_str), new InfoDelegate(_pop, _exit), _transition);
+	}
+
 	class InfoView extends Ui.View{
 		hidden var str;
 		
@@ -35,8 +45,8 @@ module UI{
 		hidden var exit;
 		
 		function initialize(_pop, _exit){
-			pop = _pop == null || _pop;
-			exit = _exit == true;
+			pop = _pop;
+			exit = _exit;
 		}
 	
 		function onBack(){

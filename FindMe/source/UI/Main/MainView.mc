@@ -22,7 +22,7 @@ module UI{
 		}
 		if(model.size() <= 1){
 			// show add locations
-			Ui.pushView(new InfoView("No locations"), new InfoDelegate(false), noTransition);
+			pushInfoView("No locations", noTransition, false);
 		} else {
 			// get from cache
 			// delete/add/import into model

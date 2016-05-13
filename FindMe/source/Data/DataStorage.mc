@@ -35,7 +35,7 @@ module Data{
 			
 			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
 			if(getInterval() == null){ setInterval(0); }
-			if(getFormat() == null){ setFormat(Position.GEO_DEG); }
+			if(getFormat() == null){ setFormat(Position.GEO_MGRS); }
 			if(getActivityType() == null){ setActivityType(ActivityRecording.SPORT_GENERIC); }
 		}
 		

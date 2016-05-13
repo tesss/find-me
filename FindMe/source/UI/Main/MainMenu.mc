@@ -33,7 +33,8 @@ module UI{
 			if(item == :types){
 				pushTypesMenu(dataStorage);
 			} else if(item == :add) {
-				Ui.pushView(new LocationPicker(dataStorage.getFormat()), new LocationPickerDelegate(), transition);
+				var format = dataStorage.getFormat();
+				Ui.pushView(new LocationPicker(format), new LocationPickerDelegate(format), transition);
 			}
 		}
 	}

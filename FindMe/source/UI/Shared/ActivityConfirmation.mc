@@ -19,7 +19,7 @@ module UI{
 				if(!exit){
 					Ui.popView(noTransition);
 				}
-				Ui.pushView(new InfoView("Activity saved"), new InfoDelegate(false, exit), transition);
+				pushInfoView("Activity saved", null, false, exit);
 			} else {
 				dataStorage.session.stop();
 				dataStorage.session.discard();
@@ -27,7 +27,7 @@ module UI{
 				if(!exit){
 					Ui.popView(noTransition);
 				}
-				Ui.pushView(new InfoView("Activity discarded"), new InfoDelegate(false, exit), transition);
+				pushInfoView("Activity discarded", null, false, exit);
 			}
 		}
 	}
