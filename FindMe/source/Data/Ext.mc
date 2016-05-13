@@ -3,6 +3,8 @@ using Toybox.Time;
 using _;
 
 module Data {
+	const NAME_LIMIT = 15;
+	
 	function toRadians(degrees){
 		return degrees * Math.PI / 180;
 	}

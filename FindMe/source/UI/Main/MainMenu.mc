@@ -2,10 +2,7 @@ using Toybox.WatchUi as Ui;
 
 module UI{
 	class MainMenu extends Ui.Menu {
-		hidden var dataStorage;
-		
-		function initialize(_dataStorage){
-			dataStorage = _dataStorage;
+		function initialize(){
 			setTitle("Find Me");
 			addItem("Locations", :types);
 			addItem("Add", :add);
@@ -23,16 +20,14 @@ module UI{
 	}
 	
 	class MainMenuDelegate extends Ui.MenuInputDelegate {
-		hidden var dataStorage;
-		
-		function initialize(_dataStorage){
-			dataStorage = _dataStorage;
+		function initialize(){
 		}
 		
 		function onMenuItem(item){
 			if(item == :types){
-				pushTypesMenu(dataStorage);
+				pushTypesMenu();
 			} else if(item == :add) {
+				release();
 				var format = dataStorage.getFormat();
 				Ui.pushView(new LocationPicker(format), new LocationPickerDelegate(format), transition);
 			}

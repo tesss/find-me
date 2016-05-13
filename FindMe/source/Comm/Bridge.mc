@@ -6,11 +6,8 @@ using _;
 
 module Comm {
 	class Bridge {
-		hidden var dataStorage;
-	
-		function initialize(_dataStorage)
+		function initialize()
 	    {
-	    	dataStorage = _dataStorage;
 	        Comm.setMailboxListener( method(:onMail) );
 	    }
 	    
@@ -18,7 +15,7 @@ module Comm {
 	    	// mock
 	    	var batch = [mail, "Batch #" + mail, Time.now().value()];
 	    	var l = 100;
-	    	var locations = new Data.DataStorage.Locations(new[l],new[l],new[l],new[l],new[l]);
+	    	var locations = new Data.Locations(new[l],new[l],new[l],new[l],new[l]);
 	    	for(var i = 0; i < l; i++){
 	    		if(i < 10){
 	    			locations.names[i] = "IIEiger Wall 0" + i;

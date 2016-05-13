@@ -47,16 +47,23 @@ module UI {
 	}
 	
 	class CharFactory extends Ui.PickerFactory {
-		var values;
-		function initialize(_full){
-			if(_full){
-				values = " ~}|{_^]\\[@?>=<;:/.-,+*)('&%$#\"!0987654321zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
-			} else {
-				values = "AZYXWVUTSRQPONMLKJIHGFEDCB";
-			}
-		}
+		static var letterValues = "AZYXWVUTSRQPONMLKJIHGFEDCB";
+		static var fullValues = " ~}|{_^]\\[@?>=<;:/.-,+*)('&%$#\"!0987654321zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
+		
+		hidden var full;
+		function initialize(_full){ full = _full; }
 		function getDrawable(index, isSelected){ return getText(getValue(index), {:isSelected => isSelected}); }
-		function getSize(){ return values.length(); }
-		function getValue(index){ return values.substring(index, index + 1); }
+		function getSize(){
+			if(full){
+				return fullValues.length();
+			}
+			return letterValues.length(); 
+		}
+		function getValue(index){
+			if(full){
+				return fullValues.substring(index, index + 1);
+			}
+			return letterValues.substring(index, index + 1);
+		}
 	}
 }

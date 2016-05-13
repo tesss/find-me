@@ -3,11 +3,9 @@ using Toybox.System;
 
 module UI{
 	class ActivityConfirmationDelegate extends Ui.ConfirmationDelegate {
-		hidden var dataStorage;
 		hidden var exit;
 		
-		function initialize(_dataStorage, _exit){
-			dataStorage = _dataStorage;
+		function initialize(_exit){
 			exit = _exit == true;
 		}
 		

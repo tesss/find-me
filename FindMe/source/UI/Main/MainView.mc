@@ -2,6 +2,7 @@ using Toybox.WatchUi as Ui;
 using Toybox.System;
 
 module UI{
+	var dataStorage;
 	var transition;
 	var noTransition;
 	var screenType;
@@ -13,11 +14,11 @@ module UI{
 	const COLOR_LOWLIGHT = 0x555555;
 	const COLOR_HIGHLIGHT = 0xFFAA00;
 	
-	function pushTypesMenu(dataStorage){
+	function pushTypesMenu(){
 		//release();
 		if(model == null){
 			var types = dataStorage.getTypesList();
-			model = new TypesViewModel(types, dataStorage);
+			model = new TypesViewModel(types, true);
 			types = null;
 		}
 		if(model.size() <= 1){
@@ -38,13 +39,10 @@ module UI{
 	}
 
 	class MainView extends Ui.View {
-		hidden var dataStorage;
 		hidden var firstLoad;
 	
-		function initialize(_dataStorage){
-			dataStorage = _dataStorage;
-		
-			screenType = getScreenType(dataStorage);
+		function initialize(){
+			screenType = getScreenType();
 			transition = Ui.SLIDE_DOWN;
 			if(screenType == :square && dataStorage.deviceSettings.inputButtons & System.BUTTON_INPUT_UP == 0){
 				transition = Ui.SLIDE_RIGHT;
@@ -52,8 +50,8 @@ module UI{
 			noTransition = Ui.SLIDE_IMMEDIATE;
 			firstLoad = true;
 			
-			Ui.pushView(new MainMenu(dataStorage), new MainMenuDelegate(dataStorage), noTransition);
-			pushTypesMenu(dataStorage);
+			Ui.pushView(new MainMenu(), new MainMenuDelegate(), noTransition);
+			pushTypesMenu();
 		}
 		
 		function onShow(){
@@ -62,7 +60,7 @@ module UI{
 			} else {
 				if(dataStorage.session != null && dataStorage.session.isRecording()){
 					firstLoad = true;
-					Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(dataStorage, true), noTransition);
+					Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(true), noTransition);
 				} else {
 					Ui.popView(noTransition);
 				}
@@ -70,7 +68,7 @@ module UI{
 		}
 	}
 	
-	function getScreenType(dataStorage){
+	function getScreenType(){
 		if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_ROUND){
 			return :round;
 		}

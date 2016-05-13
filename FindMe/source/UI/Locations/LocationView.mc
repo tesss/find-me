@@ -25,7 +25,7 @@ module UI{
 		];
 	}
 	
-	function getLocationStr(location, dataStorage){
+	function getLocationStr(location){
 		// format from settings
 		return new Position.Location({
 			:latitude => location[Data.LOC_LAT], 
@@ -51,13 +51,11 @@ module UI{
 
 	class LocationView extends Ui.View{
 		hidden var model;
-		hidden var dataStorage;
 		hidden var drawModel;
 		hidden var dots;
 	
 		function initialize(_model){
 			model = _model;
-			dataStorage = model.getDataStorage();
 			dots = "";
 			
 			Sensor.enableSensorEvents(method(:onSensor));
@@ -71,7 +69,7 @@ module UI{
 			if(dataStorage.currentLocation == null || dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
 				// Forerunner 920xt - location doesn't show
 				setColor(dc, COLOR_SECONDARY);
-				dc.drawText(drawModel.bearing[0], drawModel.bearing[1], Graphics.FONT_TINY, getLocationStr(location, dataStorage), Graphics.TEXT_JUSTIFY_CENTER);
+				dc.drawText(drawModel.bearing[0], drawModel.bearing[1], Graphics.FONT_TINY, getLocationStr(location), Graphics.TEXT_JUSTIFY_CENTER);
 				
 				setColor(dc, COLOR_LOWLIGHT);
 				dc.drawLine(drawModel.line1Dis[0], drawModel.line1Dis[1], drawModel.line1Dis[2], drawModel.line1Dis[3]);
@@ -127,7 +125,7 @@ module UI{
 		hidden function draw(location, drawModel, dc){
 			setColor(dc, COLOR_PRIMARY);
 			dc.clear();
-			
+		
 			dc.drawText(drawModel.name[0], drawModel.name[1], Graphics.FONT_MEDIUM, location[Data.LOC_NAME], Graphics.TEXT_JUSTIFY_CENTER);
 			
 			setColor(dc, COLOR_LOWLIGHT);
@@ -242,7 +240,6 @@ module UI{
 		}
 		
 		function onShow(){
-			var dataStorage = model.getDataStorage();
 			if(dataStorage.getSortBy() == Data.SORTBY_DISTANCE){
 				dataStorage.timerCallback = method(:sort).weak();
 			}

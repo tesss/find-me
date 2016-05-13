@@ -11,10 +11,10 @@ module UI{
 		function initialize(_model){
 			model = _model;
 			setTitle("Location");
-			if(model.getDataStorage().session == null){
+			if(dataStorage.session == null){
 				addItem("Start Activity", :activity);
 			} else {
-				if(model.getDataStorage().session.isRecording){
+				if(dataStorage.session.isRecording){
 					addItem("Stop Activity", :activity);
 				} else {
 					addItem("Start Activity", :activity);
@@ -36,23 +36,22 @@ module UI{
 		}
 		
 		hidden function newSession(){
-			return ActivityRecording.createSession({:name => "FindMe " + Data.dateStr(Time.Time.now().value()), :sport => model.getDataStorage().getActivityType()}); // add activity type
+			return ActivityRecording.createSession({:name => "FindMe " + Data.dateStr(Time.Time.now().value()), :sport => model.dataStorage.getActivityType()}); // add activity type
 		}
 	
 	    function onMenuItem(item) {
-	    	var dataStorage = model.getDataStorage();
 	    	if(item == :activity){
 	    		if(dataStorage.session == null){
 	    			dataStorage.session = newSession();
 	    			dataStorage.session.start();
 	    		} else if(dataStorage.session.isRecording()){
-	    			Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(dataStorage), noTransition);
+	    			Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(), noTransition);
 	    		} else {
 	    			dataStorage.session = newSession();
 	    			dataStorage.session.start(); // check for error
 	    		}
 	    	} else if(item == :coord){
-	    		pushInfoView(getLocationStr(model.get().get(), dataStorage));
+	    		pushInfoView(getLocationStr(model.get().get()));
 	    	} else if(item == :persisted){
 	    		dataStorage.saveLocationPersisted(model.get().get()[dataStorage.LOC_ID]);
 	    		pushInfoView("Saved successfully");
@@ -62,7 +61,7 @@ module UI{
 	    			Ui.popView(noTransition);
 					Ui.popView(noTransition);
 					Ui.popView(noTransition);
-					pushTypesMenu(dataStorage);
+					pushTypesMenu();
 	    		}
 	    		pushInfoView("Deleted", null, !fullRefresh);
 	    	}

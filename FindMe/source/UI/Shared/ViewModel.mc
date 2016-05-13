@@ -5,18 +5,14 @@ module UI{
 	class TypesViewModel{
 		var types;
 		var index;
-		var dataStorage;
+		var global;
 		
-		function initialize(_types, _dataStorage){
+		function initialize(_types, _global){
+			global = _global;
 			types = new[_types.size()];
 			for(var i = 0; i < types.size(); i++){
-				types[i] = new LocationsViewModel(_types[i], _dataStorage);
+				types[i] = new LocationsViewModel(_types[i]);
 			}
-			dataStorage = _dataStorage.weak();
-		}
-		
-		function getDataStorage(){
-			return dataStorage.get();
 		}
 		
 		function size(){
@@ -43,8 +39,12 @@ module UI{
 			var locationsModel = get();
 			var locationIndex = locationsModel.index;
 			var currentId = locationsModel.get()[Data.DataStorage.LOC_ID];
-			getDataStorage().deleteLocation(currentId);
+			dataStorage.deleteLocation(currentId);
 			locationsModel.locations = Data.ArrayExt.removeAt(locationsModel.locations, locationIndex);
+			if(!global){
+				return false;
+			}
+			
 			var all = get(0);
 			for(var i = 0; i < all.size(); i++){
 				var location = all.get(i);
@@ -104,18 +104,12 @@ module UI{
 	class LocationsViewModel{
 		var locations;
 		var index;
-		var dataStorage;
 		var fullRefresh;
 		
-		function initialize(_locations, _dataStorage){
+		function initialize(_locations){
 			locations = _locations;
-			dataStorage = _dataStorage.weak();
 			index = 0;
 			fullRefresh = true;
-		}
-		
-		function getDataStorage(){
-			return dataStorage.get();
 		}
 		
 		function size(){
@@ -153,7 +147,7 @@ module UI{
 		}
 		
 		function sort(){
-			var sorted = getDataStorage().sortLocationsList(locations, get()[Data.LOC_ID]);
+			var sorted = dataStorage.sortLocationsList(locations, get()[Data.LOC_ID]);
 			locations = sorted[0];
 			index = sorted[1];
 		}

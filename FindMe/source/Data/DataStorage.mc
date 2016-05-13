@@ -12,7 +12,6 @@ using _;
 module Data{
 	class DataStorage {
 		static const TYPES = ["City", "Lake", "River", "Mountain", "Spring", "Bus Station", "Custom"];
-		
 		var app = null;
 		var deviceSettings;
 		var timer;
@@ -180,8 +179,7 @@ module Data{
 				location = [0, toDegrees(currentLocation[LAT]) + ", " + Math.toDegrees(currentLocation[LON]), currentLocation[LAT], currentLocation[LON], TYPES.size() - 1, -1];
 			}
 			var newLocations = new Locations([location[LOC_NAME]], [location[LOC_LAT]], [location[LOC_LON]], [location[LOC_TYPE]], [location[LOC_BATCH]]);
-			addLocations(newLocations);
-			newLocations = null;
+			return addLocations(newLocations);
 		}
 		
 		// show error if too much
@@ -194,6 +192,20 @@ module Data{
 			locations.batches = ArrayExt.union(locations.batches, newLocations.batches);
 			locations = sortLocations(locations);
 			setLocations(locations);
+			var ids = {};
+			for(var i = 0; i < newLocations.size(); i++){
+				for(var j = 0; j < locations.size(); j++){
+					if( newLocations.names[i] == locations.names[j] &&
+						newLocations.latitudes[i] == locations.latitudes[j] && 
+						newLocations.longitudes[i] == locations.longitudes[j] &&
+						newLocations.types[i] == locations.types[j] &&
+						newLocations.batches[i] == locations.batches[j]){
+						ids.put(i, j);
+						break;
+					}
+				}
+			}
+			return ids;
 		}
 		
 		function addBatch(batch){
@@ -202,7 +214,6 @@ module Data{
 			batches.names = ArrayExt.insertAt(batches.names, batch[BATCH_NAME], 0);
 			batches.dates = ArrayExt.insertAt(batches.dates, batch[BATCH_DATE], 0);
 			setBatches(batches);
-			batches = null;
 		}
 		
 		// sorting
@@ -317,15 +328,21 @@ module Data{
 		
 		// deleting
 		
-		function deleteBatch(i){
+		function deleteBatch(id){
 			var batches = getBatches();
-			var batchId = batches.ids[i];
-			batches.remove(i);
+			var index = -1;
+			for(var i = 0; i < batches.size(); i++){
+				if(batches.ids[i] == i){
+					index = i;
+					break;
+				}
+			}
+			batches.remove(index);
 			setBatches(batches);
 			batches = null;
 			var locations = getLocations();
 			for(var i = 0; i < locations.size(); i++){
-				if(locations.batches[i] == batchId){
+				if(locations.batches[i] == id){
 					locations.remove(i);
 					i--;
 				}
@@ -353,14 +370,16 @@ module Data{
 			});
 		}
 		
-		function saveBatchPersisted(i){
-			var batches = getBatches();
-			var batchId = batches.ids[i];
-			batches = null;
+		function saveBatchPersisted(id){
 			var locations = getLocations();
 			for(var i = 0; i < locations.size(); i++){
-				if(locations.batches[i] == batchId){
-					PersistedLocations.persistLocation(new Position.Location({:latitude => locations.latitudes[i], :longitude => locations.longitudes[i], :format => :radians}));
+				if(locations.batches[i] == id){
+					PersistedLocations.persistLocation(new Position.Location({
+						:latitude => locations.latitudes[i], 
+						:longitude => locations.longitudes[i], 
+						:format => :radians}), {
+						:name => location.names[i]
+					});
 				}
 			}
 		}
