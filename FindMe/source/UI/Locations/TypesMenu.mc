@@ -33,6 +33,7 @@ module UI{
 	
 	    function onMenuItem(item) {
 	    	model.index = getIndex(item);
+	    	model.get().sort();
 	    	Ui.pushView(new LocationView(model.get()), new LocationDelegate(model), transition);
 	    }
     }

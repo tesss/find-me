@@ -59,8 +59,6 @@ module UI{
 	    	} else if(item == :delete){
 	    		var fullRefresh = model.delete();
 	    		if(fullRefresh){
-	    			var types = dataStorage.getTypesList();
-	    			var model = new TypesViewModel(types, dataStorage);
 	    			Ui.popView(noTransition);
 					Ui.popView(noTransition);
 					Ui.popView(noTransition);

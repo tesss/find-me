@@ -5,7 +5,7 @@ module UI{
 	var transition;
 	var noTransition;
 	var screenType;
-	var types;
+	var model;
 	
 	const COLOR_BACKGROUND = 0x000000;
 	const COLOR_PRIMARY = 0xFFFFFF;
@@ -14,13 +14,22 @@ module UI{
 	const COLOR_HIGHLIGHT = 0xFFAA00;
 	
 	function pushTypesMenu(dataStorage){
-		types = dataStorage.getTypesList();
+		release();
+		var types = dataStorage.getTypesList();
 		if(types.size() <= 1){
 			// show add locations
 			Ui.pushView(new InfoView("No locations"), new InfoDelegate(false), noTransition);
 		} else {
-			var model = new TypesViewModel(types, dataStorage);
+			model = new TypesViewModel(types, dataStorage);
 			Ui.pushView(new TypesMenu(model), new TypesMenuDelegate(model), noTransition);
+		}
+		types = null;
+	}
+	
+	function release(){
+		if(model != null){
+			model.dispose();
+			model = null;
 		}
 	}
 

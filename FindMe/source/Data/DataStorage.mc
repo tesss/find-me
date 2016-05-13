@@ -148,9 +148,6 @@ module Data{
 			values = ArrayExt.sortByIndex(values, indexes, method(:indexGetter));
 			indexes = null;
 			values = ArrayExt.insertAt(values, all, 0);
-			for(var i = 0; i < values.size(); i++){
-				values[i] = sortLocationsList(values[i], null)[0];
-			}
 			return values;
 		}
 		

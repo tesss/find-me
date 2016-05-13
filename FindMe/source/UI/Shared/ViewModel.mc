@@ -79,6 +79,26 @@ module UI{
 			}
 			return false;
 		}
+		
+		function dispose(){
+			if(types != null){
+				for(var i = 0; i < types.size(); i++){
+					for(var j = 0; j < types[i].locations.size(); j++){
+						types[i].locations[j][Data.LOC_ID] = null;
+						types[i].locations[j][Data.LOC_NAME] = null;
+						types[i].locations[j][Data.LOC_LAT] = null;
+						types[i].locations[j][Data.LOC_LON] = null;
+						types[i].locations[j][Data.LOC_TYPE] = null;
+						types[i].locations[j][Data.LOC_BATCH] = null;
+						types[i].locations[j][Data.LOC_DIST] = null;
+						types[i].locations[j] = null;
+					}
+					types[i].locations = null;
+					types[i] = null;
+				}
+				types = null;
+			}
+		}
 	}
 
 	class LocationsViewModel{

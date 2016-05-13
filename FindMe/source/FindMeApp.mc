@@ -45,9 +45,7 @@ class FindMeDelegate extends Ui.BehaviorDelegate {
     }
 	
 	function printTypes(types){
-		// show gps status
 		// limit - 100 locations - creshes on device
-		// check sdk version
 		// transaction while saving
 		// id - generated max
 		// play sound when import performed and activity or vibrate
