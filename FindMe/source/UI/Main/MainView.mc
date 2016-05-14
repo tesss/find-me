@@ -7,6 +7,8 @@ module UI{
 	var noTransition;
 	var screenType;
 	var model;
+	var firstLoad;
+	var drawModel;
 	
 	const COLOR_BACKGROUND = 0x000000;
 	const COLOR_PRIMARY = 0xFFFFFF;
@@ -22,10 +24,8 @@ module UI{
 			types = null;
 		}
 		if(model.size() <= 1){
-			// show add locations
 			pushInfoView("No locations", noTransition, false);
 		} else {
-			// get from cache
 			// delete/add/import into model
 			Ui.pushView(new TypesMenu(model), new TypesMenuDelegate(model), noTransition);
 		}
@@ -35,12 +35,11 @@ module UI{
 		if(model != null){
 			model.dispose();
 			model = null;
+			drawModel = null;
 		}
 	}
 
 	class MainView extends Ui.View {
-		hidden var firstLoad;
-	
 		function initialize(){
 			screenType = getScreenType();
 			transition = Ui.SLIDE_DOWN;

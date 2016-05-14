@@ -30,9 +30,9 @@ class FindMeApp extends App.AppBase {
 }
 		// improve character factory
 		// think about encoding and minifying name of loc
-		// Grant point on screenshots
+		// Jule VernGrant point on screenshots
 		// change transition
-		// limit - 100 locations - creshes on device
+		// limit - 100 locations - creshes on device (add limit info message)
 		// transaction while saving
 		// id - generated max
 		// play sound when import performed and activity or vibrate

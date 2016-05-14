@@ -46,6 +46,7 @@ module UI{
 			}
 			
 			var all = get(0);
+			var typeIndex = index;
 			for(var i = 0; i < all.size(); i++){
 				var location = all.get(i);
 				var id = location[Data.DataStorage.LOC_ID];
@@ -68,13 +69,16 @@ module UI{
 						var id = location[Data.DataStorage.LOC_ID];
 						if(id == currentId){
 							locations.locations = Data.ArrayExt.removeAt(locations.locations, j);
+							typeIndex = i;
 							removed = true;
+							break;
 						}
 					}
 				}
 			}
 			
 			if(locationsModel.size() == 0){
+				types = Data.ArrayExt.removeAt(types, typeIndex);
 				return true;
 			}
 			return false;

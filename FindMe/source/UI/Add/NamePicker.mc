@@ -22,10 +22,12 @@ module UI{
 	class NamePickerDelegate extends Ui.PickerDelegate {
 		hidden var locationStr;
 		hidden var format;
+		hidden var back;
 	
-		function initialize(_locationStr, _format){
+		function initialize(_locationStr, _format, _back){
 			locationStr = _locationStr;
 			format = _format;
+			back = _back;
 		}
 		
 		function onAccept(values){
@@ -44,7 +46,7 @@ module UI{
 			}
 			name = name.substring(0, trim + 1);
 			if(name.length() > 0){
-				Ui.pushView(new NewTypesMenu(), new NewTypesMenuDelegate(locationStr, name, format), transition);
+				Ui.pushView(new NewTypesMenu(), new NewTypesMenuDelegate(locationStr, name, format, false, back), transition);
 				pushInfoView("Name: " + name, null, false);
 			} else {
 				pushInfoView("Name can't be empty", null, false);
@@ -52,7 +54,9 @@ module UI{
 		}
 		
 		function onCancel(){
-			Ui.pushView(new LocationPicker(format), new LocationPickerDelegate(format), transition);
+			if(_back){
+				Ui.pushView(new LocationPicker(format), new LocationPickerDelegate(format), transition);
+			}
 		}
 	}
 }

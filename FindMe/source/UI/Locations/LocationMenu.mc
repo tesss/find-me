@@ -38,6 +38,12 @@ module UI{
 		hidden function newSession(){
 			return ActivityRecording.createSession({:name => "FindMe " + Data.dateStr(Time.Time.now().value()), :sport => model.dataStorage.getActivityType()}); // add activity type
 		}
+		
+		hidden function popInNotGlobal(){
+			if(!model.global){
+	    		Ui.popView(noTransition);
+	    	}
+		}
 	
 	    function onMenuItem(item) {
 	    	if(item == :activity){
@@ -51,11 +57,14 @@ module UI{
 	    			dataStorage.session.start(); // check for error
 	    		}
 	    	} else if(item == :coord){
-	    		pushInfoView(getLocationStr(model.get().get()));
+	    		popInNotGlobal();
+	    		pushInfoView(getLocationStr(model.get().get()), null, model.global);
 	    	} else if(item == :persisted){
+	    		popInNotGlobal();
 	    		dataStorage.saveLocationPersisted(model.get().get()[dataStorage.LOC_ID]);
-	    		pushInfoView("Saved successfully");
+	    		pushInfoView("Saved successfully", null, model.global);
 	    	} else if(item == :delete){
+	    		popInNotGlobal();
 	    		var fullRefresh = model.delete();
 	    		if(fullRefresh){
 	    			Ui.popView(noTransition);

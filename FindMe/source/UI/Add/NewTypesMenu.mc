@@ -17,11 +17,15 @@ module UI{
 		hidden var locationStr;
 		hidden var name;
 		hidden var format;
+		hidden var fromTextPicker;
+		hidden var pop;
 	
-		function initialize(_locationStr, _name, _format){
+		function initialize(_locationStr, _name, _format, _fromTextPicker, _pop){
 			locationStr = _locationStr;
 			name = _name;
 			format = _format;
+			fromTextPicker = _fromTextPicker;
+			pop = _pop;
 		}
 		
 		hidden function getIndex(symbol){
@@ -43,8 +47,12 @@ module UI{
 	    	var model = new TypesViewModel([[location]], false);
 	    	model.index = 0;
 	    	Ui.popView(noTransition);
-	    	Ui.popView(noTransition);
-	    	Ui.popView(noTransition);
+	    	if(pop){
+	    		Ui.popView(noTransition);
+	    	}
+	    	if(!fromTextPicker){
+	    		Ui.popView(noTransition);
+	    	}
 	    	Ui.pushView(new LocationView(model.get()), new LocationDelegate(model), transition);
 	    	pushInfoView("Location added", transition, false);
 	    	

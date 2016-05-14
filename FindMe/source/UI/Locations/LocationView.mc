@@ -35,6 +35,9 @@ module UI{
 	
 	function getDistanceStr(distance){
 		var isMetric = dataStorage.deviceSettings.distanceUnits == System.UNIT_METRIC;
+		if(distance < 0.01){
+			distance = 0;
+		}
 		if(distance < 1){
 			var meters = distance * 1000;
 			if(isMetric){
@@ -51,13 +54,11 @@ module UI{
 
 	class LocationView extends Ui.View{
 		hidden var model;
-		hidden var drawModel;
 		hidden var dots;
 	
 		function initialize(_model){
 			model = _model;
 			dots = "";
-			
 			Sensor.enableSensorEvents(method(:onSensor));
 		}
 		

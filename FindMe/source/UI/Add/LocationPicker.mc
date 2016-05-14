@@ -155,23 +155,31 @@ module UI{
 		function onAccept(values){
 			var str = null;
 			if(format == Position.GEO_DEG){
-				str = values[0] + values[1] + "." + values[3] + values[4] + values[5] + values[6] + values[7] + values[8] + ", " +
+				str = values[0] + values[1] + "." + values[3] + values[4] + values[5] + values[6] + values[7] + values[8] + " " +
 					  values[10] + values[11] + "." + values[13] + values[14] + values[15] + values[16] + values[17] + values[18];
 			} else if(format == Position.GEO_DM){
-				str = values[0] + values[1] + " " + values[3] + "." + values[5] + values[6] + values[7]  + "', " +
+				str = values[0] + values[1] + " " + values[3] + "." + values[5] + values[6] + values[7]  + "' " +
 					  values[10] + values[11] + " " + values[13] + "." + values[15] + values[16] + values[17] + "'";
 			} else if(format == Position.GEO_DMS){
-				str = values[0] + values[1] + " " + values[3] + "' " + values[6] + "\", " +
+				str = values[0] + values[1] + " " + values[3] + "' " + values[6] + "\" " +
 					  values[9] + values[10] + " " + values[12] + "' " + values[15] + "\"";
 			} else if(format == Position.GEO_MGRS){
 				str = values[0] + values[1] + values[2] + values[3] + values[4] + values[6] + values[6] + values[7] + values[8] + values[9];
 			}
-			Ui.pushView(new NamePicker(), new NamePickerDelegate(str, format), transition);
-			pushInfoView("Coord: " + str, null, false);
+			pushNameView(str, format, true);
+			pushInfoView(str, null, false);
 		}
 		
 		function onCancel(){
 			Ui.popView(transition);
+		}
+	}
+	
+	function pushNameView(location, format, back){
+		if(Ui has :TextPicker){
+			Ui.pushView(new TextNamePicker(), new TextNamePickerDelegate(location, format, back), transition);
+		} else {
+			Ui.pushView(new NamePicker(), new NamePickerDelegate(location, format, back), transition);
 		}
 	}
 }
