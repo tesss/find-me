@@ -13,6 +13,7 @@ module UI{
 			for(var i = 0; i < types.size(); i++){
 				types[i] = new LocationsViewModel(_types[i]);
 			}
+			index = 0;
 		}
 		
 		function size(){
@@ -42,7 +43,7 @@ module UI{
 			dataStorage.deleteLocation(currentId);
 			locationsModel.locations = Data.ArrayExt.removeAt(locationsModel.locations, locationIndex);
 			if(!global){
-				return false;
+				return locationsModel.size() == 0;
 			}
 			
 			var all = get(0);

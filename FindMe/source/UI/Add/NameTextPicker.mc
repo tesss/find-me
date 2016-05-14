@@ -4,13 +4,13 @@ using Data;
 using _;
 
 module UI{
-	class TextNamePicker extends Ui.TextPicker{
+	class NameTextPicker extends Ui.TextPicker{
 		function initialize(){
 			
 		}
 	}
 	
-	class TextNamePickerDelegate extends Ui.TextPickerDelegate {
+	class NameTextPickerDelegate extends Ui.TextPickerDelegate {
 		hidden var locationStr;
 		hidden var format;
 		hidden var back;

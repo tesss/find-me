@@ -31,6 +31,31 @@ module UI{
 		}
 	}
 	
+	function pushInfoView(_str, _transition, _pop, _exit){
+		if(_transition == null){
+			_transition = transition;
+		}
+		_pop = _pop == null || _pop instanceof Lang.Method || _pop;
+		_exit = _exit == true;
+		Ui.pushView(new InfoView(_str), new InfoDelegate(_pop, _exit), _transition);
+	}
+	
+	function pushNameView(location, format, back){
+		if(Ui has :TextPicker){
+			Ui.pushView(new NameTextPicker(), new NameTextPickerDelegate(location, format, back), transition);
+		} else {
+			Ui.pushView(new NamePicker(), new NamePickerDelegate(location, format, back), transition);
+		}
+	}
+	
+	function pushFindView(){
+		if(Ui has :TextPicker){
+			Ui.pushView(new FindTextPicker(), new FindTextPickerDelegate(), transition);
+		} else {
+			Ui.pushView(new FindPicker(), new FindPickerDelegate(), transition);
+		}
+	}
+	
 	function release(){
 		if(model != null){
 			model.dispose();

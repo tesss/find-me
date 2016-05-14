@@ -54,10 +54,13 @@ module UI{
 				if(info != null){
 					pushInfoView(info, null, false);
 				}
-			} else if(item == :add) {
+			} else if(item == :add){
 				release();
 				var format = dataStorage.getFormat();
 				Ui.pushView(new LocationPicker(format), new LocationPickerDelegate(format), transition);
+			} else if(item == :find){
+				release();
+				pushFindView();
 			}
 		}
 	}

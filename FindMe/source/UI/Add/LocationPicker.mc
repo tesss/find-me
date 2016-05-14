@@ -174,12 +174,4 @@ module UI{
 			Ui.popView(transition);
 		}
 	}
-	
-	function pushNameView(location, format, back){
-		if(Ui has :TextPicker){
-			Ui.pushView(new TextNamePicker(), new TextNamePickerDelegate(location, format, back), transition);
-		} else {
-			Ui.pushView(new NamePicker(), new NamePickerDelegate(location, format, back), transition);
-		}
-	}
 }

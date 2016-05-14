@@ -45,7 +45,6 @@ module UI{
 	    	var ids = dataStorage.addLocation(location);
 	    	location[Data.LOC_ID] = ids.values()[0];
 	    	var model = new TypesViewModel([[location]], false);
-	    	model.index = 0;
 	    	Ui.popView(noTransition);
 	    	if(pop){
 	    		Ui.popView(noTransition);

@@ -66,13 +66,13 @@ module UI{
 	    	} else if(item == :delete){
 	    		popInNotGlobal();
 	    		var fullRefresh = model.delete();
-	    		if(fullRefresh){
+	    		if(fullRefresh && model.global){
 	    			Ui.popView(noTransition);
 					Ui.popView(noTransition);
 					Ui.popView(noTransition);
 					pushTypesMenu();
 	    		}
-	    		pushInfoView("Deleted", null, !fullRefresh);
+	    		pushInfoView("Deleted", null, !fullRefresh && model.global || fullRefresh && !model.global);
 	    	}
 	    }
     }
