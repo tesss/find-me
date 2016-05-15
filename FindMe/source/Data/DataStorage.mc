@@ -32,10 +32,11 @@ module Data{
 			initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE); initProp(KEY_LOC_BATCH);
 			initProp(KEY_BATCH_ID); initProp(KEY_BATCH_NAME); initProp(KEY_BATCH_DATE);
 			
-			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
 			if(getInterval() == null){ setInterval(0); }
+			if(getDistance() == null){ setDistance(0); }
 			if(getFormat() == null){ setFormat(Position.GEO_DEG); }
 			if(getActivityType() == null){ setActivityType(ActivityRecording.SPORT_GENERIC); }
+			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
 		}
 		
 		// props
@@ -72,7 +73,7 @@ module Data{
 			if(interval <= 0){
 				onTimer(interval);
 			} else {
-				timer.start(method(:onTimer), interval, true);
+				timer.start(method(:onTimer), interval*1000, true);
 			}
 		}
 		
@@ -115,14 +116,14 @@ module Data{
 			var lat = null;
 			var lon = null;
 			var distance = getDistance();
-			if(currentLocation != null && distance != null){
+			if(currentLocation != null && distance != 0){
 				lat = currentLocation[LAT];
 				lon = currentLocation[LON];
 			}
 			for(var i = 0; i < locations.size(); i++){
 				var type = locations.types[i];
 				var location = locations.get(i, lat, lon);
-				if(location[LOC_DIST] == null || distance == null || location[LOC_DIST] <= distance){
+				if(location[LOC_DIST] == null || distance == 0 || location[LOC_DIST] <= distance){
 					all.put(i, location);
 					var typeLocations = types.get(type);
 					if(typeLocations == null){
@@ -309,7 +310,7 @@ module Data{
 			for(var i = 0; i < locations.size(); i++){
 				if(str == "" || locations.names[i].toLower().find(str) != null || types.hasKey(locations.types[i])){
 					var location = locations.get(i, lat, lon);
-					if(distance == null || currentLocation == null || (currentLocation != null && location[LOC_DIST] <= distance)){
+					if(distance == 0 || currentLocation == null || (currentLocation != null && location[LOC_DIST] <= distance)){
 						locationsList.put(i, location);
 					}
 				}

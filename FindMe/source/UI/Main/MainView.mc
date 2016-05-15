@@ -56,6 +56,55 @@ module UI{
 		}
 	}
 	
+	function getText(str, options){
+		var text = new Ui.Text({
+			:text => str, 
+			:font => Graphics.FONT_MEDIUM, 
+			:justification => Graphics.TEXT_JUSTIFY_CENTER,
+			:color => COLOR_SECONDARY,
+			:locX => Ui.LAYOUT_HALIGN_CENTER,
+			:locY => Ui.LAYOUT_VALIGN_CENTER
+		});
+		if(options == null){
+			
+		} else {
+			var isSelected = options.get(:isSelected) == true;
+			var isNumber = options.get(:isNumber) == true;
+			var isTitle = options.get(:isTitle) == true;
+			var isSettings = options.get(:isSettings) == true;
+			if(isSettings){
+				text.setFont(Graphics.FONT_TINY);
+				if(isSelected){
+					text.setColor(COLOR_PRIMARY);
+				} else {
+					text.setColor(COLOR_SECONDARY);
+				}
+			} else {
+				if(isNumber){
+					if(isSelected){
+						text.setFont(Graphics.FONT_NUMBER_MEDIUM);
+					} else {
+						text.setFont(Graphics.FONT_NUMBER_MILD);
+					}
+				} else {
+					if(isSelected){
+						text.setFont(Graphics.FONT_LARGE);
+					}
+				}
+				if(isSelected){
+					text.setColor(COLOR_PRIMARY);
+				}
+				if(isTitle){
+					text.setLocation(Ui.LAYOUT_HALIGN_CENTER, Ui.LAYOUT_VALIGN_TOP);
+					if(!isNumber){
+						text.setFont(Graphics.FONT_SMALL);
+					}
+				}
+			}
+		}
+		return text;
+	}
+	
 	function release(){
 		if(model != null){
 			model.dispose();

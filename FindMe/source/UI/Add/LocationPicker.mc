@@ -6,46 +6,6 @@ using Toybox.Lang;
 using Data;
 
 module UI{
-	function getText(str, options){
-		var text = new Ui.Text({
-			:text => str, 
-			:font => Graphics.FONT_MEDIUM, 
-			:justification => Graphics.TEXT_JUSTIFY_CENTER,
-			:color => COLOR_SECONDARY,
-			:locX => Ui.LAYOUT_HALIGN_CENTER,
-			:locY => Ui.LAYOUT_VALIGN_CENTER
-		});
-		if(options == null){
-			
-		} else {
-			var isSelected = options.get(:isSelected) == true;
-			var isNumber = options.get(:isNumber) == true;
-			var isTitle = options.get(:isTitle) == true;
-			if(isNumber){
-				if(isSelected){
-					text.setFont(Graphics.FONT_NUMBER_MEDIUM);
-				} else {
-					text.setFont(Graphics.FONT_NUMBER_MILD);
-				}
-			} else {
-				if(isSelected){
-					text.setFont(Graphics.FONT_LARGE);
-				}
-			}
-			if(isSelected){
-				text.setColor(COLOR_PRIMARY);
-			}
-			if(isTitle){
-				text.setLocation(Ui.LAYOUT_HALIGN_CENTER, Ui.LAYOUT_VALIGN_TOP);
-				if(!isNumber){
-					text.setFont(Graphics.FONT_SMALL);
-				}
-			}
-		}
-		return text;
-	}
-	
-	// 4QFJ12345678
 	class LocationPicker extends Ui.Picker {
 		function initialize(_format){
 			var pattern = null;

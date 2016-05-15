@@ -10,21 +10,13 @@ module UI{
 			addItem("Add Coordinates", :add);
 			addItem("Find", :find);
 			addItem("Batches", :batches);
-			
-			addItem("Sorting", :sortby);
-			addItem("Distance Filter", :distance);
-			addItem("GPS Interval", :interval);
-			addItem("GEO Format", :format);
-			addItem("Activity Type", :format);
+			addItem("Settings", :settings);
 			addItem("Clear All", :clear);
 			addItem("About", :about); // with connection status
 		}
 	}
 	
 	class MainMenuDelegate extends Ui.MenuInputDelegate {
-		function initialize(){
-		}
-		
 		function onMenuItem(item){
 			if(item == :types){
 				pushTypesMenu();
@@ -61,6 +53,9 @@ module UI{
 			} else if(item == :find){
 				release();
 				pushFindView();
+			} else if(item == :settings){
+				release();
+				Ui.pushView(new SettingsPicker(), new SettingsPickerDelegate(), transition);
 			}
 		}
 	}
