@@ -21,18 +21,9 @@ module UI{
 		function initialize(_model){
 			model = _model;
 		}
-		
-		hidden function getIndex(symbol){
-			for(var i = 0; i < model.size(); i++){
-				if(i == symbol){
-					return i;
-				}
-			}
-			return null;
-		}
 	
 	    function onMenuItem(item) {
-	    	model.index = getIndex(item);
+	    	model.index = getMenuIndex(item, model.size());
 	    	model.get().sort();
 	    	Ui.pushView(new LocationView(model.get()), new LocationDelegate(model), transition);
 	    }

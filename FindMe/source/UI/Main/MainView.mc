@@ -56,6 +56,16 @@ module UI{
 		}
 	}
 	
+	function pushBatchesMenu(){
+		release();
+		var batches = dataStorage.getBatchesList();
+		if(batches == null || batches.size() == 0) {
+			pushInfoView("No batches", null, false);
+		} else {
+			Ui.pushView(new BatchesMenu(batches), new BatchesMenuDelegate(batches), transition);
+		}
+	}
+	
 	function getText(str, options){
 		var text = new Ui.Text({
 			:text => str, 
@@ -111,6 +121,15 @@ module UI{
 			model = null;
 			drawModel = null;
 		}
+	}
+	
+	function getMenuIndex(symbol, size){
+		for(var i = 0; i < size; i++){
+			if(symbol == i){
+				return i;
+			}
+		}
+		return null;
 	}
 
 	class MainView extends Ui.View {

@@ -27,18 +27,9 @@ module UI{
 			fromTextPicker = _fromTextPicker;
 			pop = _pop;
 		}
-		
-		hidden function getIndex(symbol){
-			for(var i = 0; i < Data.DataStorage.TYPES.size(); i++){
-				if(i == symbol){
-					return i;
-				}
-			}
-			return null;
-		}
 	
 	    function onMenuItem(item) {
-	    	var index = getIndex(item);
+	    	var index = getMenuIndex(item, Data.DataStorage.TYPES.size());
 	    	var loc = Position.parse(locationStr, format);
 	    	var radians = loc.toRadians();
 	    	var location = [null, name, radians[0], radians[1], index, null];

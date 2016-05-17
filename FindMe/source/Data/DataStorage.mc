@@ -60,6 +60,13 @@ module Data{
 		function getActivityType(){ return getProp(KEY_ACT_TYPE); }
 		function setActivityType(activityType){ return setProp(KEY_ACT_TYPE, activityType); }
 		
+		function clear(){
+			clearProp(KEY_LOC_NAME); clearProp(KEY_LOC_LAT); clearProp(KEY_LOC_LON); clearProp(KEY_LOC_TYPE); clearProp(KEY_LOC_BATCH);
+			clearProp(KEY_BATCH_ID); clearProp(KEY_BATCH_NAME); clearProp(KEY_BATCH_DATE);
+			initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE); initProp(KEY_LOC_BATCH);
+			initProp(KEY_BATCH_ID); initProp(KEY_BATCH_NAME); initProp(KEY_BATCH_DATE);
+		}
+		
 		// timer
 		
 		hidden function invokeTimerCallback(){
@@ -333,7 +340,7 @@ module Data{
 			var batches = getBatches();
 			var index = -1;
 			for(var i = 0; i < batches.size(); i++){
-				if(batches.ids[i] == i){
+				if(batches.ids[i] == id){
 					index = i;
 					break;
 				}
@@ -379,7 +386,7 @@ module Data{
 						:latitude => locations.latitudes[i], 
 						:longitude => locations.longitudes[i], 
 						:format => :radians}), {
-						:name => location.names[i]
+						:name => locations.names[i]
 					});
 				}
 			}

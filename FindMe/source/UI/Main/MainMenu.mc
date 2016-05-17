@@ -53,9 +53,17 @@ module UI{
 			} else if(item == :find){
 				release();
 				pushFindView();
+			} else if(item == :batches){
+				pushBatchesMenu();
 			} else if(item == :settings){
 				release();
 				Ui.pushView(new SettingsPicker(), new SettingsPickerDelegate(), transition);
+			} else if(item == :clear){
+				release();
+				dataStorage.clear();
+				pushInfoView("Cleared", null, false);
+			} else if(item == :about){
+				Ui.pushView(new AboutView(), new AboutViewDelegate(), transition);
 			}
 		}
 	}

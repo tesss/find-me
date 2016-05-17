@@ -75,7 +75,7 @@ module Data {
 		}
 		
 		function get(i){
-			return [i, ids[i], names[i], dates[i]];
+			return [ids[i], names[i], dates[i]];
 		}
 		
 		function set(i, id, name, date){
