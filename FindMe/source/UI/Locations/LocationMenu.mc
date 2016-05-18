@@ -10,7 +10,7 @@ module UI{
 		
 		function initialize(_model){
 			model = _model;
-			setTitle(model[Data.LOC_NAME]);
+			setTitle(model.get()[Data.LOC_NAME]);
 			if(dataStorage.session == null){
 				addItem("Start Activity", :activity);
 			} else {
