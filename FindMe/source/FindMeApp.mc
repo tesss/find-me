@@ -15,9 +15,9 @@ class FindMeApp extends App.AppBase {
     	UI.dataStorage = new Data.DataStorage();
 		bridge = new Comm.Bridge();
 		
-		//var data = bridge.parseMail(i);
-		//UI.dataStorage.addBatch(data[0]);
-	    //UI.dataStorage.addLocations(data[1]);
+		var data = bridge.parseMail(i);
+		UI.dataStorage.addBatch(data[0]);
+	    UI.dataStorage.addLocations(data[1]);
     }
 
     function onStop() {
@@ -28,6 +28,8 @@ class FindMeApp extends App.AppBase {
     }
 
 }
+		// problem with popups
+		// add notification that gps found, if distance 0 - hide bearing
 		// improve character factory
 		// think about encoding and minifying name of loc
 		// Jule VernGrant point on screenshots

@@ -41,7 +41,7 @@ module UI{
 		
 		hidden function popInNotGlobal(){
 			if(!model.global){
-	    		Ui.popView(noTransition);
+	    		Ui.popView(transition);
 	    	}
 		}
 	
@@ -51,7 +51,7 @@ module UI{
 	    			dataStorage.session = newSession();
 	    			dataStorage.session.start();
 	    		} else if(dataStorage.session.isRecording()){
-	    			Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(), noTransition);
+	    			Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(), transition);
 	    		} else {
 	    			dataStorage.session = newSession();
 	    			dataStorage.session.start(); // check for error
@@ -67,9 +67,9 @@ module UI{
 	    		popInNotGlobal();
 	    		var fullRefresh = model.delete();
 	    		if(fullRefresh && model.global){
-	    			Ui.popView(noTransition);
-					Ui.popView(noTransition);
-					Ui.popView(noTransition);
+	    			Ui.popView(transition);
+					Ui.popView(transition);
+					Ui.popView(transition);
 					pushTypesMenu();
 	    		}
 	    		pushInfoView("Deleted", null, !fullRefresh && model.global || fullRefresh && !model.global);

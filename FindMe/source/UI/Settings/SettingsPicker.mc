@@ -54,6 +54,10 @@ module UI{
 			});
 		}
 		
+	    function onUpdate(dc) {
+	        clearPicker(dc);
+	    }
+		
 		function predicate(a, b){
 			return a == b;
 		}
@@ -66,7 +70,7 @@ module UI{
 			dataStorage.setFormat(values[7]);
 			dataStorage.setActivityType(values[10]);
 			dataStorage.setSortBy(values[13]);
-			Ui.popView(noTransition);
+			Ui.popView(transition);
 			pushInfoView("Settings saved", null, false);
 		}
 		

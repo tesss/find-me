@@ -22,8 +22,12 @@ module UI{
 		}
 		
 		function onTextEntered(name, changed){
-			Ui.pushView(new NewTypesMenu(), new NewTypesMenuDelegate(locationStr, name, format, true, back), transition);
+			if(name.length() > 15){
+				pushInfoView("Max length 15", transition, false);
+			} else {
+				Ui.pushView(new NewTypesMenu(), new NewTypesMenuDelegate(locationStr, name, format, true, back), transition);
 			//pushInfoView("Name: " + name, null, false);
+			}
 		}
 		
 		function onCancel(){

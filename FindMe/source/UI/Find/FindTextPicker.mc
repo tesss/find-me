@@ -15,12 +15,16 @@ module UI{
 		}
 		
 		function onTextEntered(search, changed){
-			var locations = dataStorage.find(search);
-			if(locations.size() == 0){
-				pushInfoView("No results", transition, false);
+			if(search.length() > 15){
+				pushInfoView("Max length 15", transition, false);
 			} else {
-				var model = new TypesViewModel([locations], false);
-				Ui.pushView(new LocationView(model.get()), new LocationDelegate(model), transition);
+				var locations = dataStorage.find(search);
+				if(locations.size() == 0){
+					pushInfoView("No results", transition, false);
+				} else {
+					var model = new TypesViewModel([locations], false);
+					Ui.pushView(new LocationView(model.get()), new LocationDelegate(model), transition);
+				}
 			}
 		}
 		

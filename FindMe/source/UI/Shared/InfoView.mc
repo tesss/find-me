@@ -46,7 +46,7 @@ module UI{
 				return;
 			}
 			if(pop){
-				Ui.popView(noTransition);
+				Ui.popView(transition);
 			}
 		}
 		
@@ -55,9 +55,9 @@ module UI{
 				System.exit();
 				return;
 			}
-			Ui.popView(noTransition);
+			Ui.popView(transition);
 			if(pop){
-				Ui.popView(noTransition);
+				Ui.popView(transition);
 			}
 		}
 	}

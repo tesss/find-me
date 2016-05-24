@@ -17,6 +17,10 @@ module UI{
 				:pattern => pattern
 			});
 		}
+		
+		function onUpdate(dc) {
+	        clearPicker(dc);
+	    }
 	}
 	
 	class FindPickerDelegate extends Ui.PickerDelegate {
@@ -39,7 +43,7 @@ module UI{
 			}
 			search = search.substring(0, trim + 1);
 			var locations = dataStorage.find(search);
-			Ui.popView(noTransition);
+			Ui.popView(transition);
 			if(locations.size() == 0){
 				pushInfoView("No results", transition, false);
 			} else {

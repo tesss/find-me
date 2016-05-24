@@ -15,7 +15,7 @@ module UI{
 	
 	class AboutViewDelegate extends Ui.BehaviorDelegate {
 		function onSelect(){
-			Ui.popView(noTransition);
+			Ui.popView(transition);
 		}
 	}
 }

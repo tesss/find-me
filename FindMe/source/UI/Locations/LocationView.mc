@@ -270,6 +270,11 @@ module UI{
 			model = _model;
 		}
 		
+		function onBack(){
+			Ui.popView(transition);
+			return true;
+		}
+		
 		function onNextPage(){
 			model.get().next();
 			Ui.requestUpdate();

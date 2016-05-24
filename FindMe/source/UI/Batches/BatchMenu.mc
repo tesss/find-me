@@ -22,12 +22,12 @@ module UI{
 			var id = batch[Data.BATCH_ID];
 			if(symbol == :persisted){
 				dataStorage.saveBatchPersisted(id);
-				Ui.popView(noTransition);
+				Ui.popView(transition);
 				pushInfoView("Saved successfully", null, false);
 			} else if(symbol == :delete) {
 				dataStorage.deleteBatch(id);
-				Ui.popView(noTransition);
-				Ui.popView(noTransition);
+				Ui.popView(transition);
+				Ui.popView(transition);
 				pushBatchesMenu();
 				pushInfoView("Deleted", null, false);
 			}

@@ -15,7 +15,7 @@ module UI{
 				dataStorage.session.save();
 				dataStorage.session = null;
 				if(!exit){
-					Ui.popView(noTransition);
+					Ui.popView(transition);
 				}
 				pushInfoView("Activity saved", null, false, exit);
 			} else {
@@ -23,7 +23,7 @@ module UI{
 				dataStorage.session.discard();
 				dataStorage.session = null;
 				if(!exit){
-					Ui.popView(noTransition);
+					Ui.popView(transition);
 				}
 				pushInfoView("Activity discarded", null, false, exit);
 			}

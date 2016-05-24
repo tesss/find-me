@@ -17,6 +17,10 @@ module UI{
 				:pattern => pattern
 			});
 		}
+		
+		function onUpdate(dc) {
+	        clearPicker(dc);
+	    }
 	}
 	
 	class NamePickerDelegate extends Ui.PickerDelegate {
