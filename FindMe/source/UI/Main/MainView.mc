@@ -7,8 +7,7 @@ module UI{
 			screenType = getScreenType();
 			transition = Ui.SLIDE_IMMEDIATE;
 			firstLoad = true;
-			
-			Ui.pushView(new MainMenu(), new MainMenuDelegate(), transition);
+			pushMainMenu();
 			pushTypesMenu();
 		}
 		

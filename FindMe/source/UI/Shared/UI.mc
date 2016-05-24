@@ -16,6 +16,10 @@ module UI{
 	const COLOR_LOWLIGHT = 0x555555;
 	const COLOR_HIGHLIGHT = 0xFFAA00;
 	
+	function pushMainMenu(){
+		Ui.pushView(new MainMenu(), new MainMenuDelegate(), transition);
+	}
+	
 	function pushTypesMenu(){
 		//release();
 		if(model == null){

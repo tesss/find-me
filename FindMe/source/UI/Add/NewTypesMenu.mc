@@ -36,17 +36,14 @@ module UI{
 	    	var ids = dataStorage.addLocation(location);
 	    	location[Data.LOC_ID] = ids.values()[0];
 	    	var model = new TypesViewModel([[location]], false);
-	    	Ui.popView(transition);
 	    	if(pop){
-	    		//Ui.popView(transition);
+	    		Ui.popView(transition);
 	    	}
 	    	if(!fromTextPicker){
 	    		Ui.popView(transition);
 	    	}
+	    	pushMainMenu();
 	    	Ui.pushView(new LocationView(model.get()), new LocationDelegate(model), transition);
-	    	pushInfoView("Location added", transition, false);
-	    	
-	    	// fix extra pops
 	    	// add support for text input handler
 	    }
     }

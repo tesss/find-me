@@ -63,6 +63,7 @@ module UI{
 		}
 		
 		function onSensor(info){
+			// doesn't update from compass
 			Ui.requestUpdate();
 		}
 		
@@ -268,11 +269,6 @@ module UI{
 		
 		function initialize(_model){
 			model = _model;
-		}
-		
-		function onBack(){
-			Ui.popView(transition);
-			return true;
 		}
 		
 		function onNextPage(){
