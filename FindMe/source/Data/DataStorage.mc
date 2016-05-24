@@ -11,7 +11,8 @@ using _;
 
 module Data{
 	class DataStorage {
-		static const TYPES = ["City", "Lake", "River", "Mountain", "Spring", "Bus Station", "Custom"];
+		static const TYPES = ["Place", "Highway", "Building", "Hotel", "Sight", "Transport", "Shop", "Entertainment", "Medical", "Water", "Mountain", "Campsite", "Custom"];
+		
 		var app = null;
 		var deviceSettings;
 		var timer;
