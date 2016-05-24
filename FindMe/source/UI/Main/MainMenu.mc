@@ -54,6 +54,7 @@ module UI{
 				release();
 				pushFindView();
 			} else if(item == :batches){
+				release();
 				pushBatchesMenu();
 			} else if(item == :settings){
 				release();

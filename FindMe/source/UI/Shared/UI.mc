@@ -4,7 +4,6 @@ using Toybox.System;
 module UI{
 	var dataStorage;
 	var transition;
-	var transition;
 	var screenType;
 	var model;
 	var firstLoad;
@@ -123,8 +122,8 @@ module UI{
 		if(model != null){
 			model.dispose();
 			model = null;
-			drawModel = null;
 		}
+		drawModel = null;
 	}
 	
 	function getMenuIndex(symbol, size){
