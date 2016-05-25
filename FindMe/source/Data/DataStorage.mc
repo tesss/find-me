@@ -12,20 +12,25 @@ using _;
 module Data{
 	class DataStorage {
 		static const TYPES = [
-			"Place", 
-			"Highway", 
-			"Building", 
-			"Hotel", 
-			"Sight", 
-			"Transport", 
-			"Shop", 
-			"Food", 
-			"Entertainment", 
-			"Emergency", 
-			"Water", 
-			"Mountain", 
-			"Campsite", 
-			"Natural", 
+			"Place",
+			"Highway",
+			"Building",
+			
+			"Sport",
+			
+			"Mountain",
+			"Camp",
+			"Water",
+			"Natural",
+			
+			"Hotel",
+			"Sight",
+			"Transport",
+			"Shop",
+			"Food",
+			"Entertainment",
+			"Emergency",
+			
 			"Custom"
 		];
 		
