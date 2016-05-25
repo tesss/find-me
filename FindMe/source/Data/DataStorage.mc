@@ -35,7 +35,6 @@ module Data{
 		];
 		
 		var app = null;
-		var deviceSettings;
 		var timer;
 		var currentLocation;
 		var session;
@@ -45,16 +44,19 @@ module Data{
 			app = Application.getApp().weak();
 			timer = new Timer.Timer();
 			
-			deviceSettings = System.getDeviceSettings();
-			
-			clearProp(KEY_LOC_NAME); clearProp(KEY_LOC_LAT); clearProp(KEY_LOC_LON); clearProp(KEY_LOC_TYPE); clearProp(KEY_LOC_BATCH);
-			clearProp(KEY_BATCH_ID); clearProp(KEY_BATCH_NAME); clearProp(KEY_BATCH_DATE);
-			clearProp(KEY_SORT); clearProp(KEY_DISTANCE); clearProp(KEY_INTERVAL); clearProp(KEY_FORMAT); clearProp(KEY_ACT_TYPE);
+			//clearProp(KEY_LOC_NAME); clearProp(KEY_LOC_LAT); clearProp(KEY_LOC_LON); clearProp(KEY_LOC_TYPE); clearProp(KEY_LOC_BATCH);
+			//clearProp(KEY_BATCH_ID); clearProp(KEY_BATCH_NAME); clearProp(KEY_BATCH_DATE);
+			//clearProp(KEY_SORT); clearProp(KEY_DISTANCE); clearProp(KEY_INTERVAL); clearProp(KEY_FORMAT); clearProp(KEY_ACT_TYPE);
 			
 			initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE); initProp(KEY_LOC_BATCH);
 			initProp(KEY_BATCH_ID); initProp(KEY_BATCH_NAME); initProp(KEY_BATCH_DATE);
 			
-			if(getInterval() == null){ setInterval(0); }
+			var interval = getInterval();
+			if(interval == null){ 
+				setInterval(0);
+			} else {
+				startTimer(interval);
+			}
 			if(getDistance() == null){ setDistance(0); }
 			if(getFormat() == null){ setFormat(Position.GEO_DEG); }
 			if(getActivityType() == null){ setActivityType(ActivityRecording.SPORT_GENERIC); }

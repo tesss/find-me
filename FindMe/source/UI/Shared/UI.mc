@@ -141,4 +141,48 @@ module UI{
         dc.clear();
         Picker.onUpdate(dc);
 	}
+	
+	function setColor(dc, fcolor, bcolor){
+		if(fcolor == null){
+			fcolor = COLOR_PRIMARY;
+		}
+		if(bcolor == null){
+			bcolor = COLOR_BACKGROUND;
+		}
+		dc.setColor(fcolor, bcolor);
+	}
+	
+	function rotate(point, center, angle){
+		return [
+			(point[0] - center[0]) * Math.cos(angle) - (point[1] - center[1]) * Math.sin(angle) + center[0],
+			(point[1] - center[1]) * Math.cos(angle) + (point[0] - center[0]) * Math.sin(angle) + center[1]
+		];
+	}
+	
+	function getLocationStr(location){
+		// format from settings
+		return new Position.Location({
+			:latitude => location[Data.LOC_LAT], 
+			:longitude => location[Data.LOC_LON], 
+			:format => :radians}).toGeoString(dataStorage.getFormat());
+	}
+	
+	function getDistanceStr(distance){
+		var isMetric = System.getDeviceSettings().distanceUnits == System.UNIT_METRIC;
+		if(distance < 0.01){
+			//distance = 0;
+		}
+		if(distance < 1){
+			var meters = distance * 1000;
+			if(isMetric){
+				return meters.toNumber() + " m";
+			}
+			return (meters * 3.2808).toNumber() + " ft";
+		} else {
+			if(isMetric){
+				return distance.format("%.2f") + " km";
+			}
+			return (distance * 0.621371).format("%.2f") + " mi";
+		}
+	}
 }

@@ -25,7 +25,11 @@ module UI{
 				var info = null;
 				if(dataStorage.currentLocation == null || dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
 					available = false;
-					info = "Location not available";
+					if(dataStorage.getInterval() >= 0){
+						info = "Location not available";
+					} else {
+						info = "GPS disabled";
+					}
 				} else if(dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_LAST_KNOWN){
 					info = "Using last known position";
 				} else if(dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_POOR){

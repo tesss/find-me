@@ -11,6 +11,7 @@ module UI{
 		}
 		
 		function onShow(){
+			release();
 			if(openMainMenu){
 				openMainMenu = false;
 				pushMainMenu();
@@ -30,17 +31,18 @@ module UI{
 	}
 	
 	function getScreenType(){
-		if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_ROUND){
+		var screenShape = System.getDeviceSettings().screenShape;
+		if(screenShape == System.SCREEN_SHAPE_ROUND){
 			return :round;
 		}
-		if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_RECTANGLE){
-			if(dataStorage.deviceSettings.screenWidth > dataStorage.deviceSettings.screenHeight){
+		if(screenShape == System.SCREEN_SHAPE_RECTANGLE){
+			if(screenWidth > screenHeight){
 				return :square;
 			} else {
 				return :tall;
 			}
 		}
-		if(dataStorage.deviceSettings.screenShape == System.SCREEN_SHAPE_SEMI_ROUND){
+		if(screenShape == System.SCREEN_SHAPE_SEMI_ROUND){
 			return :semiround;
 		}
 		return null;

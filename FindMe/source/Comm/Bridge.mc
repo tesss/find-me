@@ -14,7 +14,7 @@ module Comm {
 	    function parseMail(mail){
 	    	// mock
 	    	var batch = [mail, "Batch #" + mail, Time.now().value()];
-	    	var l = 10;
+	    	var l = 80;
 	    	var locations = new Data.Locations(new[l],new[l],new[l],new[l],new[l]);
 	    	for(var i = 0; i < l; i++){
 	    		if(i < 10){
