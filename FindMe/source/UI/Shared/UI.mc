@@ -6,7 +6,8 @@ module UI{
 	var transition;
 	var screenType;
 	var model;
-	var firstLoad;
+	var openMainMenu;
+	var openTypesMenu;
 	var drawModel;
 	
 	const COLOR_BACKGROUND = 0x000000;

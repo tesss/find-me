@@ -36,7 +36,7 @@ module UI{
 	function getDistanceStr(distance){
 		var isMetric = dataStorage.deviceSettings.distanceUnits == System.UNIT_METRIC;
 		if(distance < 0.01){
-			distance = 0;
+			//distance = 0;
 		}
 		if(distance < 1){
 			var meters = distance * 1000;
@@ -101,16 +101,25 @@ module UI{
 				dc.drawLine(drawModel.line1[0], drawModel.line1[1], drawModel.line1[2], drawModel.line1[3]);
 				dc.drawLine(drawModel.line2[0], drawModel.line2[1], drawModel.line2[2], drawModel.line2[3]);
 				
-				setColor(dc, COLOR_SECONDARY);
-				var p1 = rotate(drawModel.direction[0], drawModel.directionCenter, bearing);
-				var p2 = rotate(drawModel.direction[1], drawModel.directionCenter, bearing);
-				var p3 = rotate(drawModel.direction[2], drawModel.directionCenter, bearing);
-				var p4 = rotate(drawModel.direction[3], drawModel.directionCenter, bearing);
-				dc.fillPolygon([p1, p2, p3, p4]);	
-				dc.drawLine(p1[0], p1[1], p2[0], p2[1]);
-				dc.drawLine(p2[0], p2[1], p3[0], p3[1]);
-				dc.drawLine(p3[0], p3[1], p4[0], p4[1]);
-				dc.drawLine(p4[0], p4[1], p1[0], p1[1]);
+				if(distance > Data.ZERO_LIMIT){
+					setColor(dc, COLOR_SECONDARY);
+					var p1 = rotate(drawModel.direction[0], drawModel.directionCenter, bearing);
+					var p2 = rotate(drawModel.direction[1], drawModel.directionCenter, bearing);
+					var p3 = rotate(drawModel.direction[2], drawModel.directionCenter, bearing);
+					var p4 = rotate(drawModel.direction[3], drawModel.directionCenter, bearing);
+					dc.fillPolygon([p1, p2, p3, p4]);
+									
+					setColor(dc, COLOR_LOWLIGHT);
+					dc.drawLine(p1[0], p1[1], p2[0], p2[1]);
+					dc.drawLine(p2[0], p2[1], p3[0], p3[1]);
+					dc.drawLine(p3[0], p3[1], p4[0], p4[1]);
+					dc.drawLine(p4[0], p4[1], p1[0], p1[1]);
+				} else {
+					setColor(dc, COLOR_SECONDARY);
+					dc.drawCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius);
+					setColor(dc, COLOR_HIGHLIGHT);
+					dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], 10);
+				}
 				
 				setColor(dc, COLOR_HIGHLIGHT);
 				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_SMALL, getDistanceStr(distance), Graphics.TEXT_JUSTIFY_CENTER);
@@ -128,6 +137,7 @@ module UI{
 			setColor(dc, COLOR_PRIMARY);
 			dc.clear();
 		
+			dc.setPenWidth(3);
 			dc.drawText(drawModel.name[0], drawModel.name[1], Graphics.FONT_MEDIUM, location[Data.LOC_NAME], Graphics.TEXT_JUSTIFY_CENTER);
 			
 			setColor(dc, COLOR_LOWLIGHT);
@@ -143,6 +153,7 @@ module UI{
 				dc.fillPolygon(drawModel.arrow2);
 			}
 			drawDynamic(location, drawModel, dc);
+			dc.setPenWidth(1);
 		}
 		
 		function getDrawModel(dc){
@@ -159,6 +170,7 @@ module UI{
 				var a1 = 1.5;
 				var a2 = 1;
 				var r = 30;
+				var dr = 5;
 				drawModel = new LocationDrawModel();
 				drawModel.line1 = [padding, hc + r, wc - r - padding, hc];
 				drawModel.line2 = [wc + r + padding, hc, w - padding, hc + r];
@@ -174,6 +186,7 @@ module UI{
 					drawModel.bearing = [wc, hc3 * 3];
 					drawModel.direction = getDirectionArrow(c, r);
 					drawModel.directionCenter = c;
+					drawModel.radius = getDistance(drawModel.direction[0], drawModel.directionCenter) - dr;
 				} else if (screenType == :square){
 					if(dataStorage.deviceSettings.inputButtons & System.BUTTON_INPUT_UP == 0){
 						drawModel.arrow1 = [[a2, hc], [ar + a2, hc - ar * a1], [ar + a2, hc + ar * a1]];
@@ -190,6 +203,7 @@ module UI{
 					drawModel.bearing = [wc, hc - dc.getFontHeight(Graphics.FONT_TINY)/2];
 					drawModel.direction = getDirectionArrow(c, r);
 					drawModel.directionCenter = c;
+					drawModel.radius = getDistance(drawModel.direction[0], drawModel.directionCenter) - dr;
 				} else if (screenType == :tall){
 					c = [wc, hc];
 					p = 15;
@@ -204,6 +218,7 @@ module UI{
 					drawModel.bearing = [wc, hc - dc.getFontHeight(Graphics.FONT_TINY)/2];
 					drawModel.direction = getDirectionArrow(c, r);
 					drawModel.directionCenter = c;
+					drawModel.radius = getDistance(drawModel.direction[0], drawModel.directionCenter) - dr;
 				} else if (type == :semiround){
 					c = [wc, hc + 5];
 					p = 15;
@@ -213,6 +228,7 @@ module UI{
 					drawModel.bearing = [wc, hc3 * 3];
 					drawModel.direction = getDirectionArrow(c, r);
 					drawModel.directionCenter = c;
+					drawModel.radius = getDistance(drawModel.direction[0], drawModel.directionCenter) - dr;
 				}
 			}
 			return drawModel;
@@ -237,6 +253,12 @@ module UI{
 			}
 		}
 		
+		function getDistance(p1, p2){
+			var d1 = p2[0] - p1[0];
+			var d2 = p2[1] - p1[1];
+			return Math.sqrt(d1*d1 + d2*d2);
+		}
+		
 		function sort(){
 			model.sort();
 		}
@@ -258,6 +280,7 @@ module UI{
 		var arrow1;
 		var arrow2;
 		var triangle;
+		var radius;
 		var distance;
 		var bearing;
 		var direction;
@@ -279,6 +302,11 @@ module UI{
 		function onPreviousPage(){
 			model.get().prev();
 			Ui.requestUpdate();
+		}
+		
+		function onBack(){
+			Ui.popView(transition);
+			return false;
 		}
 		
 		function onSelect(){

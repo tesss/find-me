@@ -6,17 +6,21 @@ module UI{
 		function initialize(){
 			screenType = getScreenType();
 			transition = Ui.SLIDE_IMMEDIATE;
-			firstLoad = true;
-			pushMainMenu();
-			pushTypesMenu();
+			openMainMenu = true;
+			openTypesMenu = true;
 		}
 		
 		function onShow(){
-			if(firstLoad){
-				firstLoad = false;
+			if(openMainMenu){
+				openMainMenu = false;
+				pushMainMenu();
+				if(openTypesMenu){
+					pushTypesMenu();
+					openTypesMenu = false;
+				}
 			} else {
 				if(dataStorage.session != null && dataStorage.session.isRecording()){
-					firstLoad = true;
+					openMainMenu = true;
 					Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(true), transition);
 				} else {
 					Ui.popView(transition);
