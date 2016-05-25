@@ -11,7 +11,23 @@ using _;
 
 module Data{
 	class DataStorage {
-		static const TYPES = ["Place", "Highway", "Building", "Hotel", "Sight", "Transport", "Shop", "Entertainment", "Medical", "Water", "Mountain", "Campsite", "Custom"];
+		static const TYPES = [
+			"Place", 
+			"Highway", 
+			"Building", 
+			"Hotel", 
+			"Sight", 
+			"Transport", 
+			"Shop", 
+			"Food", 
+			"Entertainment", 
+			"Emergency", 
+			"Water", 
+			"Mountain", 
+			"Campsite", 
+			"Natural", 
+			"Custom"
+		];
 		
 		var app = null;
 		var deviceSettings;

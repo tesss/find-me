@@ -28,6 +28,7 @@ class FindMeApp extends App.AppBase {
     }
 
 }
+		// show logo on main page
 		// problem with popups
 		// add notification that gps found, if distance 0 - hide bearing
 		// improve character factory
