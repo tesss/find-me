@@ -34,7 +34,7 @@ module UI{
 	    	var radians = loc.toRadians();
 	    	var location = [null, name, radians[0], radians[1], index, null];
 	    	var ids = dataStorage.addLocation(location);
-	    	location[Data.LOC_ID] = ids.values()[0];
+	    	location[Data.LOC_ID] = ids[0];
 	    	var model = new TypesViewModel([[location]], false);
 	    	Ui.popView(transition);
 	    	if(!fromTextPicker){

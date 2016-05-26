@@ -79,7 +79,11 @@ module UI{
 			}
 			
 			if(locationsModel.size() == 0){
-				types = Data.ArrayExt.removeAt(types, typeIndex);
+				if(index == 0){
+					types = [];
+				} else {
+					types = Data.ArrayExt.removeAt(types, typeIndex);
+				}
 				return true;
 			}
 			return false;

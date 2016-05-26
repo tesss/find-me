@@ -22,8 +22,10 @@ module UI{
 	
 	function pushTypesMenu(){
 		//release();
+		_.p(model);
 		if(model == null){
 			var types = dataStorage.getTypesList();
+			_.p(types);
 			model = new TypesViewModel(types, true);
 			types = null;
 		}
