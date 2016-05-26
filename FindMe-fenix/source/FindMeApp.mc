@@ -34,8 +34,6 @@ class FindMeApp extends App.AppBase {
 		// transaction while saving
 		// id - generated max
 		// play sound when import performed and activity or vibrate
-		// add with picker
-    	// show find only for supported devices (possible with picker)
-    	// separate into diff packages
     	// indicate the quality of signal (maybe use in zero-distance)
     	// highlight name with invert color (colors by type?)
+    	// show if activity started

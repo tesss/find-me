@@ -142,6 +142,9 @@ module Data{
 		// validate in import
 		function getTypesList(){
 			var locations = getLocations();
+			if(locations.size() == 0){
+				return [];
+			}
 			var types = {};
 			var all = {};
 			var lat = null;

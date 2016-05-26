@@ -6,8 +6,8 @@ using _;
 module UI{
 	class FindTextPickerDelegate extends Ui.TextPickerDelegate {
 		function onTextEntered(search, changed){
-			if(search.length() > 15){
-				pushInfoView("Max length 15", transition, false);
+			if(search.length() > 5){
+				pushInfoView("Max length 5", transition, false);
 			} else {
 				var locations = dataStorage.find(search);
 				if(locations.size() == 0){

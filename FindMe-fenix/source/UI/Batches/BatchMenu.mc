@@ -29,7 +29,7 @@ module UI{
 				Ui.popView(transition);
 				Ui.popView(transition);
 				pushBatchesMenu();
-				pushInfoView("Deleted", null, false);
+				//pushInfoView("Deleted", null, false);
 			}
 		}
 	}

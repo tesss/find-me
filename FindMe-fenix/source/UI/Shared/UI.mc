@@ -22,17 +22,15 @@ module UI{
 	
 	function pushTypesMenu(){
 		//release();
-		_.p(model);
 		if(model == null){
 			var types = dataStorage.getTypesList();
-			_.p(types);
 			model = new TypesViewModel(types, true);
-			types = null;
 		}
-		if(model.size() <= 1){
+		if(model.size() == 0){
 			pushInfoView("No locations", transition, false);
 		} else {
 			// delete/add/import into model
+			_.p(111);
 			Ui.pushView(new TypesMenu(model), new TypesMenuDelegate(model), transition);
 		}
 	}

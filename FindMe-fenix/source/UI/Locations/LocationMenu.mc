@@ -65,9 +65,10 @@ module UI{
 	    			Ui.popView(transition);
 					Ui.popView(transition);
 					Ui.popView(transition);
-					pushTypesMenu();
+					openMainMenu = true;
+					openTypesMenu = true;
 	    		}
-	    		pushInfoView("Deleted", null, !fullRefresh && model.global || fullRefresh && !model.global);
+	    		//pushInfoView("Deleted", null, !fullRefresh && model.global || fullRefresh && !model.global);
 	    	}
 	    }
     }

@@ -20,7 +20,6 @@ module UI{
 				pushInfoView("Max length 15", transition, false);
 			} else {
 				Ui.pushView(new NewTypesMenu(), new NewTypesMenuDelegate(locationStr, name, format, true, back), transition);
-			//pushInfoView("Name: " + name, null, false);
 			}
 		}
 		
