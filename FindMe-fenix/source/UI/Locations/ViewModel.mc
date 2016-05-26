@@ -38,10 +38,12 @@ module UI{
 		
 		function delete(){
 			var locationsModel = get();
-			var locationIndex = locationsModel.index;
 			var currentId = locationsModel.get()[Data.DataStorage.LOC_ID];
 			dataStorage.deleteLocation(currentId);
-			locationsModel.locations = Data.ArrayExt.removeAt(locationsModel.locations, locationIndex);
+			locationsModel.locations = Data.ArrayExt.removeAt(locationsModel.locations, locationsModel.index);
+			if(locationsModel.index == locationsModel.locations.size()){
+				locationsModel.index--;
+			}
 			if(!global){
 				return locationsModel.size() == 0;
 			}
