@@ -30,7 +30,6 @@ module UI{
 			pushInfoView("No locations", transition, false);
 		} else {
 			// delete/add/import into model
-			_.p(111);
 			Ui.pushView(new TypesMenu(model), new TypesMenuDelegate(model), transition);
 		}
 	}
@@ -135,13 +134,6 @@ module UI{
 			bcolor = COLOR_BACKGROUND;
 		}
 		dc.setColor(fcolor, bcolor);
-	}
-	
-	function rotate(point, center, angle){
-		return [
-			(point[0] - center[0]) * Math.cos(angle) - (point[1] - center[1]) * Math.sin(angle) + center[0],
-			(point[1] - center[1]) * Math.cos(angle) + (point[0] - center[0]) * Math.sin(angle) + center[1]
-		];
 	}
 	
 	function getLocationStr(location){

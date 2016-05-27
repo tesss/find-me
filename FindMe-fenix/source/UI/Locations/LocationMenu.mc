@@ -59,14 +59,16 @@ module UI{
 	    		dataStorage.saveLocationPersisted(model.get().get()[dataStorage.LOC_ID]);
 	    		pushInfoView("Saved successfully", null, model.global);
 	    	} else if(item == :delete){
-	    		popInNotGlobal();
+	    		//popInNotGlobal();
 	    		var fullRefresh = model.delete();
-	    		if(fullRefresh && model.global){
-	    			Ui.popView(transition);
+	    		if(fullRefresh){
+	    			if(model.global){
+	    				Ui.popView(transition);
+	    				openTypesMenu = true;
+	    			}
 					Ui.popView(transition);
 					Ui.popView(transition);
 					openMainMenu = true;
-					openTypesMenu = true;
 	    		}
 	    		//pushInfoView("Deleted", null, !fullRefresh && model.global || fullRefresh && !model.global);
 	    	}

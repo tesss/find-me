@@ -95,12 +95,34 @@ module UI{
 			];
 		}
 		
+		hidden function getNameColor(type){
+			if(type <= 2){
+				return Graphics.COLOR_BLUE;
+			}
+			if(type <= 3){
+				return Graphics.COLOR_RED;
+			}
+			if(type <= 7){
+				return Graphics.COLOR_GREEN;
+			}
+			if(type <= 14){
+				return Graphics.COLOR_YELLOW;
+			}
+			return Graphics.COLOR_LT_GRAY;
+		}
+		
 		hidden function draw(location, drawModel, dc){
 			setColor(dc, COLOR_PRIMARY);
 			dc.clear();
 		
 			dc.setPenWidth(3);
-			dc.drawText(drawModel.name[0], drawModel.name[1], Graphics.FONT_MEDIUM, location[Data.LOC_NAME], Graphics.TEXT_JUSTIFY_CENTER);
+			
+			var color = getNameColor(location[Data.LOC_TYPE]);
+			setColor(dc, color);
+			var font = Graphics.FONT_SMALL;
+			dc.fillRectangle(0, drawModel.name[1], dc.getWidth(), dc.getFontHeight(font) + 1);
+			setColor(dc, COLOR_BACKGROUND, color);
+			dc.drawText(drawModel.name[0], drawModel.name[1], font, location[Data.LOC_NAME], Graphics.TEXT_JUSTIFY_CENTER);
 			
 			setColor(dc, COLOR_LOWLIGHT);
 			

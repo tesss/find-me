@@ -8,7 +8,7 @@ module UI {
 		var isLat;		
 		function initialize(_isLat){ isLat = _isLat; }
 		function getDrawable(index, isSelected){ return getText(index.toString(), {:isNumber => true, :isSelected => isSelected});}
-		function getSize(){ if(isLat){ return 91; } return 181; }
+		function getSize(){ if(isLat){ return 90; } return 180; }
 		function getValue(index){ return index; }
 	}
 	
