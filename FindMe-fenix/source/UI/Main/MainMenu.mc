@@ -8,7 +8,6 @@ module UI{
 			addItem("Locations", :types);
 			addItem("Add Current", :addCurrent);
 			addItem("Add Coordinates", :add);
-			addItem("Find", :find);
 			addItem("Batches", :batches);
 			addItem("Settings", :settings);
 			addItem("Clear All", :clear);
@@ -54,9 +53,6 @@ module UI{
 				release();
 				var format = dataStorage.getFormat();
 				Ui.pushView(new LocationPicker(format), new LocationPickerDelegate(format), transition);
-			} else if(item == :find){
-				release();
-				Ui.pushView(new Ui.TextPicker(), new FindTextPickerDelegate(), transition);
 			} else if(item == :batches){
 				release();
 				pushBatchesMenu();

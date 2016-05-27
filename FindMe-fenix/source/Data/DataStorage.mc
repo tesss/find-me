@@ -14,15 +14,11 @@ module Data{
 		static const TYPES = [
 			"Place",
 			"Highway",
-			"Building",
-			
 			"Sport",
-			
 			"Mountain",
-			"Camp",
 			"Water",
+			"Tourism",
 			"Natural",
-			
 			"Hotel",
 			"Sight",
 			"Transport",
@@ -30,7 +26,7 @@ module Data{
 			"Food",
 			"Entertainment",
 			"Emergency",
-			
+			"Tactical",
 			"Custom"
 		];
 		
@@ -169,6 +165,9 @@ module Data{
 					typeLocations = null;
 				}
 			}
+			if(all.size() == 0){
+				return [];
+			}
 			locations = null;
 			all = all.values();
 			var keys = types.keys();
@@ -276,43 +275,6 @@ module Data{
 		
 		function idPredicate(item, id){
 			return item[LOC_ID] == id;
-		}
-		
-		function find(str){
-			str = str.toLower();
-			var types = {};
-			for(var i = 0; i < TYPES.size(); i++){
-				if(TYPES[i].toLower().find(str) != null){
-					types.put(i, i);
-				}
-			}
-			var locations = getLocations();
-			var locationsList = {};
-			var lat = null;
-			var lon = null;
-			var distance = getDistance();
-			if(currentLocation != null){
-				lat = currentLocation[LAT];
-				lon = currentLocation[LON];
-			}
-			for(var i = 0; i < locations.size(); i++){
-				if(str == "" || locations.names[i].toLower().find(str) != null || types.hasKey(locations.types[i])){
-					var location = locations.get(i, lat, lon);
-					if(distance == 0 || currentLocation == null || (currentLocation != null && location[LOC_DIST] <= distance)){
-						locationsList.put(i, location);
-					}
-				}
-			}
-			locations = null;
-			types = null;
-			locationsList = locationsList.values();
-			var method;
-			if(currentLocation != null){
-				method = method(:distanceComparer);
-			} else {
-				method = method(:nameComparer);
-			}
-			return ArrayExt.sort(locationsList, method);
 		}
 		
 		// deleting

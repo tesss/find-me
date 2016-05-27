@@ -1,3 +1,5 @@
+
+
 using Toybox.System;
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics;
@@ -12,6 +14,25 @@ module UI{
 		hidden var model;
 		hidden var dots;
 		hidden var interval;
+		
+		const TYPES_BCOLORS = [
+			Graphics.COLOR_WHITE,
+			Graphics.COLOR_LT_GRAY,
+			Graphics.COLOR_DK_RED,
+			Graphics.COLOR_DK_BLUE,
+			Graphics.COLOR_BLUE,
+			Graphics.COLOR_DK_GREEN,
+			Graphics.COLOR_GREEN,
+			Graphics.COLOR_WHITE,
+			Graphics.COLOR_ORANGE,
+			Graphics.COLOR_LT_GRAY,
+			Graphics.COLOR_PURPLE,
+			Graphics.COLOR_YELLOW,
+			Graphics.COLOR_PINK,
+			Graphics.COLOR_RED,
+			Graphics.COLOR_DK_GREEN,
+			Graphics.COLOR_WHITE
+		];
 	
 		function initialize(_model){
 			model = _model;
@@ -95,36 +116,18 @@ module UI{
 			];
 		}
 		
-		hidden function getNameColor(type){
-			if(type <= 2){
-				return Graphics.COLOR_BLUE;
-			}
-			if(type <= 3){
-				return Graphics.COLOR_RED;
-			}
-			if(type <= 7){
-				return Graphics.COLOR_GREEN;
-			}
-			if(type <= 14){
-				return Graphics.COLOR_YELLOW;
-			}
-			return Graphics.COLOR_LT_GRAY;
-		}
-		
 		hidden function draw(location, drawModel, dc){
 			setColor(dc, COLOR_PRIMARY);
 			dc.clear();
 		
 			dc.setPenWidth(3);
 			
-			var color = getNameColor(location[Data.LOC_TYPE]);
+			var color = TYPES_BCOLORS[location[Data.LOC_TYPE]];
 			setColor(dc, color);
 			var font = Graphics.FONT_SMALL;
 			dc.fillRectangle(0, drawModel.name[1], dc.getWidth(), dc.getFontHeight(font) + 1);
 			setColor(dc, COLOR_BACKGROUND, color);
 			dc.drawText(drawModel.name[0], drawModel.name[1], font, location[Data.LOC_NAME], Graphics.TEXT_JUSTIFY_CENTER);
-			
-			setColor(dc, COLOR_LOWLIGHT);
 			
 			setColor(dc, COLOR_SECONDARY);
 			dc.drawText(drawModel.type[0], drawModel.type[1], Graphics.FONT_XTINY, 
