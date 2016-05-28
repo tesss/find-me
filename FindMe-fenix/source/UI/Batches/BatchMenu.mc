@@ -23,13 +23,12 @@ module UI{
 			if(symbol == :persisted){
 				dataStorage.saveBatchPersisted(id);
 				Ui.popView(transition);
-				pushInfoView("Saved successfully", null, false);
+				pushInfoView("Saved successfully", false);
 			} else if(symbol == :delete) {
 				dataStorage.deleteBatch(id);
 				Ui.popView(transition);
 				Ui.popView(transition);
 				pushBatchesMenu();
-				//pushInfoView("Deleted", null, false);
 			}
 		}
 	}

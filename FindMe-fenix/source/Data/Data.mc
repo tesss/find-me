@@ -4,7 +4,6 @@ using _;
 
 module Data {
 	const NAME_LIMIT = 15;
-	const FIND_LIMIT = 5;
 	const ZERO_LIMIT = 0.005;
 	
 	function toRadians(degrees){

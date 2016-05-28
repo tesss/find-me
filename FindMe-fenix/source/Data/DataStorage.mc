@@ -7,6 +7,7 @@ using Toybox.Position;
 using Toybox.PersistedLocations;
 using Toybox.WatchUi as Ui;
 using Toybox.ActivityRecording;
+using Alert;
 using _;
 
 module Data{
@@ -116,6 +117,16 @@ module Data{
 		}
 		
 		function updateCurrentLocation(info){
+			if(info.accuracy != Position.QUALITY_NOT_AVAILABLE){
+				if(currentLocation == null || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
+					Alert.alert(Alert.GPS_FOUND);
+				}
+			} else {
+				if(currentLocation != null && currentLocation[ACCURACY] != Position.QUALITY_NOT_AVAILABLE){
+					Alert.alert(Alert.GPS_LOST);
+				}
+			}
+			
 			var radians = info.position.toRadians();
 			currentLocation = [radians[0], radians[1], info.heading, info.accuracy];
 			invokeTimerCallback();

@@ -5,6 +5,7 @@ using Toybox.Math;
 using Toybox.Sensor;
 using Toybox.Position;
 using Data;
+using Alert;
 using _;
 
 module UI{
@@ -51,7 +52,7 @@ module UI{
 				return;
 			}
 			Ui.requestUpdate();
-			if(bearing != null && directionDrawable.angle != bearing){
+			if(bearing != null && (directionDrawable.angle * 1000).toNumber() != (bearing * 1000).toNumber()){
 				anim = true;
 				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 1, method(:animCallback));
 			}
@@ -90,12 +91,6 @@ module UI{
 					location[Data.LOC_LON], 
 					dataStorage.currentLocation[Data.LAT], 
 					dataStorage.currentLocation[Data.LON]);
-				bearing = Data.bearing(
-					dataStorage.currentLocation[Data.LAT], 
-					dataStorage.currentLocation[Data.LON], 
-					location[Data.LOC_LAT], 
-					location[Data.LOC_LON]
-				) - dataStorage.currentLocation[Data.HEADING];
 				dots = "";
 
 				setColor(dc, COLOR_LOWLIGHT);
@@ -103,9 +98,18 @@ module UI{
 				dc.drawLine(drawModel.line2[0], drawModel.line2[1], drawModel.line2[2], drawModel.line2[3]);
 				
 				if(distance > Data.ZERO_LIMIT){
-					//directionDrawable.angle = bearing;
+					bearing = Data.bearing(
+						dataStorage.currentLocation[Data.LAT], 
+						dataStorage.currentLocation[Data.LON], 
+						location[Data.LOC_LAT], 
+						location[Data.LOC_LON]
+					) - dataStorage.currentLocation[Data.HEADING];
 					directionDrawable.draw(dc);
 				} else {
+					if(bearing != null){
+						Alert.alert(Alert.ZERO_DISTANCE);
+					}
+					bearing = null;
 					setColor(dc, COLOR_SECONDARY);
 					dc.drawCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius);
 					setColor(dc, COLOR_HIGHLIGHT);

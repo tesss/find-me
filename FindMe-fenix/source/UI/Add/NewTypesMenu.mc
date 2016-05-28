@@ -17,15 +17,11 @@ module UI{
 		hidden var locationStr;
 		hidden var name;
 		hidden var format;
-		hidden var fromTextPicker;
-		hidden var pop;
 	
-		function initialize(_locationStr, _name, _format, _fromTextPicker, _pop){
+		function initialize(_locationStr, _name, _format){
 			locationStr = _locationStr;
 			name = _name;
 			format = _format;
-			fromTextPicker = _fromTextPicker;
-			pop = _pop;
 		}
 	
 	    function onMenuItem(item) {
@@ -37,12 +33,9 @@ module UI{
 	    	location[Data.LOC_ID] = ids[0];
 	    	var model = new TypesViewModel([[location]], false);
 	    	Ui.popView(transition);
-	    	if(!fromTextPicker){
-	    		Ui.popView(transition);
-	    	}
+	    	Ui.popView(transition);
 	    	openMainMenu = true;
 	    	Ui.pushView(new LocationView(model.get()), new LocationDelegate(model), transition);
-	    	// add support for text input handler
 	    }
     }
 }

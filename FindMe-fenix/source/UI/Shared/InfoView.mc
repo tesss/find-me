@@ -6,9 +6,11 @@ using Toybox.Lang;
 module UI{
 	class InfoView extends Ui.View{
 		hidden var str;
+		hidden var error;
 		
-		function initialize(_str){
+		function initialize(_str, _error){
 			str = _str;
+			error = _error;
 		}
 		
 		function onUpdate(dc){
@@ -23,7 +25,11 @@ module UI{
 			var y = hc - dc.getFontHeight(font)/2;
 			dc.drawText(wc, y, font, str, Graphics.TEXT_JUSTIFY_CENTER);
 			
-			dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
+			if(error){
+				dc.setColor(Graphics.COLOR_RED, COLOR_PRIMARY);
+			} else {
+				dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
+			}
 			dc.drawRectangle(0, h6 * 4, w, h6);
 			y = h6 * 4.5 - dc.getFontHeight(font)/2;
 			dc.setColor(COLOR_PRIMARY, COLOR_LOWLIGHT);
@@ -33,28 +39,18 @@ module UI{
 	
 	class InfoDelegate extends Ui.BehaviorDelegate {
 		hidden var pop;
-		hidden var exit;
 		
-		function initialize(_pop, _exit){
+		function initialize(_pop){
 			pop = _pop;
-			exit = _exit;
 		}
 	
 		function onBack(){
-			if(exit){
-				System.exit();
-				return;
-			}
 			if(pop){
 				Ui.popView(transition);
 			}
 		}
 		
 		function onSelect(){
-			if(exit){
-				System.exit();
-				return;
-			}
 			Ui.popView(transition);
 			if(pop){
 				Ui.popView(transition);

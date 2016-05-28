@@ -8,7 +8,7 @@ module UI{
 			addItem("Locations", :types);
 			addItem("Add Current", :addCurrent);
 			addItem("Add Coordinates", :add);
-			addItem("Batches", :batches);
+			//addItem("Batches", :batches);
 			addItem("Settings", :settings);
 			addItem("Clear All", :clear);
 			addItem("About", :about); // with connection status
@@ -33,10 +33,6 @@ module UI{
 					info = "Using last known position";
 				} else if(dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_POOR){
 					info = "Poor signal quality";
-				} else if(dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_USABLE){
-					//info = "Usable signal quality";
-				} else if(dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_GOOD){
-					//info = "Good signal quality";
 				}
 				if(available){
 					release();
@@ -47,7 +43,7 @@ module UI{
 						:format => :radians}).toGeoString(format), format, false);
 				}
 				if(info != null){
-					pushInfoView(info, null, false);
+					pushInfoView(info, false);
 				}
 			} else if(item == :add){
 				release();
@@ -62,7 +58,7 @@ module UI{
 			} else if(item == :clear){
 				release();
 				dataStorage.clear();
-				pushInfoView("Cleared", null, false);
+				pushInfoView("Cleared", false);
 			} else if(item == :about){
 				Ui.pushView(new AboutView(), new AboutViewDelegate(), transition);
 			}

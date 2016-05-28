@@ -12,7 +12,7 @@ module UI {
 			dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
 			dc.clear();
 			dc.setColor(COLOR_PRIMARY, COLOR_BACKGROUND);
-			var text = getText("Find % Me v.0.1", {});
+			var text = getText("FindMe v.0.1", {});
 			text.draw(dc); 
 		}
 	}

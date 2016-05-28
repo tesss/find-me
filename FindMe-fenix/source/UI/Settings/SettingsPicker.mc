@@ -71,7 +71,7 @@ module UI{
 			dataStorage.setActivityType(values[10]);
 			dataStorage.setSortBy(values[13]);
 			Ui.popView(transition);
-			pushInfoView("Settings saved", null, false);
+			pushInfoView("Settings saved", false);
 		}
 		
 		function onCancel(){
@@ -130,7 +130,7 @@ module UI{
 	}
 	
 	class FormatPickerFactory extends Ui.PickerFactory {
-		static const values = [Position.GEO_DEG, Position.GEO_DM, Position.GEO_DMS, Position.GEO_MGRS];
+		static const values = [Position.GEO_DEG, Position.GEO_MGRS, Position.GEO_DMS, Position.GEO_DM];
 		
 		function getDrawable(index, isSelected){
 			var value = values[index];

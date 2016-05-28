@@ -27,20 +27,17 @@ module UI{
 			model = new TypesViewModel(types, true);
 		}
 		if(model.size() == 0){
-			pushInfoView("No locations", transition, false);
+			pushInfoView("No locations", false);
 		} else {
 			// delete/add/import into model
 			Ui.pushView(new TypesMenu(model), new TypesMenuDelegate(model), transition);
 		}
 	}
 	
-	function pushInfoView(_str, _transition, _pop, _exit){
-		if(_transition == null){
-			_transition = transition;
-		}
+	function pushInfoView(_str, _pop, _error){
 		_pop = _pop == null || _pop instanceof Lang.Method || _pop;
-		_exit = _exit == true;
-		Ui.pushView(new InfoView(_str), new InfoDelegate(_pop, _exit), _transition);
+		_error = _error == true;
+		Ui.pushView(new InfoView(_str, _error), new InfoDelegate(_pop), transition);
 	}
 	
 	function pushNameView(location, format, back){
@@ -51,7 +48,7 @@ module UI{
 		release();
 		var batches = dataStorage.getBatchesList();
 		if(batches == null || batches.size() == 0) {
-			pushInfoView("No batches", null, false);
+			pushInfoView("No batches", false);
 		} else {
 			Ui.pushView(new BatchesMenu(batches), new BatchesMenuDelegate(batches), transition);
 		}
@@ -137,7 +134,6 @@ module UI{
 	}
 	
 	function getLocationStr(location){
-		// format from settings
 		return new Position.Location({
 			:latitude => location[Data.LOC_LAT], 
 			:longitude => location[Data.LOC_LON], 
@@ -146,9 +142,6 @@ module UI{
 	
 	function getDistanceStr(distance){
 		var isMetric = System.getDeviceSettings().distanceUnits == System.UNIT_METRIC;
-		if(distance < 0.01){
-			//distance = 0;
-		}
 		if(distance < 1){
 			var meters = distance * 1000;
 			if(isMetric){

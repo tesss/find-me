@@ -131,8 +131,8 @@ module UI{
 				str = values[0] + values[1] + values[2] + values[3] + values[4] + values[6] + values[6] + values[7] + values[8] + values[9];
 			}
 			Ui.popView(transition);
-			pushNameView(str, format, true);
-			pushInfoView(str, null, false);
+			pushNameView(str, format);
+			pushInfoView(str, false);
 		}
 		
 		function onCancel(){

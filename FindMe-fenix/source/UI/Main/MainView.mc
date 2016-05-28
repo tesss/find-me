@@ -20,8 +20,8 @@ module UI{
 				}
 			} else {
 				if(dataStorage.session != null && dataStorage.session.isRecording()){
-					openMainMenu = true;
-					Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(true), transition);
+					//openMainMenu = true;
+					Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(), transition);
 				} else {
 					Ui.popView(transition);
 				}
