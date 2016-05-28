@@ -171,7 +171,7 @@ module UI{
 			}
 			if(anim){
 				dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
-				dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius + 6);
+				dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius + 7);
 				directionDrawable.draw(dc);
 				return;
 			}

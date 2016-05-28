@@ -25,15 +25,14 @@ class FindMeApp extends App.AppBase {
 }
 		// show logo on main page
 		// problem with popups
-		// add notification that gps found, if distance 0 - hide bearing
+		// add notification that gps found
+		// invert order of settings values
 		// improve character factory
 		// think about encoding and minifying name of loc
 		// Jule VernGrant point on screenshots
-		// change transition
 		// limit - 100 locations - creshes on device (add limit info message)
 		// transaction while saving
 		// id - generated max
 		// play sound when import performed and activity or vibrate
     	// indicate the quality of signal (maybe use in zero-distance)
-    	// highlight name with invert color (colors by type?)
     	// show if activity started
