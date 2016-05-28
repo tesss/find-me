@@ -1,5 +1,3 @@
-
-
 using Toybox.System;
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics;
@@ -14,6 +12,10 @@ module UI{
 		hidden var model;
 		hidden var dots;
 		hidden var interval;
+		hidden var anim;
+		hidden var bearing;
+		
+		var directionDrawable;
 		
 		const TYPES_BCOLORS = [
 			Graphics.COLOR_WHITE,
@@ -38,16 +40,31 @@ module UI{
 			model = _model;
 			dots = "";
 			interval = dataStorage.getInterval();
+			anim = false;
+			getDrawModel();
+			directionDrawable = new DirectionDrawable(drawModel.direction, drawModel.directionCenter, 0);
 			Sensor.enableSensorEvents(method(:onSensor));
 		}
 		
 		function onSensor(info){
-			// doesn't update from compass
+			if(anim){
+				return;
+			}
+			Ui.requestUpdate();
+			if(bearing != null && directionDrawable.angle != bearing){
+				anim = true;
+				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 1, method(:animCallback));
+			}
+		}
+		
+		function animCallback(){
+			anim = false;
 			Ui.requestUpdate();
 		}
 		
 		hidden function drawDynamic(location, drawModel, dc){
 			if(dataStorage.currentLocation == null || dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
+				bearing = null;
 				// Forerunner 920xt - location doesn't show
 				setColor(dc, COLOR_SECONDARY);
 				dc.drawText(drawModel.bearing[0], drawModel.bearing[1], Graphics.FONT_TINY, getLocationStr(location), Graphics.TEXT_JUSTIFY_CENTER);
@@ -73,11 +90,12 @@ module UI{
 					location[Data.LOC_LON], 
 					dataStorage.currentLocation[Data.LAT], 
 					dataStorage.currentLocation[Data.LON]);
-				var bearing = Data.bearing(
+				bearing = Data.bearing(
 					dataStorage.currentLocation[Data.LAT], 
 					dataStorage.currentLocation[Data.LON], 
 					location[Data.LOC_LAT], 
-					location[Data.LOC_LON]) - dataStorage.currentLocation[Data.HEADING];
+					location[Data.LOC_LON]
+				) - dataStorage.currentLocation[Data.HEADING];
 				dots = "";
 
 				setColor(dc, COLOR_LOWLIGHT);
@@ -85,18 +103,8 @@ module UI{
 				dc.drawLine(drawModel.line2[0], drawModel.line2[1], drawModel.line2[2], drawModel.line2[3]);
 				
 				if(distance > Data.ZERO_LIMIT){
-					setColor(dc, COLOR_SECONDARY);
-					var p1 = rotate(drawModel.direction[0], drawModel.directionCenter, bearing);
-					var p2 = rotate(drawModel.direction[1], drawModel.directionCenter, bearing);
-					var p3 = rotate(drawModel.direction[2], drawModel.directionCenter, bearing);
-					var p4 = rotate(drawModel.direction[3], drawModel.directionCenter, bearing);
-					dc.fillPolygon([p1, p2, p3, p4]);
-									
-					setColor(dc, COLOR_LOWLIGHT);
-					dc.drawLine(p1[0], p1[1], p2[0], p2[1]);
-					dc.drawLine(p2[0], p2[1], p3[0], p3[1]);
-					dc.drawLine(p3[0], p3[1], p4[0], p4[1]);
-					dc.drawLine(p4[0], p4[1], p1[0], p1[1]);
+					//directionDrawable.angle = bearing;
+					directionDrawable.draw(dc);
 				} else {
 					setColor(dc, COLOR_SECONDARY);
 					dc.drawCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius);
@@ -107,13 +115,6 @@ module UI{
 				setColor(dc, COLOR_HIGHLIGHT);
 				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_SMALL, getDistanceStr(distance), Graphics.TEXT_JUSTIFY_CENTER);
 			}
-		}
-		
-		hidden function rotate(point, center, angle){
-			return [
-				(point[0] - center[0]) * Math.cos(angle) - (point[1] - center[1]) * Math.sin(angle) + center[0],
-				(point[1] - center[1]) * Math.cos(angle) + (point[0] - center[0]) * Math.sin(angle) + center[1]
-			];
 		}
 		
 		hidden function draw(location, drawModel, dc){
@@ -132,7 +133,6 @@ module UI{
 			setColor(dc, COLOR_SECONDARY);
 			dc.drawText(drawModel.type[0], drawModel.type[1], Graphics.FONT_XTINY, 
 				Data.DataStorage.TYPES[location[Data.LOC_TYPE]], Graphics.TEXT_JUSTIFY_CENTER);
-			model.fullRefresh = false;
 			
 			if(model.showArrows()){
 				setColor(dc, COLOR_LOWLIGHT);
@@ -164,25 +164,20 @@ module UI{
 		}
 	
 		function onUpdate(dc){
+			if(model.fullRefresh){
+				model.fullRefresh = false;
+				onSensor();
+				return;
+			}
+			if(anim){
+				dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
+				dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius + 6);
+				directionDrawable.draw(dc);
+				return;
+			}
 			var location = model.get();
 			if(location != null){
-				draw(location, getDrawModel(dc), dc);
-			}
-		}
-		
-		function getDistance(p1, p2){
-			var d1 = p2[0] - p1[0];
-			var d2 = p2[1] - p1[1];
-			return Math.sqrt(d1*d1 + d2*d2);
-		}
-		
-		function sort(){
-			model.sort();
-		}
-		
-		function onShow(){
-			if(dataStorage.getSortBy() == Data.SORTBY_DISTANCE){
-				dataStorage.timerCallback = method(:sort).weak();
+				draw(location, drawModel, dc);
 			}
 		}
 	}

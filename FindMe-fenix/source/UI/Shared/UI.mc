@@ -162,4 +162,11 @@ module UI{
 			return (distance * 0.621371).format("%.2f") + " mi";
 		}
 	}
+	
+	function rotate(point, center, angle){
+		return [
+			(point[0] - center[0]) * Math.cos(angle) - (point[1] - center[1]) * Math.sin(angle) + center[0],
+			(point[1] - center[1]) * Math.cos(angle) + (point[0] - center[0]) * Math.sin(angle) + center[1]
+		];
+	}
 }

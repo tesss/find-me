@@ -1,15 +1,19 @@
 using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
 using Data;
 using _;
 
-module UI{
+module UI {
 	class AboutView extends Ui.View{
+		function initialize(){
+		}
+		
 		function onUpdate(dc){
 			dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
 			dc.clear();
 			dc.setColor(COLOR_PRIMARY, COLOR_BACKGROUND);
 			var text = getText("Find % Me v.0.1", {});
-			text.draw(dc);
+			text.draw(dc); 
 		}
 	}
 	
