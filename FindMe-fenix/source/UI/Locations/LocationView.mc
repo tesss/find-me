@@ -63,7 +63,7 @@ module UI{
 			Ui.requestUpdate();
 		}
 		
-		hidden function drawDynamic(location, drawModel, dc){
+		hidden function drawDynamic(location, dc){
 			if(dataStorage.currentLocation == null || dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
 				bearing = null;
 				// Forerunner 920xt - location doesn't show
@@ -121,7 +121,8 @@ module UI{
 			}
 		}
 		
-		hidden function draw(location, drawModel, dc){
+		hidden function draw(location, dc){
+			getDrawModel();
 			setColor(dc, COLOR_PRIMARY);
 			dc.clear();
 		
@@ -143,7 +144,7 @@ module UI{
 				dc.fillPolygon(drawModel.arrow1);
 				dc.fillPolygon(drawModel.arrow2);
 			}
-			drawDynamic(location, drawModel, dc);
+			drawDynamic(location, dc);
 			dc.setPenWidth(1);
 		}
 		
@@ -181,7 +182,7 @@ module UI{
 			}
 			var location = model.get();
 			if(location != null){
-				draw(location, drawModel, dc);
+				draw(location, dc);
 			}
 		}
 	}

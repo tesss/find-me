@@ -33,7 +33,6 @@ module UI{
 	    	location[Data.LOC_ID] = ids[0];
 	    	var model = new TypesViewModel([[location]], false);
 	    	Ui.popView(transition);
-	    	Ui.popView(transition);
 	    	openMainMenu = true;
 	    	Ui.pushView(new LocationView(model.get()), new LocationDelegate(model), transition);
 	    }
