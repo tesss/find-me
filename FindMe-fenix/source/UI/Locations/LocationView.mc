@@ -77,8 +77,10 @@ module UI{
 				return;
 			}
 			Ui.requestUpdate();
-			if(info != null && info.heading != null && info.heading > 0){
-				heading = info.heading;
+			if(info != null){
+	            var xMag = info.mag[0];
+	            var yMag = info.mag[1] * -1;
+	            heading = Math.sqrt(Math.pow(xMag,2) + Math.pow(yMag,2));
 			} else {
 				heading = null;
 			}
@@ -227,6 +229,8 @@ module UI{
 		}
 		
 		function onShow(){
+			setColor(dc, COLOR_PRIMARY);
+			dc.clear();
 			dataStorage.timerCallback = method(:onTimer);
 		}
 		
