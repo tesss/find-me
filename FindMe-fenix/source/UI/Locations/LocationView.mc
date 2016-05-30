@@ -76,6 +76,9 @@ module UI{
 				return;
 			}
 			Ui.requestUpdate();
+			if(info != null && info.heading != null && info.heading != bearing && info.heading > 0){
+				bearing = info.heading;
+			}
 			if(bearing != null && (directionDrawable.angle * 1000).toNumber() != (bearing * 1000).toNumber()){
 				anim = true;	
 				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 1, method(:animCallback));
@@ -141,7 +144,7 @@ module UI{
 				}
 				
 				setColor(dc, COLOR_HIGHLIGHT);
-				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_SMALL, getDistanceStr(distance), Graphics.TEXT_JUSTIFY_CENTER);
+				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_NUMBER_MILD, getDistanceStr(distance), Graphics.TEXT_JUSTIFY_CENTER);
 			}
 		}
 		
@@ -191,7 +194,7 @@ module UI{
 				drawModel.arrow1 = [[109, 1], [116.500000, 6], [101.500000, 6]];
 				drawModel.arrow2 = [[109, 217], [116.500000, 212], [101.500000, 212]];
 				drawModel.radius = 35;
-				drawModel.distance = [109, 175];
+				drawModel.distance = [109, 174];
 				drawModel.bearing = [109, 108];
 				drawModel.direction = [[109, 97.000000], [136.000000, 157.000000], [109, 142.000000], [82.000000, 157.000000]];
 				drawModel.directionCenter = [109.000000, 137.000000];

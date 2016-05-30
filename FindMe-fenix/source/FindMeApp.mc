@@ -30,6 +30,5 @@ class FindMeApp extends App.AppBase {
 		// transaction while saving
 		// id - generated max
 		// import alert
-		
-		// icon (also to about)
+
     	// bugs

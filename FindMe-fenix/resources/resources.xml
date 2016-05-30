@@ -15,12 +15,12 @@
     </bitmap>
     <bitmap id="GpsUsable" filename="images/gps.png">
     	<palette disableTransparency="false">
-            <color>FF5500</color>
+            <color>FFAA00</color>
         </palette>
     </bitmap>
     <bitmap id="GpsGood" filename="images/gps.png">
    		<palette disableTransparency="false">
-            <color>00FF00</color>
+            <color>00AA00</color>
         </palette>
     </bitmap>
     <bitmap id="GpsActivity" filename="images/activity.png"/>
