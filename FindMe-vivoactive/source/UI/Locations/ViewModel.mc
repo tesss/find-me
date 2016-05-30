@@ -38,10 +38,12 @@ module UI{
 		
 		function delete(){
 			var locationsModel = get();
-			var locationIndex = locationsModel.index;
 			var currentId = locationsModel.get()[Data.DataStorage.LOC_ID];
 			dataStorage.deleteLocation(currentId);
-			locationsModel.locations = Data.ArrayExt.removeAt(locationsModel.locations, locationIndex);
+			locationsModel.locations = Data.ArrayExt.removeAt(locationsModel.locations, locationsModel.index);
+			if(locationsModel.index == locationsModel.locations.size()){
+				locationsModel.index--;
+			}
 			if(!global){
 				return locationsModel.size() == 0;
 			}
@@ -79,30 +81,14 @@ module UI{
 			}
 			
 			if(locationsModel.size() == 0){
-				types = Data.ArrayExt.removeAt(types, typeIndex);
+				if(index == 0){
+					types = [];
+				} else {
+					types = Data.ArrayExt.removeAt(types, typeIndex);
+				}
 				return true;
 			}
 			return false;
-		}
-		
-		function dispose(){
-			if(types != null){
-				for(var i = 0; i < types.size(); i++){
-					for(var j = 0; j < types[i].locations.size(); j++){
-						types[i].locations[j][Data.LOC_ID] = null;
-						types[i].locations[j][Data.LOC_NAME] = null;
-						types[i].locations[j][Data.LOC_LAT] = null;
-						types[i].locations[j][Data.LOC_LON] = null;
-						types[i].locations[j][Data.LOC_TYPE] = null;
-						types[i].locations[j][Data.LOC_BATCH] = null;
-						types[i].locations[j][Data.LOC_DIST] = null;
-						types[i].locations[j] = null;
-					}
-					types[i].locations = null;
-					types[i] = null;
-				}
-				types = null;
-			}
 		}
 	}
 

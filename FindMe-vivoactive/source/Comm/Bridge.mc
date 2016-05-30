@@ -6,15 +6,14 @@ using _;
 
 module Comm {
 	class Bridge {
-		function initialize()
-	    {
+		function initialize(){
 	        Comm.setMailboxListener( method(:onMail) );
 	    }
 	    
 	    function parseMail(mail){
 	    	// mock
 	    	var batch = [mail, "Batch #" + mail, Time.now().value()];
-	    	var l = 80;
+	    	var l = 10;
 	    	var locations = new Data.Locations(new[l],new[l],new[l],new[l],new[l]);
 	    	for(var i = 0; i < l; i++){
 	    		if(i < 10){

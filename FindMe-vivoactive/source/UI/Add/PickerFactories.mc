@@ -8,7 +8,7 @@ module UI {
 		var isLat;		
 		function initialize(_isLat){ isLat = _isLat; }
 		function getDrawable(index, isSelected){ return getText(index.toString(), {:isNumber => true, :isSelected => isSelected});}
-		function getSize(){ if(isLat){ return 91; } return 181; }
+		function getSize(){ if(isLat){ return 90; } return 180; }
 		function getValue(index){ return index; }
 	}
 	
@@ -47,23 +47,10 @@ module UI {
 	}
 	
 	class CharFactory extends Ui.PickerFactory {
-		static var letterValues = "AZYXWVUTSRQPONMLKJIHGFEDCB";
-		static var fullValues = " ~}|{_^]\\[@?>=<;:/.-,+*)('&%$#\"!0987654321zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
-		
-		hidden var full;
-		function initialize(_full){ full = _full; }
+		static const letterValues = "AZYXWVUTSRQPONMLKJIHGFEDCB";
+
 		function getDrawable(index, isSelected){ return getText(getValue(index), {:isSelected => isSelected}); }
-		function getSize(){
-			if(full){
-				return fullValues.length();
-			}
-			return letterValues.length(); 
-		}
-		function getValue(index){
-			if(full){
-				return fullValues.substring(index, index + 1);
-			}
-			return letterValues.substring(index, index + 1);
-		}
+		function getSize(){ return letterValues.length(); }
+		function getValue(index){ return letterValues.substring(index, index + 1); }
 	}
 }

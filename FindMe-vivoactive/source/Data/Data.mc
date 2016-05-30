@@ -3,9 +3,10 @@ using Toybox.Time;
 using _;
 
 module Data {
+	const VERSION = "0.1.0";
 	const NAME_LIMIT = 15;
-	const FIND_LIMIT = 5;
 	const ZERO_LIMIT = 0.005;
+	const LOC_MAX_COUNT = 100;
 	
 	function toRadians(degrees){
 		return degrees * Math.PI / 180;
@@ -86,11 +87,6 @@ module Data {
 		KEY_BATCH_ID,
 		KEY_BATCH_NAME,
 		KEY_BATCH_DATE
-	}
-	
-	enum {
-		KEY,
-		VALUE
 	}
 	
 	enum {

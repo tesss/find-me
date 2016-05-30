@@ -6,7 +6,6 @@ module UI{
 	class BatchMenu extends Ui.Menu {
 		function initialize(batch){
 			setTitle(batch[Data.BATCH_NAME]);
-			addItem("Save Persisted", :persisted);
 			addItem("Delete", :delete);
 		}
 	}
@@ -20,16 +19,11 @@ module UI{
 		
 		function onMenuItem(symbol){
 			var id = batch[Data.BATCH_ID];
-			if(symbol == :persisted){
-				dataStorage.saveBatchPersisted(id);
-				Ui.popView(transition);
-				pushInfoView("Saved successfully", null, false);
-			} else if(symbol == :delete) {
+			if(symbol == :delete) {
 				dataStorage.deleteBatch(id);
 				Ui.popView(transition);
 				Ui.popView(transition);
 				pushBatchesMenu();
-				pushInfoView("Deleted", null, false);
 			}
 		}
 	}

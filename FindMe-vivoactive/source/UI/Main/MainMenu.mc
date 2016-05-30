@@ -8,8 +8,7 @@ module UI{
 			addItem("Locations", :types);
 			addItem("Add Current", :addCurrent);
 			addItem("Add Coordinates", :add);
-			addItem("Find", :find);
-			addItem("Batches", :batches);
+			//addItem("Batches", :batches);
 			addItem("Settings", :settings);
 			addItem("Clear All", :clear);
 			addItem("About", :about); // with connection status
@@ -21,6 +20,9 @@ module UI{
 			if(item == :types){
 				pushTypesMenu();
 			} else if(item == :addCurrent){
+				if(pushIfInsufficientSpace()){
+					return;
+				}
 				var available = true;
 				var info = null;
 				if(dataStorage.currentLocation == null || dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
@@ -34,10 +36,6 @@ module UI{
 					info = "Using last known position";
 				} else if(dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_POOR){
 					info = "Poor signal quality";
-				} else if(dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_USABLE){
-					//info = "Usable signal quality";
-				} else if(dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_GOOD){
-					//info = "Good signal quality";
 				}
 				if(available){
 					release();
@@ -48,15 +46,15 @@ module UI{
 						:format => :radians}).toGeoString(format), format, false);
 				}
 				if(info != null){
-					pushInfoView(info, null, false);
+					pushInfoView(info, false);
 				}
 			} else if(item == :add){
+				if(pushIfInsufficientSpace()){
+					return;
+				}
 				release();
 				var format = dataStorage.getFormat();
 				Ui.pushView(new LocationPicker(format), new LocationPickerDelegate(format), transition);
-			} else if(item == :find){
-				release();
-				pushFindView();
 			} else if(item == :batches){
 				release();
 				pushBatchesMenu();
@@ -66,7 +64,7 @@ module UI{
 			} else if(item == :clear){
 				release();
 				dataStorage.clear();
-				pushInfoView("Cleared", null, false);
+				pushInfoView("Cleared", false);
 			} else if(item == :about){
 				Ui.pushView(new AboutView(), new AboutViewDelegate(), transition);
 			}

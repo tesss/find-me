@@ -47,20 +47,6 @@ module Data {
 			types = _types;
 			batches = _batches;
 		}
-		
-		function toString(loc){
-			var str = "";
-			if(loc != null){
-				for(var i = 0; i < size(); i++){
-					str = str + names[i] + " " + latitudes[i] + " " + longitudes[i] + " " + types[i] + " " + batches[i] + " " + distance(latitudes[i], longitudes[i], loc[0], loc[1]) + "\n";
-				}
-			} else {
-				for(var i = 0; i < size(); i++){
-					str = str + names[i] + " " + latitudes[i] + " " + longitudes[i] + " " + types[i] + " " + batches[i] + "\n";
-				}
-			}
-			return str;
-		}
 	}
 	
 	class Batches {
@@ -98,15 +84,6 @@ module Data {
 				return 0;
 			}
 			return ids.size();
-		}
-		
-		function toString(){
-			var str = "";
-			for(var i = 0; i < size(); i++){
-				var dateStr = dateStr(dates[i]);
-				str = str + ids[i] + " " + names[i] + " " + dateStr + "\n";
-			}
-			return str;
 		}
 	}
 }

@@ -2,15 +2,13 @@ using Toybox.WatchUi as Ui;
 using Toybox.ActivityRecording;
 using Toybox.Time;
 using Data;
+using Alert;
 using _;
 
 module UI{
 	class LocationMenu extends Ui.Menu {
-		hidden var model;
-		
 		function initialize(_model){
-			model = _model;
-			setTitle(model.get()[Data.LOC_NAME]);
+			setTitle(_model.get()[Data.LOC_NAME]);
 			if(dataStorage.session == null){
 				addItem("Start Activity", :activity);
 			} else {
@@ -21,9 +19,6 @@ module UI{
 				}
 			}
 			addItem("Coordinates", :coord);
-			if(Toybox has :PersistedLocations){
-				addItem("Save Persisted", :persisted);
-			}
 			addItem("Delete", :delete);
 		}
 	}
@@ -36,7 +31,10 @@ module UI{
 		}
 		
 		hidden function newSession(){
-			return ActivityRecording.createSession({:name => "FindMe " + Data.dateStr(Time.Time.now().value()), :sport => model.dataStorage.getActivityType()}); // add activity type
+			return ActivityRecording.createSession({
+				:name => "FindMe " + Data.dateStr(Time.Time.now().value()), 
+				:sport => model.dataStorage.getActivityType()
+			});
 		}
 		
 		hidden function popInNotGlobal(){
@@ -49,30 +47,30 @@ module UI{
 	    	if(item == :activity){
 	    		if(dataStorage.session == null){
 	    			dataStorage.session = newSession();
-	    			dataStorage.session.start();
+	    			if(!dataStorage.session.start()){
+	    				pushInfoView("Start error", model.global, true);
+	    				Alert.alert(Alert.ACTIVITY_FAILURE);
+	    			} else {
+	    				Alert.alert(Alert.ACTIVITY_START);
+	    			}
 	    		} else if(dataStorage.session.isRecording()){
 	    			Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(), transition);
-	    		} else {
-	    			dataStorage.session = newSession();
-	    			dataStorage.session.start(); // check for error
 	    		}
 	    	} else if(item == :coord){
 	    		popInNotGlobal();
-	    		pushInfoView(getLocationStr(model.get().get()), null, model.global);
-	    	} else if(item == :persisted){
-	    		popInNotGlobal();
-	    		dataStorage.saveLocationPersisted(model.get().get()[dataStorage.LOC_ID]);
-	    		pushInfoView("Saved successfully", null, model.global);
+	    		pushInfoView(getLocationStr(model.get().get()), model.global);
 	    	} else if(item == :delete){
-	    		popInNotGlobal();
 	    		var fullRefresh = model.delete();
-	    		if(fullRefresh && model.global){
-	    			Ui.popView(transition);
+	    		if(fullRefresh){
+	    			if(model.global){
+	    				Ui.popView(transition);
+	    				openTypesMenu = true;
+	    			}
 					Ui.popView(transition);
 					Ui.popView(transition);
-					pushTypesMenu();
+					openMainMenu = true;
 	    		}
-	    		pushInfoView("Deleted", null, !fullRefresh && model.global || fullRefresh && !model.global);
+	    		pushInfoView("Deleted", !fullRefresh && model.global || fullRefresh && !model.global);
 	    	}
 	    }
     }

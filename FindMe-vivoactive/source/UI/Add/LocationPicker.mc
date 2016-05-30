@@ -83,10 +83,10 @@ module UI{
 			} else if(_format == Position.GEO_MGRS){
 				title = "MGRS";
 				pattern = [
-					new CharFactory(false),
-					new CharFactory(false),
-					new CharFactory(false),
-					new CharFactory(false),
+					new CharFactory(),
+					new CharFactory(),
+					new CharFactory(),
+					new CharFactory(),
 					new NumberFactory(),
 					new NumberFactory(),
 					new NumberFactory(),
@@ -128,11 +128,11 @@ module UI{
 				str = values[0] + " " + values[1] + " " + values[3] + "' " + values[6] + "\" " +
 					  values[9] + " " + values[10] + " " + values[12] + "' " + values[15] + "\"";
 			} else if(format == Position.GEO_MGRS){
-				str = values[0] + values[1] + values[2] + values[3] + values[4] + values[6] + values[6] + values[7] + values[8] + values[9];
+				str = values[0] + values[1] + values[2] + values[3] + values[4] + values[5] + values[6] + values[7] + values[8] + values[9];
 			}
 			Ui.popView(transition);
-			pushNameView(str, format, true);
-			pushInfoView(str, null, false);
+			pushNameView(str, format);
+			pushInfoView(str, false);
 		}
 		
 		function onCancel(){

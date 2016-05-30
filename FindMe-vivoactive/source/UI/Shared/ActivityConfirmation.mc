@@ -1,31 +1,31 @@
 using Toybox.WatchUi as Ui;
 using Toybox.System;
+using Alert;
 
 module UI{
 	class ActivityConfirmationDelegate extends Ui.ConfirmationDelegate {
-		hidden var exit;
-		
-		function initialize(_exit){
-			exit = _exit == true;
-		}
-		
 		function onResponse(response){
-			if(response == Ui.CONFIRM_YES){
-				dataStorage.session.stop();
-				dataStorage.session.save();
-				dataStorage.session = null;
-				if(!exit){
-					Ui.popView(transition);
+			Ui.popView(transition);
+			if(dataStorage.session.stop()){
+				if(response == Ui.CONFIRM_YES){
+					if(dataStorage.session.save()){
+						Alert.alert(Alert.ACTIVITY_SAVE);
+					} else {
+						pushInfoView("Save error", true, true);
+						Alert.alert(Alert.ACTIVITY_FAILURE);
+					}
+				} else {
+					if(dataStorage.session.discard()){
+						Alert.alert(Alert.ACTIVITY_DISCARD);
+					} else {
+						pushInfoView("Save error", true, true);
+						Alert.alert(Alert.ACTIVITY_FAILURE);
+					}
 				}
-				pushInfoView("Activity saved", null, false, exit);
+				dataStorage.session = null;	
 			} else {
-				dataStorage.session.stop();
-				dataStorage.session.discard();
-				dataStorage.session = null;
-				if(!exit){
-					Ui.popView(transition);
-				}
-				pushInfoView("Activity discarded", null, false, exit);
+				pushInfoView("Stop error", true, true);
+				Alert.alert(Alert.ACTIVITY_FAILURE);
 			}
 		}
 	}

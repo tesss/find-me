@@ -32,4 +32,7 @@ class FindMeApp extends App.AppBase {
 		// import alert
 
 		// bug with MGRS ?
-    	// bugs
+		// improve heading
+		// try make number font for picker
+    	// bug in settings
+    	// default name for location

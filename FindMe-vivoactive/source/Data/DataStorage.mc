@@ -7,6 +7,7 @@ using Toybox.Position;
 using Toybox.PersistedLocations;
 using Toybox.WatchUi as Ui;
 using Toybox.ActivityRecording;
+using Alert;
 using _;
 
 module Data{
@@ -14,15 +15,11 @@ module Data{
 		static const TYPES = [
 			"Place",
 			"Highway",
-			"Building",
-			
 			"Sport",
-			
 			"Mountain",
-			"Camp",
 			"Water",
+			"Tourism",
 			"Natural",
-			
 			"Hotel",
 			"Sight",
 			"Transport",
@@ -30,7 +27,7 @@ module Data{
 			"Food",
 			"Entertainment",
 			"Emergency",
-			
+			"Tactical",
 			"Custom"
 		];
 		
@@ -39,6 +36,7 @@ module Data{
 		var currentLocation;
 		var session;
 		var timerCallback;
+		var locCount;
 		
 		function initialize(){
 			app = Application.getApp().weak();
@@ -61,6 +59,8 @@ module Data{
 			if(getFormat() == null){ setFormat(Position.GEO_DEG); }
 			if(getActivityType() == null){ setActivityType(ActivityRecording.SPORT_GENERIC); }
 			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
+			
+			locCount = getProp(KEY_LOC_BATCH).size();
 		}
 		
 		// props
@@ -74,7 +74,7 @@ module Data{
 		// options
 		
 		function getSortBy(){ return getProp(KEY_SORT); }	
-		function setSortBy(sortBy){ setProp(KEY_SORT, sortBy); setLocations(sortLocations(getLocations(), sortBy)); }	
+		function setSortBy(sortBy){ setProp(KEY_SORT, sortBy); }	
 		function getDistance(){ return getProp(KEY_DISTANCE); }
 		function setDistance(distance){ setProp(KEY_DISTANCE, distance); }
 		function getInterval(){ return getProp(KEY_INTERVAL); }
@@ -89,13 +89,14 @@ module Data{
 			clearProp(KEY_BATCH_ID); clearProp(KEY_BATCH_NAME); clearProp(KEY_BATCH_DATE);
 			initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE); initProp(KEY_LOC_BATCH);
 			initProp(KEY_BATCH_ID); initProp(KEY_BATCH_NAME); initProp(KEY_BATCH_DATE);
+			locCount = 0;
 		}
 		
 		// timer
 		
-		hidden function invokeTimerCallback(){
-			if(timerCallback != null && timerCallback.stillAlive()){
-				timerCallback.get().invoke();
+		hidden function invokeTimerCallback(accuracyChanged){
+			if(timerCallback != null){
+				timerCallback.invoke(accuracyChanged);
 			}
 		}
 		
@@ -111,7 +112,9 @@ module Data{
 		function onTimer(interval){
 			if(interval == -1){
 				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+				var accuracyChanged = currentLocation != null;
 				currentLocation = null;
+				invokeTimerCallback(accuracyChanged);
 			} else if(interval == 0){
 				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
 			} else {
@@ -120,14 +123,25 @@ module Data{
 		}
 		
 		function updateCurrentLocation(info){
+			if(info.accuracy != Position.QUALITY_NOT_AVAILABLE){
+				if(currentLocation == null || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
+					Alert.alert(Alert.GPS_FOUND);
+				}
+			} else {
+				if(currentLocation != null && currentLocation[ACCURACY] != Position.QUALITY_NOT_AVAILABLE){
+					Alert.alert(Alert.GPS_LOST);
+				}
+			}
+			
 			var radians = info.position.toRadians();
+			var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
 			currentLocation = [radians[0], radians[1], info.heading, info.accuracy];
-			invokeTimerCallback();
+			invokeTimerCallback(accuracyChanged);
 		}
 		
-		// timer
+		// locations
 		
-		function getLocations(){
+		hidden function getLocations(){
 			return new Locations(getProp(KEY_LOC_NAME), getProp(KEY_LOC_LAT), getProp(KEY_LOC_LON), getProp(KEY_LOC_TYPE), getProp(KEY_LOC_BATCH));
 		}
 		
@@ -137,11 +151,18 @@ module Data{
 			setProp(KEY_LOC_TYPE, locations.types);
 			setProp(KEY_LOC_BATCH, locations.batches);
 			setProp(KEY_LOC_NAME, locations.names);
+			locCount = locations.size();
 		}
 		
-		// validate in import
+		function checkLocCount(newLocCount){
+			return locCount + newLocCount <= LOC_MAX_COUNT;
+		}
+		
 		function getTypesList(){
 			var locations = getLocations();
+			if(locations.size() == 0){
+				return [];
+			}
 			var types = {};
 			var all = {};
 			var lat = null;
@@ -166,25 +187,19 @@ module Data{
 					typeLocations = null;
 				}
 			}
+			if(all.size() == 0){
+				return [];
+			}
 			locations = null;
 			all = all.values();
-			var keys = types.keys();
-			var values = types.values();
-			types = null;
-			var indexes = new[keys.size()];
-			for(var i = 0; i < indexes.size(); i++){
-				indexes[i] = [i, keys[i]];
-			}
-			indexes = ArrayExt.sort(indexes, method(:numberComparer)); 
-			values = ArrayExt.sortByIndex(values, indexes, method(:indexGetter));
-			indexes = null;
-			values = ArrayExt.insertAt(values, all, 0);
-			return values;
+			types = ArrayExt.sort(types.values(), method(:typeComparer)); 
+			types = ArrayExt.insertAt(types, all, 0);
+			return types;
 		}
 		
 		// batches
 		
-		function getBatches(){
+		hidden function getBatches(){
 			return new Batches(getProp(KEY_BATCH_ID), getProp(KEY_BATCH_NAME), getProp(KEY_BATCH_DATE));
 		}
 		
@@ -204,38 +219,22 @@ module Data{
 		}
 		
 		function addLocation(location){
-			if(location == null){
-				if(currentLocation == null){
-					return;
-				}
-				location = [0, toDegrees(currentLocation[LAT]) + ", " + Math.toDegrees(currentLocation[LON]), currentLocation[LAT], currentLocation[LON], TYPES.size() - 1, -1];
-			}
 			var newLocations = new Locations([location[LOC_NAME]], [location[LOC_LAT]], [location[LOC_LON]], [location[LOC_TYPE]], [location[LOC_BATCH]]);
 			return addLocations(newLocations);
 		}
 		
-		// show error if too much
 		function addLocations(newLocations){
 			var locations = getLocations();
+			var l = locations.size();
 			locations.names = ArrayExt.union(locations.names, newLocations.names);
 			locations.latitudes = ArrayExt.union(locations.latitudes, newLocations.latitudes);
 			locations.longitudes = ArrayExt.union(locations.longitudes, newLocations.longitudes);
 			locations.types = ArrayExt.union(locations.types, newLocations.types);
 			locations.batches = ArrayExt.union(locations.batches, newLocations.batches);
-			locations = sortLocations(locations);
 			setLocations(locations);
-			var ids = {};
-			for(var i = 0; i < newLocations.size(); i++){
-				for(var j = 0; j < locations.size(); j++){
-					if( newLocations.names[i] == locations.names[j] &&
-						newLocations.latitudes[i] == locations.latitudes[j] && 
-						newLocations.longitudes[i] == locations.longitudes[j] &&
-						newLocations.types[i] == locations.types[j] &&
-						newLocations.batches[i] == locations.batches[j]){
-						ids.put(i, j);
-						break;
-					}
-				}
+			var ids = new [newLocations.size()];
+			for(var i = 0; i < ids.size(); i++){
+				ids[i] = l + i;
 			}
 			return ids;
 		}
@@ -249,37 +248,6 @@ module Data{
 		}
 		
 		// sorting
-		
-		function sortLocations(locations){
-			var sortBy = getSortBy();
-			var method = null;
-			var arrayToSort = null;
-			if(sortBy == SORTBY_NAME || currentLocation == null){
-				method = method(:nameComparer);
-				arrayToSort = locations.names;
-			} else if(false && sortBy == SORTBY_DISTANCE){
-				method = method(:numberComparer);
-				arrayToSort = new[locations.size()];
-				for(var i = 0; i < arrayToSort.size(); i++){
-					arrayToSort[i] = distance(locations.latitudes[i], locations.longitudes[i], currentLocation[0], currentLocation[1]);
-				}
-			}
-			if(method != null){
-				var indexes = new[arrayToSort.size()];
-				for(var i = 0; i < indexes.size(); i++){
-					indexes[i] = [i, arrayToSort[i]];
-				}
-				arrayToSort = null;
-				indexes = ArrayExt.sort(indexes, method);
-				locations.names = ArrayExt.sortByIndex(locations.names, indexes, method(:indexGetter));
-				locations.latitudes = ArrayExt.sortByIndex(locations.latitudes, indexes, method(:indexGetter));
-				locations.longitudes = ArrayExt.sortByIndex(locations.longitudes, indexes, method(:indexGetter));
-				locations.types = ArrayExt.sortByIndex(locations.types, indexes, method(:indexGetter));
-				locations.batches = ArrayExt.sortByIndex(locations.batches, indexes, method(:indexGetter));
-				indexes = null;
-			}
-			return locations;
-		}
 		
 		function sortLocationsList(locations, id){ // on load
 			var sortBy = getSortBy();
@@ -301,61 +269,16 @@ module Data{
 			return h1 - h2;
 		}
 		
-		function numberComparer(a, b){
-			return a[VALUE] - b[VALUE];
+		function typeComparer(a, b){
+			return a[0][LOC_TYPE] - a[0][LOC_TYPE];
 		}
 		
 		function distanceComparer(a, b){
 			return a[LOC_DIST] - b[LOC_DIST];
 		}
 		
-		function indexComparer(item, index){
-			return item[KEY] == index;
-		}
-		
-		function indexGetter(index){
-			return index[KEY];
-		}
-		
 		function idPredicate(item, id){
 			return item[LOC_ID] == id;
-		}
-		
-		function find(str){
-			str = str.toLower();
-			var types = {};
-			for(var i = 0; i < TYPES.size(); i++){
-				if(TYPES[i].toLower().find(str) != null){
-					types.put(i, i);
-				}
-			}
-			var locations = getLocations();
-			var locationsList = {};
-			var lat = null;
-			var lon = null;
-			var distance = getDistance();
-			if(currentLocation != null){
-				lat = currentLocation[LAT];
-				lon = currentLocation[LON];
-			}
-			for(var i = 0; i < locations.size(); i++){
-				if(str == "" || locations.names[i].toLower().find(str) != null || types.hasKey(locations.types[i])){
-					var location = locations.get(i, lat, lon);
-					if(distance == 0 || currentLocation == null || (currentLocation != null && location[LOC_DIST] <= distance)){
-						locationsList.put(i, location);
-					}
-				}
-			}
-			locations = null;
-			types = null;
-			locationsList = locationsList.values();
-			var method;
-			if(currentLocation != null){
-				method = method(:distanceComparer);
-			} else {
-				method = method(:nameComparer);
-			}
-			return ArrayExt.sort(locationsList, method);
 		}
 		
 		// deleting
@@ -390,9 +313,7 @@ module Data{
 			locations = null;
 		}
 		
-		// persisted
-		
-		function saveLocationPersisted(i){ // check if has persisted
+		function saveLocationPersisted(i){
 			var locations = getLocations();
 			PersistedLocations.persistLocation(new Position.Location({
 				:latitude => locations.latitudes[i], 

@@ -415,838 +415,833 @@
 <entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="204" pc="268447962" symbol="getDrawModel"/>
 <entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="206" pc="268448011" symbol="getDrawModel"/>
 <entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="210" pc="268448023" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="211" pc="268448034" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="212" pc="268448062" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="213" pc="268448134" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="215" pc="268448157" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="216" pc="268448176" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="217" pc="268448183" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="223" pc="268448205" symbol="onShow"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="224" pc="268448237" symbol="onShow"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="230" pc="268448270" symbol="onHide"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="231" pc="268448287" symbol="onHide"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="258" pc="268448306" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="262" pc="268448319" symbol="onNextPage"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="263" pc="268448346" symbol="onNextPage"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="267" pc="268448365" symbol="onPreviousPage"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="268" pc="268448392" symbol="onPreviousPage"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="272" pc="268448411" symbol="onBack"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="273" pc="268448428" symbol="onBack"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="274" pc="268448452" symbol="onBack"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="276" pc="268448458" symbol="onBack"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="277" pc="268448482" symbol="onBack"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="281" pc="268448488" symbol="onSelect"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="282" pc="268448507" symbol="onSelect"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="11" pc="268448588" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="12" pc="268448624" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="13" pc="268448643" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="15" pc="268448668" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="16" pc="268448691" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="18" pc="268448716" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="21" pc="268448738" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="22" pc="268448760" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="23" pc="268448782" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="31" pc="268448807" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="35" pc="268448820" symbol="newSession"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="42" pc="268448935" symbol="popInNotGlobal"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="43" pc="268448953" symbol="popInNotGlobal"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="48" pc="268448983" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="49" pc="268448994" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="50" pc="268449013" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="51" pc="268449038" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="52" pc="268449065" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="53" pc="268449098" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="55" pc="268449129" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="58" pc="268449186" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="61" pc="268449280" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="62" pc="268449292" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="64" pc="268449369" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="65" pc="268449381" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="66" pc="268449440" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="68" pc="268449485" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="69" pc="268449504" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="70" pc="268449509" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="71" pc="268449526" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="72" pc="268449550" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="74" pc="268449563" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="75" pc="268449587" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="76" pc="268449611" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="78" pc="268449624" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="10" pc="268449699" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="11" pc="268449709" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="12" pc="268449719" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="16" pc="268449732" symbol="draw"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="17" pc="268449760" symbol="draw"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="18" pc="268449803" symbol="draw"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="19" pc="268449846" symbol="draw"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="20" pc="268449889" symbol="draw"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="21" pc="268449932" symbol="draw"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="23" pc="268449990" symbol="draw"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="24" pc="268450018" symbol="draw"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="25" pc="268450062" symbol="draw"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="26" pc="268450106" symbol="draw"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="27" pc="268450150" symbol="draw"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="8" pc="268450197" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="9" pc="268450214" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="10" pc="268450238" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="19" pc="268450286" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="23" pc="268450299" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="24" pc="268450331" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="8" pc="268450424" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="9" pc="268450451" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="10" pc="268450473" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="18" pc="268450498" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="22" pc="268450511" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="23" pc="268450534" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="24" pc="268450545" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="25" pc="268450565" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="26" pc="268450589" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="28" pc="268450622" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="29" pc="268450642" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="30" pc="268450666" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="31" pc="268450690" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="9" pc="268450708" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="10" pc="268450721" symbol="getDrawable"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="11" pc="268450773" symbol="getSize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="11" pc="268450784" symbol="getSize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="11" pc="268450793" symbol="getSize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="12" pc="268450802" symbol="getValue"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="18" pc="268450808" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="19" pc="268450813" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="21" pc="268450856" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="24" pc="268450899" symbol="getDrawable"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="25" pc="268450943" symbol="getSize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="26" pc="268450964" symbol="getValue"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="31" pc="268450979" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="33" pc="268450992" symbol="getDrawable"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="34" pc="268450999" symbol="getDrawable"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="35" pc="268451011" symbol="getDrawable"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="37" pc="268451021" symbol="getDrawable"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="39" pc="268451084" symbol="getSize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="40" pc="268451093" symbol="getValue"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="44" pc="268451099" symbol="getDrawable"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="45" pc="268451162" symbol="getSize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="46" pc="268451171" symbol="getValue"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="9" pc="268451178" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="10" pc="268451195" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="11" pc="268451235" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="22" pc="268451286" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="23" pc="268451296" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="24" pc="268451306" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="28" pc="268451319" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="29" pc="268451361" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="30" pc="268451394" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="31" pc="268451407" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="32" pc="268451491" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="33" pc="268451512" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="34" pc="268451535" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="35" pc="268451591" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="36" pc="268451615" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="37" pc="268451625" symbol="onMenuItem"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NameTextPicker.mc" lineNum="12" pc="268451709" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NameTextPicker.mc" lineNum="13" pc="268451719" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NameTextPicker.mc" lineNum="17" pc="268451732" symbol="onTextEntered"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NameTextPicker.mc" lineNum="18" pc="268451752" symbol="onTextEntered"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NameTextPicker.mc" lineNum="20" pc="268451776" symbol="onTextEntered"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="11" pc="268451865" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="12" pc="268451868" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="13" pc="268451871" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="14" pc="268451889" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="15" pc="268451896" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="38" pc="268452485" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="39" pc="268452492" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="62" pc="268453061" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="63" pc="268453068" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="84" pc="268453569" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="85" pc="268453576" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="101" pc="268453955" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="108" pc="268454023" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="116" pc="268454040" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="120" pc="268454053" symbol="onAccept"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="121" pc="268454056" symbol="onAccept"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="122" pc="268454080" symbol="onAccept"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="125" pc="268454282" symbol="onAccept"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="128" pc="268454466" symbol="onAccept"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="131" pc="268454614" symbol="onAccept"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="133" pc="268454708" symbol="onAccept"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="134" pc="268454732" symbol="onAccept"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="135" pc="268454754" symbol="onAccept"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="139" pc="268454773" symbol="onCancel"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="12" pc="268454803" symbol="fontPadding"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="16" pc="268454830" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="17" pc="268454843" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="18" pc="268454862" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="19" pc="268454872" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="20" pc="268454879" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="21" pc="268454907" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="22" pc="268454919" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="23" pc="268454947" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="24" pc="268455023" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="25" pc="268455059" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="26" pc="268455128" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="27" pc="268455160" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="28" pc="268455205" symbol="onUpdate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="34" pc="268455314" symbol="onSelect"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="12" pc="268455342" symbol="onStart"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="13" pc="268455380" symbol="onStart"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="15" pc="268455414" symbol="onStart"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="16" pc="268455438" symbol="onStart"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="17" pc="268455468" symbol="onStart"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="18" pc="268455498" symbol="onStart"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="22" pc="268455504" symbol="getInitialView"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="10" pc="268455549" symbol="get"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="11" pc="268455552" symbol="get"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="12" pc="268455569" symbol="get"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="14" pc="268455611" symbol="get"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="18" pc="268455736" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="19" pc="268455749" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="20" pc="268455762" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="21" pc="268455775" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="22" pc="268455788" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="26" pc="268455804" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="27" pc="268455835" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="29" pc="268455839" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="30" pc="268455874" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="31" pc="268455909" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="32" pc="268455944" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="33" pc="268455979" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="37" pc="268456017" symbol="size"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="38" pc="268456030" symbol="size"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="40" pc="268456039" symbol="size"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="44" pc="268456060" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="45" pc="268456070" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="46" pc="268456080" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="47" pc="268456090" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="48" pc="268456100" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="58" pc="268456113" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="59" pc="268456123" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="60" pc="268456133" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="64" pc="268456146" symbol="get"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="68" pc="268456213" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="69" pc="268456226" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="70" pc="268456239" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="74" pc="268456255" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="75" pc="268456286" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="77" pc="268456290" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="78" pc="268456325" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="79" pc="268456360" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="83" pc="268456398" symbol="size"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="84" pc="268456411" symbol="size"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="86" pc="268456420" symbol="size"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="42" pc="268456441" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="43" pc="268456473" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="49" pc="268456507" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="49" pc="268456527" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="49" pc="268456547" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="49" pc="268456567" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="49" pc="268456587" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="50" pc="268456607" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="50" pc="268456627" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="50" pc="268456647" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="52" pc="268456667" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="53" pc="268456680" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="54" pc="268456687" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="56" pc="268456707" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="58" pc="268456721" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="58" pc="268456737" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="59" pc="268456757" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="59" pc="268456773" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="60" pc="268456800" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="60" pc="268456816" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="61" pc="268456843" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="61" pc="268456859" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="63" pc="268456882" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="68" pc="268456921" symbol="getApp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="69" pc="268456942" symbol="getProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="70" pc="268456968" symbol="setProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="71" pc="268456996" symbol="initProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="71" pc="268457014" symbol="initProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="72" pc="268457040" symbol="clearProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="76" pc="268457058" symbol="getSortBy"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="77" pc="268457081" symbol="setSortBy"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="78" pc="268457106" symbol="getDistance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="79" pc="268457129" symbol="setDistance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="80" pc="268457154" symbol="getInterval"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="81" pc="268457177" symbol="setInterval"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="81" pc="268457199" symbol="setInterval"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="82" pc="268457216" symbol="getFormat"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="83" pc="268457239" symbol="setFormat"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="84" pc="268457264" symbol="getActivityType"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="85" pc="268457287" symbol="setActivityType"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="88" pc="268457312" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="88" pc="268457332" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="88" pc="268457352" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="88" pc="268457372" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="88" pc="268457392" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="89" pc="268457412" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="89" pc="268457432" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="89" pc="268457452" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="90" pc="268457472" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="90" pc="268457492" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="90" pc="268457512" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="90" pc="268457532" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="90" pc="268457552" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="91" pc="268457572" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="91" pc="268457592" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="91" pc="268457612" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="92" pc="268457632" symbol="clear"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="98" pc="268457648" symbol="invokeTimerCallback"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="99" pc="268457661" symbol="invokeTimerCallback"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="104" pc="268457687" symbol="startTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="105" pc="268457705" symbol="startTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="106" pc="268457716" symbol="startTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="108" pc="268457733" symbol="startTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="113" pc="268457780" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="114" pc="268457797" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="115" pc="268457826" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="116" pc="268457838" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="117" pc="268457847" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="119" pc="268457875" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="121" pc="268457922" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="126" pc="268457969" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="127" pc="268457993" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="128" pc="268458042" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="131" pc="268458076" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="132" pc="268458125" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="136" pc="268458156" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="137" pc="268458175" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="138" pc="268458219" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="139" pc="268458297" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="145" pc="268458314" symbol="getLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="149" pc="268458435" symbol="setLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="150" pc="268458463" symbol="setLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="151" pc="268458491" symbol="setLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="152" pc="268458519" symbol="setLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="153" pc="268458547" symbol="setLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="154" pc="268458575" symbol="setLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="158" pc="268458597" symbol="checkLocCount"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="162" pc="268458621" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="163" pc="268458634" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="164" pc="268458654" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="166" pc="268458664" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="167" pc="268458672" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="168" pc="268458680" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="169" pc="268458683" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="170" pc="268458686" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="171" pc="268458699" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="172" pc="268458726" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="173" pc="268458745" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="175" pc="268458767" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="176" pc="268458791" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="177" pc="268458804" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="178" pc="268458823" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="179" pc="268458873" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="180" pc="268458889" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="181" pc="268458904" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="182" pc="268458911" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="183" pc="268458929" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="185" pc="268458948" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="187" pc="268458994" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="190" pc="268459013" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="191" pc="268459033" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="193" pc="268459043" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="194" pc="268459046" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="195" pc="268459059" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="196" pc="268459105" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="197" pc="268459133" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="203" pc="268459139" symbol="getBatches"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="207" pc="268459222" symbol="setBatches"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="208" pc="268459250" symbol="setBatches"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="209" pc="268459278" symbol="setBatches"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="213" pc="268459309" symbol="getBatchesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="214" pc="268459322" symbol="getBatchesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="215" pc="268459336" symbol="getBatchesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="216" pc="268459360" symbol="getBatchesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="218" pc="268459391" symbol="getBatchesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="222" pc="268459397" symbol="addLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="223" pc="268459546" symbol="addLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="227" pc="268459563" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="228" pc="268459576" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="229" pc="268459589" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="230" pc="268459630" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="231" pc="268459671" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="232" pc="268459712" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="233" pc="268459753" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="234" pc="268459794" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="235" pc="268459808" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="236" pc="268459822" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="237" pc="268459846" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="239" pc="268459869" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="243" pc="268459875" symbol="addBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="244" pc="268459888" symbol="addBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="245" pc="268459937" symbol="addBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="246" pc="268459986" symbol="addBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="247" pc="268460035" symbol="addBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="253" pc="268460052" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="254" pc="268460065" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="255" pc="268460095" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="256" pc="268460119" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="258" pc="268460219" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="260" pc="268460259" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="261" pc="268460266" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="263" pc="268460295" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="267" pc="268460360" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="268" pc="268460401" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="269" pc="268460442" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="273" pc="268460451" symbol="typeComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="277" pc="268460490" symbol="distanceComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="281" pc="268460517" symbol="idPredicate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="287" pc="268460535" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="288" pc="268460548" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="289" pc="268460561" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="290" pc="268460585" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="291" pc="268460602" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="292" pc="268460606" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="295" pc="268460625" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="296" pc="268460639" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="297" pc="268460653" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="298" pc="268460656" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="299" pc="268460669" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="300" pc="268460693" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="301" pc="268460710" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="302" pc="268460724" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="305" pc="268460750" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="306" pc="268460764" symbol="deleteBatch"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="310" pc="268460770" symbol="deleteLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="311" pc="268460783" symbol="deleteLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="312" pc="268460797" symbol="deleteLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="313" pc="268460811" symbol="deleteLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="319" pc="268460817" symbol="saveLocationPersisted"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="320" pc="268460830" symbol="saveLocationPersisted"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="329" pc="268460957" symbol="saveBatchPersisted"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="330" pc="268460970" symbol="saveBatchPersisted"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="331" pc="268460994" symbol="saveBatchPersisted"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="332" pc="268461011" symbol="saveBatchPersisted"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="12" pc="268461154" symbol="toRadians"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="16" pc="268461179" symbol="toDegrees"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="20" pc="268461204" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="21" pc="268461215" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="23" pc="268461239" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="24" pc="268461250" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="26" pc="268461293" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="27" pc="268461304" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="29" pc="268461353" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="30" pc="268461364" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="31" pc="268461378" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="32" pc="268461389" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="34" pc="268461408" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="36" pc="268461431" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="40" pc="268461436" symbol="distance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="41" pc="268461443" symbol="distance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="42" pc="268461450" symbol="distance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="44" pc="268461583" symbol="distance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="49" pc="268461644" symbol="bearing"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="50" pc="268461651" symbol="bearing"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="51" pc="268461688" symbol="bearing"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="53" pc="268461779" symbol="bearing"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="57" pc="268461798" symbol="dateStr"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="58" pc="268461861" symbol="dateStr"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="59" pc="268461946" symbol="dateStr"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="10" pc="268461952" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="11" pc="268461972" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="13" pc="268461978" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="14" pc="268461992" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="15" pc="268462016" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="17" pc="268462039" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="18" pc="268462077" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="22" pc="268462083" symbol="quickSortRec"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="23" pc="268462104" symbol="quickSortRec"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="24" pc="268462118" symbol="quickSortRec"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="26" pc="268462147" symbol="quickSortRec"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="27" pc="268462155" symbol="quickSortRec"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="32" pc="268462181" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="33" pc="268462197" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="34" pc="268462205" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="35" pc="268462232" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="37" pc="268462245" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="38" pc="268462272" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="40" pc="268462285" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="41" pc="268462293" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="42" pc="268462311" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="43" pc="268462321" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="46" pc="268462337" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="50" pc="268462343" symbol="swap"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="51" pc="268462350" symbol="swap"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="52" pc="268462360" symbol="swap"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="56" pc="268462370" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="57" pc="268462390" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="58" pc="268462411" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="60" pc="268462440" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="61" pc="268462447" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="62" pc="268462468" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="64" pc="268462491" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="68" pc="268462497" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="69" pc="268462517" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="70" pc="268462532" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="72" pc="268462555" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="73" pc="268462576" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="75" pc="268462605" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="79" pc="268462611" symbol="indexOf"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="80" pc="268462635" symbol="indexOf"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="81" pc="268462656" symbol="indexOf"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="84" pc="268462675" symbol="indexOf"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="88" pc="268462680" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="89" pc="268462706" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="90" pc="268462730" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="92" pc="268462753" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="93" pc="268462777" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="95" pc="268462812" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\CommListener.mc" lineNum="11" pc="268462819" symbol="onComplete"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\CommListener.mc" lineNum="15" pc="268462845" symbol="onError"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="10" pc="268462872" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="15" pc="268462907" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="16" pc="268462973" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="17" pc="268462980" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="18" pc="268463023" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="19" pc="268463038" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="20" pc="268463049" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="22" pc="268463071" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="25" pc="268463090" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="26" pc="268463128" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="27" pc="268463166" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="28" pc="268463220" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="30" pc="268463246" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="31" pc="268463284" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="32" pc="268463322" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="33" pc="268463360" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="35" pc="268463398" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="40" pc="268463428" symbol="onMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="41" pc="268463441" symbol="onMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="43" pc="268463448" symbol="onMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="44" pc="268463461" symbol="onMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="45" pc="268463476" symbol="onMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="47" pc="268463499" symbol="onMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="16" pc="268463518" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="17" pc="268463525" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="18" pc="268463532" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="19" pc="268463546" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="21" pc="268463623" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="23" pc="268463700" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="24" pc="268463728" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="26" pc="268463805" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="27" pc="268463833" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="29" pc="268463910" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="30" pc="268463938" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="32" pc="268464015" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="33" pc="268464043" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="35" pc="268464120" symbol="alert"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="37" pc="268464197" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="211" pc="268448055" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="212" pc="268448083" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="213" pc="268448155" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="215" pc="268448178" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="216" pc="268448197" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="217" pc="268448204" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="219" pc="268448223" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="224" pc="268448242" symbol="onShow"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="225" pc="268448274" symbol="onShow"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="231" pc="268448307" symbol="onHide"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="232" pc="268448324" symbol="onHide"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="259" pc="268448343" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="263" pc="268448356" symbol="onNextPage"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="264" pc="268448383" symbol="onNextPage"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="268" pc="268448402" symbol="onPreviousPage"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="269" pc="268448429" symbol="onPreviousPage"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="273" pc="268448448" symbol="onBack"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="274" pc="268448465" symbol="onBack"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="275" pc="268448489" symbol="onBack"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="277" pc="268448495" symbol="onBack"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="278" pc="268448519" symbol="onBack"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="282" pc="268448525" symbol="onSelect"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="283" pc="268448544" symbol="onSelect"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationView.mc" lineNum="284" pc="268448554" symbol="onSelect"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="11" pc="268448635" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="12" pc="268448671" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="13" pc="268448690" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="15" pc="268448715" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="16" pc="268448738" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="18" pc="268448763" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="21" pc="268448785" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="22" pc="268448807" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="23" pc="268448829" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="31" pc="268448854" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="35" pc="268448867" symbol="newSession"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="42" pc="268448982" symbol="popInNotGlobal"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="43" pc="268449000" symbol="popInNotGlobal"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="48" pc="268449030" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="49" pc="268449041" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="50" pc="268449060" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="51" pc="268449085" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="52" pc="268449112" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="53" pc="268449145" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="55" pc="268449176" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="58" pc="268449233" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="61" pc="268449327" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="62" pc="268449339" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="64" pc="268449416" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="65" pc="268449428" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="66" pc="268449487" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="68" pc="268449532" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="69" pc="268449551" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="70" pc="268449556" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="71" pc="268449573" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="72" pc="268449597" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="74" pc="268449610" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="75" pc="268449634" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="76" pc="268449658" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\LocationMenu.mc" lineNum="78" pc="268449671" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="10" pc="268449746" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="11" pc="268449756" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="12" pc="268449766" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="16" pc="268449779" symbol="draw"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="17" pc="268449807" symbol="draw"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="18" pc="268449850" symbol="draw"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="19" pc="268449893" symbol="draw"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="20" pc="268449936" symbol="draw"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="21" pc="268449979" symbol="draw"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="23" pc="268450037" symbol="draw"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="24" pc="268450065" symbol="draw"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="25" pc="268450109" symbol="draw"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="26" pc="268450153" symbol="draw"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Locations\\DirectionDrawable.mc" lineNum="27" pc="268450197" symbol="draw"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="8" pc="268450244" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="9" pc="268450261" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="10" pc="268450285" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="19" pc="268450333" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="23" pc="268450346" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchesMenu.mc" lineNum="24" pc="268450378" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="8" pc="268450471" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="9" pc="268450498" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="10" pc="268450520" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="18" pc="268450545" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="22" pc="268450558" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="23" pc="268450581" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="24" pc="268450592" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="25" pc="268450612" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="26" pc="268450636" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="28" pc="268450669" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="29" pc="268450689" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="30" pc="268450713" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Batches\\BatchMenu.mc" lineNum="31" pc="268450737" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="9" pc="268450755" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="10" pc="268450768" symbol="getDrawable"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="11" pc="268450820" symbol="getSize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="11" pc="268450831" symbol="getSize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="11" pc="268450840" symbol="getSize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="12" pc="268450849" symbol="getValue"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="18" pc="268450855" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="19" pc="268450860" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="21" pc="268450903" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="24" pc="268450946" symbol="getDrawable"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="25" pc="268450990" symbol="getSize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="26" pc="268451011" symbol="getValue"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="31" pc="268451026" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="33" pc="268451039" symbol="getDrawable"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="34" pc="268451046" symbol="getDrawable"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="35" pc="268451058" symbol="getDrawable"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="37" pc="268451068" symbol="getDrawable"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="39" pc="268451131" symbol="getSize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="40" pc="268451140" symbol="getValue"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="44" pc="268451146" symbol="getDrawable"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="45" pc="268451209" symbol="getSize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="46" pc="268451218" symbol="getValue"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="52" pc="268451225" symbol="getDrawable"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="53" pc="268451269" symbol="getSize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\PickerFactories.mc" lineNum="54" pc="268451290" symbol="getValue"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="9" pc="268451322" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="10" pc="268451339" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="11" pc="268451379" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="22" pc="268451430" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="23" pc="268451440" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="24" pc="268451450" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="28" pc="268451463" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="29" pc="268451505" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="30" pc="268451538" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="31" pc="268451551" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="32" pc="268451635" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="33" pc="268451656" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="34" pc="268451679" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="35" pc="268451735" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="36" pc="268451759" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NewTypesMenu.mc" lineNum="37" pc="268451769" symbol="onMenuItem"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NameTextPicker.mc" lineNum="12" pc="268451853" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NameTextPicker.mc" lineNum="13" pc="268451863" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NameTextPicker.mc" lineNum="17" pc="268451876" symbol="onTextEntered"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NameTextPicker.mc" lineNum="18" pc="268451896" symbol="onTextEntered"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\NameTextPicker.mc" lineNum="20" pc="268451920" symbol="onTextEntered"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="11" pc="268452009" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="12" pc="268452012" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="13" pc="268452015" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="14" pc="268452033" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="15" pc="268452040" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="38" pc="268452629" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="39" pc="268452636" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="62" pc="268453205" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="63" pc="268453212" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="84" pc="268453713" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="85" pc="268453720" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="101" pc="268454091" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="108" pc="268454159" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="116" pc="268454176" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="120" pc="268454189" symbol="onAccept"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="121" pc="268454192" symbol="onAccept"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="122" pc="268454216" symbol="onAccept"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="125" pc="268454418" symbol="onAccept"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="128" pc="268454602" symbol="onAccept"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="131" pc="268454750" symbol="onAccept"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="133" pc="268454844" symbol="onAccept"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="134" pc="268454868" symbol="onAccept"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="135" pc="268454890" symbol="onAccept"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\Add\\LocationPicker.mc" lineNum="139" pc="268454909" symbol="onCancel"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="12" pc="268454939" symbol="fontPadding"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="16" pc="268454966" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="17" pc="268454979" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="18" pc="268454998" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="19" pc="268455008" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="20" pc="268455015" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="21" pc="268455043" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="22" pc="268455055" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="23" pc="268455083" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="24" pc="268455159" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="25" pc="268455195" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="26" pc="268455264" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="27" pc="268455296" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="28" pc="268455341" symbol="onUpdate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\UI\\About\\AboutView.mc" lineNum="34" pc="268455450" symbol="onSelect"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="12" pc="268455478" symbol="onStart"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="13" pc="268455516" symbol="onStart"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="15" pc="268455550" symbol="onStart"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="16" pc="268455574" symbol="onStart"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="17" pc="268455604" symbol="onStart"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="18" pc="268455634" symbol="onStart"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\FindMeApp.mc" lineNum="22" pc="268455640" symbol="getInitialView"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="10" pc="268455685" symbol="get"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="11" pc="268455688" symbol="get"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="12" pc="268455705" symbol="get"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="14" pc="268455747" symbol="get"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="18" pc="268455872" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="19" pc="268455885" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="20" pc="268455898" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="21" pc="268455911" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="22" pc="268455924" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="26" pc="268455940" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="27" pc="268455971" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="29" pc="268455975" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="30" pc="268456010" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="31" pc="268456045" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="32" pc="268456080" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="33" pc="268456115" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="37" pc="268456153" symbol="size"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="38" pc="268456166" symbol="size"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="40" pc="268456175" symbol="size"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="44" pc="268456196" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="45" pc="268456206" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="46" pc="268456216" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="47" pc="268456226" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="48" pc="268456236" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="58" pc="268456249" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="59" pc="268456259" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="60" pc="268456269" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="64" pc="268456282" symbol="get"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="68" pc="268456349" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="69" pc="268456362" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="70" pc="268456375" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="74" pc="268456391" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="75" pc="268456422" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="77" pc="268456426" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="78" pc="268456461" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="79" pc="268456496" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="83" pc="268456534" symbol="size"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="84" pc="268456547" symbol="size"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Models.mc" lineNum="86" pc="268456556" symbol="size"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="42" pc="268456577" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="43" pc="268456609" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="49" pc="268456643" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="49" pc="268456663" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="49" pc="268456683" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="49" pc="268456703" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="49" pc="268456723" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="50" pc="268456743" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="50" pc="268456763" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="50" pc="268456783" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="52" pc="268456803" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="53" pc="268456816" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="54" pc="268456823" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="56" pc="268456843" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="58" pc="268456857" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="58" pc="268456873" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="59" pc="268456893" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="59" pc="268456909" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="60" pc="268456936" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="60" pc="268456952" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="61" pc="268456979" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="61" pc="268456995" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="63" pc="268457018" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="68" pc="268457057" symbol="getApp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="69" pc="268457078" symbol="getProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="70" pc="268457104" symbol="setProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="71" pc="268457132" symbol="initProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="71" pc="268457150" symbol="initProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="72" pc="268457176" symbol="clearProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="76" pc="268457194" symbol="getSortBy"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="77" pc="268457217" symbol="setSortBy"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="78" pc="268457242" symbol="getDistance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="79" pc="268457265" symbol="setDistance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="80" pc="268457290" symbol="getInterval"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="81" pc="268457313" symbol="setInterval"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="81" pc="268457335" symbol="setInterval"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="82" pc="268457352" symbol="getFormat"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="83" pc="268457375" symbol="setFormat"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="84" pc="268457400" symbol="getActivityType"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="85" pc="268457423" symbol="setActivityType"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="88" pc="268457448" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="88" pc="268457468" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="88" pc="268457488" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="88" pc="268457508" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="88" pc="268457528" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="89" pc="268457548" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="89" pc="268457568" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="89" pc="268457588" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="90" pc="268457608" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="90" pc="268457628" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="90" pc="268457648" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="90" pc="268457668" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="90" pc="268457688" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="91" pc="268457708" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="91" pc="268457728" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="91" pc="268457748" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="92" pc="268457768" symbol="clear"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="98" pc="268457784" symbol="invokeTimerCallback"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="99" pc="268457797" symbol="invokeTimerCallback"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="104" pc="268457823" symbol="startTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="105" pc="268457841" symbol="startTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="106" pc="268457852" symbol="startTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="108" pc="268457869" symbol="startTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="113" pc="268457916" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="114" pc="268457933" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="115" pc="268457962" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="116" pc="268457974" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="117" pc="268457983" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="119" pc="268458011" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="121" pc="268458058" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="126" pc="268458105" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="127" pc="268458129" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="128" pc="268458178" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="131" pc="268458212" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="132" pc="268458261" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="136" pc="268458292" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="137" pc="268458311" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="138" pc="268458355" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="139" pc="268458433" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="145" pc="268458450" symbol="getLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="149" pc="268458571" symbol="setLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="150" pc="268458599" symbol="setLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="151" pc="268458627" symbol="setLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="152" pc="268458655" symbol="setLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="153" pc="268458683" symbol="setLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="154" pc="268458711" symbol="setLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="158" pc="268458733" symbol="checkLocCount"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="162" pc="268458757" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="163" pc="268458770" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="164" pc="268458790" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="166" pc="268458800" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="167" pc="268458808" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="168" pc="268458816" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="169" pc="268458819" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="170" pc="268458822" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="171" pc="268458835" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="172" pc="268458862" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="173" pc="268458881" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="175" pc="268458903" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="176" pc="268458927" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="177" pc="268458940" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="178" pc="268458959" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="179" pc="268459009" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="180" pc="268459025" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="181" pc="268459040" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="182" pc="268459047" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="183" pc="268459065" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="185" pc="268459084" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="187" pc="268459130" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="190" pc="268459149" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="191" pc="268459169" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="193" pc="268459179" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="194" pc="268459182" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="195" pc="268459195" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="196" pc="268459241" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="197" pc="268459269" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="203" pc="268459275" symbol="getBatches"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="207" pc="268459358" symbol="setBatches"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="208" pc="268459386" symbol="setBatches"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="209" pc="268459414" symbol="setBatches"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="213" pc="268459445" symbol="getBatchesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="214" pc="268459458" symbol="getBatchesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="215" pc="268459472" symbol="getBatchesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="216" pc="268459496" symbol="getBatchesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="218" pc="268459527" symbol="getBatchesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="222" pc="268459533" symbol="addLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="223" pc="268459682" symbol="addLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="227" pc="268459699" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="228" pc="268459712" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="229" pc="268459725" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="230" pc="268459766" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="231" pc="268459807" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="232" pc="268459848" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="233" pc="268459889" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="234" pc="268459930" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="235" pc="268459944" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="236" pc="268459958" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="237" pc="268459982" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="239" pc="268460005" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="243" pc="268460011" symbol="addBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="244" pc="268460024" symbol="addBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="245" pc="268460073" symbol="addBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="246" pc="268460122" symbol="addBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="247" pc="268460171" symbol="addBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="253" pc="268460188" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="254" pc="268460201" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="255" pc="268460231" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="256" pc="268460255" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="258" pc="268460355" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="260" pc="268460395" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="261" pc="268460402" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="263" pc="268460431" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="267" pc="268460496" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="268" pc="268460537" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="269" pc="268460578" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="273" pc="268460587" symbol="typeComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="277" pc="268460626" symbol="distanceComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="281" pc="268460653" symbol="idPredicate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="287" pc="268460671" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="288" pc="268460684" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="289" pc="268460697" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="290" pc="268460721" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="291" pc="268460738" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="292" pc="268460742" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="295" pc="268460761" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="296" pc="268460775" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="297" pc="268460789" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="298" pc="268460792" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="299" pc="268460805" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="300" pc="268460829" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="301" pc="268460846" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="302" pc="268460860" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="305" pc="268460886" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="306" pc="268460900" symbol="deleteBatch"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="310" pc="268460906" symbol="deleteLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="311" pc="268460919" symbol="deleteLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="312" pc="268460933" symbol="deleteLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\DataStorage.mc" lineNum="313" pc="268460947" symbol="deleteLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="12" pc="268460953" symbol="toRadians"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="16" pc="268460978" symbol="toDegrees"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="20" pc="268461003" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="21" pc="268461014" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="23" pc="268461038" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="24" pc="268461049" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="26" pc="268461092" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="27" pc="268461103" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="29" pc="268461152" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="30" pc="268461163" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="31" pc="268461177" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="32" pc="268461188" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="34" pc="268461207" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="36" pc="268461230" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="40" pc="268461235" symbol="distance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="41" pc="268461242" symbol="distance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="42" pc="268461249" symbol="distance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="44" pc="268461382" symbol="distance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="49" pc="268461443" symbol="bearing"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="50" pc="268461450" symbol="bearing"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="51" pc="268461487" symbol="bearing"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="53" pc="268461578" symbol="bearing"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="57" pc="268461597" symbol="dateStr"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="58" pc="268461660" symbol="dateStr"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\Data.mc" lineNum="59" pc="268461745" symbol="dateStr"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="10" pc="268461751" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="11" pc="268461771" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="13" pc="268461777" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="14" pc="268461791" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="15" pc="268461815" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="17" pc="268461838" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="18" pc="268461876" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="22" pc="268461882" symbol="quickSortRec"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="23" pc="268461903" symbol="quickSortRec"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="24" pc="268461917" symbol="quickSortRec"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="26" pc="268461946" symbol="quickSortRec"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="27" pc="268461954" symbol="quickSortRec"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="32" pc="268461980" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="33" pc="268461996" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="34" pc="268462004" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="35" pc="268462031" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="37" pc="268462044" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="38" pc="268462071" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="40" pc="268462084" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="41" pc="268462092" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="42" pc="268462110" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="43" pc="268462120" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="46" pc="268462136" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="50" pc="268462142" symbol="swap"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="51" pc="268462149" symbol="swap"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="52" pc="268462159" symbol="swap"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="56" pc="268462169" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="57" pc="268462189" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="58" pc="268462210" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="60" pc="268462239" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="61" pc="268462246" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="62" pc="268462267" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="64" pc="268462290" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="68" pc="268462296" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="69" pc="268462316" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="70" pc="268462331" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="72" pc="268462354" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="73" pc="268462375" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="75" pc="268462404" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="79" pc="268462410" symbol="indexOf"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="80" pc="268462434" symbol="indexOf"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="81" pc="268462455" symbol="indexOf"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="84" pc="268462474" symbol="indexOf"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="88" pc="268462479" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="89" pc="268462505" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="90" pc="268462529" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="92" pc="268462552" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="93" pc="268462576" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Data\\ArrayExt.mc" lineNum="95" pc="268462611" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\CommListener.mc" lineNum="11" pc="268462618" symbol="onComplete"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\CommListener.mc" lineNum="15" pc="268462644" symbol="onError"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="10" pc="268462671" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="15" pc="268462706" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="16" pc="268462772" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="17" pc="268462779" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="18" pc="268462822" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="19" pc="268462837" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="20" pc="268462848" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="22" pc="268462870" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="25" pc="268462889" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="26" pc="268462927" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="27" pc="268462965" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="28" pc="268463019" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="30" pc="268463045" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="31" pc="268463083" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="32" pc="268463121" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="33" pc="268463159" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="35" pc="268463197" symbol="parseMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="40" pc="268463227" symbol="onMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="41" pc="268463240" symbol="onMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="43" pc="268463247" symbol="onMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="44" pc="268463260" symbol="onMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="45" pc="268463275" symbol="onMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Comm\\Bridge.mc" lineNum="47" pc="268463298" symbol="onMail"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="16" pc="268463317" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="17" pc="268463324" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="18" pc="268463331" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="19" pc="268463345" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="21" pc="268463422" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="23" pc="268463499" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="25" pc="268463576" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="27" pc="268463653" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="29" pc="268463730" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="31" pc="268463807" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-fenix\\source\\Alert\\Alert.mc" lineNum="33" pc="268463884" symbol="alert"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388644" module="true" symbol="System"/>
-<entry id="114" method="true" symbol="getDistance"/>
+<entry id="115" method="true" symbol="getDistance"/>
 <entry id="8389540" method="true" symbol="onTextEntered"/>
-<entry field="true" id="148" symbol="transition"/>
+<entry field="true" id="147" symbol="transition"/>
 <entry field="true" id="225" symbol="directionCenter"/>
 <entry id="8389308" method="true" symbol="toRadians"/>
-<entry field="true" id="242" symbol="TYPES_BCOLORS"/>
-<entry field="true" id="70" symbol="KEY_LOC_LON"/>
+<entry field="true" id="243" symbol="TYPES_BCOLORS"/>
+<entry field="true" id="71" symbol="KEY_LOC_LON"/>
 <entry field="true" id="221" symbol="line2Dis"/>
-<entry field="true" id="150" symbol="model"/>
+<entry field="true" id="149" symbol="model"/>
 <entry id="208" object="true" symbol="AboutViewDelegate"/>
-<entry id="138" method="true" symbol="typeComparer"/>
+<entry field="true" id="233" symbol="letterValues"/>
+<entry id="139" method="true" symbol="typeComparer"/>
 <entry id="8388791" method="true" symbol="remove"/>
 <entry id="8389124" method="true" symbol="onUpdate"/>
 <entry id="8388826" method="true" symbol="next"/>
 <entry id="8389258" method="true" symbol="release"/>
-<entry field="true" id="53" symbol="NAME_LIMIT"/>
-<entry field="true" id="33" symbol="GpsLast"/>
+<entry field="true" id="54" symbol="NAME_LIMIT"/>
+<entry field="true" id="34" symbol="GpsLast"/>
 <entry id="8389349" symbol="justification"/>
 <entry id="8389716" method="true" symbol="atan2"/>
-<entry field="true" id="73" symbol="KEY_LOC_BATCH"/>
+<entry field="true" id="74" symbol="KEY_LOC_BATCH"/>
 <entry id="8389307" method="true" symbol="toDegrees"/>
-<entry field="true" id="94" symbol="ids"/>
+<entry field="true" id="95" symbol="ids"/>
 <entry id="8389177" method="true" symbol="clear"/>
-<entry field="true" id="156" symbol="COLOR_SECONDARY"/>
+<entry field="true" id="155" symbol="COLOR_SECONDARY"/>
 <entry id="8389642" symbol="title"/>
 <entry id="8389629" method="true" symbol="getValue"/>
-<entry id="254" symbol="addCurrent"/>
+<entry id="255" symbol="addCurrent"/>
 <entry id="8389534" module="true" symbol="PersistedLocations"/>
 <entry field="true" id="224" symbol="direction"/>
-<entry field="true" id="234" symbol="isMinute"/>
+<entry field="true" id="235" symbol="isMinute"/>
 <entry id="214" symbol="newSession"/>
 <entry id="211" method="true" symbol="predicate"/>
-<entry id="21" module="true" symbol="UI"/>
-<entry id="120" method="true" symbol="getActivityType"/>
-<entry field="true" id="145" symbol="TYPES"/>
-<entry field="true" id="247" symbol="arrow"/>
-<entry id="112" method="true" symbol="getSortBy"/>
-<entry id="183" object="true" symbol="MainMenuDelegate"/>
-<entry id="172" object="true" symbol="InfoDelegate"/>
-<entry field="true" id="71" symbol="KEY_LOC_NAME"/>
-<entry field="true" id="58" symbol="SORTBY_NAME"/>
+<entry id="22" module="true" symbol="UI"/>
+<entry id="121" method="true" symbol="getActivityType"/>
+<entry field="true" id="144" symbol="TYPES"/>
+<entry field="true" id="248" symbol="arrow"/>
+<entry id="113" method="true" symbol="getSortBy"/>
+<entry id="182" object="true" symbol="MainMenuDelegate"/>
+<entry id="171" object="true" symbol="InfoDelegate"/>
+<entry field="true" id="72" symbol="KEY_LOC_NAME"/>
+<entry field="true" id="59" symbol="SORTBY_NAME"/>
 <entry field="true" id="8389759" symbol="radius"/>
 <entry field="true" id="8388611" module="true" symbol="Toybox"/>
 <entry id="8388645" module="true" symbol="Time"/>
-<entry field="true" id="47" symbol="ERROR"/>
-<entry id="141" method="true" symbol="deleteBatch"/>
-<entry id="144" method="true" symbol="saveBatchPersisted"/>
-<entry id="102" method="true" symbol="indexOf"/>
-<entry id="130" symbol="getBatches"/>
-<entry id="99" method="true" symbol="swap"/>
-<entry field="true" id="44" symbol="ACTIVITY_DISCARD"/>
-<entry id="182" object="true" symbol="MainMenu"/>
-<entry id="136" method="true" symbol="sortLocationsList"/>
+<entry field="true" id="48" symbol="ERROR"/>
+<entry id="142" method="true" symbol="deleteBatch"/>
+<entry id="103" method="true" symbol="indexOf"/>
+<entry id="131" symbol="getBatches"/>
+<entry id="100" method="true" symbol="swap"/>
+<entry field="true" id="45" symbol="ACTIVITY_DISCARD"/>
+<entry id="181" object="true" symbol="MainMenu"/>
+<entry id="137" method="true" symbol="sortLocationsList"/>
 <entry id="8389619" method="true" symbol="onSelect"/>
-<entry field="true" id="69" symbol="KEY_LOC_LAT"/>
+<entry field="true" id="70" symbol="KEY_LOC_LAT"/>
 <entry id="203" object="true" symbol="NewTypesMenuDelegate"/>
-<entry id="110" symbol="initProp"/>
-<entry id="192" object="true" symbol="LocationMenuDelegate"/>
-<entry id="24" module="true" symbol="Comm"/>
+<entry id="201" object="true" symbol="CharFactory"/>
+<entry id="111" symbol="initProp"/>
+<entry id="191" object="true" symbol="LocationMenuDelegate"/>
+<entry id="25" module="true" symbol="Comm"/>
 <entry id="8388770" module="true" symbol="Strings"/>
 <entry id="8388643" module="true" symbol="Sensor"/>
-<entry field="true" id="147" symbol="dataStorage"/>
-<entry field="true" id="151" symbol="openMainMenu"/>
+<entry field="true" id="146" symbol="dataStorage"/>
+<entry field="true" id="150" symbol="openMainMenu"/>
 <entry field="true" id="8388764" method="true" symbol="format"/>
 <entry field="true" id="8388965" symbol="heading"/>
-<entry field="true" id="90" symbol="longitudes"/>
+<entry field="true" id="91" symbol="longitudes"/>
 <entry field="true" id="230" symbol="fullRefresh"/>
-<entry id="180" object="true" symbol="SortingPickerFactory"/>
-<entry field="true" id="91" symbol="types"/>
-<entry id="113" method="true" symbol="setSortBy"/>
-<entry id="49" object="true" symbol="Locations"/>
-<entry id="186" object="true" symbol="TypesMenu"/>
-<entry id="256" symbol="about"/>
-<entry id="167" method="true" symbol="clearPicker"/>
+<entry id="179" object="true" symbol="SortingPickerFactory"/>
+<entry field="true" id="92" symbol="types"/>
+<entry id="114" method="true" symbol="setSortBy"/>
+<entry id="50" object="true" symbol="Locations"/>
+<entry id="185" object="true" symbol="TypesMenu"/>
+<entry id="257" symbol="about"/>
+<entry id="166" method="true" symbol="clearPicker"/>
 <entry id="8389280" method="true" symbol="getInitialView"/>
-<entry field="true" id="78" symbol="LOC_NAME"/>
+<entry field="true" id="79" symbol="LOC_NAME"/>
 <entry id="8389275" method="true" symbol="getApp"/>
 <entry field="true" id="8388736" symbol="currentLocation"/>
 <entry id="8389068" method="true" symbol="draw"/>
-<entry id="126" symbol="getLocations"/>
-<entry field="true" id="36" symbol="GpsGood"/>
-<entry id="98" symbol="partition"/>
+<entry id="127" symbol="getLocations"/>
+<entry field="true" id="37" symbol="GpsGood"/>
+<entry id="99" symbol="partition"/>
 <entry id="8388718" method="true" symbol="error"/>
 <entry id="8388640" module="true" symbol="Lang"/>
 <entry id="8388639" module="true" symbol="Graphics"/>
-<entry field="true" id="248" symbol="center"/>
-<entry id="243" method="true" symbol="onSensor"/>
+<entry field="true" id="249" symbol="center"/>
+<entry id="244" method="true" symbol="onSensor"/>
 <entry field="true" id="8388794" method="true" symbol="values"/>
-<entry id="142" method="true" symbol="deleteLocation"/>
+<entry id="143" method="true" symbol="deleteLocation"/>
 <entry id="207" object="true" symbol="AboutView"/>
 <entry id="8388769" module="true" symbol="Rez"/>
 <entry id="8389123" method="true" symbol="onShow"/>
-<entry field="true" id="84" symbol="BATCH_ID"/>
-<entry id="103" method="true" symbol="union"/>
-<entry id="250" symbol="isSelected"/>
+<entry field="true" id="85" symbol="BATCH_ID"/>
+<entry id="104" method="true" symbol="union"/>
+<entry id="251" symbol="isSelected"/>
 <entry id="8388782" method="true" symbol="size"/>
 <entry field="true" id="223" symbol="arrow2"/>
 <entry field="true" id="222" symbol="arrow1"/>
 <entry field="true" id="8389314" symbol="latitude"/>
-<entry field="true" id="41" symbol="GPS_LOST"/>
-<entry field="true" id="88" symbol="names"/>
-<entry id="199" object="true" symbol="DirectionFactory"/>
-<entry id="197" object="true" symbol="BatchMenuDelegate"/>
+<entry field="true" id="42" symbol="GPS_LOST"/>
+<entry field="true" id="89" symbol="names"/>
+<entry id="198" object="true" symbol="DirectionFactory"/>
+<entry id="196" object="true" symbol="BatchMenuDelegate"/>
 <entry id="8388638" module="true" symbol="ActivityRecording"/>
-<entry id="170" method="true" symbol="rotate"/>
-<entry id="135" method="true" symbol="addBatch"/>
+<entry id="169" method="true" symbol="rotate"/>
+<entry id="136" method="true" symbol="addBatch"/>
 <entry id="8389626" method="true" symbol="onAccept"/>
-<entry field="true" id="89" symbol="latitudes"/>
-<entry field="true" id="95" symbol="dates"/>
-<entry id="163" method="true" symbol="pushBatchesMenu"/>
+<entry field="true" id="90" symbol="latitudes"/>
+<entry field="true" id="96" symbol="dates"/>
+<entry id="162" method="true" symbol="pushBatchesMenu"/>
 <entry id="8388636" module="true" symbol="Attention"/>
-<entry id="108" symbol="getProp"/>
+<entry id="109" symbol="getProp"/>
 <entry field="true" id="226" symbol="gpsIcon"/>
-<entry id="139" method="true" symbol="distanceComparer"/>
-<entry field="true" id="105" symbol="timer"/>
+<entry id="140" method="true" symbol="distanceComparer"/>
+<entry field="true" id="106" symbol="timer"/>
 <entry id="8389131" method="true" symbol="setColor"/>
 <entry id="8388702" method="true" symbol="initialize"/>
-<entry field="true" id="155" symbol="COLOR_PRIMARY"/>
-<entry id="48" method="true" symbol="alert"/>
-<entry field="true" id="157" symbol="COLOR_LOWLIGHT"/>
-<entry field="true" id="39" symbol="AppName"/>
-<entry id="179" object="true" symbol="TypePickerFactory"/>
-<entry id="196" object="true" symbol="BatchMenu"/>
+<entry field="true" id="154" symbol="COLOR_PRIMARY"/>
+<entry id="49" method="true" symbol="alert"/>
+<entry field="true" id="156" symbol="COLOR_LOWLIGHT"/>
+<entry field="true" id="40" symbol="AppName"/>
+<entry id="178" object="true" symbol="TypePickerFactory"/>
+<entry id="195" object="true" symbol="BatchMenu"/>
 <entry id="204" object="true" symbol="NameTextPickerDelegate"/>
-<entry field="true" id="66" symbol="KEY_INTERVAL"/>
-<entry field="true" id="59" symbol="SORTBY_DISTANCE"/>
-<entry field="true" id="72" symbol="KEY_LOC_TYPE"/>
-<entry field="true" id="61" symbol="LON"/>
-<entry id="166" method="true" symbol="getMenuIndex"/>
-<entry field="true" id="249" symbol="angle"/>
-<entry id="188" object="true" symbol="LocationView"/>
-<entry id="143" method="true" symbol="saveLocationPersisted"/>
-<entry field="true" id="92" symbol="batches"/>
+<entry field="true" id="67" symbol="KEY_INTERVAL"/>
+<entry field="true" id="60" symbol="SORTBY_DISTANCE"/>
+<entry field="true" id="73" symbol="KEY_LOC_TYPE"/>
+<entry field="true" id="62" symbol="LON"/>
+<entry id="165" method="true" symbol="getMenuIndex"/>
+<entry field="true" id="250" symbol="angle"/>
+<entry id="187" object="true" symbol="LocationView"/>
+<entry field="true" id="93" symbol="batches"/>
 <entry field="true" id="8388890" symbol="sport"/>
-<entry field="true" id="68" symbol="KEY_ACT_TYPE"/>
+<entry field="true" id="69" symbol="KEY_ACT_TYPE"/>
 <entry field="true" id="8388892" symbol="name"/>
-<entry field="true" id="86" symbol="BATCH_DATE"/>
-<entry id="246" method="true" symbol="getDrawModel"/>
-<entry id="28" method="true" symbol="parseMail"/>
-<entry id="97" symbol="quickSortRec"/>
+<entry field="true" id="87" symbol="BATCH_DATE"/>
+<entry id="247" method="true" symbol="getDrawModel"/>
+<entry id="29" method="true" symbol="parseMail"/>
+<entry id="98" symbol="quickSortRec"/>
 <entry id="8389078" method="true" symbol="onNextPage"/>
-<entry field="true" id="45" symbol="ACTIVITY_FAILURE"/>
-<entry field="true" id="152" symbol="openTypesMenu"/>
-<entry field="true" id="149" symbol="screenType"/>
-<entry id="87" object="true" symbol="ArrayExt"/>
-<entry id="189" object="true" symbol="LocationDrawModel"/>
-<entry id="132" method="true" symbol="getBatchesList"/>
-<entry id="118" method="true" symbol="getFormat"/>
-<entry id="239" symbol="interval"/>
-<entry field="true" id="104" symbol="app"/>
-<entry field="true" id="81" symbol="LOC_TYPE"/>
+<entry field="true" id="46" symbol="ACTIVITY_FAILURE"/>
+<entry field="true" id="151" symbol="openTypesMenu"/>
+<entry field="true" id="148" symbol="screenType"/>
+<entry id="88" object="true" symbol="ArrayExt"/>
+<entry id="188" object="true" symbol="LocationDrawModel"/>
+<entry id="133" method="true" symbol="getBatchesList"/>
+<entry id="119" method="true" symbol="getFormat"/>
+<entry id="240" symbol="interval"/>
+<entry field="true" id="105" symbol="app"/>
+<entry field="true" id="82" symbol="LOC_TYPE"/>
 <entry id="215" symbol="popInNotGlobal"/>
-<entry field="true" id="241" symbol="directionDrawable"/>
+<entry field="true" id="242" symbol="directionDrawable"/>
 <entry id="8388641" module="true" symbol="Math"/>
 <entry id="8389108" method="true" symbol="onResponse"/>
-<entry id="96" method="true" symbol="sort"/>
-<entry field="true" id="38" symbol="LauncherIcon"/>
-<entry field="true" id="235" symbol="global"/>
-<entry field="true" id="64" symbol="KEY_SORT"/>
-<entry id="26" object="true" symbol="CommListener"/>
-<entry field="true" id="74" symbol="KEY_BATCH_ID"/>
-<entry field="true" id="42" symbol="ACTIVITY_START"/>
-<entry id="122" symbol="invokeTimerCallback"/>
-<entry field="true" id="85" symbol="BATCH_NAME"/>
-<entry id="174" object="true" symbol="SettingsPicker"/>
+<entry id="97" method="true" symbol="sort"/>
+<entry field="true" id="39" symbol="LauncherIcon"/>
+<entry field="true" id="236" symbol="global"/>
+<entry field="true" id="65" symbol="KEY_SORT"/>
+<entry id="27" object="true" symbol="CommListener"/>
+<entry field="true" id="75" symbol="KEY_BATCH_ID"/>
+<entry field="true" id="43" symbol="ACTIVITY_START"/>
+<entry id="123" symbol="invokeTimerCallback"/>
+<entry field="true" id="86" symbol="BATCH_NAME"/>
+<entry id="173" object="true" symbol="SettingsPicker"/>
 <entry id="8388646" module="true" object="true" symbol="Timer"/>
-<entry id="240" symbol="anim"/>
-<entry id="22" object="true" symbol="FindMeApp"/>
+<entry id="241" symbol="anim"/>
+<entry id="23" object="true" symbol="FindMeApp"/>
 <entry id="8389081" method="true" symbol="onBack"/>
-<entry id="25" module="true" symbol="Alert"/>
-<entry id="245" symbol="drawDynamic"/>
-<entry id="165" method="true" symbol="getText"/>
-<entry field="true" id="60" symbol="LAT"/>
+<entry id="26" module="true" symbol="Alert"/>
+<entry id="246" symbol="drawDynamic"/>
+<entry id="164" method="true" symbol="getText"/>
+<entry field="true" id="61" symbol="LAT"/>
 <entry id="8388829" method="true" symbol="onComplete"/>
-<entry id="173" object="true" symbol="ActivityConfirmationDelegate"/>
-<entry id="119" method="true" symbol="setFormat"/>
-<entry id="184" object="true" symbol="TypesViewModel"/>
-<entry field="true" id="37" symbol="GpsActivity"/>
-<entry id="128" method="true" symbol="checkLocCount"/>
+<entry id="172" object="true" symbol="ActivityConfirmationDelegate"/>
+<entry id="120" method="true" symbol="setFormat"/>
+<entry id="183" object="true" symbol="TypesViewModel"/>
+<entry field="true" id="38" symbol="GpsActivity"/>
+<entry id="129" method="true" symbol="checkLocCount"/>
 <entry field="true" id="8389065" symbol="locY"/>
 <entry field="true" id="8389064" symbol="locX"/>
-<entry id="187" object="true" symbol="TypesMenuDelegate"/>
+<entry id="186" object="true" symbol="TypesMenuDelegate"/>
 <entry id="8388771" module="true" symbol="Drawables"/>
-<entry id="123" symbol="startTimer"/>
-<entry field="true" id="52" symbol="VERSION"/>
-<entry id="201" object="true" symbol="NumberFactory"/>
-<entry field="true" id="56" method="true" symbol="bearing"/>
+<entry id="124" symbol="startTimer"/>
+<entry field="true" id="53" symbol="VERSION"/>
+<entry id="200" object="true" symbol="NumberFactory"/>
+<entry field="true" id="57" method="true" symbol="bearing"/>
 <entry id="232" method="true" symbol="showArrows"/>
 <entry id="8389122" method="true" symbol="onLayout"/>
-<entry id="140" method="true" symbol="idPredicate"/>
-<entry field="true" id="35" symbol="GpsUsable"/>
-<entry id="255" symbol="settings"/>
-<entry field="true" id="40" symbol="GPS_FOUND"/>
+<entry id="141" method="true" symbol="idPredicate"/>
+<entry field="true" id="36" symbol="GpsUsable"/>
+<entry id="256" symbol="settings"/>
+<entry field="true" id="41" symbol="GPS_FOUND"/>
 <entry id="8389279" method="true" symbol="onStart"/>
 <entry id="209" symbol="locationStr"/>
 <entry id="8388942" method="true" symbol="add"/>
-<entry field="true" id="54" symbol="ZERO_LIMIT"/>
-<entry field="true" id="63" symbol="ACCURACY"/>
-<entry id="195" object="true" symbol="BatchesMenuDelegate"/>
+<entry field="true" id="55" symbol="ZERO_LIMIT"/>
+<entry field="true" id="64" symbol="ACCURACY"/>
+<entry id="194" object="true" symbol="BatchesMenuDelegate"/>
 <entry field="true" id="229" symbol="index"/>
-<entry id="129" method="true" symbol="getTypesList"/>
-<entry field="true" id="107" symbol="locCount"/>
+<entry id="130" method="true" symbol="getTypesList"/>
+<entry field="true" id="108" symbol="locCount"/>
 <entry id="8389348" symbol="font"/>
-<entry id="244" method="true" symbol="animCallback"/>
+<entry id="245" method="true" symbol="animCallback"/>
 <entry id="205" object="true" symbol="LocationPicker"/>
 <entry field="true" id="228" symbol="locations"/>
-<entry field="true" id="43" symbol="ACTIVITY_SAVE"/>
-<entry field="true" id="83" symbol="LOC_DIST"/>
-<entry id="121" method="true" symbol="setActivityType"/>
+<entry field="true" id="44" symbol="ACTIVITY_SAVE"/>
+<entry field="true" id="84" symbol="LOC_DIST"/>
+<entry id="122" method="true" symbol="setActivityType"/>
 <entry id="8389347" symbol="color"/>
 <entry id="206" object="true" symbol="LocationPickerDelegate"/>
-<entry id="177" object="true" symbol="DistancePickerFactory"/>
-<entry field="true" id="67" symbol="KEY_FORMAT"/>
+<entry id="176" object="true" symbol="DistancePickerFactory"/>
+<entry field="true" id="68" symbol="KEY_FORMAT"/>
 <entry field="true" id="210" symbol="isLat"/>
-<entry id="259" symbol="persisted"/>
-<entry id="190" object="true" symbol="LocationDelegate"/>
-<entry field="true" id="65" symbol="KEY_DISTANCE"/>
-<entry id="178" object="true" symbol="FormatPickerFactory"/>
+<entry id="260" symbol="persisted"/>
+<entry id="189" object="true" symbol="LocationDelegate"/>
+<entry field="true" id="66" symbol="KEY_DISTANCE"/>
+<entry id="177" object="true" symbol="FormatPickerFactory"/>
 <entry field="true" id="217" symbol="type"/>
-<entry id="161" method="true" symbol="pushInfoView"/>
-<entry id="137" method="true" symbol="nameComparer"/>
-<entry field="true" id="76" symbol="KEY_BATCH_DATE"/>
-<entry id="181" object="true" symbol="MainView"/>
-<entry id="117" method="true" symbol="setInterval"/>
-<entry field="true" id="46" symbol="ZERO_DISTANCE"/>
-<entry id="109" symbol="setProp"/>
-<entry id="258" symbol="coord"/>
-<entry id="131" symbol="setBatches"/>
-<entry id="51" object="true" symbol="DataStorage"/>
+<entry id="160" method="true" symbol="pushInfoView"/>
+<entry id="138" method="true" symbol="nameComparer"/>
+<entry field="true" id="77" symbol="KEY_BATCH_DATE"/>
+<entry id="180" object="true" symbol="MainView"/>
+<entry id="118" method="true" symbol="setInterval"/>
+<entry field="true" id="47" symbol="ZERO_DISTANCE"/>
+<entry id="110" symbol="setProp"/>
+<entry id="259" symbol="coord"/>
+<entry id="132" symbol="setBatches"/>
+<entry id="52" object="true" symbol="DataStorage"/>
 <entry field="true" id="227" symbol="activityIcon"/>
-<entry field="true" id="158" symbol="COLOR_HIGHLIGHT"/>
-<entry id="57" method="true" symbol="dateStr"/>
+<entry field="true" id="157" symbol="COLOR_HIGHLIGHT"/>
+<entry id="58" method="true" symbol="dateStr"/>
 <entry id="8388789" method="true" symbol="get"/>
 <entry field="true" id="8388651" symbol="session"/>
 <entry id="8389109" method="true" symbol="onMenuItem"/>
-<entry id="116" method="true" symbol="getInterval"/>
-<entry id="253" symbol="isSettings"/>
+<entry id="117" method="true" symbol="getInterval"/>
+<entry id="254" symbol="isSettings"/>
 <entry field="true" id="220" symbol="line1Dis"/>
-<entry id="101" method="true" symbol="removeAt"/>
-<entry id="29" method="true" symbol="onMail"/>
-<entry field="true" id="75" symbol="KEY_BATCH_NAME"/>
+<entry id="102" method="true" symbol="removeAt"/>
+<entry id="30" method="true" symbol="onMail"/>
+<entry field="true" id="76" symbol="KEY_BATCH_NAME"/>
 <entry field="true" id="8388911" method="true" symbol="distance"/>
-<entry id="32" module="true" symbol="Layouts"/>
-<entry field="true" id="62" symbol="HEADING"/>
+<entry id="33" module="true" symbol="Layouts"/>
+<entry field="true" id="63" symbol="HEADING"/>
 <entry id="8389316" symbol="radians"/>
-<entry id="146" symbol="bridge"/>
+<entry id="145" symbol="bridge"/>
 <entry id="202" object="true" symbol="NewTypesMenu"/>
-<entry id="198" object="true" symbol="DegreeFactory"/>
-<entry id="160" method="true" symbol="pushTypesMenu"/>
+<entry id="197" object="true" symbol="DegreeFactory"/>
+<entry id="159" method="true" symbol="pushTypesMenu"/>
 <entry id="8388642" module="true" symbol="Position"/>
 <entry id="8389079" method="true" symbol="onPreviousPage"/>
 <entry id="231" method="true" symbol="prev"/>
-<entry id="252" symbol="isTitle"/>
-<entry id="237" method="true" symbol="delete"/>
-<entry id="23" module="true" symbol="Data"/>
-<entry id="164" method="true" symbol="pushIfInsufficientSpace"/>
-<entry id="233" symbol="pop"/>
+<entry id="253" symbol="isTitle"/>
+<entry id="238" method="true" symbol="delete"/>
+<entry id="24" module="true" symbol="Data"/>
+<entry id="163" method="true" symbol="pushIfInsufficientSpace"/>
+<entry id="234" symbol="pop"/>
 <entry id="8389125" method="true" symbol="onHide"/>
-<entry id="162" method="true" symbol="pushNameView"/>
-<entry field="true" id="82" symbol="LOC_BATCH"/>
-<entry field="true" id="80" symbol="LOC_LON"/>
+<entry id="161" method="true" symbol="pushNameView"/>
+<entry field="true" id="83" symbol="LOC_BATCH"/>
+<entry field="true" id="81" symbol="LOC_LON"/>
 <entry id="212" symbol="str"/>
-<entry field="true" id="55" symbol="LOC_MAX_COUNT"/>
-<entry id="251" symbol="isNumber"/>
-<entry id="175" object="true" symbol="SettingsPickerDelegate"/>
-<entry id="133" method="true" symbol="addLocation"/>
+<entry field="true" id="56" symbol="LOC_MAX_COUNT"/>
+<entry id="252" symbol="isNumber"/>
+<entry id="174" object="true" symbol="SettingsPickerDelegate"/>
+<entry id="134" method="true" symbol="addLocation"/>
 <entry id="216" symbol="batch"/>
-<entry id="111" symbol="clearProp"/>
-<entry field="true" id="77" symbol="LOC_ID"/>
+<entry id="112" symbol="clearProp"/>
+<entry field="true" id="78" symbol="LOC_ID"/>
 <entry id="8388828" method="true" symbol="onError"/>
-<entry id="100" method="true" symbol="insertAt"/>
+<entry id="101" method="true" symbol="insertAt"/>
 <entry id="8389644" symbol="defaults"/>
 <entry id="8389628" method="true" symbol="getDrawable"/>
-<entry field="true" id="106" symbol="timerCallback"/>
+<entry field="true" id="107" symbol="timerCallback"/>
 <entry field="true" id="219" symbol="line2"/>
 <entry field="true" id="218" symbol="line1"/>
 <entry id="8389346" symbol="text"/>
 <entry field="true" id="8389066" symbol="width"/>
-<entry field="true" id="153" symbol="drawModel"/>
-<entry id="191" object="true" symbol="LocationMenu"/>
-<entry id="31" module="true" symbol="Menus"/>
-<entry id="171" object="true" symbol="InfoView"/>
+<entry field="true" id="152" symbol="drawModel"/>
+<entry id="190" object="true" symbol="LocationMenu"/>
+<entry id="32" module="true" symbol="Menus"/>
+<entry id="170" object="true" symbol="InfoView"/>
 <entry id="213" method="true" symbol="fontPadding"/>
-<entry id="27" object="true" symbol="Bridge"/>
-<entry id="134" method="true" symbol="addLocations"/>
-<entry id="193" object="true" symbol="DirectionDrawable"/>
-<entry id="125" method="true" symbol="updateCurrentLocation"/>
-<entry field="true" id="34" symbol="GpsPoor"/>
-<entry id="236" method="true" symbol="getTypeName"/>
+<entry id="28" object="true" symbol="Bridge"/>
+<entry id="135" method="true" symbol="addLocations"/>
+<entry id="192" object="true" symbol="DirectionDrawable"/>
+<entry id="126" method="true" symbol="updateCurrentLocation"/>
+<entry field="true" id="35" symbol="GpsPoor"/>
+<entry id="237" method="true" symbol="getTypeName"/>
 <entry id="8389643" symbol="pattern"/>
-<entry field="true" id="79" symbol="LOC_LAT"/>
-<entry id="185" object="true" symbol="LocationsViewModel"/>
-<entry id="50" object="true" symbol="Batches"/>
-<entry id="168" method="true" symbol="getLocationStr"/>
-<entry id="159" method="true" symbol="pushMainMenu"/>
-<entry id="194" object="true" symbol="BatchesMenu"/>
-<entry field="true" id="154" symbol="COLOR_BACKGROUND"/>
-<entry id="93" method="true" symbol="set"/>
-<entry id="124" method="true" symbol="onTimer"/>
+<entry field="true" id="80" symbol="LOC_LAT"/>
+<entry id="184" object="true" symbol="LocationsViewModel"/>
+<entry id="51" object="true" symbol="Batches"/>
+<entry id="167" method="true" symbol="getLocationStr"/>
+<entry id="158" method="true" symbol="pushMainMenu"/>
+<entry id="193" object="true" symbol="BatchesMenu"/>
+<entry field="true" id="153" symbol="COLOR_BACKGROUND"/>
+<entry id="94" method="true" symbol="set"/>
+<entry id="125" method="true" symbol="onTimer"/>
 <entry id="8388772" module="true" symbol="Fonts"/>
-<entry id="30" method="true" symbol="p"/>
+<entry id="31" method="true" symbol="p"/>
 <entry id="8389630" method="true" symbol="getSize"/>
 <entry field="true" id="8389315" symbol="longitude"/>
-<entry id="127" symbol="setLocations"/>
-<entry id="20" module="true" symbol="_"/>
-<entry id="257" symbol="activity"/>
+<entry id="128" symbol="setLocations"/>
+<entry id="21" module="true" symbol="_"/>
+<entry id="258" symbol="activity"/>
 <entry id="8389541" method="true" symbol="onCancel"/>
-<entry id="169" method="true" symbol="getDistanceStr"/>
-<entry id="238" symbol="dots"/>
-<entry id="115" method="true" symbol="setDistance"/>
-<entry id="200" object="true" symbol="MinuteFactory"/>
+<entry id="168" method="true" symbol="getDistanceStr"/>
+<entry id="239" symbol="dots"/>
+<entry id="116" method="true" symbol="setDistance"/>
+<entry id="199" object="true" symbol="MinuteFactory"/>
 <entry id="8388635" module="true" symbol="Application"/>
-<entry id="176" object="true" symbol="IntervalPickerFactory"/>
+<entry id="175" object="true" symbol="IntervalPickerFactory"/>
 </symbolTable>
 <localVars>
 <entry endPc="268435622" name="types" stackId="1" startPc="268435569"/>
@@ -1303,101 +1298,98 @@
 <entry endPc="268446149" name="distance" stackId="4" startPc="268445294"/>
 <entry endPc="268446854" name="font" stackId="4" startPc="268446152"/>
 <entry endPc="268446854" name="color" stackId="3" startPc="268446152"/>
-<entry endPc="268448202" name="location" stackId="2" startPc="268448157"/>
-<entry endPc="268448585" name="locations" stackId="1" startPc="268448488"/>
-<entry endPc="268449693" name="fullRefresh" stackId="2" startPc="268449485"/>
-<entry endPc="268450194" name="p4" stackId="5" startPc="268449732"/>
-<entry endPc="268450194" name="p3" stackId="4" startPc="268449732"/>
-<entry endPc="268450194" name="p2" stackId="3" startPc="268449732"/>
-<entry endPc="268450194" name="p1" stackId="2" startPc="268449732"/>
-<entry endPc="268450283" name="i" stackId="2" startPc="268450238"/>
-<entry endPc="268450421" name="index" stackId="2" startPc="268450299"/>
-<entry endPc="268450705" name="id" stackId="2" startPc="268450511"/>
-<entry endPc="268451081" name="sign" stackId="3" startPc="268450992"/>
-<entry endPc="268451283" name="i" stackId="1" startPc="268451235"/>
-<entry endPc="268451706" name="location" stackId="5" startPc="268451319"/>
-<entry endPc="268451706" name="model" stackId="7" startPc="268451319"/>
-<entry endPc="268451706" name="index" stackId="2" startPc="268451319"/>
-<entry endPc="268451706" name="ids" stackId="6" startPc="268451319"/>
-<entry endPc="268451706" name="radians" stackId="4" startPc="268451319"/>
-<entry endPc="268451706" name="loc" stackId="3" startPc="268451319"/>
-<entry endPc="268454020" name="pattern" stackId="2" startPc="268451865"/>
-<entry endPc="268454020" name="title" stackId="3" startPc="268451865"/>
-<entry endPc="268454770" name="str" stackId="2" startPc="268454053"/>
-<entry endPc="268455311" name="h" stackId="2" startPc="268454830"/>
-<entry endPc="268455311" name="wc" stackId="3" startPc="268454830"/>
-<entry endPc="268455311" name="d" stackId="5" startPc="268454830"/>
-<entry endPc="268455311" name="hc" stackId="4" startPc="268454830"/>
-<entry endPc="268455501" name="data" stackId="1" startPc="268455342"/>
-<entry endPc="268455733" name="distance" stackId="4" startPc="268455549"/>
-<entry endPc="268456918" name="interval" stackId="1" startPc="268456441"/>
-<entry endPc="268457861" name="accuracyChanged" stackId="2" startPc="268457797"/>
-<entry endPc="268458311" name="accuracyChanged" stackId="3" startPc="268457969"/>
-<entry endPc="268458311" name="radians" stackId="2" startPc="268457969"/>
-<entry endPc="268458997" name="typeLocations" stackId="10" startPc="268458873"/>
-<entry endPc="268459000" name="location" stackId="9" startPc="268458791"/>
-<entry endPc="268459000" name="type" stackId="8" startPc="268458791"/>
-<entry endPc="268459013" name="i" stackId="7" startPc="268458791"/>
-<entry endPc="268459136" name="locations" stackId="1" startPc="268458621"/>
-<entry endPc="268459136" name="types" stackId="2" startPc="268458621"/>
-<entry endPc="268459136" name="all" stackId="3" startPc="268458621"/>
-<entry endPc="268459136" name="lat" stackId="4" startPc="268458621"/>
-<entry endPc="268459136" name="lon" stackId="5" startPc="268458621"/>
-<entry endPc="268459136" name="distance" stackId="6" startPc="268458621"/>
-<entry endPc="268459391" name="i" stackId="3" startPc="268459360"/>
-<entry endPc="268459394" name="batchesList" stackId="2" startPc="268459309"/>
-<entry endPc="268459394" name="batches" stackId="1" startPc="268459309"/>
-<entry endPc="268459560" name="newLocations" stackId="2" startPc="268459397"/>
-<entry endPc="268459869" name="i" stackId="5" startPc="268459846"/>
-<entry endPc="268459872" name="locations" stackId="2" startPc="268459563"/>
-<entry endPc="268459872" name="l" stackId="3" startPc="268459563"/>
-<entry endPc="268459872" name="ids" stackId="4" startPc="268459563"/>
-<entry endPc="268460049" name="batches" stackId="2" startPc="268459875"/>
-<entry endPc="268460219" name="i" stackId="4" startPc="268460119"/>
-<entry endPc="268460357" name="sortBy" stackId="3" startPc="268460052"/>
-<entry endPc="268460448" name="h2" stackId="4" startPc="268460360"/>
-<entry endPc="268460448" name="h1" stackId="3" startPc="268460360"/>
-<entry endPc="268460625" name="i" stackId="4" startPc="268460585"/>
-<entry endPc="268460750" name="i" stackId="6" startPc="268460693"/>
-<entry endPc="268460767" name="locations" stackId="5" startPc="268460535"/>
-<entry endPc="268460767" name="index" stackId="3" startPc="268460535"/>
-<entry endPc="268460767" name="batches" stackId="2" startPc="268460535"/>
-<entry endPc="268460814" name="locations" stackId="2" startPc="268460770"/>
-<entry endPc="268460954" name="locations" stackId="2" startPc="268460817"/>
-<entry endPc="268461151" name="i" stackId="3" startPc="268460994"/>
-<entry endPc="268461151" name="locations" stackId="2" startPc="268460957"/>
-<entry endPc="268461428" name="pi" stackId="3" startPc="268461364"/>
-<entry endPc="268461641" name="a" stackId="7" startPc="268461436"/>
-<entry endPc="268461641" name="dLat" stackId="5" startPc="268461436"/>
-<entry endPc="268461641" name="dLon" stackId="6" startPc="268461436"/>
-<entry endPc="268461795" name="x" stackId="7" startPc="268461644"/>
-<entry endPc="268461795" name="dLon" stackId="5" startPc="268461644"/>
-<entry endPc="268461795" name="y" stackId="6" startPc="268461644"/>
-<entry endPc="268461949" name="dateStr" stackId="3" startPc="268461798"/>
-<entry endPc="268461949" name="date" stackId="2" startPc="268461798"/>
-<entry endPc="268462039" name="i" stackId="4" startPc="268462016"/>
-<entry endPc="268462080" name="result" stackId="3" startPc="268461952"/>
-<entry endPc="268462178" name="i" stackId="5" startPc="268462083"/>
-<entry endPc="268462340" name="pivot" stackId="5" startPc="268462181"/>
-<entry endPc="268462367" name="temp" stackId="4" startPc="268462343"/>
-<entry endPc="268462440" name="i" stackId="5" startPc="268462411"/>
-<entry endPc="268462491" name="i" stackId="6" startPc="268462468"/>
-<entry endPc="268462494" name="result" stackId="4" startPc="268462370"/>
-<entry endPc="268462555" name="i" stackId="4" startPc="268462532"/>
-<entry endPc="268462605" name="i" stackId="5" startPc="268462576"/>
-<entry endPc="268462608" name="result" stackId="3" startPc="268462497"/>
-<entry endPc="268462675" name="i" stackId="4" startPc="268462635"/>
-<entry endPc="268462753" name="i" stackId="4" startPc="268462730"/>
-<entry endPc="268462812" name="i" stackId="5" startPc="268462777"/>
-<entry endPc="268462815" name="result" stackId="3" startPc="268462680"/>
-<entry endPc="268463246" name="i" stackId="5" startPc="268463038"/>
-<entry endPc="268463425" name="locations" stackId="4" startPc="268462907"/>
-<entry endPc="268463425" name="l" stackId="3" startPc="268462907"/>
-<entry endPc="268463425" name="batch" stackId="2" startPc="268462907"/>
-<entry endPc="268463496" name="batch" stackId="3" startPc="268463448"/>
-<entry endPc="268463515" name="mail" stackId="2" startPc="268463428"/>
-<entry endPc="268464260" name="duty" stackId="2" startPc="268463518"/>
-<entry endPc="268464260" name="length" stackId="3" startPc="268463518"/>
+<entry endPc="268448239" name="location" stackId="2" startPc="268448178"/>
+<entry endPc="268448632" name="locations" stackId="1" startPc="268448525"/>
+<entry endPc="268449740" name="fullRefresh" stackId="2" startPc="268449532"/>
+<entry endPc="268450241" name="p4" stackId="5" startPc="268449779"/>
+<entry endPc="268450241" name="p3" stackId="4" startPc="268449779"/>
+<entry endPc="268450241" name="p2" stackId="3" startPc="268449779"/>
+<entry endPc="268450241" name="p1" stackId="2" startPc="268449779"/>
+<entry endPc="268450330" name="i" stackId="2" startPc="268450285"/>
+<entry endPc="268450468" name="index" stackId="2" startPc="268450346"/>
+<entry endPc="268450752" name="id" stackId="2" startPc="268450558"/>
+<entry endPc="268451128" name="sign" stackId="3" startPc="268451039"/>
+<entry endPc="268451427" name="i" stackId="1" startPc="268451379"/>
+<entry endPc="268451850" name="location" stackId="5" startPc="268451463"/>
+<entry endPc="268451850" name="model" stackId="7" startPc="268451463"/>
+<entry endPc="268451850" name="index" stackId="2" startPc="268451463"/>
+<entry endPc="268451850" name="ids" stackId="6" startPc="268451463"/>
+<entry endPc="268451850" name="radians" stackId="4" startPc="268451463"/>
+<entry endPc="268451850" name="loc" stackId="3" startPc="268451463"/>
+<entry endPc="268454156" name="pattern" stackId="2" startPc="268452009"/>
+<entry endPc="268454156" name="title" stackId="3" startPc="268452009"/>
+<entry endPc="268454906" name="str" stackId="2" startPc="268454189"/>
+<entry endPc="268455447" name="h" stackId="2" startPc="268454966"/>
+<entry endPc="268455447" name="wc" stackId="3" startPc="268454966"/>
+<entry endPc="268455447" name="d" stackId="5" startPc="268454966"/>
+<entry endPc="268455447" name="hc" stackId="4" startPc="268454966"/>
+<entry endPc="268455637" name="data" stackId="1" startPc="268455478"/>
+<entry endPc="268455869" name="distance" stackId="4" startPc="268455685"/>
+<entry endPc="268457054" name="interval" stackId="1" startPc="268456577"/>
+<entry endPc="268457997" name="accuracyChanged" stackId="2" startPc="268457933"/>
+<entry endPc="268458447" name="accuracyChanged" stackId="3" startPc="268458105"/>
+<entry endPc="268458447" name="radians" stackId="2" startPc="268458105"/>
+<entry endPc="268459133" name="typeLocations" stackId="10" startPc="268459009"/>
+<entry endPc="268459136" name="location" stackId="9" startPc="268458927"/>
+<entry endPc="268459136" name="type" stackId="8" startPc="268458927"/>
+<entry endPc="268459149" name="i" stackId="7" startPc="268458927"/>
+<entry endPc="268459272" name="locations" stackId="1" startPc="268458757"/>
+<entry endPc="268459272" name="types" stackId="2" startPc="268458757"/>
+<entry endPc="268459272" name="all" stackId="3" startPc="268458757"/>
+<entry endPc="268459272" name="lat" stackId="4" startPc="268458757"/>
+<entry endPc="268459272" name="lon" stackId="5" startPc="268458757"/>
+<entry endPc="268459272" name="distance" stackId="6" startPc="268458757"/>
+<entry endPc="268459527" name="i" stackId="3" startPc="268459496"/>
+<entry endPc="268459530" name="batchesList" stackId="2" startPc="268459445"/>
+<entry endPc="268459530" name="batches" stackId="1" startPc="268459445"/>
+<entry endPc="268459696" name="newLocations" stackId="2" startPc="268459533"/>
+<entry endPc="268460005" name="i" stackId="5" startPc="268459982"/>
+<entry endPc="268460008" name="locations" stackId="2" startPc="268459699"/>
+<entry endPc="268460008" name="l" stackId="3" startPc="268459699"/>
+<entry endPc="268460008" name="ids" stackId="4" startPc="268459699"/>
+<entry endPc="268460185" name="batches" stackId="2" startPc="268460011"/>
+<entry endPc="268460355" name="i" stackId="4" startPc="268460255"/>
+<entry endPc="268460493" name="sortBy" stackId="3" startPc="268460188"/>
+<entry endPc="268460584" name="h2" stackId="4" startPc="268460496"/>
+<entry endPc="268460584" name="h1" stackId="3" startPc="268460496"/>
+<entry endPc="268460761" name="i" stackId="4" startPc="268460721"/>
+<entry endPc="268460886" name="i" stackId="6" startPc="268460829"/>
+<entry endPc="268460903" name="locations" stackId="5" startPc="268460671"/>
+<entry endPc="268460903" name="index" stackId="3" startPc="268460671"/>
+<entry endPc="268460903" name="batches" stackId="2" startPc="268460671"/>
+<entry endPc="268460950" name="locations" stackId="2" startPc="268460906"/>
+<entry endPc="268461227" name="pi" stackId="3" startPc="268461163"/>
+<entry endPc="268461440" name="a" stackId="7" startPc="268461235"/>
+<entry endPc="268461440" name="dLat" stackId="5" startPc="268461235"/>
+<entry endPc="268461440" name="dLon" stackId="6" startPc="268461235"/>
+<entry endPc="268461594" name="x" stackId="7" startPc="268461443"/>
+<entry endPc="268461594" name="dLon" stackId="5" startPc="268461443"/>
+<entry endPc="268461594" name="y" stackId="6" startPc="268461443"/>
+<entry endPc="268461748" name="dateStr" stackId="3" startPc="268461597"/>
+<entry endPc="268461748" name="date" stackId="2" startPc="268461597"/>
+<entry endPc="268461838" name="i" stackId="4" startPc="268461815"/>
+<entry endPc="268461879" name="result" stackId="3" startPc="268461751"/>
+<entry endPc="268461977" name="i" stackId="5" startPc="268461882"/>
+<entry endPc="268462139" name="pivot" stackId="5" startPc="268461980"/>
+<entry endPc="268462166" name="temp" stackId="4" startPc="268462142"/>
+<entry endPc="268462239" name="i" stackId="5" startPc="268462210"/>
+<entry endPc="268462290" name="i" stackId="6" startPc="268462267"/>
+<entry endPc="268462293" name="result" stackId="4" startPc="268462169"/>
+<entry endPc="268462354" name="i" stackId="4" startPc="268462331"/>
+<entry endPc="268462404" name="i" stackId="5" startPc="268462375"/>
+<entry endPc="268462407" name="result" stackId="3" startPc="268462296"/>
+<entry endPc="268462474" name="i" stackId="4" startPc="268462434"/>
+<entry endPc="268462552" name="i" stackId="4" startPc="268462529"/>
+<entry endPc="268462611" name="i" stackId="5" startPc="268462576"/>
+<entry endPc="268462614" name="result" stackId="3" startPc="268462479"/>
+<entry endPc="268463045" name="i" stackId="5" startPc="268462837"/>
+<entry endPc="268463224" name="locations" stackId="4" startPc="268462706"/>
+<entry endPc="268463224" name="l" stackId="3" startPc="268462706"/>
+<entry endPc="268463224" name="batch" stackId="2" startPc="268462706"/>
+<entry endPc="268463295" name="batch" stackId="3" startPc="268463247"/>
+<entry endPc="268463314" name="mail" stackId="2" startPc="268463227"/>
+<entry endPc="268463947" name="duty" stackId="2" startPc="268463317"/>
+<entry endPc="268463947" name="length" stackId="3" startPc="268463317"/>
 </localVars>
 <annotations/>
 <functions>
@@ -1804,6 +1796,18 @@
 <param id="index"/>
 <documentation/>
 </functionEntry>
+<functionEntry name="getDrawable" parent="CharFactory">
+<param id="index"/>
+<param id="isSelected"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="getSize" parent="CharFactory">
+<documentation/>
+</functionEntry>
+<functionEntry name="getValue" parent="CharFactory">
+<param id="index"/>
+<documentation/>
+</functionEntry>
 <functionEntry name="initialize" parent="NewTypesMenu">
 <documentation/>
 </functionEntry>
@@ -2064,14 +2068,6 @@
 </functionEntry>
 <functionEntry name="deleteLocation" parent="DataStorage">
 <param id="i"/>
-<documentation/>
-</functionEntry>
-<functionEntry name="saveLocationPersisted" parent="DataStorage">
-<param id="i"/>
-<documentation/>
-</functionEntry>
-<functionEntry name="saveBatchPersisted" parent="DataStorage">
-<param id="id"/>
 <documentation/>
 </functionEntry>
 <functionEntry name="toRadians" parent="Data">

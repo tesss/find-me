@@ -1,5 +1,6 @@
 using Toybox.WatchUi as Ui;
 using Toybox.System;
+using Toybox.Lang;
 
 module UI{
 	var dataStorage;
@@ -25,49 +26,41 @@ module UI{
 		if(model == null){
 			var types = dataStorage.getTypesList();
 			model = new TypesViewModel(types, true);
-			types = null;
 		}
-		if(model.size() <= 1){
-			pushInfoView("No locations", transition, false);
+		if(model.size() == 0){
+			pushInfoView("No locations", false);
 		} else {
 			// delete/add/import into model
 			Ui.pushView(new TypesMenu(model), new TypesMenuDelegate(model), transition);
 		}
 	}
 	
-	function pushInfoView(_str, _transition, _pop, _exit){
-		if(_transition == null){
-			_transition = transition;
-		}
-		_pop = _pop == null || _pop instanceof Lang.Method || _pop;
-		_exit = _exit == true;
-		Ui.pushView(new InfoView(_str), new InfoDelegate(_pop, _exit), _transition);
+	function pushInfoView(_str, _pop, _error){
+		_pop = _pop == true;
+		_error = _error == true;
+		Ui.pushView(new InfoView(_str, _error), new InfoDelegate(_pop), transition);
 	}
 	
 	function pushNameView(location, format, back){
-		if(Ui has :TextPicker){
-			Ui.pushView(new NameTextPicker(), new NameTextPickerDelegate(location, format, back), transition);
-		} else {
-			Ui.pushView(new NamePicker(), new NamePickerDelegate(location, format, back), transition);
-		}
-	}
-	
-	function pushFindView(){
-		if(Ui has :TextPicker){
-			Ui.pushView(new FindTextPicker(), new FindTextPickerDelegate(), transition);
-		} else {
-			Ui.pushView(new FindPicker(), new FindPickerDelegate(), transition);
-		}
+		Ui.pushView(new Ui.TextPicker(), new NameTextPickerDelegate(location, format, back), transition);
 	}
 	
 	function pushBatchesMenu(){
 		release();
 		var batches = dataStorage.getBatchesList();
 		if(batches == null || batches.size() == 0) {
-			pushInfoView("No batches", null, false);
+			pushInfoView("No batches", false);
 		} else {
 			Ui.pushView(new BatchesMenu(batches), new BatchesMenuDelegate(batches), transition);
 		}
+	}
+	
+	function pushIfInsufficientSpace(){
+		if(!dataStorage.checkLocCount(1)){
+			pushInfoView("Insufficient storage (" + dataStorage.locCount + "/" + Data.LOC_MAX_COUNT + ")", false, true);
+			return true;
+		}
+		return false;
 	}
 	
 	function getText(str, options){
@@ -120,10 +113,7 @@ module UI{
 	}
 	
 	function release(){
-		if(model != null){
-			model.dispose();
-			model = null;
-		}
+		model = null;
 		drawModel = null;
 	}
 	
@@ -152,15 +142,7 @@ module UI{
 		dc.setColor(fcolor, bcolor);
 	}
 	
-	function rotate(point, center, angle){
-		return [
-			(point[0] - center[0]) * Math.cos(angle) - (point[1] - center[1]) * Math.sin(angle) + center[0],
-			(point[1] - center[1]) * Math.cos(angle) + (point[0] - center[0]) * Math.sin(angle) + center[1]
-		];
-	}
-	
 	function getLocationStr(location){
-		// format from settings
 		return new Position.Location({
 			:latitude => location[Data.LOC_LAT], 
 			:longitude => location[Data.LOC_LON], 
@@ -169,9 +151,6 @@ module UI{
 	
 	function getDistanceStr(distance){
 		var isMetric = System.getDeviceSettings().distanceUnits == System.UNIT_METRIC;
-		if(distance < 0.01){
-			//distance = 0;
-		}
 		if(distance < 1){
 			var meters = distance * 1000;
 			if(isMetric){
@@ -184,5 +163,12 @@ module UI{
 			}
 			return (distance * 0.621371).format("%.2f") + " mi";
 		}
+	}
+	
+	function rotate(point, center, angle){
+		return [
+			(point[0] - center[0]) * Math.cos(angle) - (point[1] - center[1]) * Math.sin(angle) + center[0],
+			(point[1] - center[1]) * Math.cos(angle) + (point[0] - center[0]) * Math.sin(angle) + center[1]
+		];
 	}
 }
