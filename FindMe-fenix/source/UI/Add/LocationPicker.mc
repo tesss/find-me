@@ -83,10 +83,10 @@ module UI{
 			} else if(_format == Position.GEO_MGRS){
 				title = "MGRS";
 				pattern = [
-					new CharFactory(false),
-					new CharFactory(false),
-					new CharFactory(false),
-					new CharFactory(false),
+					new CharFactory(),
+					new CharFactory(),
+					new CharFactory(),
+					new CharFactory(),
 					new NumberFactory(),
 					new NumberFactory(),
 					new NumberFactory(),

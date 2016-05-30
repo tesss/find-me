@@ -45,4 +45,12 @@ module UI {
 		function getSize(){ return 10; }
 		function getValue(index){ return index; }
 	}
+	
+	class CharFactory extends Ui.PickerFactory {
+		static const letterValues = "AZYXWVUTSRQPONMLKJIHGFEDCB";
+
+		function getDrawable(index, isSelected){ return getText(getValue(index), {:isSelected => isSelected}); }
+		function getSize(){ return letterValues.length(); }
+		function getValue(index){ return letterValues.substring(index, index + 1); }
+	}
 }
