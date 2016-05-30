@@ -32,4 +32,5 @@ class FindMeApp extends App.AppBase {
 		// import alert
 
 		// bug with MGRS ?
+		// switch between mag and gps heading according to speed?
     	// bugs
