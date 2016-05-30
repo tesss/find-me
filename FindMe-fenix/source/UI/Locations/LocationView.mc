@@ -77,10 +77,10 @@ module UI{
 				return;
 			}
 			Ui.requestUpdate();
-			if(info != null){
+			if(info != null && info has :mag && info.mag != null){
 	            var xMag = info.mag[0];
 	            var yMag = info.mag[1] * -1;
-	            heading = Math.sqrt(Math.pow(xMag,2) + Math.pow(yMag,2));
+	            heading = Math.sqrt(xMag*xMag + yMag*yMag);
 			} else {
 				heading = null;
 			}
@@ -213,6 +213,8 @@ module UI{
 		function onUpdate(dc){
 			if(model.fullRefresh){
 				model.fullRefresh = false;
+				setColor(dc, COLOR_PRIMARY);
+				dc.clear();
 				onSensor();
 				return;
 			}
@@ -229,8 +231,6 @@ module UI{
 		}
 		
 		function onShow(){
-			setColor(dc, COLOR_PRIMARY);
-			dc.clear();
 			dataStorage.timerCallback = method(:onTimer);
 		}
 		
