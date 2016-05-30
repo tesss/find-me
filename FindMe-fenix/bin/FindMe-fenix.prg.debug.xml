@@ -931,317 +931,318 @@
 </pcToLineNum>
 <symbolTable>
 <entry id="8388644" module="true" symbol="System"/>
-<entry id="113" method="true" symbol="getDistance"/>
+<entry id="114" method="true" symbol="getDistance"/>
 <entry id="8389540" method="true" symbol="onTextEntered"/>
-<entry field="true" id="147" symbol="transition"/>
-<entry field="true" id="224" symbol="directionCenter"/>
+<entry field="true" id="148" symbol="transition"/>
+<entry field="true" id="225" symbol="directionCenter"/>
 <entry id="8389308" method="true" symbol="toRadians"/>
-<entry field="true" id="241" symbol="TYPES_BCOLORS"/>
-<entry field="true" id="69" symbol="KEY_LOC_LON"/>
-<entry field="true" id="220" symbol="line2Dis"/>
-<entry field="true" id="149" symbol="model"/>
-<entry id="207" object="true" symbol="AboutViewDelegate"/>
-<entry id="137" method="true" symbol="typeComparer"/>
+<entry field="true" id="242" symbol="TYPES_BCOLORS"/>
+<entry field="true" id="70" symbol="KEY_LOC_LON"/>
+<entry field="true" id="221" symbol="line2Dis"/>
+<entry field="true" id="150" symbol="model"/>
+<entry id="208" object="true" symbol="AboutViewDelegate"/>
+<entry id="138" method="true" symbol="typeComparer"/>
 <entry id="8388791" method="true" symbol="remove"/>
 <entry id="8389124" method="true" symbol="onUpdate"/>
 <entry id="8388826" method="true" symbol="next"/>
 <entry id="8389258" method="true" symbol="release"/>
-<entry field="true" id="52" symbol="NAME_LIMIT"/>
+<entry field="true" id="53" symbol="NAME_LIMIT"/>
 <entry field="true" id="33" symbol="GpsLast"/>
 <entry id="8389349" symbol="justification"/>
 <entry id="8389716" method="true" symbol="atan2"/>
-<entry field="true" id="72" symbol="KEY_LOC_BATCH"/>
+<entry field="true" id="73" symbol="KEY_LOC_BATCH"/>
 <entry id="8389307" method="true" symbol="toDegrees"/>
-<entry field="true" id="93" symbol="ids"/>
+<entry field="true" id="94" symbol="ids"/>
 <entry id="8389177" method="true" symbol="clear"/>
-<entry field="true" id="155" symbol="COLOR_SECONDARY"/>
+<entry field="true" id="156" symbol="COLOR_SECONDARY"/>
 <entry id="8389642" symbol="title"/>
 <entry id="8389629" method="true" symbol="getValue"/>
-<entry id="253" symbol="addCurrent"/>
+<entry id="254" symbol="addCurrent"/>
 <entry id="8389534" module="true" symbol="PersistedLocations"/>
-<entry field="true" id="223" symbol="direction"/>
-<entry field="true" id="233" symbol="isMinute"/>
-<entry id="213" symbol="newSession"/>
-<entry id="210" method="true" symbol="predicate"/>
+<entry field="true" id="224" symbol="direction"/>
+<entry field="true" id="234" symbol="isMinute"/>
+<entry id="214" symbol="newSession"/>
+<entry id="211" method="true" symbol="predicate"/>
 <entry id="21" module="true" symbol="UI"/>
-<entry id="119" method="true" symbol="getActivityType"/>
-<entry field="true" id="144" symbol="TYPES"/>
-<entry field="true" id="246" symbol="arrow"/>
-<entry id="111" method="true" symbol="getSortBy"/>
-<entry id="182" object="true" symbol="MainMenuDelegate"/>
-<entry id="171" object="true" symbol="InfoDelegate"/>
-<entry field="true" id="70" symbol="KEY_LOC_NAME"/>
-<entry field="true" id="57" symbol="SORTBY_NAME"/>
+<entry id="120" method="true" symbol="getActivityType"/>
+<entry field="true" id="145" symbol="TYPES"/>
+<entry field="true" id="247" symbol="arrow"/>
+<entry id="112" method="true" symbol="getSortBy"/>
+<entry id="183" object="true" symbol="MainMenuDelegate"/>
+<entry id="172" object="true" symbol="InfoDelegate"/>
+<entry field="true" id="71" symbol="KEY_LOC_NAME"/>
+<entry field="true" id="58" symbol="SORTBY_NAME"/>
 <entry field="true" id="8389759" symbol="radius"/>
 <entry field="true" id="8388611" module="true" symbol="Toybox"/>
 <entry id="8388645" module="true" symbol="Time"/>
-<entry field="true" id="46" symbol="ERROR"/>
-<entry id="140" method="true" symbol="deleteBatch"/>
-<entry id="143" method="true" symbol="saveBatchPersisted"/>
-<entry id="101" method="true" symbol="indexOf"/>
-<entry id="129" symbol="getBatches"/>
-<entry id="98" method="true" symbol="swap"/>
-<entry field="true" id="43" symbol="ACTIVITY_DISCARD"/>
-<entry id="181" object="true" symbol="MainMenu"/>
-<entry id="135" method="true" symbol="sortLocationsList"/>
+<entry field="true" id="47" symbol="ERROR"/>
+<entry id="141" method="true" symbol="deleteBatch"/>
+<entry id="144" method="true" symbol="saveBatchPersisted"/>
+<entry id="102" method="true" symbol="indexOf"/>
+<entry id="130" symbol="getBatches"/>
+<entry id="99" method="true" symbol="swap"/>
+<entry field="true" id="44" symbol="ACTIVITY_DISCARD"/>
+<entry id="182" object="true" symbol="MainMenu"/>
+<entry id="136" method="true" symbol="sortLocationsList"/>
 <entry id="8389619" method="true" symbol="onSelect"/>
-<entry field="true" id="68" symbol="KEY_LOC_LAT"/>
-<entry id="202" object="true" symbol="NewTypesMenuDelegate"/>
-<entry id="109" symbol="initProp"/>
-<entry id="191" object="true" symbol="LocationMenuDelegate"/>
+<entry field="true" id="69" symbol="KEY_LOC_LAT"/>
+<entry id="203" object="true" symbol="NewTypesMenuDelegate"/>
+<entry id="110" symbol="initProp"/>
+<entry id="192" object="true" symbol="LocationMenuDelegate"/>
 <entry id="24" module="true" symbol="Comm"/>
 <entry id="8388770" module="true" symbol="Strings"/>
 <entry id="8388643" module="true" symbol="Sensor"/>
-<entry field="true" id="146" symbol="dataStorage"/>
-<entry field="true" id="150" symbol="openMainMenu"/>
+<entry field="true" id="147" symbol="dataStorage"/>
+<entry field="true" id="151" symbol="openMainMenu"/>
 <entry field="true" id="8388764" method="true" symbol="format"/>
-<entry field="true" id="89" symbol="longitudes"/>
-<entry field="true" id="229" symbol="fullRefresh"/>
-<entry id="179" object="true" symbol="SortingPickerFactory"/>
-<entry field="true" id="90" symbol="types"/>
-<entry id="112" method="true" symbol="setSortBy"/>
-<entry id="48" object="true" symbol="Locations"/>
-<entry id="185" object="true" symbol="TypesMenu"/>
-<entry id="255" symbol="about"/>
-<entry id="166" method="true" symbol="clearPicker"/>
+<entry field="true" id="90" symbol="longitudes"/>
+<entry field="true" id="230" symbol="fullRefresh"/>
+<entry id="180" object="true" symbol="SortingPickerFactory"/>
+<entry field="true" id="91" symbol="types"/>
+<entry id="113" method="true" symbol="setSortBy"/>
+<entry id="49" object="true" symbol="Locations"/>
+<entry id="186" object="true" symbol="TypesMenu"/>
+<entry id="256" symbol="about"/>
+<entry id="167" method="true" symbol="clearPicker"/>
 <entry id="8389280" method="true" symbol="getInitialView"/>
-<entry field="true" id="77" symbol="LOC_NAME"/>
+<entry field="true" id="78" symbol="LOC_NAME"/>
 <entry id="8389275" method="true" symbol="getApp"/>
 <entry field="true" id="8388736" symbol="currentLocation"/>
 <entry id="8389068" method="true" symbol="draw"/>
-<entry id="125" symbol="getLocations"/>
+<entry id="126" symbol="getLocations"/>
 <entry field="true" id="36" symbol="GpsGood"/>
-<entry id="97" symbol="partition"/>
+<entry id="98" symbol="partition"/>
 <entry id="8388718" method="true" symbol="error"/>
 <entry id="8388640" module="true" symbol="Lang"/>
 <entry id="8388639" module="true" symbol="Graphics"/>
-<entry field="true" id="247" symbol="center"/>
-<entry id="242" method="true" symbol="onSensor"/>
+<entry field="true" id="248" symbol="center"/>
+<entry id="243" method="true" symbol="onSensor"/>
 <entry field="true" id="8388794" method="true" symbol="values"/>
-<entry id="141" method="true" symbol="deleteLocation"/>
-<entry id="206" object="true" symbol="AboutView"/>
+<entry id="142" method="true" symbol="deleteLocation"/>
+<entry id="207" object="true" symbol="AboutView"/>
 <entry id="8388769" module="true" symbol="Rez"/>
 <entry id="8389123" method="true" symbol="onShow"/>
-<entry field="true" id="83" symbol="BATCH_ID"/>
-<entry id="102" method="true" symbol="union"/>
-<entry id="249" symbol="isSelected"/>
+<entry field="true" id="84" symbol="BATCH_ID"/>
+<entry id="103" method="true" symbol="union"/>
+<entry id="250" symbol="isSelected"/>
 <entry id="8388782" method="true" symbol="size"/>
-<entry field="true" id="222" symbol="arrow2"/>
-<entry field="true" id="221" symbol="arrow1"/>
+<entry field="true" id="223" symbol="arrow2"/>
+<entry field="true" id="222" symbol="arrow1"/>
 <entry field="true" id="8389314" symbol="latitude"/>
-<entry field="true" id="40" symbol="GPS_LOST"/>
-<entry field="true" id="87" symbol="names"/>
-<entry id="198" object="true" symbol="DirectionFactory"/>
-<entry id="196" object="true" symbol="BatchMenuDelegate"/>
+<entry field="true" id="41" symbol="GPS_LOST"/>
+<entry field="true" id="88" symbol="names"/>
+<entry id="199" object="true" symbol="DirectionFactory"/>
+<entry id="197" object="true" symbol="BatchMenuDelegate"/>
 <entry id="8388638" module="true" symbol="ActivityRecording"/>
-<entry id="169" method="true" symbol="rotate"/>
-<entry id="134" method="true" symbol="addBatch"/>
+<entry id="170" method="true" symbol="rotate"/>
+<entry id="135" method="true" symbol="addBatch"/>
 <entry id="8389626" method="true" symbol="onAccept"/>
-<entry field="true" id="88" symbol="latitudes"/>
-<entry field="true" id="94" symbol="dates"/>
-<entry id="162" method="true" symbol="pushBatchesMenu"/>
+<entry field="true" id="89" symbol="latitudes"/>
+<entry field="true" id="95" symbol="dates"/>
+<entry id="163" method="true" symbol="pushBatchesMenu"/>
 <entry id="8388636" module="true" symbol="Attention"/>
-<entry id="107" symbol="getProp"/>
-<entry field="true" id="225" symbol="gpsIcon"/>
-<entry id="138" method="true" symbol="distanceComparer"/>
-<entry field="true" id="104" symbol="timer"/>
+<entry id="108" symbol="getProp"/>
+<entry field="true" id="226" symbol="gpsIcon"/>
+<entry id="139" method="true" symbol="distanceComparer"/>
+<entry field="true" id="105" symbol="timer"/>
 <entry id="8389131" method="true" symbol="setColor"/>
 <entry id="8388702" method="true" symbol="initialize"/>
-<entry field="true" id="154" symbol="COLOR_PRIMARY"/>
-<entry id="47" method="true" symbol="alert"/>
-<entry field="true" id="156" symbol="COLOR_LOWLIGHT"/>
-<entry field="true" id="38" symbol="AppName"/>
-<entry id="178" object="true" symbol="TypePickerFactory"/>
-<entry id="195" object="true" symbol="BatchMenu"/>
-<entry id="203" object="true" symbol="NameTextPickerDelegate"/>
-<entry field="true" id="65" symbol="KEY_INTERVAL"/>
-<entry field="true" id="58" symbol="SORTBY_DISTANCE"/>
-<entry field="true" id="71" symbol="KEY_LOC_TYPE"/>
-<entry field="true" id="60" symbol="LON"/>
-<entry id="165" method="true" symbol="getMenuIndex"/>
-<entry field="true" id="248" symbol="angle"/>
-<entry id="187" object="true" symbol="LocationView"/>
-<entry id="142" method="true" symbol="saveLocationPersisted"/>
-<entry field="true" id="91" symbol="batches"/>
+<entry field="true" id="155" symbol="COLOR_PRIMARY"/>
+<entry id="48" method="true" symbol="alert"/>
+<entry field="true" id="157" symbol="COLOR_LOWLIGHT"/>
+<entry field="true" id="39" symbol="AppName"/>
+<entry id="179" object="true" symbol="TypePickerFactory"/>
+<entry id="196" object="true" symbol="BatchMenu"/>
+<entry id="204" object="true" symbol="NameTextPickerDelegate"/>
+<entry field="true" id="66" symbol="KEY_INTERVAL"/>
+<entry field="true" id="59" symbol="SORTBY_DISTANCE"/>
+<entry field="true" id="72" symbol="KEY_LOC_TYPE"/>
+<entry field="true" id="61" symbol="LON"/>
+<entry id="166" method="true" symbol="getMenuIndex"/>
+<entry field="true" id="249" symbol="angle"/>
+<entry id="188" object="true" symbol="LocationView"/>
+<entry id="143" method="true" symbol="saveLocationPersisted"/>
+<entry field="true" id="92" symbol="batches"/>
 <entry field="true" id="8388890" symbol="sport"/>
-<entry field="true" id="67" symbol="KEY_ACT_TYPE"/>
+<entry field="true" id="68" symbol="KEY_ACT_TYPE"/>
 <entry field="true" id="8388892" symbol="name"/>
-<entry field="true" id="85" symbol="BATCH_DATE"/>
-<entry id="245" method="true" symbol="getDrawModel"/>
+<entry field="true" id="86" symbol="BATCH_DATE"/>
+<entry id="246" method="true" symbol="getDrawModel"/>
 <entry id="28" method="true" symbol="parseMail"/>
-<entry id="96" symbol="quickSortRec"/>
+<entry id="97" symbol="quickSortRec"/>
 <entry id="8389078" method="true" symbol="onNextPage"/>
-<entry field="true" id="44" symbol="ACTIVITY_FAILURE"/>
-<entry field="true" id="151" symbol="openTypesMenu"/>
-<entry field="true" id="148" symbol="screenType"/>
-<entry id="86" object="true" symbol="ArrayExt"/>
-<entry id="188" object="true" symbol="LocationDrawModel"/>
-<entry id="131" method="true" symbol="getBatchesList"/>
-<entry id="117" method="true" symbol="getFormat"/>
-<entry id="238" symbol="interval"/>
-<entry field="true" id="103" symbol="app"/>
-<entry field="true" id="80" symbol="LOC_TYPE"/>
-<entry id="214" symbol="popInNotGlobal"/>
-<entry field="true" id="240" symbol="directionDrawable"/>
+<entry field="true" id="45" symbol="ACTIVITY_FAILURE"/>
+<entry field="true" id="152" symbol="openTypesMenu"/>
+<entry field="true" id="149" symbol="screenType"/>
+<entry id="87" object="true" symbol="ArrayExt"/>
+<entry id="189" object="true" symbol="LocationDrawModel"/>
+<entry id="132" method="true" symbol="getBatchesList"/>
+<entry id="118" method="true" symbol="getFormat"/>
+<entry id="239" symbol="interval"/>
+<entry field="true" id="104" symbol="app"/>
+<entry field="true" id="81" symbol="LOC_TYPE"/>
+<entry id="215" symbol="popInNotGlobal"/>
+<entry field="true" id="241" symbol="directionDrawable"/>
 <entry id="8388641" module="true" symbol="Math"/>
 <entry id="8389108" method="true" symbol="onResponse"/>
-<entry id="95" method="true" symbol="sort"/>
-<entry field="true" id="234" symbol="global"/>
-<entry field="true" id="63" symbol="KEY_SORT"/>
+<entry id="96" method="true" symbol="sort"/>
+<entry field="true" id="38" symbol="LauncherIcon"/>
+<entry field="true" id="235" symbol="global"/>
+<entry field="true" id="64" symbol="KEY_SORT"/>
 <entry id="26" object="true" symbol="CommListener"/>
-<entry field="true" id="73" symbol="KEY_BATCH_ID"/>
-<entry field="true" id="41" symbol="ACTIVITY_START"/>
-<entry id="121" symbol="invokeTimerCallback"/>
-<entry field="true" id="84" symbol="BATCH_NAME"/>
-<entry id="173" object="true" symbol="SettingsPicker"/>
+<entry field="true" id="74" symbol="KEY_BATCH_ID"/>
+<entry field="true" id="42" symbol="ACTIVITY_START"/>
+<entry id="122" symbol="invokeTimerCallback"/>
+<entry field="true" id="85" symbol="BATCH_NAME"/>
+<entry id="174" object="true" symbol="SettingsPicker"/>
 <entry id="8388646" module="true" object="true" symbol="Timer"/>
-<entry id="239" symbol="anim"/>
+<entry id="240" symbol="anim"/>
 <entry id="22" object="true" symbol="FindMeApp"/>
 <entry id="8389081" method="true" symbol="onBack"/>
 <entry id="25" module="true" symbol="Alert"/>
-<entry id="244" symbol="drawDynamic"/>
-<entry id="164" method="true" symbol="getText"/>
-<entry field="true" id="59" symbol="LAT"/>
+<entry id="245" symbol="drawDynamic"/>
+<entry id="165" method="true" symbol="getText"/>
+<entry field="true" id="60" symbol="LAT"/>
 <entry id="8388829" method="true" symbol="onComplete"/>
-<entry id="172" object="true" symbol="ActivityConfirmationDelegate"/>
-<entry id="118" method="true" symbol="setFormat"/>
-<entry id="183" object="true" symbol="TypesViewModel"/>
+<entry id="173" object="true" symbol="ActivityConfirmationDelegate"/>
+<entry id="119" method="true" symbol="setFormat"/>
+<entry id="184" object="true" symbol="TypesViewModel"/>
 <entry field="true" id="37" symbol="GpsActivity"/>
-<entry id="127" method="true" symbol="checkLocCount"/>
+<entry id="128" method="true" symbol="checkLocCount"/>
 <entry field="true" id="8389065" symbol="locY"/>
 <entry field="true" id="8389064" symbol="locX"/>
-<entry id="186" object="true" symbol="TypesMenuDelegate"/>
+<entry id="187" object="true" symbol="TypesMenuDelegate"/>
 <entry id="8388771" module="true" symbol="Drawables"/>
-<entry id="122" symbol="startTimer"/>
-<entry field="true" id="51" symbol="VERSION"/>
-<entry id="200" object="true" symbol="NumberFactory"/>
-<entry field="true" id="55" method="true" symbol="bearing"/>
-<entry id="231" method="true" symbol="showArrows"/>
+<entry id="123" symbol="startTimer"/>
+<entry field="true" id="52" symbol="VERSION"/>
+<entry id="201" object="true" symbol="NumberFactory"/>
+<entry field="true" id="56" method="true" symbol="bearing"/>
+<entry id="232" method="true" symbol="showArrows"/>
 <entry id="8389122" method="true" symbol="onLayout"/>
-<entry id="139" method="true" symbol="idPredicate"/>
+<entry id="140" method="true" symbol="idPredicate"/>
 <entry field="true" id="35" symbol="GpsUsable"/>
-<entry id="254" symbol="settings"/>
-<entry field="true" id="39" symbol="GPS_FOUND"/>
+<entry id="255" symbol="settings"/>
+<entry field="true" id="40" symbol="GPS_FOUND"/>
 <entry id="8389279" method="true" symbol="onStart"/>
-<entry id="208" symbol="locationStr"/>
+<entry id="209" symbol="locationStr"/>
 <entry id="8388942" method="true" symbol="add"/>
-<entry field="true" id="53" symbol="ZERO_LIMIT"/>
-<entry field="true" id="62" symbol="ACCURACY"/>
-<entry id="194" object="true" symbol="BatchesMenuDelegate"/>
-<entry field="true" id="228" symbol="index"/>
-<entry id="128" method="true" symbol="getTypesList"/>
-<entry field="true" id="106" symbol="locCount"/>
+<entry field="true" id="54" symbol="ZERO_LIMIT"/>
+<entry field="true" id="63" symbol="ACCURACY"/>
+<entry id="195" object="true" symbol="BatchesMenuDelegate"/>
+<entry field="true" id="229" symbol="index"/>
+<entry id="129" method="true" symbol="getTypesList"/>
+<entry field="true" id="107" symbol="locCount"/>
 <entry id="8389348" symbol="font"/>
-<entry id="243" method="true" symbol="animCallback"/>
-<entry id="204" object="true" symbol="LocationPicker"/>
-<entry field="true" id="227" symbol="locations"/>
-<entry field="true" id="42" symbol="ACTIVITY_SAVE"/>
-<entry field="true" id="82" symbol="LOC_DIST"/>
-<entry id="120" method="true" symbol="setActivityType"/>
+<entry id="244" method="true" symbol="animCallback"/>
+<entry id="205" object="true" symbol="LocationPicker"/>
+<entry field="true" id="228" symbol="locations"/>
+<entry field="true" id="43" symbol="ACTIVITY_SAVE"/>
+<entry field="true" id="83" symbol="LOC_DIST"/>
+<entry id="121" method="true" symbol="setActivityType"/>
 <entry id="8389347" symbol="color"/>
-<entry id="205" object="true" symbol="LocationPickerDelegate"/>
-<entry id="176" object="true" symbol="DistancePickerFactory"/>
-<entry field="true" id="66" symbol="KEY_FORMAT"/>
-<entry field="true" id="209" symbol="isLat"/>
-<entry id="258" symbol="persisted"/>
-<entry id="189" object="true" symbol="LocationDelegate"/>
-<entry field="true" id="64" symbol="KEY_DISTANCE"/>
-<entry id="177" object="true" symbol="FormatPickerFactory"/>
-<entry field="true" id="216" symbol="type"/>
-<entry id="160" method="true" symbol="pushInfoView"/>
-<entry id="136" method="true" symbol="nameComparer"/>
-<entry field="true" id="75" symbol="KEY_BATCH_DATE"/>
-<entry id="180" object="true" symbol="MainView"/>
-<entry id="116" method="true" symbol="setInterval"/>
-<entry field="true" id="45" symbol="ZERO_DISTANCE"/>
-<entry id="108" symbol="setProp"/>
-<entry id="257" symbol="coord"/>
-<entry id="130" symbol="setBatches"/>
-<entry id="50" object="true" symbol="DataStorage"/>
-<entry field="true" id="226" symbol="activityIcon"/>
-<entry field="true" id="157" symbol="COLOR_HIGHLIGHT"/>
-<entry id="56" method="true" symbol="dateStr"/>
+<entry id="206" object="true" symbol="LocationPickerDelegate"/>
+<entry id="177" object="true" symbol="DistancePickerFactory"/>
+<entry field="true" id="67" symbol="KEY_FORMAT"/>
+<entry field="true" id="210" symbol="isLat"/>
+<entry id="259" symbol="persisted"/>
+<entry id="190" object="true" symbol="LocationDelegate"/>
+<entry field="true" id="65" symbol="KEY_DISTANCE"/>
+<entry id="178" object="true" symbol="FormatPickerFactory"/>
+<entry field="true" id="217" symbol="type"/>
+<entry id="161" method="true" symbol="pushInfoView"/>
+<entry id="137" method="true" symbol="nameComparer"/>
+<entry field="true" id="76" symbol="KEY_BATCH_DATE"/>
+<entry id="181" object="true" symbol="MainView"/>
+<entry id="117" method="true" symbol="setInterval"/>
+<entry field="true" id="46" symbol="ZERO_DISTANCE"/>
+<entry id="109" symbol="setProp"/>
+<entry id="258" symbol="coord"/>
+<entry id="131" symbol="setBatches"/>
+<entry id="51" object="true" symbol="DataStorage"/>
+<entry field="true" id="227" symbol="activityIcon"/>
+<entry field="true" id="158" symbol="COLOR_HIGHLIGHT"/>
+<entry id="57" method="true" symbol="dateStr"/>
 <entry id="8388789" method="true" symbol="get"/>
 <entry field="true" id="8388651" symbol="session"/>
 <entry id="8389109" method="true" symbol="onMenuItem"/>
-<entry id="115" method="true" symbol="getInterval"/>
-<entry id="252" symbol="isSettings"/>
-<entry field="true" id="219" symbol="line1Dis"/>
-<entry id="100" method="true" symbol="removeAt"/>
+<entry id="116" method="true" symbol="getInterval"/>
+<entry id="253" symbol="isSettings"/>
+<entry field="true" id="220" symbol="line1Dis"/>
+<entry id="101" method="true" symbol="removeAt"/>
 <entry id="29" method="true" symbol="onMail"/>
-<entry field="true" id="74" symbol="KEY_BATCH_NAME"/>
+<entry field="true" id="75" symbol="KEY_BATCH_NAME"/>
 <entry field="true" id="8388911" method="true" symbol="distance"/>
 <entry id="32" module="true" symbol="Layouts"/>
-<entry field="true" id="61" symbol="HEADING"/>
+<entry field="true" id="62" symbol="HEADING"/>
 <entry id="8389316" symbol="radians"/>
-<entry id="145" symbol="bridge"/>
-<entry id="201" object="true" symbol="NewTypesMenu"/>
-<entry id="197" object="true" symbol="DegreeFactory"/>
-<entry id="159" method="true" symbol="pushTypesMenu"/>
+<entry id="146" symbol="bridge"/>
+<entry id="202" object="true" symbol="NewTypesMenu"/>
+<entry id="198" object="true" symbol="DegreeFactory"/>
+<entry id="160" method="true" symbol="pushTypesMenu"/>
 <entry id="8388642" module="true" symbol="Position"/>
 <entry id="8389079" method="true" symbol="onPreviousPage"/>
-<entry id="230" method="true" symbol="prev"/>
-<entry id="251" symbol="isTitle"/>
-<entry id="236" method="true" symbol="delete"/>
+<entry id="231" method="true" symbol="prev"/>
+<entry id="252" symbol="isTitle"/>
+<entry id="237" method="true" symbol="delete"/>
 <entry id="23" module="true" symbol="Data"/>
-<entry id="163" method="true" symbol="pushIfInsufficientSpace"/>
-<entry id="232" symbol="pop"/>
+<entry id="164" method="true" symbol="pushIfInsufficientSpace"/>
+<entry id="233" symbol="pop"/>
 <entry id="8389125" method="true" symbol="onHide"/>
-<entry id="161" method="true" symbol="pushNameView"/>
-<entry field="true" id="81" symbol="LOC_BATCH"/>
-<entry field="true" id="79" symbol="LOC_LON"/>
-<entry id="211" symbol="str"/>
-<entry field="true" id="54" symbol="LOC_MAX_COUNT"/>
-<entry id="250" symbol="isNumber"/>
-<entry id="174" object="true" symbol="SettingsPickerDelegate"/>
-<entry id="132" method="true" symbol="addLocation"/>
-<entry id="215" symbol="batch"/>
-<entry id="110" symbol="clearProp"/>
-<entry field="true" id="76" symbol="LOC_ID"/>
+<entry id="162" method="true" symbol="pushNameView"/>
+<entry field="true" id="82" symbol="LOC_BATCH"/>
+<entry field="true" id="80" symbol="LOC_LON"/>
+<entry id="212" symbol="str"/>
+<entry field="true" id="55" symbol="LOC_MAX_COUNT"/>
+<entry id="251" symbol="isNumber"/>
+<entry id="175" object="true" symbol="SettingsPickerDelegate"/>
+<entry id="133" method="true" symbol="addLocation"/>
+<entry id="216" symbol="batch"/>
+<entry id="111" symbol="clearProp"/>
+<entry field="true" id="77" symbol="LOC_ID"/>
 <entry id="8388828" method="true" symbol="onError"/>
-<entry id="99" method="true" symbol="insertAt"/>
+<entry id="100" method="true" symbol="insertAt"/>
 <entry id="8389644" symbol="defaults"/>
 <entry id="8389628" method="true" symbol="getDrawable"/>
-<entry field="true" id="105" symbol="timerCallback"/>
-<entry field="true" id="218" symbol="line2"/>
-<entry field="true" id="217" symbol="line1"/>
+<entry field="true" id="106" symbol="timerCallback"/>
+<entry field="true" id="219" symbol="line2"/>
+<entry field="true" id="218" symbol="line1"/>
 <entry id="8389346" symbol="text"/>
 <entry field="true" id="8389066" symbol="width"/>
-<entry field="true" id="152" symbol="drawModel"/>
-<entry id="190" object="true" symbol="LocationMenu"/>
+<entry field="true" id="153" symbol="drawModel"/>
+<entry id="191" object="true" symbol="LocationMenu"/>
 <entry id="31" module="true" symbol="Menus"/>
-<entry id="170" object="true" symbol="InfoView"/>
-<entry id="212" method="true" symbol="fontPadding"/>
+<entry id="171" object="true" symbol="InfoView"/>
+<entry id="213" method="true" symbol="fontPadding"/>
 <entry id="27" object="true" symbol="Bridge"/>
-<entry id="133" method="true" symbol="addLocations"/>
-<entry id="192" object="true" symbol="DirectionDrawable"/>
-<entry id="124" method="true" symbol="updateCurrentLocation"/>
+<entry id="134" method="true" symbol="addLocations"/>
+<entry id="193" object="true" symbol="DirectionDrawable"/>
+<entry id="125" method="true" symbol="updateCurrentLocation"/>
 <entry field="true" id="34" symbol="GpsPoor"/>
-<entry id="235" method="true" symbol="getTypeName"/>
+<entry id="236" method="true" symbol="getTypeName"/>
 <entry id="8389643" symbol="pattern"/>
-<entry field="true" id="78" symbol="LOC_LAT"/>
-<entry id="184" object="true" symbol="LocationsViewModel"/>
-<entry id="49" object="true" symbol="Batches"/>
-<entry id="167" method="true" symbol="getLocationStr"/>
-<entry id="158" method="true" symbol="pushMainMenu"/>
-<entry id="193" object="true" symbol="BatchesMenu"/>
-<entry field="true" id="153" symbol="COLOR_BACKGROUND"/>
-<entry id="92" method="true" symbol="set"/>
-<entry id="123" method="true" symbol="onTimer"/>
+<entry field="true" id="79" symbol="LOC_LAT"/>
+<entry id="185" object="true" symbol="LocationsViewModel"/>
+<entry id="50" object="true" symbol="Batches"/>
+<entry id="168" method="true" symbol="getLocationStr"/>
+<entry id="159" method="true" symbol="pushMainMenu"/>
+<entry id="194" object="true" symbol="BatchesMenu"/>
+<entry field="true" id="154" symbol="COLOR_BACKGROUND"/>
+<entry id="93" method="true" symbol="set"/>
+<entry id="124" method="true" symbol="onTimer"/>
 <entry id="8388772" module="true" symbol="Fonts"/>
 <entry id="30" method="true" symbol="p"/>
 <entry id="8389630" method="true" symbol="getSize"/>
 <entry field="true" id="8389315" symbol="longitude"/>
-<entry id="126" symbol="setLocations"/>
+<entry id="127" symbol="setLocations"/>
 <entry id="20" module="true" symbol="_"/>
-<entry id="256" symbol="activity"/>
+<entry id="257" symbol="activity"/>
 <entry id="8389541" method="true" symbol="onCancel"/>
-<entry id="168" method="true" symbol="getDistanceStr"/>
-<entry id="237" symbol="dots"/>
-<entry id="114" method="true" symbol="setDistance"/>
-<entry id="199" object="true" symbol="MinuteFactory"/>
+<entry id="169" method="true" symbol="getDistanceStr"/>
+<entry id="238" symbol="dots"/>
+<entry id="115" method="true" symbol="setDistance"/>
+<entry id="200" object="true" symbol="MinuteFactory"/>
 <entry id="8388635" module="true" symbol="Application"/>
-<entry id="175" object="true" symbol="IntervalPickerFactory"/>
+<entry id="176" object="true" symbol="IntervalPickerFactory"/>
 </symbolTable>
 <localVars>
 <entry endPc="268435622" name="types" stackId="1" startPc="268435569"/>
