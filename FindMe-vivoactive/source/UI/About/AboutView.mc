@@ -16,7 +16,7 @@ module UI {
 			var h = dc.getHeight();
 			var wc = dc.getWidth()/2;
 			var hc = h/2;
-			var d = 20;
+			var d = 15;
 			dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
 			dc.clear();
 			dc.setColor(COLOR_SECONDARY, COLOR_PRIMARY);
