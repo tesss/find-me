@@ -1,5 +1,6 @@
 using Toybox.WatchUi as Ui;
 using Toybox.System;
+using Toybox.Lang;
 
 module UI{
 	var dataStorage;
@@ -35,7 +36,7 @@ module UI{
 	}
 	
 	function pushInfoView(_str, _pop, _error){
-		_pop = _pop == null || _pop instanceof Lang.Method || _pop;
+		_pop = _pop == true;
 		_error = _error == true;
 		Ui.pushView(new InfoView(_str, _error), new InfoDelegate(_pop), transition);
 	}
@@ -52,6 +53,14 @@ module UI{
 		} else {
 			Ui.pushView(new BatchesMenu(batches), new BatchesMenuDelegate(batches), transition);
 		}
+	}
+	
+	function pushIfInsufficientSpace(){
+		if(!dataStorage.checkLocCount(1)){
+			pushInfoView("Insufficient storage (" + dataStorage.locCount + "/" + Data.LOC_MAX_COUNT + ")", false, true);
+			return true;
+		}
+		return false;
 	}
 	
 	function getText(str, options){

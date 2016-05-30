@@ -31,7 +31,6 @@ class FindMeApp extends App.AppBase {
 		// id - generated max
 		// import alert
 		
-		// limit = 100 locations - creshes on device (add limit info message)
-    	// icons = gps quality; activity status
-    	// about = autho, available space, version
+		// change font of distance to numeric
+		// icon (also to about)
     	// bugs

@@ -94,13 +94,5 @@ module Data
 			}
 			return result;
 		}
-		
-		static function sortByIndex(array, indexes, getter){
-			var result = new[indexes.size()];
-			for(var i = 0; i < indexes.size(); i++){
-				result[i] = array[getter.invoke(indexes[i])];
-			}
-			return result;
-		}
 	}
 }

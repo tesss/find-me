@@ -36,6 +36,7 @@ module Data{
 		var currentLocation;
 		var session;
 		var timerCallback;
+		var locCount;
 		
 		function initialize(){
 			app = Application.getApp().weak();
@@ -58,6 +59,8 @@ module Data{
 			if(getFormat() == null){ setFormat(Position.GEO_DEG); }
 			if(getActivityType() == null){ setActivityType(ActivityRecording.SPORT_GENERIC); }
 			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
+			
+			locCount = getProp(KEY_LOC_BATCH).size();
 		}
 		
 		// props
@@ -90,9 +93,9 @@ module Data{
 		
 		// timer
 		
-		hidden function invokeTimerCallback(){
-			if(timerCallback != null && timerCallback.stillAlive()){
-				timerCallback.get().invoke();
+		hidden function invokeTimerCallback(accuracyChanged){
+			if(timerCallback != null){
+				timerCallback.invoke(accuracyChanged);
 			}
 		}
 		
@@ -108,7 +111,9 @@ module Data{
 		function onTimer(interval){
 			if(interval == -1){
 				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+				var accuracyChanged = currentLocation != null;
 				currentLocation = null;
+				invokeTimerCallback(accuracyChanged);
 			} else if(interval == 0){
 				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
 			} else {
@@ -128,13 +133,14 @@ module Data{
 			}
 			
 			var radians = info.position.toRadians();
+			var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
 			currentLocation = [radians[0], radians[1], info.heading, info.accuracy];
-			invokeTimerCallback();
+			invokeTimerCallback(accuracyChanged);
 		}
 		
-		// timer
+		// locations
 		
-		function getLocations(){
+		hidden function getLocations(){
 			return new Locations(getProp(KEY_LOC_NAME), getProp(KEY_LOC_LAT), getProp(KEY_LOC_LON), getProp(KEY_LOC_TYPE), getProp(KEY_LOC_BATCH));
 		}
 		
@@ -144,9 +150,13 @@ module Data{
 			setProp(KEY_LOC_TYPE, locations.types);
 			setProp(KEY_LOC_BATCH, locations.batches);
 			setProp(KEY_LOC_NAME, locations.names);
+			locCount = locations.size();
 		}
 		
-		// validate in import
+		function checkLocCount(newLocCount){
+			return locCount + newLocCount <= LOC_MAX_COUNT;
+		}
+		
 		function getTypesList(){
 			var locations = getLocations();
 			if(locations.size() == 0){
@@ -181,23 +191,14 @@ module Data{
 			}
 			locations = null;
 			all = all.values();
-			var keys = types.keys();
-			var values = types.values();
-			types = null;
-			var indexes = new[keys.size()];
-			for(var i = 0; i < indexes.size(); i++){
-				indexes[i] = [i, keys[i]];
-			}
-			indexes = ArrayExt.sort(indexes, method(:numberComparer)); 
-			values = ArrayExt.sortByIndex(values, indexes, method(:indexGetter));
-			indexes = null;
-			values = ArrayExt.insertAt(values, all, 0);
-			return values;
+			types = ArrayExt.sort(types.values(), method(:typeComparer)); 
+			types = ArrayExt.insertAt(types, all, 0);
+			return types;
 		}
 		
 		// batches
 		
-		function getBatches(){
+		hidden function getBatches(){
 			return new Batches(getProp(KEY_BATCH_ID), getProp(KEY_BATCH_NAME), getProp(KEY_BATCH_DATE));
 		}
 		
@@ -221,7 +222,6 @@ module Data{
 			return addLocations(newLocations);
 		}
 		
-		// show error if too much
 		function addLocations(newLocations){
 			var locations = getLocations();
 			var l = locations.size();
@@ -268,20 +268,12 @@ module Data{
 			return h1 - h2;
 		}
 		
-		function numberComparer(a, b){
-			return a[VALUE] - b[VALUE];
+		function typeComparer(a, b){
+			return a[0][LOC_TYPE] - a[0][LOC_TYPE];
 		}
 		
 		function distanceComparer(a, b){
 			return a[LOC_DIST] - b[LOC_DIST];
-		}
-		
-		function indexComparer(item, index){
-			return item[KEY] == index;
-		}
-		
-		function indexGetter(index){
-			return index[KEY];
 		}
 		
 		function idPredicate(item, id){

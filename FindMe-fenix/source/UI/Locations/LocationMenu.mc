@@ -48,7 +48,6 @@ module UI{
 	    	if(item == :activity){
 	    		if(dataStorage.session == null){
 	    			dataStorage.session = newSession();
-	    			dataStorage.session.start();
 	    			if(!dataStorage.session.start()){
 	    				pushInfoView("Start error", model.global, true);
 	    				Alert.alert(Alert.ACTIVITY_FAILURE);
@@ -57,13 +56,6 @@ module UI{
 	    			}
 	    		} else if(dataStorage.session.isRecording()){
 	    			Ui.pushView(new Ui.Confirmation("Save activity?"), new ActivityConfirmationDelegate(), transition);
-	    		} else {
-	    			dataStorage.session = newSession();
-	    			if(!dataStorage.session.start()){
-	    				pushInfoView("Start error", model.global, true);
-	    			} else {
-	    				Alert.alert(Alert.ACTIVITY_START);
-	    			}
 	    		}
 	    	} else if(item == :coord){
 	    		popInNotGlobal();

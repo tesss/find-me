@@ -20,6 +20,9 @@ module UI{
 			if(item == :types){
 				pushTypesMenu();
 			} else if(item == :addCurrent){
+				if(pushIfInsufficientSpace()){
+					return;
+				}
 				var available = true;
 				var info = null;
 				if(dataStorage.currentLocation == null || dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
@@ -46,6 +49,9 @@ module UI{
 					pushInfoView(info, false);
 				}
 			} else if(item == :add){
+				if(pushIfInsufficientSpace()){
+					return;
+				}
 				release();
 				var format = dataStorage.getFormat();
 				Ui.pushView(new LocationPicker(format), new LocationPickerDelegate(format), transition);
