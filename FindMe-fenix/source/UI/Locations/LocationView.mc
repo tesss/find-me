@@ -69,7 +69,6 @@ module UI{
 			directionDrawable = new DirectionDrawable(drawModel.direction, drawModel.directionCenter, 0);
 			onTimer(true);
 			activityIcon = Ui.loadResource(Rez.Drawables.GpsActivity);
-			Sensor.enableSensorEvents(method(:onSensor));
 		}
 		
 		function onSensor(info){
@@ -77,10 +76,8 @@ module UI{
 				return;
 			}
 			Ui.requestUpdate();
-			if(info != null && info has :mag && info.mag != null){
-	            var xMag = info.mag[0];
-	            var yMag = info.mag[1] * -1;
-	            heading = Math.sqrt(xMag*xMag + yMag*yMag);
+			if(info != null && info.heading != null && info.heading > 0){
+				heading = info.heading;
 			} else {
 				heading = null;
 			}
@@ -157,7 +154,6 @@ module UI{
 		hidden function draw(location, dc){
 			setColor(dc, COLOR_PRIMARY);
 			dc.clear();
-
 			if(gpsIcon != null){
 				dc.drawBitmap(drawModel.gpsIcon[0], drawModel.gpsIcon[1], gpsIcon);
 			}
@@ -211,32 +207,27 @@ module UI{
 		}
 	
 		function onUpdate(dc){
-			if(model.fullRefresh){
-				model.fullRefresh = false;
-				setColor(dc, COLOR_PRIMARY);
-				dc.clear();
-				onSensor();
-				return;
-			}
 			if(anim){
 				dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
 				dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius + 7);
 				directionDrawable.draw(dc);
-				return;
-			}
-			var location = model.get();
-			if(location != null){
-				draw(location, dc);
+			} else {
+				var location = model.get();
+				if(location != null){
+					draw(location, dc);
+				}
 			}
 		}
 		
 		function onShow(){
+			Sensor.enableSensorEvents(method(:onSensor));
 			dataStorage.timerCallback = method(:onTimer);
 		}
 		
 		function onHide(){
 			//gpsIcon = null;
 			//activityIcon = null;
+			Sensor.enableSensorEvents(null);
 			dataStorage.timerCallback = null;
 		}
 	}
@@ -287,7 +278,8 @@ module UI{
 		}
 		
 		function onSelect(){
-			Ui.pushView(new LocationMenu(model.get()), new LocationMenuDelegate(model), transition);
+			var locations = model.get();
+			Ui.pushView(new LocationMenu(locations), new LocationMenuDelegate(model), transition);
 		}
 	}
 }

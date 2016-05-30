@@ -5,6 +5,7 @@ using Alert;
 module UI{
 	class ActivityConfirmationDelegate extends Ui.ConfirmationDelegate {
 		function onResponse(response){
+			Ui.popView(transition);
 			if(dataStorage.session.stop()){
 				if(response == Ui.CONFIRM_YES){
 					if(dataStorage.session.save()){
