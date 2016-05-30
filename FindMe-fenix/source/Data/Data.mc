@@ -54,8 +54,11 @@ module Data {
 	}
 	
 	function dateStr(moment){
+		if(moment == null){
+			moment = Time.Time.now().value();
+		}
 		var date = Time.Gregorian.info(new Time.Moment(moment), Time.FORMAT_SHORT);
-		var dateStr = date.day + "." + date.month + "." + date.year + " " + date.hour + ":" + date.min + ":" + date.sec;
+		var dateStr = (date.year - 2000).format("%02d") + date.month.format("%02d") + date.day.format("%02d") + date.hour.format("%02d") + date.min.format("%02d");
 		return dateStr;
 	}
 	

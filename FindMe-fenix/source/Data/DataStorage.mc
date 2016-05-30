@@ -312,31 +312,5 @@ module Data{
 			setLocations(locations);
 			locations = null;
 		}
-		
-		// persisted
-		
-		function saveLocationPersisted(i){
-			var locations = getLocations();
-			PersistedLocations.persistLocation(new Position.Location({
-				:latitude => locations.latitudes[i], 
-				:longitude => locations.longitudes[i], 
-				:format => :radians}), {
-				:name => locations.names[i]
-			});
-		}
-		
-		function saveBatchPersisted(id){
-			var locations = getLocations();
-			for(var i = 0; i < locations.size(); i++){
-				if(locations.batches[i] == id){
-					PersistedLocations.persistLocation(new Position.Location({
-						:latitude => locations.latitudes[i], 
-						:longitude => locations.longitudes[i], 
-						:format => :radians}), {
-						:name => locations.names[i]
-					});
-				}
-			}
-		}
 	}
 }

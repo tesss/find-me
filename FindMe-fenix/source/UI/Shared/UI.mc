@@ -41,8 +41,8 @@ module UI{
 		Ui.pushView(new InfoView(_str, _error), new InfoDelegate(_pop), transition);
 	}
 	
-	function pushNameView(location, format, back){
-		Ui.pushView(new Ui.TextPicker(), new NameTextPickerDelegate(location, format, back), transition);
+	function pushNameView(location, format, def){
+		Ui.pushView(new Ui.TextPicker(def), new NameTextPickerDelegate(location, format), transition);
 	}
 	
 	function pushBatchesMenu(){
@@ -61,6 +61,10 @@ module UI{
 			return true;
 		}
 		return false;
+	}
+	
+	function defLocationName(){
+		return "LOC_" + Data.dateStr();
 	}
 	
 	function getText(str, options){
