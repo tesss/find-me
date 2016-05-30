@@ -15,6 +15,7 @@ module UI{
 		hidden var interval;
 		hidden var anim;
 		hidden var bearing;
+		hidden var heading;
 		hidden var gpsIcon;
 		hidden var activityIcon;
 		
@@ -76,8 +77,10 @@ module UI{
 				return;
 			}
 			Ui.requestUpdate();
-			if(info != null && info.heading != null && info.heading != bearing && info.heading > 0){
-				bearing = info.heading;
+			if(info != null && info.heading != null && info.heading > 0){
+				heading = info.heading;
+			} else {
+				heading = null;
 			}
 			if(bearing != null && (directionDrawable.angle * 1000).toNumber() != (bearing * 1000).toNumber()){
 				anim = true;	
@@ -125,12 +128,13 @@ module UI{
 				dc.drawLine(drawModel.line2[0], drawModel.line2[1], drawModel.line2[2], drawModel.line2[3]);
 				
 				if(distance > Data.ZERO_LIMIT){
+					var angle = heading == null ? dataStorage.currentLocation[Data.HEADING] : heading;
 					bearing = Data.bearing(
 						dataStorage.currentLocation[Data.LAT], 
 						dataStorage.currentLocation[Data.LON], 
 						location[Data.LOC_LAT], 
 						location[Data.LOC_LON]
-					) - dataStorage.currentLocation[Data.HEADING];
+					) - angle;
 					directionDrawable.draw(dc);
 				} else {
 					if(bearing != null){

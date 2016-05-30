@@ -31,4 +31,5 @@ class FindMeApp extends App.AppBase {
 		// id - generated max
 		// import alert
 
+		// bug with MGRS ?
     	// bugs
