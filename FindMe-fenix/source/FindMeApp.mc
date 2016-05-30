@@ -32,5 +32,4 @@ class FindMeApp extends App.AppBase {
 		// import alert
 
 		// bug with MGRS ?
-		// after start/stop activity not all screen clears
     	// bugs

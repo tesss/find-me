@@ -207,7 +207,7 @@ module UI{
 		}
 	
 		function onUpdate(dc){
-			if(anim){
+			if(anim && !model.fullRefresh){
 				dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
 				dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius + 7);
 				directionDrawable.draw(dc);
@@ -216,6 +216,7 @@ module UI{
 				if(location != null){
 					draw(location, dc);
 				}
+				model.fullRefresh = false;
 			}
 		}
 		
@@ -279,6 +280,7 @@ module UI{
 		
 		function onSelect(){
 			var locations = model.get();
+			locations.fullRefresh = true;
 			Ui.pushView(new LocationMenu(locations), new LocationMenuDelegate(model), transition);
 		}
 	}
