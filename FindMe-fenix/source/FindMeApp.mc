@@ -32,5 +32,8 @@ class FindMeApp extends App.AppBase {
 		// import alert
 
 		// bug with MGRS ?
+		// bug with heading
+		// after start/stop activity not all screen clears
+		// after stop activity menu doesn't close
 		// switch between mag and gps heading according to speed?
     	// bugs
