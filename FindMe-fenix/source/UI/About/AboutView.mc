@@ -22,7 +22,7 @@ module UI {
 			dc.setColor(COLOR_SECONDARY, COLOR_PRIMARY);
 			dc.drawText(wc, hc - fontPadding(Graphics.FONT_NUMBER_THAI_HOT), Graphics.FONT_NUMBER_THAI_HOT, Data.VERSION, Graphics.TEXT_JUSTIFY_CENTER);
 			dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT);
-			dc.drawText(wc, hc - fontPadding(Graphics.FONT_MEDIUM), Graphics.FONT_LARGE, "FindMe", Graphics.TEXT_JUSTIFY_CENTER);
+			dc.drawText(wc, hc - fontPadding(Graphics.FONT_LARGE), Graphics.FONT_LARGE, "FindMe", Graphics.TEXT_JUSTIFY_CENTER);
 			dc.setColor(COLOR_LOWLIGHT, Graphics.COLOR_TRANSPARENT);
 			dc.drawText(wc, d, Graphics.FONT_XTINY, "(c) Andriy Babets", Graphics.TEXT_JUSTIFY_CENTER);
 			dc.drawText(wc, h - d - fontPadding(Graphics.FONT_XTINY), Graphics.FONT_XTINY, "STORAGE: " + dataStorage.locCount + "/" + Data.LOC_MAX_COUNT, Graphics.TEXT_JUSTIFY_CENTER);

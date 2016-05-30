@@ -31,6 +31,5 @@ class FindMeApp extends App.AppBase {
 		// id - generated max
 		// import alert
 		
-		// change font of distance to numeric
 		// icon (also to about)
     	// bugs
