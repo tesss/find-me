@@ -32,7 +32,7 @@ module UI{
 		
 		hidden function newSession(){
 			return ActivityRecording.createSession({
-				:name => "FindMe " + Data.dateStr(Time.Time.now().value()), 
+				:name => "FindMe " + Data.dateStr(), 
 				:sport => model.dataStorage.getActivityType()
 			});
 		}

@@ -59,6 +59,7 @@ module UI{
 	    		}
 	    	} else if(item == :coord){
 	    		popInNotGlobal();
+	    		_.p(getLocationStr(model.get().get()));
 	    		pushInfoView(getLocationStr(model.get().get()), model.global);
 	    	} else if(item == :persisted){
 	    		popInNotGlobal();

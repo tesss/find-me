@@ -43,7 +43,7 @@ module UI{
 					pushNameView(new Position.Location({
 						:latitude => dataStorage.currentLocation[Data.LAT],
 						:longitude => dataStorage.currentLocation[Data.LON],
-						:format => :radians}).toGeoString(format), format, false);
+						:format => :radians}).toGeoString(format), format, defLocationName());
 				}
 				if(info != null){
 					pushInfoView(info, false);

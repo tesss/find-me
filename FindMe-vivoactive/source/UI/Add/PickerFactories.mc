@@ -7,7 +7,7 @@ module UI {
 	class DegreeFactory extends Ui.PickerFactory {
 		var isLat;		
 		function initialize(_isLat){ isLat = _isLat; }
-		function getDrawable(index, isSelected){ return getText(index.toString(), {:isNumber => true, :isSelected => isSelected});}
+		function getDrawable(index, isSelected){ return getText(isLat ? index.format("%02d") : index.format("%03d"), {:isNumber => true, :isSelected => isSelected});}
 		function getSize(){ if(isLat){ return 90; } return 180; }
 		function getValue(index){ return index; }
 	}
@@ -34,7 +34,7 @@ module UI {
 			if(!isMinute){
 				sign = "''";
 			}
-			return getText(getValue(index).toString(), {:isNumber => true, :isSelected => isSelected}); 
+			return getText(getValue(index).format("%02d"), {:isNumber => true, :isSelected => isSelected}); 
 		}
 		function getSize(){ return 60; }
 		function getValue(index){ return index; }
@@ -47,10 +47,10 @@ module UI {
 	}
 	
 	class CharFactory extends Ui.PickerFactory {
-		static const letterValues = "AZYXWVUTSRQPONMLKJIHGFEDCB";
+		static const values = " ~}|{_^]\\[@?>=<;:/.-,+*)('&%$#\"!0987654321zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
 
 		function getDrawable(index, isSelected){ return getText(getValue(index), {:isSelected => isSelected}); }
-		function getSize(){ return letterValues.length(); }
-		function getValue(index){ return letterValues.substring(index, index + 1); }
+		function getSize(){ return values.length(); }
+		function getValue(index){ return values.substring(index, index + 1); }
 	}
 }

@@ -80,7 +80,7 @@ module UI{
 	}
 	
 	class IntervalPickerFactory extends Ui.PickerFactory {
-		static const values = [0, 1, 5, 10, 30, 60, 300, -1];
+		static const values = [0, 5, 10, 30, 60, 300, -1];
 		
 		function getDrawable(index, isSelected){
 			var value = values[index];
@@ -106,7 +106,7 @@ module UI{
 	}
 	
 	class DistancePickerFactory extends Ui.PickerFactory {
-		static const values = [0, 0.1, 0.5, 1, 2, 5, 10, 50, 100];
+		static const values = [0, 0.1, 0.5, 1, 10, 50, 100];
 		
 		function getDrawable(index, isSelected){
 			var value = values[index];
@@ -130,7 +130,7 @@ module UI{
 	}
 	
 	class FormatPickerFactory extends Ui.PickerFactory {
-		static const values = [Position.GEO_DEG, Position.GEO_MGRS, Position.GEO_DMS, Position.GEO_DM];
+		static const values = [Position.GEO_DEG, Position.GEO_DMS, Position.GEO_DM];
 		
 		function getDrawable(index, isSelected){
 			var value = values[index];
@@ -139,9 +139,7 @@ module UI{
 			} else if(value == Position.GEO_DM){
 				value = "D M.M'";
 			} else if(value == Position.GEO_DMS){
-				value = "D M' S\"";
-			} else if(value == Position.GEO_MGRS){
-				value = "MGRS";
+				value = "D M'S.S\"";
 			}
 			return getText(value, {:isSelected => isSelected, :isSettings => true});
 		}
@@ -157,53 +155,32 @@ module UI{
 	
 	class TypePickerFactory extends Ui.PickerFactory {
 		static const values = [
-			A.SPORT_GENERIC, 
-			A.SPORT_ALPINE_SKIING, 
-			A.SPORT_CROSS_COUNTRY_SKIING,
+			A.SPORT_GENERIC,
 			A.SPORT_CYCLING,
+			A.SPORT_SWIMMING,
+			A.SPORT_MULTISPORT,
 			A.SPORT_HIKING,
 			A.SPORT_MOUNTAINEERING,
-			A.SPORT_MULTISPORT,
-			A.SPORT_PADDLING,
-			A.SPORT_ROWING,
 			A.SPORT_RUNNING,
-			A.SPORT_SNOWBOARDING,
-			A.SPORT_SWIMMING,
-			A.SPORT_TRAINING,
-			A.SPORT_TRANSITION,
-			A.SPORT_WALKING
+			A.SPORT_WALKING			
 		];
 		
 		function getDrawable(index, isSelected){
 			var value = values[index];
 			if(value == A.SPORT_GENERIC){
 				value = "Generic";
-			} else if(value == A.SPORT_ALPINE_SKIING){
-				value = "Alp Ski";
-			} else if(value == A.SPORT_CROSS_COUNTRY_SKIING){
-				value = "Cr. Ski";
 			} else if(value == A.SPORT_CYCLING){
 				value = "Cycle";
+			} else if(value == A.SPORT_SWIMMING){
+				value = "Swim";
+			} else if(value == A.SPORT_MULTISPORT){
+				value = "Multi.";
 			} else if(value == A.SPORT_HIKING){
 				value = "Hike";
 			} else if(value == A.SPORT_MOUNTAINEERING){
 				value = "Mount.";
-			} else if(value == A.SPORT_MULTISPORT){
-				value = "Multi.";
-			} else if(value == A.SPORT_PADDLING){
-				value = "Paddle";
-			} else if(value == A.SPORT_ROWING){
-				value = "Row";
 			} else if(value == A.SPORT_RUNNING){
 				value = "Run";
-			} else if(value == A.SPORT_SNOWBOARDING){
-				value = "Board";
-			} else if(value == A.SPORT_SWIMMING){
-				value = "Swim";
-			} else if(value == A.SPORT_TRAINING){
-				value = "Train.";
-			} else if(value == A.SPORT_TRANSITION){
-				value = "Trans.";
 			} else if(value == A.SPORT_WALKING){
 				value = "Walk";
 			}

@@ -42,19 +42,22 @@ module Data{
 			app = Application.getApp().weak();
 			timer = new Timer.Timer();
 			
-			//clearProp(KEY_LOC_NAME); clearProp(KEY_LOC_LAT); clearProp(KEY_LOC_LON); clearProp(KEY_LOC_TYPE); clearProp(KEY_LOC_BATCH);
-			//clearProp(KEY_BATCH_ID); clearProp(KEY_BATCH_NAME); clearProp(KEY_BATCH_DATE);
-			//clearProp(KEY_SORT); clearProp(KEY_DISTANCE); clearProp(KEY_INTERVAL); clearProp(KEY_FORMAT); clearProp(KEY_ACT_TYPE);
+			clearProp(KEY_LOC_NAME); clearProp(KEY_LOC_LAT); clearProp(KEY_LOC_LON); clearProp(KEY_LOC_TYPE); clearProp(KEY_LOC_BATCH);
+			clearProp(KEY_BATCH_ID); clearProp(KEY_BATCH_NAME); clearProp(KEY_BATCH_DATE);
+			clearProp(KEY_SORT); clearProp(KEY_DISTANCE); clearProp(KEY_INTERVAL); clearProp(KEY_FORMAT); clearProp(KEY_ACT_TYPE);
 			
 			initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE); initProp(KEY_LOC_BATCH);
 			initProp(KEY_BATCH_ID); initProp(KEY_BATCH_NAME); initProp(KEY_BATCH_DATE);
 			
 			var interval = getInterval();
-			if(interval == null){ 
-				setInterval(0);
+			if(interval == null){
+				interval = 0; 
+				setInterval(interval);
 			} else {
 				startTimer(interval);
 			}
+			onTimer(interval);
+			
 			if(getDistance() == null){ setDistance(0); }
 			if(getFormat() == null){ setFormat(Position.GEO_DEG); }
 			if(getActivityType() == null){ setActivityType(ActivityRecording.SPORT_GENERIC); }
@@ -311,30 +314,6 @@ module Data{
 			locations.remove(i);
 			setLocations(locations);
 			locations = null;
-		}
-		
-		function saveLocationPersisted(i){
-			var locations = getLocations();
-			PersistedLocations.persistLocation(new Position.Location({
-				:latitude => locations.latitudes[i], 
-				:longitude => locations.longitudes[i], 
-				:format => :radians}), {
-				:name => locations.names[i]
-			});
-		}
-		
-		function saveBatchPersisted(id){
-			var locations = getLocations();
-			for(var i = 0; i < locations.size(); i++){
-				if(locations.batches[i] == id){
-					PersistedLocations.persistLocation(new Position.Location({
-						:latitude => locations.latitudes[i], 
-						:longitude => locations.longitudes[i], 
-						:format => :radians}), {
-						:name => locations.names[i]
-					});
-				}
-			}
 		}
 	}
 }

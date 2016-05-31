@@ -35,13 +35,14 @@ module UI{
 					new NumberFactory()
 				];
 			} else if(_format == Position.GEO_DM){
-				title = "DD MM.MMM'";
+				title = "DD MM.MMMM'";
 				pattern = [
 					new DirectionFactory(true),
 					new DegreeFactory(true),
 					getText(" "),
 					new MinuteFactory(true),
 					getText("."),
+					new NumberFactory(),
 					new NumberFactory(),
 					new NumberFactory(),
 					new NumberFactory(),
@@ -56,10 +57,11 @@ module UI{
 					new NumberFactory(),
 					new NumberFactory(),
 					new NumberFactory(),
+					new NumberFactory(),
 					getText("'")
 				];
 			} else if(_format == Position.GEO_DMS){
-				title = "DD MM' SS\"";
+				title = "DD MM' SS.SS\"";
 				pattern = [
 					new DirectionFactory(true),
 					new DegreeFactory(true),
@@ -68,6 +70,9 @@ module UI{
 					getText("'"),
 					getText(" "),
 					new MinuteFactory(false),
+					getText("."),
+					new NumberFactory(),
+					new NumberFactory(),
 					getText("\""),
 					getText(" "),
 					
@@ -78,23 +83,10 @@ module UI{
 					getText("'"),
 					getText(" "),
 					new MinuteFactory(false),
+					getText("."),
+					new NumberFactory(),
+					new NumberFactory(),
 					getText("\"")
-				];
-			} else if(_format == Position.GEO_MGRS){
-				title = "MGRS";
-				pattern = [
-					new CharFactory(),
-					new CharFactory(),
-					new CharFactory(),
-					new CharFactory(),
-					new NumberFactory(),
-					new NumberFactory(),
-					new NumberFactory(),
-					new NumberFactory(),
-					new NumberFactory(),
-					new NumberFactory(),
-					new NumberFactory(),
-					new NumberFactory()
 				];
 			}
 			
@@ -119,16 +111,14 @@ module UI{
 		function onAccept(values){
 			var str = null;
 			if(format == Position.GEO_DEG){
-				str = values[0] + " " + values[1] + "." + values[3] + values[4] + values[5] + values[6] + values[7] + values[8] + " " +
-					  values[10] + " " + values[11] + "." + values[13] + values[14] + values[15] + values[16] + values[17] + values[18];
+				str = values[0] + " " + values[1].format("%02d") + "." + values[3] + values[4] + values[5] + values[6] + values[7] + values[8] + " " +
+					  values[10] + " " + values[11].format("%03d") + "." + values[13] + values[14] + values[15] + values[16] + values[17] + values[18] + " ";
 			} else if(format == Position.GEO_DM){
-				str = values[0] + " " + values[1] + " " + values[3] + "." + values[5] + values[6] + values[7]  + "' " +
-					  values[10] + " " + values[11] + " " + values[13] + "." + values[15] + values[16] + values[17] + "'";
+				str = values[0] + " " + values[1].format("%02d") + " " + values[3].format("%02d") + "." + values[5] + values[6] + values[7] + values[8]  + "'" +
+					  values[11] + " " + values[12].format("%03d") + " " + values[14].format("%02d") + "." + values[16] + values[17] + values[18] + values[19] + "'";
 			} else if(format == Position.GEO_DMS){
-				str = values[0] + " " + values[1] + " " + values[3] + "' " + values[6] + "\" " +
-					  values[9] + " " + values[10] + " " + values[12] + "' " + values[15] + "\"";
-			} else if(format == Position.GEO_MGRS){
-				str = values[0] + values[1] + values[2] + values[3] + values[4] + values[5] + values[6] + values[7] + values[8] + values[9];
+				str = values[0] + " " + values[1].format("%02d") + " " + values[3].format("%02d") + "'" + values[6].format("%02d") + "." + values[8] + values[9] + "\"" +
+					  values[12] + " " + values[13].format("%03d") + " " + values[15].format("%02d") + "'" + values[18].format("%02d") + "." + values[20] + values[21] + "\"";
 			}
 			Ui.popView(transition);
 			pushNameView(str, format, defLocationName());

@@ -50,11 +50,14 @@ module Data{
 			initProp(KEY_BATCH_ID); initProp(KEY_BATCH_NAME); initProp(KEY_BATCH_DATE);
 			
 			var interval = getInterval();
-			if(interval == null){ 
-				setInterval(0);
+			if(interval == null){
+				interval = 0; 
+				setInterval(interval);
 			} else {
 				startTimer(interval);
 			}
+			onTimer(interval);
+			
 			if(getDistance() == null){ setDistance(0); }
 			if(getFormat() == null){ setFormat(Position.GEO_DEG); }
 			if(getActivityType() == null){ setActivityType(ActivityRecording.SPORT_GENERIC); }
@@ -311,6 +314,32 @@ module Data{
 			locations.remove(i);
 			setLocations(locations);
 			locations = null;
+		}
+		
+		// persisted
+		
+		function saveLocationPersisted(i){
+			var locations = getLocations();
+			PersistedLocations.persistLocation(new Position.Location({
+				:latitude => locations.latitudes[i], 
+				:longitude => locations.longitudes[i], 
+				:format => :radians}), {
+				:name => locations.names[i]
+			});
+		}
+		
+		function saveBatchPersisted(id){
+			var locations = getLocations();
+			for(var i = 0; i < locations.size(); i++){
+				if(locations.batches[i] == id){
+					PersistedLocations.persistLocation(new Position.Location({
+						:latitude => locations.latitudes[i], 
+						:longitude => locations.longitudes[i], 
+						:format => :radians}), {
+						:name => locations.names[i]
+					});
+				}
+			}
 		}
 	}
 }
