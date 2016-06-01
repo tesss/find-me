@@ -23,7 +23,9 @@ module UI{
 				dataStorage.deleteBatch(id);
 				Ui.popView(transition);
 				Ui.popView(transition);
-				pushBatchesMenu();
+				openMainMenu = true;
+				openBatchesMenu = true;
+				pushInfoView("Deleted", true);
 			}
 		}
 	}

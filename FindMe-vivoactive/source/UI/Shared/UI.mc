@@ -9,6 +9,7 @@ module UI{
 	var model;
 	var openMainMenu;
 	var openTypesMenu;
+	var openBatchesMenu;
 	var drawModel;
 	
 	const COLOR_BACKGROUND = 0x000000;

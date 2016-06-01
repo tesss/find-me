@@ -62,15 +62,6 @@ module UI{
 					gpsIcon = Ui.loadResource(Rez.Drawables.GpsGood);
 				}
 			}
-		}
-		
-		function onLayout(){
-			directionDrawable = new DirectionDrawable(drawModel.direction, drawModel.directionCenter, 0);
-			onTimer(true);
-			activityIcon = Ui.loadResource(Rez.Drawables.GpsActivity);
-		}
-		
-		function onSensor(info){
 			if(anim){
 				return;
 			}
@@ -79,6 +70,12 @@ module UI{
 				anim = true;	
 				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 1, method(:animCallback));
 			}
+		}
+		
+		function onLayout(){
+			directionDrawable = new DirectionDrawable(drawModel.direction, drawModel.directionCenter, 0);
+			onTimer(true);
+			activityIcon = Ui.loadResource(Rez.Drawables.GpsActivity);
 		}
 		
 		function animCallback(){
@@ -214,7 +211,6 @@ module UI{
 		}
 		
 		function onShow(){
-			Sensor.enableSensorEvents(method(:onSensor));
 			dataStorage.timerCallback = method(:onTimer);
 		}
 		
