@@ -23,15 +23,13 @@ module UI{
 			if(symbol == :persisted){
 				dataStorage.saveBatchPersisted(id);
 				Ui.popView(transition);
-				Ui.popView(transition);
-				openMainMenu = true;
+				openMainMenu = false;
 				openBatchesMenu = true;
 				pushInfoView("Saved successfully", true);
 			} else if(symbol == :delete) {
 				dataStorage.deleteBatch(id);
 				Ui.popView(transition);
-				Ui.popView(transition);
-				openMainMenu = true;
+				openMainMenu = false;
 				openBatchesMenu = true;
 				pushInfoView("Deleted", true);
 			}

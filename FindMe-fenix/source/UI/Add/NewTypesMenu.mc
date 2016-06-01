@@ -32,8 +32,7 @@ module UI{
 	    	var ids = dataStorage.addLocation(location);
 	    	location[Data.LOC_ID] = ids[0];
 	    	var model = new TypesViewModel([[location]], false);
-	    	Ui.popView(transition);
-	    	openMainMenu = true;
+	    	popMainMenu();
 	    	Ui.pushView(new LocationView(model.get()), new LocationDelegate(model), transition);
 	    }
     }

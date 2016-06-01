@@ -122,6 +122,7 @@ module UI{
 			}
 			Ui.popView(transition);
 			pushNameView(str, format, defLocationName());
+			keepMainView = true;
 			pushInfoView(str, false);
 		}
 		

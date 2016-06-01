@@ -11,8 +11,11 @@ class FindMeApp extends App.AppBase {
     function onStart() {
     	UI.dataStorage = new Data.DataStorage();
 		bridge = new Comm.Bridge();
-		
+
 		var data = bridge.parseMail(0);
+		if(!UI.dataStorage.checkLocCount(data[1].size())){
+			return;
+		}
 		UI.dataStorage.addBatch(data[0]);
 	    UI.dataStorage.addLocations(data[1]);
 	    data = null;
@@ -31,6 +34,6 @@ class FindMeApp extends App.AppBase {
 		// id - generated max
 		// import alert
 
-		// bug with MGRS ?
 		// improve heading
-    	// bug in settings
+    	
+    	// register onImport after open mainView

@@ -69,14 +69,12 @@ module UI{
 	    		var fullRefresh = model.delete();
 	    		if(fullRefresh){
 	    			if(model.global){
-	    				Ui.popView(transition);
 	    				openTypesMenu = true;
+	    				Ui.popView(transition);
 	    			}
 					Ui.popView(transition);
-					Ui.popView(transition);
-					openMainMenu = true;
 	    		}
-	    		pushInfoView("Deleted", !fullRefresh && model.global || fullRefresh && !model.global);
+	    		pushInfoView("Deleted", true);
 	    	}
 	    }
     }

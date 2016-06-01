@@ -17,6 +17,7 @@ module UI{
 			if(name.length() > 15){
 				pushInfoView("Max length 15", false, true);
 			} else {
+				keepMainView = true;
 				Ui.pushView(new NewTypesMenu(), new NewTypesMenuDelegate(locationStr, name, format), transition);
 			}
 		}

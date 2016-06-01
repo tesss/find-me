@@ -70,8 +70,7 @@ module UI{
 			dataStorage.setFormat(values[7]);
 			dataStorage.setActivityType(values[10]);
 			dataStorage.setSortBy(values[13]);
-			Ui.popView(transition);
-			pushInfoView("Settings saved", false);
+			pushInfoView("Settings saved", true);
 		}
 		
 		function onCancel(){

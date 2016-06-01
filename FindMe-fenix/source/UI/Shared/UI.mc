@@ -7,6 +7,7 @@ module UI{
 	var transition;
 	var screenType;
 	var model;
+	var keepMainView;
 	var openMainMenu;
 	var openTypesMenu;
 	var openBatchesMenu;
@@ -23,7 +24,6 @@ module UI{
 	}
 	
 	function pushTypesMenu(){
-		//release();
 		if(model == null){
 			var types = dataStorage.getTypesList();
 			model = new TypesViewModel(types, true);
@@ -62,6 +62,11 @@ module UI{
 			return true;
 		}
 		return false;
+	}
+	
+	function popMainMenu(){
+		keepMainView = true;
+		Ui.popView(transition);
 	}
 	
 	function defLocationName(){
