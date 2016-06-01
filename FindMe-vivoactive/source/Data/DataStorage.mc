@@ -273,7 +273,7 @@ module Data{
 		}
 		
 		function typeComparer(a, b){
-			return a[0][LOC_TYPE] - a[0][LOC_TYPE];
+			return a[0][LOC_TYPE] - b[0][LOC_TYPE];
 		}
 		
 		function distanceComparer(a, b){

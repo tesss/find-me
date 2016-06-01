@@ -8,7 +8,7 @@ module UI{
 			addItem("Locations", :types);
 			addItem("Add Current", :addCurrent);
 			addItem("Add Coordinates", :add);
-			//addItem("Batches", :batches);
+			addItem("Batches", :batches);
 			addItem("Settings", :settings);
 			addItem("Clear All", :clear);
 			addItem("About", :about); // with connection status

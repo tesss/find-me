@@ -128,6 +128,8 @@ module UI{
 				
 				if(distance > Data.ZERO_LIMIT){
 					var angle = heading == null ? dataStorage.currentLocation[Data.HEADING] : heading;
+					_.p("PosHeading: " + dataStorage.currentLocation[Data.HEADING]);
+					_.p("MagHeading: " + heading);
 					bearing = Data.bearing(
 						dataStorage.currentLocation[Data.LAT], 
 						dataStorage.currentLocation[Data.LON], 
