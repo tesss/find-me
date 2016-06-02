@@ -63,6 +63,7 @@ module UI{
 	    		var fullRefresh = model.delete();
 	    		if(fullRefresh){
 	    			if(model.global){
+	    				openMainMenu = false;
 	    				openTypesMenu = true;
 	    				Ui.popView(transition);
 	    			}
