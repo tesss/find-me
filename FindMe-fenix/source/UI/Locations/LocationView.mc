@@ -76,11 +76,7 @@ module UI{
 				return;
 			}
 			Ui.requestUpdate();
-			if(info != null && info.heading != null && info.heading > 0){
-				heading = info.heading;
-			} else {
-				heading = null;
-			}
+			heading = Data.heading(info);
 			if(bearing != null && (directionDrawable.angle * 1000).toNumber() != (bearing * 1000).toNumber()){
 				anim = true;	
 				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 1, method(:animCallback));

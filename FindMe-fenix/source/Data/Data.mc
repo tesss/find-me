@@ -45,12 +45,32 @@ module Data {
 	}
 	
 	function bearing(lat1, lon1, lat2, lon2){
-		
 		var dLon = lon2 - lon1;
 		var y = Math.sin(dLon) * Math.cos(lat2);
 		var x = Math.cos(lat1) * Math.sin(lat2) - 
 				Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon);
 		return atan2(y, x);
+	}
+	
+	function heading(info){
+		if(info == null){
+			return null;
+		}
+		return info.heading;
+		//var axf = toRadians(info.accel[0]);
+		//var ayf = toRadians(info.accel[1]);
+		//var mx = toRadians(info.mag[0]);
+		//var my = toRadians(info.mag[1]);
+		//var mz = toRadians(info.mag[2]);
+		//var xh = mx * Math.cos(ayf) + my * Math.sin(ayf) * Math.sin(axf) - mz * Math.cos(axf) * Math.sin(ayf);
+		//var yh = my * Math.cos(axf) + mz * Math.sin(axf);
+	    //var h = atan2(yh, xh) - toRadians(90);
+		//var r360 = toRadians(360);
+		//if (h > 0){
+		//	h -= r360;
+		//}
+		//h = h + r360;
+		//return h;
 	}
 	
 	function dateStr(moment){
