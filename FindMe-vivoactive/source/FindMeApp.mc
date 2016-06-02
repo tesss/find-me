@@ -13,6 +13,9 @@ class FindMeApp extends App.AppBase {
 		bridge = new Comm.Bridge();
 		
 		var data = bridge.parseMail(0);
+		if(!UI.dataStorage.checkLocCount(data[1].size())){
+			return;
+		}
 		UI.dataStorage.addBatch(data[0]);
 	    UI.dataStorage.addLocations(data[1]);
 	    data = null;

@@ -257,12 +257,8 @@ module UI{
 		}
 		
 		function onBack(){
-			if(model.global){
-				Ui.popView(transition);
-				return true;
-			}
 			Ui.popView(transition);
-			return false;
+			return true;
 		}
 		
 		function onSelect(){

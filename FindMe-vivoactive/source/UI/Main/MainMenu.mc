@@ -18,6 +18,7 @@ module UI{
 	class MainMenuDelegate extends Ui.MenuInputDelegate {
 		function onMenuItem(item){
 			if(item == :types){
+				popMainMenu();
 				pushTypesMenu();
 			} else if(item == :addCurrent){
 				if(pushIfInsufficientSpace()){
@@ -40,6 +41,7 @@ module UI{
 				if(available){
 					release();
 					var format = dataStorage.getFormat();
+					popMainMenu();
 					pushNameView(new Position.Location({
 						:latitude => dataStorage.currentLocation[Data.LAT],
 						:longitude => dataStorage.currentLocation[Data.LON],
@@ -54,18 +56,22 @@ module UI{
 				}
 				release();
 				var format = dataStorage.getFormat();
+				popMainMenu();
 				Ui.pushView(new LocationPicker(format), new LocationPickerDelegate(format), transition);
 			} else if(item == :batches){
 				release();
+				popMainMenu();
 				pushBatchesMenu();
 			} else if(item == :settings){
 				release();
+				popMainMenu();
 				Ui.pushView(new SettingsPicker(), new SettingsPickerDelegate(), transition);
 			} else if(item == :clear){
 				release();
 				dataStorage.clear();
 				pushInfoView("Cleared", false);
 			} else if(item == :about){
+				popMainMenu();
 				Ui.pushView(new AboutView(), new AboutViewDelegate(), transition);
 			}
 		}

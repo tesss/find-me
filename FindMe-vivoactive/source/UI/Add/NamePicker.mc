@@ -59,6 +59,7 @@ module UI{
 			name = name.substring(0, trim + 1);
 			if(name.length() > 0){
 				Ui.pushView(new NewTypesMenu(), new NewTypesMenuDelegate(locationStr, name, format), transition);
+				keepMainView = true;
 				pushInfoView("Name: " + name, null, false);
 			} else {
 				pushInfoView("Name can't be empty", null, false);

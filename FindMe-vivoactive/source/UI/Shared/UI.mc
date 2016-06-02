@@ -23,7 +23,6 @@ module UI{
 	}
 	
 	function pushTypesMenu(){
-		//release();
 		if(model == null){
 			var types = dataStorage.getTypesList();
 			model = new TypesViewModel(types, true);
@@ -34,6 +33,11 @@ module UI{
 			// delete/add/import into model
 			Ui.pushView(new TypesMenu(model), new TypesMenuDelegate(model), transition);
 		}
+	}
+	
+	function popMainMenu(){
+		keepMainView = true;
+		Ui.popView(transition);
 	}
 	
 	function pushInfoView(_str, _pop, _error){
