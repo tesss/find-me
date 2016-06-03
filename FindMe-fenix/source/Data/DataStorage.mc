@@ -85,7 +85,7 @@ module Data{
 		}
 				
 		hidden function initProp(key){ if(getProp(key, true) == null){ setProp(key, [], true); } }
-		hidden function clearProp(key){ setProp(key, null); }
+		hidden function clearProp(key){ setProp(key, null, true); }
 		
 		// options
 		
@@ -137,7 +137,6 @@ module Data{
 		}
 		
 		function updateCurrentLocation(info){
-			_.p("gpsFound " +info.accuracy);
 			gpsFinding = false;
 			if(info.accuracy != Position.QUALITY_NOT_AVAILABLE){
 				if(currentLocation == null || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
