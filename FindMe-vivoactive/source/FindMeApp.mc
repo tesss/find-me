@@ -12,10 +12,10 @@ class FindMeApp extends App.AppBase {
     	UI.dataStorage = new Data.DataStorage();
 		bridge = new Comm.Bridge();
 
-		var locations = bridge.parseMail();
-		if(!UI.dataStorage.checkLocCount(locations.size())){
-			return;
-		}
+		//var locations = bridge.parseMail();
+		//if(!UI.dataStorage.checkLocCount(locations.size())){
+		//	return;
+		//}
 	    UI.dataStorage.addLocations(locations);
     }
 

@@ -104,7 +104,7 @@ module UI{
 					str = "GPS" + dots;
 				}
 				setColor(dc, COLOR_HIGHLIGHT);
-				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_XTINY, str, Graphics.TEXT_JUSTIFY_CENTER);
+				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_TINY, str, Graphics.TEXT_JUSTIFY_CENTER);
 			} else {
 				var distance = Data.distance(
 					location[Data.LOC_LAT], 
@@ -155,7 +155,7 @@ module UI{
 			
 			var color = TYPES_BCOLORS[location[Data.LOC_TYPE]];
 			setColor(dc, color);
-			var font = Graphics.FONT_SMALL;
+			var font = Graphics.FONT_MEDIUM;
 			dc.fillRectangle(0, drawModel.name[1], drawModel.width, dc.getFontHeight(font) + 1);
 			setColor(dc, COLOR_BACKGROUND, color);
 			dc.drawText(drawModel.name[0], drawModel.name[1], font, location[Data.LOC_NAME], Graphics.TEXT_JUSTIFY_CENTER);
@@ -178,20 +178,20 @@ module UI{
 				drawModel = new LocationDrawModel();
 				drawModel.width = 205;
 				drawModel.name = [102, 0];
-				drawModel.type = [102, 24];
+				drawModel.type = [102, 29];
 				drawModel.line1 = [20, 104, 52, 74];
 				drawModel.line2 = [152, 74, 185, 104];
 				drawModel.line1Dis = [20, 104, 52, 134];
 				drawModel.line2Dis = [152, 134, 185, 104];
 				drawModel.arrow1 = [[1, 74], [6, 66.500000], [6, 81.500000]];
 				drawModel.arrow2 = [[204, 74], [199, 66.500000], [199, 81.500000]];
-				drawModel.radius = 35.000000;
+				drawModel.radius = 30;
 				drawModel.distance = [102, 120];
 				drawModel.bearing = [102, 64];
-				drawModel.direction = [[102, 44], [129.000000, 104], [102, 89.000000], [75.000000, 104]];
-				drawModel.directionCenter = [102.000000, 84];
-				drawModel.gpsIcon = [5, 26];
-				drawModel.activityIcon = [183, 26];
+				drawModel.direction = [[102.500000, 55], [125.000000, 105], [102.500000, 92.500000], [80.000000, 105]];
+				drawModel.directionCenter = [102.500000, 88];
+				drawModel.gpsIcon = [5, 31];
+				drawModel.activityIcon = [183, 31];
 			}
 			return drawModel;
 		}
