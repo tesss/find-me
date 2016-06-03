@@ -16,7 +16,7 @@ class FindMeApp extends App.AppBase {
 		//if(!UI.dataStorage.checkLocCount(locations.size())){
 		//	return;
 		//}
-	    UI.dataStorage.addLocations(locations);
+	    //UI.dataStorage.addLocations(locations);
     }
 
     function getInitialView() {
