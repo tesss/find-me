@@ -32,4 +32,11 @@ module UI {
 		function getSize(){ return limit; }
 		function getValue(index){ return index; }
 	}
+	
+	class CharFactory extends Ui.PickerFactory {
+		static const values = " ~}|{_^]\\[@?>=<;:/.-,+*)('&%$#\"!0987654321zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
+		function getDrawable(index, isSelected){ return getText(getValue(index), {:isSelected => isSelected}); }
+		function getSize(){ return values.length(); }
+		function getValue(index){ return values.substring(index, index + 1); }
+	}
 }
