@@ -8,9 +8,7 @@ module UI{
 			addItem("Locations", :types);
 			addItem("Add Current", :addCurrent);
 			addItem("Add Coordinates", :add);
-			addItem("Batches", :batches);
 			addItem("Settings", :settings);
-			addItem("Clear All", :clear);
 			addItem("About", :about); // with connection status
 		}
 	}
@@ -58,10 +56,6 @@ module UI{
 				var format = dataStorage.getFormat();
 				popMainMenu();
 				Ui.pushView(new LocationPicker(format), new LocationPickerDelegate(format), transition);
-			} else if(item == :batches){
-				release();
-				popMainMenu();
-				pushBatchesMenu();
 			} else if(item == :settings){
 				release();
 				popMainMenu();

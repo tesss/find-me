@@ -24,8 +24,8 @@ module UI{
 		const TYPES_BCOLORS = [
 			Graphics.COLOR_WHITE,
 			Graphics.COLOR_LT_GRAY,
-			Graphics.COLOR_DK_RED,
-			Graphics.COLOR_DK_BLUE,
+			Graphics.COLOR_RED,
+			Graphics.COLOR_BLUE,
 			Graphics.COLOR_BLUE,
 			Graphics.COLOR_DK_GREEN,
 			Graphics.COLOR_GREEN,
@@ -79,7 +79,7 @@ module UI{
 			heading = Data.heading(info);
 			if(bearing != null && (directionDrawable.angle * 1000).toNumber() != (bearing * 1000).toNumber()){
 				anim = true;	
-				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 1, method(:animCallback));
+				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 2, method(:animCallback));
 			}
 		}
 		
@@ -124,8 +124,6 @@ module UI{
 				
 				if(distance > Data.ZERO_LIMIT){
 					var angle = heading == null ? dataStorage.currentLocation[Data.HEADING] : heading;
-					_.p("PosHeading: " + dataStorage.currentLocation[Data.HEADING]);
-					_.p("MagHeading: " + heading);
 					bearing = Data.bearing(
 						dataStorage.currentLocation[Data.LAT], 
 						dataStorage.currentLocation[Data.LON], 

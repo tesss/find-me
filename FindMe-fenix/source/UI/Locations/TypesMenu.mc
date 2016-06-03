@@ -21,8 +21,10 @@ module UI{
 	
 	    function onMenuItem(item) {
 	    	model.index = getMenuIndex(item, model.size());
-	    	model.get().sort();
-	    	Ui.pushView(new LocationView(model.get()), new LocationDelegate(model), transition);
+	    	var locations = model.get();
+	    	locations.sort();
+	    	locations.index = 0;
+	    	Ui.pushView(new LocationView(locations), new LocationDelegate(model), transition);
 	    }
     }
 }

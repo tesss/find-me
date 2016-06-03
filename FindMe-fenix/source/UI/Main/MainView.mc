@@ -8,7 +8,6 @@ module UI{
 			keepMainView = false;
 			openMainMenu = false;
 			openTypesMenu = true;
-			openBatchesMenu = false;
 		}
 		
 		function onShow(){
@@ -18,7 +17,7 @@ module UI{
 				return;
 			}
 			release();
-			var exit = !openMainMenu && !openTypesMenu && !openBatchesMenu;
+			var exit = !openMainMenu && !openTypesMenu;
 			if(openMainMenu){
 				openMainMenu = false;
 				pushMainMenu();
@@ -27,11 +26,6 @@ module UI{
 				openMainMenu = true;
 				openTypesMenu = false;
 				pushTypesMenu();
-			}
-			if(openBatchesMenu){
-				openMainMenu = true;
-				openBatchesMenu = false;
-				pushBatchesMenu();
 			}
 			if(exit){
 				if(dataStorage.session != null && dataStorage.session.isRecording()){

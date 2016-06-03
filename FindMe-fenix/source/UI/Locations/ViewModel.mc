@@ -1,4 +1,5 @@
 using Toybox.WatchUi as Ui;
+using Toybox.PersistedLocations;
 using Data;
 
 module UI{
@@ -90,6 +91,35 @@ module UI{
 			}
 			return false;
 		}
+		
+		function deleteAll(){
+			var data = null;
+			if(global){
+				if(index > 0){
+					data = get().locations[0][Data.LOC_TYPE];
+				}
+			} else {
+				var locations = get().locations;
+				data = new [locations.size()];
+				for(var i = 0; i < data.size(); i++){
+					data[i] = locations[i][Data.LOC_ID];
+				}
+			}
+			dataStorage.deleteAllLocations(data);
+		}
+		
+		function savePersisted(){
+			var locations = get().locations;
+			for(var i = 0; i < locations.size(); i++){
+				var location = locations[i];
+				PersistedLocations.persistLocation(new Position.Location({
+					:latitude => location[Data.LOC_LAT], 
+					:longitude => location[Data.LOC_LON], 
+					:format => :radians}), {
+					:name => location[Data.LOC_NAME]
+				});
+			}
+		}
 	}
 
 	class LocationsViewModel{
@@ -141,6 +171,16 @@ module UI{
 			var sorted = dataStorage.sortLocationsList(locations, get()[Data.LOC_ID]);
 			locations = sorted[0];
 			index = sorted[1];
+		}
+		
+		function savePersisted(){
+			var location = get();
+			PersistedLocations.persistLocation(new Position.Location({
+				:latitude => location[Data.LOC_LAT], 
+				:longitude => location[Data.LOC_LON], 
+				:format => :radians}), {
+				:name => location[Data.LOC_NAME]
+			});
 		}
 	}
 }

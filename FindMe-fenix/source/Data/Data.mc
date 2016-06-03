@@ -5,7 +5,7 @@ using _;
 module Data {
 	const VERSION = "0.1.0";
 	const NAME_LIMIT = 15;
-	const ZERO_LIMIT = 0.005;
+	const ZERO_LIMIT = 0.02;
 	const LOC_MAX_COUNT = 100;
 	
 	function toRadians(degrees){
@@ -104,12 +104,7 @@ module Data {
 		KEY_LOC_LAT,
 		KEY_LOC_LON,
 		KEY_LOC_NAME,
-		KEY_LOC_TYPE,
-		KEY_LOC_BATCH,
-		
-		KEY_BATCH_ID,
-		KEY_BATCH_NAME,
-		KEY_BATCH_DATE
+		KEY_LOC_TYPE
 	}
 	
 	enum {
@@ -118,13 +113,6 @@ module Data {
 		LOC_LAT,
 		LOC_LON,
 		LOC_TYPE,
-		LOC_BATCH,
 		LOC_DIST
-	}
-	
-	enum {
-		BATCH_ID,
-		BATCH_NAME,
-		BATCH_DATE
 	}
 }

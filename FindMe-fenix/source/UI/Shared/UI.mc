@@ -10,7 +10,6 @@ module UI{
 	var keepMainView;
 	var openMainMenu;
 	var openTypesMenu;
-	var openBatchesMenu;
 	var drawModel;
 	
 	const COLOR_BACKGROUND = 0x000000;
@@ -44,16 +43,6 @@ module UI{
 	
 	function pushNameView(location, format, def){
 		Ui.pushView(new Ui.TextPicker(def), new NameTextPickerDelegate(location, format), transition);
-	}
-	
-	function pushBatchesMenu(){
-		release();
-		var batches = dataStorage.getBatchesList();
-		if(batches == null || batches.size() == 0) {
-			pushInfoView("No batches", false);
-		} else {
-			Ui.pushView(new BatchesMenu(batches), new BatchesMenuDelegate(batches), transition);
-		}
 	}
 	
 	function pushIfInsufficientSpace(){
@@ -137,7 +126,7 @@ module UI{
 	}
 	
 	function clearPicker(dc){
-		dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+		dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.clear();
         Picker.onUpdate(dc);
 	}

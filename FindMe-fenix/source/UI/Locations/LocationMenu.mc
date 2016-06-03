@@ -20,7 +20,13 @@ module UI{
 			}
 			addItem("Coordinates", :coord);
 			addItem("Save Persisted", :persisted);
+			if(_model.size() > 1){
+				addItem("Save All Persisted", :persistedAll);
+			}
 			addItem("Delete", :delete);
+			if(_model.size() > 1){
+				addItem("Delete All", :deleteAll);
+			}
 		}
 	}
 	
@@ -33,7 +39,7 @@ module UI{
 		
 		hidden function newSession(){
 			return ActivityRecording.createSession({
-				:name => "FindMe " + Data.dateStr(), 
+				:name => "FM_" + Data.dateStr(), 
 				:sport => model.dataStorage.getActivityType()
 			});
 		}
@@ -59,11 +65,14 @@ module UI{
 	    		}
 	    	} else if(item == :coord){
 	    		popInNotGlobal();
-	    		_.p(getLocationStr(model.get().get()));
 	    		pushInfoView(getLocationStr(model.get().get()), model.global);
 	    	} else if(item == :persisted){
 	    		popInNotGlobal();
-	    		dataStorage.saveLocationPersisted(model.get().get()[dataStorage.LOC_ID]);
+	    		model.get().savePersisted();
+	    		pushInfoView("Saved successfully", model.global);
+	    	} else if(item == :persistedAll){
+	    		popInNotGlobal();
+	    		model.get().savePersisted();
 	    		pushInfoView("Saved successfully", model.global);
 	    	} else if(item == :delete){
 	    		var fullRefresh = model.delete();
@@ -75,6 +84,15 @@ module UI{
 	    			}
 					Ui.popView(transition);
 	    		}
+	    		pushInfoView("Deleted", true);
+	    	} else if(item == :deleteAll){
+	    		model.deleteAll();
+	    		if(model.global){
+    				openMainMenu = false;
+    				openTypesMenu = true;
+    				Ui.popView(transition);
+    			}
+				Ui.popView(transition);
 	    		pushInfoView("Deleted", true);
 	    	}
 	    }
