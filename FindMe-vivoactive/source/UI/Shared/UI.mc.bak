@@ -53,11 +53,6 @@ module UI{
 		return false;
 	}
 	
-	function popMainMenu(){
-		keepMainView = true;
-		Ui.popView(transition);
-	}
-	
 	function defLocationName(){
 		return "LOC_" + Data.dateStr();
 	}
@@ -126,7 +121,7 @@ module UI{
 	}
 	
 	function clearPicker(dc){
-		dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+		dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         Picker.onUpdate(dc);
 	}

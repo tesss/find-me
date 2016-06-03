@@ -222,6 +222,8 @@ module UI{
 		}
 		
 		function onHide(){
+			//gpsIcon = null;
+			//activityIcon = null;
 			Sensor.enableSensorEvents(null);
 			dataStorage.timerCallback = null;
 		}

@@ -4,8 +4,9 @@ using Toybox.Math;
 using Toybox.Time;
 using Toybox.Timer;
 using Toybox.Position;
+using Toybox.PersistedLocations;
+using Toybox.WatchUi as Ui;
 using Toybox.ActivityRecording;
-using Toybox.Lang;
 using Alert;
 using _;
 
@@ -36,16 +37,17 @@ module Data{
 		var session;
 		var timerCallback;
 		var locCount;
-		var cache;
-		var gpsFinding;
 		
 		function initialize(){
 			app = Application.getApp().weak();
 			timer = new Timer.Timer();
-			cache = new [5];
-			gpsFinding = false;
 			
-			initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE);
+			//clearProp(KEY_LOC_NAME); clearProp(KEY_LOC_LAT); clearProp(KEY_LOC_LON); clearProp(KEY_LOC_TYPE); clearProp(KEY_LOC_BATCH);
+			//clearProp(KEY_BATCH_ID); clearProp(KEY_BATCH_NAME); clearProp(KEY_BATCH_DATE);
+			//clearProp(KEY_SORT); clearProp(KEY_DISTANCE); clearProp(KEY_INTERVAL); clearProp(KEY_FORMAT); clearProp(KEY_ACT_TYPE);
+			
+			initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE); initProp(KEY_LOC_BATCH);
+			initProp(KEY_BATCH_ID); initProp(KEY_BATCH_NAME); initProp(KEY_BATCH_DATE);
 			
 			var interval = getInterval();
 			if(interval == null){
@@ -54,38 +56,23 @@ module Data{
 			} else {
 				startTimer(interval);
 			}
+			onTimer(interval);
 			
 			if(getDistance() == null){ setDistance(0); }
 			if(getFormat() == null){ setFormat(Position.GEO_DEG); }
 			if(getActivityType() == null){ setActivityType(ActivityRecording.SPORT_GENERIC); }
 			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
 			
-			locCount = getProp(KEY_LOC_TYPE, true).size();
+			locCount = getProp(KEY_LOC_BATCH).size();
 		}
 		
 		// props
 		
-		hidden function getApp(){ return app.get(); }
-		
-		hidden function getProp(key, noCache){
-			if(noCache == true){
-				return getApp().getProperty(key);
-			}
-			if(cache[key] == null){
-				cache[key] = getApp().getProperty(key);
-			}
-			return cache[key];
-		}	
-			
-		hidden function setProp(key, value, noCache){
-			if(noCache != true){
-				cache[key] = value;
-			}
-			getApp().setProperty(key, value); 
-		}
-				
-		hidden function initProp(key){ if(getProp(key, true) == null){ setProp(key, [], true); } }
-		hidden function clearProp(key){ setProp(key, null, true); }
+		hidden function getApp(){ return app.get(); }		
+		hidden function getProp(key){ return getApp().getProperty(key); }		
+		hidden function setProp(key, value){ getApp().setProperty(key, value); }		
+		hidden function initProp(key){ if(getProp(key) == null){ setProp(key, []); } }
+		hidden function clearProp(key){ setProp(key, null); }
 		
 		// options
 		
@@ -100,6 +87,14 @@ module Data{
 		function getActivityType(){ return getProp(KEY_ACT_TYPE); }
 		function setActivityType(activityType){ return setProp(KEY_ACT_TYPE, activityType); }
 		
+		function clear(){
+			clearProp(KEY_LOC_NAME); clearProp(KEY_LOC_LAT); clearProp(KEY_LOC_LON); clearProp(KEY_LOC_TYPE); clearProp(KEY_LOC_BATCH);
+			clearProp(KEY_BATCH_ID); clearProp(KEY_BATCH_NAME); clearProp(KEY_BATCH_DATE);
+			initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE); initProp(KEY_LOC_BATCH);
+			initProp(KEY_BATCH_ID); initProp(KEY_BATCH_NAME); initProp(KEY_BATCH_DATE);
+			locCount = 0;
+		}
+		
 		// timer
 		
 		hidden function invokeTimerCallback(accuracyChanged){
@@ -111,33 +106,26 @@ module Data{
 		hidden function startTimer(interval){
 			timer.stop();
 			if(interval <= 0){
-				onTimer();
+				onTimer(interval);
 			} else {
-				timer.start(method(:onTimer), interval * 1000, true);
+				timer.start(method(:onTimer), interval*1000, true);
 			}
 		}
 		
-		function onTimer(){
-			if(gpsFinding){
-				return;
-			}
-			var interval = getInterval();
+		function onTimer(interval){
 			if(interval == -1){
 				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 				var accuracyChanged = currentLocation != null;
 				currentLocation = null;
 				invokeTimerCallback(accuracyChanged);
 			} else if(interval == 0){
-				gpsFinding = true;
 				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
 			} else {
-				gpsFinding = true;
 				Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
 			}
 		}
 		
 		function updateCurrentLocation(info){
-			gpsFinding = false;
 			if(info.accuracy != Position.QUALITY_NOT_AVAILABLE){
 				if(currentLocation == null || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
 					Alert.alert(Alert.GPS_FOUND);
@@ -157,14 +145,15 @@ module Data{
 		// locations
 		
 		hidden function getLocations(){
-			return new Locations(getProp(KEY_LOC_NAME, true), getProp(KEY_LOC_LAT, true), getProp(KEY_LOC_LON, true), getProp(KEY_LOC_TYPE, true));
+			return new Locations(getProp(KEY_LOC_NAME), getProp(KEY_LOC_LAT), getProp(KEY_LOC_LON), getProp(KEY_LOC_TYPE), getProp(KEY_LOC_BATCH));
 		}
 		
 		hidden function setLocations(locations){
-			setProp(KEY_LOC_NAME, locations.names, true);
-			setProp(KEY_LOC_LAT, locations.latitudes, true);
-			setProp(KEY_LOC_LON, locations.longitudes, true);
-			setProp(KEY_LOC_TYPE, locations.types, true);
+			setProp(KEY_LOC_LAT, locations.latitudes);
+			setProp(KEY_LOC_LON, locations.longitudes);
+			setProp(KEY_LOC_TYPE, locations.types);
+			setProp(KEY_LOC_BATCH, locations.batches);
+			setProp(KEY_LOC_NAME, locations.names);
 			locCount = locations.size();
 		}
 		
@@ -211,8 +200,29 @@ module Data{
 			return types;
 		}
 		
+		// batches
+		
+		hidden function getBatches(){
+			return new Batches(getProp(KEY_BATCH_ID), getProp(KEY_BATCH_NAME), getProp(KEY_BATCH_DATE));
+		}
+		
+		hidden function setBatches(batches){
+			setProp(KEY_BATCH_ID, batches.ids);
+			setProp(KEY_BATCH_NAME, batches.names);
+			setProp(KEY_BATCH_DATE, batches.dates);
+		}
+		
+		function getBatchesList(){
+			var batches = getBatches();
+			var batchesList = new[batches.size()];
+			for(var i = 0; i < batches.size(); i++){
+				batchesList[i] = batches.get(i);
+			}
+			return batchesList;
+		}
+		
 		function addLocation(location){
-			var newLocations = new Locations([location[LOC_NAME]], [location[LOC_LAT]], [location[LOC_LON]], [location[LOC_TYPE]]);
+			var newLocations = new Locations([location[LOC_NAME]], [location[LOC_LAT]], [location[LOC_LON]], [location[LOC_TYPE]], [location[LOC_BATCH]]);
 			return addLocations(newLocations);
 		}
 		
@@ -223,12 +233,21 @@ module Data{
 			locations.latitudes = ArrayExt.union(locations.latitudes, newLocations.latitudes);
 			locations.longitudes = ArrayExt.union(locations.longitudes, newLocations.longitudes);
 			locations.types = ArrayExt.union(locations.types, newLocations.types);
+			locations.batches = ArrayExt.union(locations.batches, newLocations.batches);
 			setLocations(locations);
 			var ids = new [newLocations.size()];
 			for(var i = 0; i < ids.size(); i++){
 				ids[i] = l + i;
 			}
 			return ids;
+		}
+		
+		function addBatch(batch){
+			var batches = getBatches();
+			batches.ids = ArrayExt.insertAt(batches.ids, batch[BATCH_ID], 0);
+			batches.names = ArrayExt.insertAt(batches.names, batch[BATCH_NAME], 0);
+			batches.dates = ArrayExt.insertAt(batches.dates, batch[BATCH_DATE], 0);
+			setBatches(batches);
 		}
 		
 		// sorting
@@ -267,38 +286,34 @@ module Data{
 		
 		// deleting
 		
+		function deleteBatch(id){
+			var batches = getBatches();
+			var index = -1;
+			for(var i = 0; i < batches.size(); i++){
+				if(batches.ids[i] == id){
+					index = i;
+					break;
+				}
+			}
+			batches.remove(index);
+			setBatches(batches);
+			batches = null;
+			var locations = getLocations();
+			for(var i = 0; i < locations.size(); i++){
+				if(locations.batches[i] == id){
+					locations.remove(i);
+					i--;
+				}
+			}
+			setLocations(locations);
+			locations = null;
+		}
+		
 		function deleteLocation(i){
 			var locations = getLocations();
 			locations.remove(i);
 			setLocations(locations);
-		}
-		
-		function deleteAllLocations(data){ // if null - all
-			if(data == null){
-				clearProp(KEY_LOC_NAME); clearProp(KEY_LOC_LAT); clearProp(KEY_LOC_LON); clearProp(KEY_LOC_TYPE);
-				initProp(KEY_LOC_NAME); initProp(KEY_LOC_LAT); initProp(KEY_LOC_LON); initProp(KEY_LOC_TYPE);
-				locCount = 0;
-			} else if(data instanceof Toybox.Lang.Number) { // delete all of type
-				var locations = getLocations();
-				for(var i = 0; i < locations.size(); i++){
-					if(locations.types[i] == data){
-						locations.remove(i);
-					}
-				}
-				setLocations(locations);
-			} else if(data instanceof Toybox.Array){
-				var locations = getLocations();
-				for(var i = 0; i < locations.size(); i++){
-					for(var j = 0; j < data.size(); j++){
-						if(locations.ids[i] == data[j]){
-							locations.remove(i);
-							data = ArrayExt.removeAt(data, j);
-							break;
-						}
-					}
-				}
-				setLocations(locations);
-			}
+			locations = null;
 		}
 	}
 }

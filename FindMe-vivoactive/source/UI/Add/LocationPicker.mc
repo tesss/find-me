@@ -14,7 +14,8 @@ module UI{
 				title = "DD.DDDDDD";
 				pattern = [
 					new DirectionFactory(true), 
-					new DegreeFactory(true), 
+					new NumberFactory(9),
+					new NumberFactory(),
 					getText("."),
 					new NumberFactory(),
 					new NumberFactory(),
@@ -24,8 +25,10 @@ module UI{
 					new NumberFactory(),
 					getText(" "),
 					
-					new DirectionFactory(false), 
-					new DegreeFactory(false), 
+					new DirectionFactory(false),
+					new NumberFactory(2),
+					new NumberFactory(),
+					new NumberFactory(),
 					getText("."),
 					new NumberFactory(),
 					new NumberFactory(),
@@ -38,9 +41,11 @@ module UI{
 				title = "DD MM.MMMM'";
 				pattern = [
 					new DirectionFactory(true),
-					new DegreeFactory(true),
+					new NumberFactory(9),
+					new NumberFactory(),
 					getText(" "),
-					new MinuteFactory(true),
+					new NumberFactory(6),
+					new NumberFactory(),
 					getText("."),
 					new NumberFactory(),
 					new NumberFactory(),
@@ -50,9 +55,12 @@ module UI{
 					getText(" "),
 					
 					new DirectionFactory(false),
-					new DegreeFactory(false),
+					new NumberFactory(2),
+					new NumberFactory(),
+					new NumberFactory(),
 					getText(" "),
-					new MinuteFactory(true),
+					new NumberFactory(6),
+					new NumberFactory(),
 					getText("."),
 					new NumberFactory(),
 					new NumberFactory(),
@@ -64,12 +72,15 @@ module UI{
 				title = "DD MM' SS.SS\"";
 				pattern = [
 					new DirectionFactory(true),
-					new DegreeFactory(true),
+					new NumberFactory(9),
+					new NumberFactory(),
 					getText(" "),
-					new MinuteFactory(true),
+					new NumberFactory(6),
+					new NumberFactory(),
 					getText("'"),
 					getText(" "),
-					new MinuteFactory(false),
+					new NumberFactory(6),
+					new NumberFactory(),
 					getText("."),
 					new NumberFactory(),
 					new NumberFactory(),
@@ -77,12 +88,16 @@ module UI{
 					getText(" "),
 					
 					new DirectionFactory(false),
-					new DegreeFactory(false),
+					new NumberFactory(2),
+					new NumberFactory(),
+					new NumberFactory(),
 					getText(" "),
-					new MinuteFactory(true),
+					new NumberFactory(6),
+					new NumberFactory(),
 					getText("'"),
 					getText(" "),
-					new MinuteFactory(false),
+					new NumberFactory(6),
+					new NumberFactory(),
 					getText("."),
 					new NumberFactory(),
 					new NumberFactory(),
@@ -107,23 +122,39 @@ module UI{
 		function initialize(_format){
 			format = _format;
 		}
+		
+		function checkDegrees(str){
+			if(str.toNumber() > 179){
+				pushInfoView("Degrees error");
+				return false;
+			}
+			return true;
+		}
 	
 		function onAccept(values){
 			var str = null;
 			if(format == Position.GEO_DEG){
-				str = values[0] + " " + values[1].format("%02d") + "." + values[3] + values[4] + values[5] + values[6] + values[7] + values[8] + " " +
-					  values[10] + " " + values[11].format("%03d") + "." + values[13] + values[14] + values[15] + values[16] + values[17] + values[18] + " ";
+				if(checkDegrees(values[12].toString() + values[13] + values[14].toString())) {
+					str = values[0] + " " + values[1] + values[2] + "." + values[4] + values[5] + values[6] + values[7] + values[8] + values[9] + " " +
+					  	  values[11] + " " + values[12] + values[13] + values[14] + "." + values[16] + values[17] + values[18] + values[19] + values[20] + values[21] + " ";
+				}
 			} else if(format == Position.GEO_DM){
-				str = values[0] + " " + values[1].format("%02d") + " " + values[3].format("%02d") + "." + values[5] + values[6] + values[7] + values[8]  + "'" +
-					  values[11] + " " + values[12].format("%03d") + " " + values[14].format("%02d") + "." + values[16] + values[17] + values[18] + values[19] + "'";
+				if(checkDegrees(values[14].toString() + values[15].toString() + values[16].toString())) {
+					str = values[0] + " " + values[1] + values[2] + " " + values[4] + values[5] + "." + values[7] + values[8] + values[9] + values[10] + "'" +
+					  	  values[13] + " " + values[14] + values[15] + values[16] + " " + values[18] + values[19] + "." + values[21] + values[22] + values[23] + values[24] + "'";
+				}
 			} else if(format == Position.GEO_DMS){
-				str = values[0] + " " + values[1].format("%02d") + " " + values[3].format("%02d") + "'" + values[6].format("%02d") + "." + values[8] + values[9] + "\"" +
-					  values[12] + " " + values[13].format("%03d") + " " + values[15].format("%02d") + "'" + values[18].format("%02d") + "." + values[20] + values[21] + "\"";
+				if(checkDegrees(values[16].toString() + values[17].toString() + values[18].toString())) {
+					str = values[0] + " " + values[1] + values[2] + " " + values[4] + values[5] + "'" + values[8] + values[9] + "." + values[11] + values[12] + "\"" +
+					  	  values[15] + " " + values[16] + values[17] + values[18] + " " + values[20] + values[21] + "'" + values[24] + values[25] + "." + values[27] + values[28] + "\"";
+				}
 			}
-			Ui.popView(transition);
-			pushNameView(str, format, defLocationName());
-			keepMainView = true;
-			pushInfoView(str, false);
+			if(str != null){
+				Ui.popView(transition);
+				pushNameView(str, format, defLocationName());
+				keepMainView = true;
+				pushInfoView(str, false);
+			}
 		}
 		
 		function onCancel(){

@@ -23,8 +23,8 @@ module UI{
 		const TYPES_BCOLORS = [
 			Graphics.COLOR_WHITE,
 			Graphics.COLOR_LT_GRAY,
-			Graphics.COLOR_DK_RED,
-			Graphics.COLOR_DK_BLUE,
+			Graphics.COLOR_RED,
+			Graphics.COLOR_BLUE,
 			Graphics.COLOR_BLUE,
 			Graphics.COLOR_DK_GREEN,
 			Graphics.COLOR_GREEN,
@@ -68,7 +68,7 @@ module UI{
 			Ui.requestUpdate();
 			if(bearing != null && (directionDrawable.angle * 1000).toNumber() != (bearing * 1000).toNumber()){
 				anim = true;	
-				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 1, method(:animCallback));
+				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 2, method(:animCallback));
 			}
 		}
 		
@@ -215,7 +215,6 @@ module UI{
 		}
 		
 		function onHide(){
-			Sensor.enableSensorEvents(null);
 			dataStorage.timerCallback = null;
 		}
 	}
