@@ -52,7 +52,9 @@ module Data{
 				interval = 0; 
 				setInterval(interval);
 			} else {
-				startTimer(interval);
+				if(interval >= 0){
+					startTimer(interval);
+				}
 			}
 			
 			if(getDistance() == null){ setDistance(0); }
@@ -122,17 +124,12 @@ module Data{
 				return;
 			}
 			var interval = getInterval();
-			if(interval == -1){
+			gpsFinding = true;
+			if(interval != 0){
 				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
-				var accuracyChanged = currentLocation != null;
-				currentLocation = null;
-				invokeTimerCallback(accuracyChanged);
-			} else if(interval == 0){
-				gpsFinding = true;
-				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
-			} else {
-				gpsFinding = true;
 				Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
+			} else {
+				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
 			}
 		}
 		

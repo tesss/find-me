@@ -53,7 +53,7 @@ module UI{
 				var accuracy = dataStorage.currentLocation == null ? null : dataStorage.currentLocation[Data.ACCURACY];
 				if(accuracy == null || accuracy == Position.QUALITY_NOT_AVAILABLE){
 					gpsIcon = null;
-				} else if(accuracy == Position.QUALITY_LAST_KNOWN){
+				} else if(accuracy == Position.QUALITY_LAST_KNOWN || dataStorage.getInterval() == -1){
 					gpsIcon = Ui.loadResource(Rez.Drawables.GpsLast);
 				} else if(accuracy == Position.QUALITY_POOR){
 					gpsIcon = Ui.loadResource(Rez.Drawables.GpsPoor);
@@ -76,7 +76,11 @@ module UI{
 				return;
 			}
 			Ui.requestUpdate();
-			heading = Data.heading(info);
+			if(info == null || (info.speed != null && info.speed > Data.SPEED_LIMIT && dataStorage.getInterval() > 0)){
+				heading = null;
+			} else {
+				heading = Data.heading(info);
+			}
 			if(bearing != null && (directionDrawable.angle * 1000).toNumber() != (bearing * 1000).toNumber()){
 				anim = true;	
 				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 2, method(:animCallback));
@@ -99,8 +103,8 @@ module UI{
 				dc.drawLine(drawModel.line1Dis[0], drawModel.line1Dis[1], drawModel.line1Dis[2], drawModel.line1Dis[3]);
 				dc.drawLine(drawModel.line2Dis[0], drawModel.line2Dis[1], drawModel.line2Dis[2], drawModel.line2Dis[3]);
 				
-				var str = "NO GPS";
-				if(interval >= 0){
+				var str = "MANUAL GPS";
+				if(interval >= 0 || dataStorage.gpsFinding){
 					if(dots.length() < 3){
 						dots = dots + ".";
 					} else {
@@ -269,6 +273,13 @@ module UI{
 		}
 		
 		function onSelect(){
+			if(dataStorage.getInterval() == -1){
+				dataStorage.onTimer();
+				Alert.alert(Alert.GPS_MANUAL);
+			}
+		}
+		
+		function onMenu(){
 			var locations = model.get();
 			locations.fullRefresh = true;
 			Ui.pushView(new LocationMenu(locations), new LocationMenuDelegate(model), transition);

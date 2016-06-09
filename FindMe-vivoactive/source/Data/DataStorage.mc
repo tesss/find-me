@@ -132,7 +132,8 @@ module Data{
 				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
 			} else {
 				gpsFinding = true;
-				Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
+				//Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
+				updateCurrentLocation(Position.getInfo());
 			}
 		}
 		

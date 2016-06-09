@@ -7,6 +7,7 @@ module Data {
 	const NAME_LIMIT = 15;
 	const ZERO_LIMIT = 0.02;
 	const LOC_MAX_COUNT = 100;
+	const SPEED_LIMIT = 2;
 	
 	function toRadians(degrees){
 		return degrees * Math.PI / 180;

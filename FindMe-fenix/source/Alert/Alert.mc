@@ -4,6 +4,7 @@ module Alert{
 	enum {
 		GPS_FOUND,
 		GPS_LOST,
+		GPS_MANUAL,
 		ACTIVITY_START,
 		ACTIVITY_SAVE,
 		ACTIVITY_DISCARD,
@@ -18,6 +19,8 @@ module Alert{
 		if(event == GPS_FOUND){
 			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
 		} else if(event == GPS_LOST){
+			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
+		} else if(event == GPS_MANUAL){
 			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
 		} else if(event == ACTIVITY_START){
 			Attention.playTone(Attention.TONE_START);
