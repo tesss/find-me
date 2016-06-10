@@ -7,8 +7,8 @@ module UI{
 	class NewTypesMenu extends Ui.Menu {
 		function initialize(){
 			setTitle("Type");
-			for(var i = 0; i < Data.DataStorage.TYPES.size(); i++){
-				addItem(Data.DataStorage.TYPES[i], i);
+			for(var i = 0; i < dataStorage.TYPES.size(); i++){
+				addItem(dataStorage.TYPES[i], i);
 			}
 		}
 	}
@@ -25,7 +25,7 @@ module UI{
 		}
 	
 	    function onMenuItem(item) {
-	    	var index = getMenuIndex(item, Data.DataStorage.TYPES.size());
+	    	var index = getMenuIndex(item, dataStorage.TYPES.size());
 	    	var loc = Position.parse(locationStr, format);
 	    	var radians = loc.toRadians();
 	    	var location = [null, name, radians[0], radians[1], index, null];

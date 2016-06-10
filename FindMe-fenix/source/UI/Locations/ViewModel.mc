@@ -33,13 +33,13 @@ module UI{
      			return "All";
 	    	} else {
 	    		var key = get(i).get(0)[Data.LOC_TYPE];
-	    		return Data.DataStorage.TYPES[key];
+	    		return dataStorage.TYPES[key];
 	    	}
 		}
 		
 		function delete(){
 			var locationsModel = get();
-			var currentId = locationsModel.get()[Data.DataStorage.LOC_ID];
+			var currentId = locationsModel.get()[Data.LOC_ID];
 			dataStorage.deleteLocation(currentId);
 			locationsModel.locations = Data.ArrayExt.removeAt(locationsModel.locations, locationsModel.index);
 			if(locationsModel.index == locationsModel.locations.size()){
@@ -53,12 +53,12 @@ module UI{
 			var typeIndex = index;
 			for(var i = 0; i < all.size(); i++){
 				var location = all.get(i);
-				var id = location[Data.DataStorage.LOC_ID];
+				var id = location[Data.LOC_ID];
 				if(index != 0 && id == currentId){
 					all.locations = Data.ArrayExt.removeAt(all.locations, i);
 					i--;
 				} else if(id > currentId){
-					location[Data.DataStorage.LOC_ID]--;
+					location[Data.LOC_ID]--;
 				}
 			}
 			if(index == 0){
@@ -70,7 +70,7 @@ module UI{
 					var locations = get(i);
 					for(var j = 0; j < locations.size(); j++){
 						var location = locations.get(j);
-						var id = location[Data.DataStorage.LOC_ID];
+						var id = location[Data.LOC_ID];
 						if(id == currentId){
 							locations.locations = Data.ArrayExt.removeAt(locations.locations, j);
 							typeIndex = i;

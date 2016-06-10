@@ -184,7 +184,7 @@ module UI{
 			
 			setColor(dc, COLOR_SECONDARY);
 			dc.drawText(drawModel.type[0], drawModel.type[1], Graphics.FONT_XTINY, 
-				Data.DataStorage.TYPES[location[Data.LOC_TYPE]], Graphics.TEXT_JUSTIFY_CENTER);
+				dataStorage.TYPES[location[Data.LOC_TYPE]], Graphics.TEXT_JUSTIFY_CENTER);
 			
 			if(model.showArrows()){
 				setColor(dc, COLOR_LOWLIGHT);
