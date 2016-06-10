@@ -30,6 +30,9 @@ module Data{
 			"Custom"
 		];
 		
+		const TIMER_INTERVAL = 1000;
+		const LAST_POSITION_INTERVAL = 10;
+		
 		var app = null;
 		var timer;
 		var currentLocation;
@@ -38,6 +41,7 @@ module Data{
 		var locCount;
 		var cache;
 		var gpsFinding;
+		var tickNumber;
 		
 		function initialize(){
 			app = Application.getApp().weak();
@@ -112,51 +116,55 @@ module Data{
 			timer.stop();
 			Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 			gpsFinding = false;
-			onTimer();
-			if(interval != 0){
-				var int = interval > 0 ? interval * 1000 : 10000;
-				timer.start(method(:onTimer), int, true);
+			if(interval >= 0){
+				tickNumber = interval;
+				onTimer();
+			} else {
+				tickNumber = 0;
 			}
+			timer.start(method(:onTimer), TIMER_INTERVAL, true);
 		}
 		
 		function onTimer(shot){
+			var interval = getInterval();
+			if(interval > 0){
+				tickNumber++;
+			}
+			if(currentLocation != null && currentLocation[ACCURACY] > Position.QUALITY_LAST_KNOWN && Time.Time.now().subtract(currentLocation[TIMESTAMP]).value() >= LAST_POSITION_INTERVAL){
+				currentLocation[ACCURACY] = Position.QUALITY_LAST_KNOWN;
+				invokeTimerCallback(true);
+			}
 			if(gpsFinding){
 				return;
 			}
-			var interval = getInterval();
-			shot = shot == true;
-			if(interval != 0){
-				if(interval == -1 && shot || interval > 0){
-					gpsFinding = true;
-					Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
-				} else if(interval == -1 && currentLocation != null){
-					Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
-				}
-			} else {
+			if(interval == 0 || shot == true || (interval > 0 && tickNumber >= interval)) {
 				gpsFinding = true;
+				tickNumber = 0;
 				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
 			}
 		}
 		
 		function updateCurrentLocation(info){
-			gpsFinding = false;
 			var interval = getInterval();
 			if(interval != 0){
-				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+				gpsFinding = false;
 			}
 			if(info.accuracy > Position.QUALITY_LAST_KNOWN){
-				if(currentLocation == null || currentLocation[ACCURACY] <= Position.QUALITY_LAST_KNOWN){
+				if(interval != 0){
+					Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+				}
+				if(currentLocation == null || interval == 0 && currentLocation[ACCURACY] <= Position.QUALITY_LAST_KNOWN || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
 					Alert.alert(Alert.GPS_FOUND);
 				}
 			} else {
-				if(currentLocation != null && currentLocation[ACCURACY] > Position.QUALITY_LAST_KNOWN && interval >= 0){
+				if(currentLocation != null && (interval == 0 || info.accuracy == Position.QUALITY_NOT_AVAILABLE)){
 					Alert.alert(Alert.GPS_LOST);
 				}
 			}
 			
 			var radians = info.position.toRadians();
 			var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
-			currentLocation = [radians[0], radians[1], info.heading, info.accuracy];
+			currentLocation = [radians[0], radians[1], info.heading, info.accuracy, info.when];
 			invokeTimerCallback(accuracyChanged);
 		}
 		
