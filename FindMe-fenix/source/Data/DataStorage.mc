@@ -41,7 +41,6 @@ module Data{
 		var locCount;
 		var cache;
 		var gpsFinding;
-		var tickNumber;
 		
 		function initialize(){
 			app = Application.getApp().weak();
@@ -117,29 +116,26 @@ module Data{
 			Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 			gpsFinding = false;
 			if(interval >= 0){
-				tickNumber = interval;
 				onTimer();
-			} else {
-				tickNumber = 0;
 			}
 			timer.start(method(:onTimer), TIMER_INTERVAL, true);
 		}
 		
 		function onTimer(shot){
 			var interval = getInterval();
-			if(interval > 0){
-				tickNumber++;
-			}
-			if(currentLocation != null && currentLocation[ACCURACY] > Position.QUALITY_LAST_KNOWN && Time.Time.now().subtract(currentLocation[TIMESTAMP]).value() >= LAST_POSITION_INTERVAL){
-				currentLocation[ACCURACY] = Position.QUALITY_LAST_KNOWN;
-				invokeTimerCallback(true);
+			var duration = null;
+			if(currentLocation != null){
+				duration = Time.Time.now().subtract(currentLocation[TIMESTAMP]).value();
+				if(currentLocation[ACCURACY] > Position.QUALITY_LAST_KNOWN && duration >= LAST_POSITION_INTERVAL){
+					currentLocation[ACCURACY] = Position.QUALITY_LAST_KNOWN;
+					invokeTimerCallback(true);
+				}
 			}
 			if(gpsFinding){
 				return;
 			}
-			if(interval == 0 || shot == true || (interval > 0 && tickNumber >= interval)) {
+			if(interval == 0 || shot == true || (interval > 0 && (duration == null || duration >= interval))) {
 				gpsFinding = true;
-				tickNumber = 0;
 				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
 			}
 		}
