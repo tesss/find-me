@@ -85,11 +85,14 @@ module UI{
 				anim = true;
 				var t1 = directionDrawable.angle;
 				var t2 = bearing;
+				var sign;
 				if((t1 - t2).abs() > Math.PI){
-					if(t1 > Math.PI){
-						t1 = t1 - Math.PI * 2;
+					if(t1.abs() > Math.PI){
+						sign = t1 < 0 ? 1 : -1;
+						t1 = t1 + sign * Math.PI * 2;
 					} else {
-						t2 = t2 - Math.PI * 2;
+						sign = t2 < 0 ? 1 : -1;
+						t2 = t2 + sign * Math.PI * 2;
 					}
 				}
 				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, t1, t2, 2, method(:animCallback));

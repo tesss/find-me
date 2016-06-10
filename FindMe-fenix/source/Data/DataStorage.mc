@@ -128,9 +128,8 @@ module Data{
 			if(interval != 0){
 				if(interval == -1 && shot || interval > 0){
 					gpsFinding = true;
-					Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
-				}
-				if(interval == -1 && (currentLocation != null || shot) || interval > 0){
+					Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
+				} else if(interval == -1 && currentLocation != null){
 					Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
 				}
 			} else {
@@ -141,12 +140,16 @@ module Data{
 		
 		function updateCurrentLocation(info){
 			gpsFinding = false;
+			var interval = getInterval();
+			if(interval != 0){
+				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+			}
 			if(info.accuracy > Position.QUALITY_LAST_KNOWN){
 				if(currentLocation == null || currentLocation[ACCURACY] <= Position.QUALITY_LAST_KNOWN){
 					Alert.alert(Alert.GPS_FOUND);
 				}
 			} else {
-				if(currentLocation != null && currentLocation[ACCURACY] > Position.QUALITY_LAST_KNOWN && getInterval() >= 0){
+				if(currentLocation != null && currentLocation[ACCURACY] > Position.QUALITY_LAST_KNOWN && interval >= 0){
 					Alert.alert(Alert.GPS_LOST);
 				}
 			}
