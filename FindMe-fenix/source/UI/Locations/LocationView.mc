@@ -53,7 +53,7 @@ module UI{
 				var accuracy = dataStorage.currentLocation == null ? null : dataStorage.currentLocation[Data.ACCURACY];
 				if(accuracy == null || accuracy == Position.QUALITY_NOT_AVAILABLE){
 					gpsIcon = null;
-				} else if(accuracy == Position.QUALITY_LAST_KNOWN || dataStorage.getInterval() == -1){
+				} else if(accuracy == Position.QUALITY_LAST_KNOWN){
 					gpsIcon = Ui.loadResource(Rez.Drawables.GpsLast);
 				} else if(accuracy == Position.QUALITY_POOR){
 					gpsIcon = Ui.loadResource(Rez.Drawables.GpsPoor);
@@ -113,7 +113,7 @@ module UI{
 				dc.drawLine(drawModel.line2Dis[0], drawModel.line2Dis[1], drawModel.line2Dis[2], drawModel.line2Dis[3]);
 				
 				var str = "MANUAL GPS";
-				if(interval >= 0 || dataStorage.gpsFinding){
+				if(dataStorage.gpsFinding){
 					if(dots.length() < 3){
 						dots = dots + ".";
 					} else {
@@ -283,7 +283,7 @@ module UI{
 		
 		function onSelect(){
 			if(dataStorage.getInterval() == -1){
-				dataStorage.onTimer();
+				dataStorage.onTimer(true);
 				Alert.alert(Alert.GPS_MANUAL);
 			}
 		}

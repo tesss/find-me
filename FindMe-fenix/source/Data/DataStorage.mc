@@ -52,9 +52,7 @@ module Data{
 				interval = 0; 
 				setInterval(interval);
 			} else {
-				if(interval >= 0){
-					startTimer(interval);
-				}
+				startTimer(interval);
 			}
 			
 			if(getDistance() == null){ setDistance(0); }
@@ -112,23 +110,31 @@ module Data{
 		
 		hidden function startTimer(interval){
 			timer.stop();
-			if(interval <= 0){
-				onTimer();
-			} else {
-				timer.start(method(:onTimer), interval * 1000, true);
+			Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+			gpsFinding = false;
+			onTimer();
+			if(interval != 0){
+				var int = interval > 0 ? interval * 1000 : 10000;
+				timer.start(method(:onTimer), int, true);
 			}
 		}
 		
-		function onTimer(){
+		function onTimer(shot){
 			if(gpsFinding){
 				return;
 			}
 			var interval = getInterval();
-			gpsFinding = true;
+			shot = shot == true;
 			if(interval != 0){
-				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
-				Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
+				if(interval == -1 && shot || interval > 0){
+					gpsFinding = true;
+					Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+				}
+				if(interval == -1 && (currentLocation != null || shot) || interval > 0){
+					Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
+				}
 			} else {
+				gpsFinding = true;
 				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
 			}
 		}
@@ -140,7 +146,7 @@ module Data{
 					Alert.alert(Alert.GPS_FOUND);
 				}
 			} else {
-				if(currentLocation != null && currentLocation[ACCURACY] > Position.QUALITY_LAST_KNOWN){
+				if(currentLocation != null && currentLocation[ACCURACY] > Position.QUALITY_LAST_KNOWN && getInterval() >= 0){
 					Alert.alert(Alert.GPS_LOST);
 				}
 			}
