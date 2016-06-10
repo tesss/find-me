@@ -15,11 +15,10 @@ module UI{
 		
 		function onTextEntered(name, changed){
 			if(name.length() > 15){
-				pushInfoView("Max length 15", false, true);
-			} else {
-				keepMainView = true;
-				Ui.pushView(new NewTypesMenu(), new NewTypesMenuDelegate(locationStr, name, format), transition);
+				name = name.substring(0, 15);
 			}
+			keepMainView = true;
+			Ui.pushView(new NewTypesMenu(), new NewTypesMenuDelegate(locationStr, name, format), transition);
 		}
 	}
 }

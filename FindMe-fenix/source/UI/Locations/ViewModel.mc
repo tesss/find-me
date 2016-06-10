@@ -96,13 +96,13 @@ module UI{
 			var data = null;
 			if(global){
 				if(index > 0){
-					data = get().locations[0][Data.LOC_TYPE];
+					data = get().get(0)[Data.LOC_TYPE];
 				}
 			} else {
-				var locations = get().locations;
+				var locations = get();
 				data = new [locations.size()];
 				for(var i = 0; i < data.size(); i++){
-					data[i] = locations[i][Data.LOC_ID];
+					data[i] = locations.get(i)[Data.LOC_ID];
 				}
 			}
 			dataStorage.deleteAllLocations(data);

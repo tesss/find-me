@@ -300,6 +300,7 @@ module Data{
 				for(var i = 0; i < locations.size(); i++){
 					if(locations.types[i] == data){
 						locations.remove(i);
+						i--;
 					}
 				}
 				setLocations(locations);
@@ -310,6 +311,7 @@ module Data{
 						if(locations.ids[i] == data[j]){
 							locations.remove(i);
 							data = ArrayExt.removeAt(data, j);
+							i--;
 							break;
 						}
 					}
