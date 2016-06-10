@@ -29,7 +29,7 @@ module UI{
 					if(dataStorage.getInterval() >= 0){
 						info = "Location not available";
 					} else {
-						info = "GPS disabled";
+						info = "GPS manual update";
 					}
 				} else if(dataStorage.currentLocation[Data.ACCURACY] == Position.QUALITY_LAST_KNOWN){
 					info = "Using last known position";

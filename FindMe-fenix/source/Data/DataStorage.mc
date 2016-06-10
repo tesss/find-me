@@ -135,12 +135,12 @@ module Data{
 		
 		function updateCurrentLocation(info){
 			gpsFinding = false;
-			if(info.accuracy != Position.QUALITY_NOT_AVAILABLE){
-				if(currentLocation == null || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
+			if(info.accuracy > Position.QUALITY_LAST_KNOWN){
+				if(currentLocation == null || currentLocation[ACCURACY] <= Position.QUALITY_LAST_KNOWN){
 					Alert.alert(Alert.GPS_FOUND);
 				}
 			} else {
-				if(currentLocation != null && currentLocation[ACCURACY] != Position.QUALITY_NOT_AVAILABLE){
+				if(currentLocation != null && currentLocation[ACCURACY] > Position.QUALITY_LAST_KNOWN){
 					Alert.alert(Alert.GPS_LOST);
 				}
 			}
@@ -230,24 +230,31 @@ module Data{
 		
 		// sorting
 		
-		function sortLocationsList(locations, id){ // on load
+		function sortLocationsList(locations){
 			var sortBy = getSortBy();
 			if(currentLocation != null && sortBy == SORTBY_DISTANCE){
 				for(var i = 0; i < locations.size(); i++){
 					locations[i][LOC_DIST] = distance(locations[i][LOC_LAT], locations[i][LOC_LON], currentLocation[LAT], currentLocation[LON]);
 				}
-				locations = ArrayExt.sort(locations, method(:distanceComparer));
+				return ArrayExt.sort(locations, method(:distanceComparer));
+			} else {
+				return ArrayExt.sort(locations, method(:nameComparer));
 			}
-			if(id == null){
-				return [locations, null];
-			}
-			return [locations, ArrayExt.indexOf(locations, id, method(:idPredicate))];
 		}
 		
 		function nameComparer(a, b){
-			var h1 = a[LOC_NAME].substring(0, 2).hashCode();
-			var h2 = b[LOC_NAME].substring(0, 2).hashCode();
-			return h1 - h2;
+			var t1 = a[LOC_NAME].toLower();
+	    	var t2 = b[LOC_NAME].toLower();
+	    	var i = 0;
+	    	var d = 0;
+			do {
+				if(i >= t1.length() || i >= t2.length()){
+					return t1.length() - t2.length();
+				}
+				d = t1.substring(i, i + 1).hashCode() - t2.substring(i, i + 1).hashCode();
+				i++;
+			} while(d == 0);
+			return d;
 		}
 		
 		function typeComparer(a, b){

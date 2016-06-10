@@ -241,6 +241,8 @@ module Data{
 					locations[i][LOC_DIST] = distance(locations[i][LOC_LAT], locations[i][LOC_LON], currentLocation[LAT], currentLocation[LON]);
 				}
 				locations = ArrayExt.sort(locations, method(:distanceComparer));
+			} else {
+				locations = ArrayExt.sort(locations, method(:nameComparer));
 			}
 			if(id == null){
 				return [locations, null];

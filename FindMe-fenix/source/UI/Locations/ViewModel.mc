@@ -168,9 +168,7 @@ module UI{
 		}
 		
 		function sort(){
-			var sorted = dataStorage.sortLocationsList(locations, get()[Data.LOC_ID]);
-			locations = sorted[0];
-			index = sorted[1];
+			locations = dataStorage.sortLocationsList(locations);
 		}
 		
 		function savePersisted(){

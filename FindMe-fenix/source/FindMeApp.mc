@@ -19,6 +19,7 @@ class FindMeApp extends App.AppBase {
 	    //UI.dataStorage.addLocations(locations);
     }
 
+
     function getInitialView() {
         return [new UI.MainView()];
     }
@@ -31,7 +32,5 @@ class FindMeApp extends App.AppBase {
 		// transaction while saving
 		// id - generated max
 		// import alert
-
-		// improve heading
-    	
     	// register onImport after open mainView
+    	// sort imported locations before show

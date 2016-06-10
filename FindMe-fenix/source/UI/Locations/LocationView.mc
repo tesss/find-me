@@ -82,8 +82,17 @@ module UI{
 				heading = Data.heading(info);
 			}
 			if(bearing != null && (directionDrawable.angle * 1000).toNumber() != (bearing * 1000).toNumber()){
-				anim = true;	
-				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 2, method(:animCallback));
+				anim = true;
+				var t1 = directionDrawable.angle;
+				var t2 = bearing;
+				if((t1 - t2).abs() > Math.PI){
+					if(t1 > Math.PI){
+						t1 = t1 - Math.PI * 2;
+					} else {
+						t2 = t2 - Math.PI * 2;
+					}
+				}
+				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, t1, t2, 2, method(:animCallback));
 			}
 		}
 		
