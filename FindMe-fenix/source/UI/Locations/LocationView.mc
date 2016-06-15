@@ -238,6 +238,7 @@ module UI{
 		}
 		
 		function onHide(){
+			model.fullRefresh = true;
 			Sensor.enableSensorEvents(null);
 			dataStorage.timerCallback = null;
 		}
