@@ -216,7 +216,6 @@ module UI{
 		}
 		
 		function onHide(){
-			model.fullRefresh = true;
 			dataStorage.timerCallback = null;
 		}
 	}
