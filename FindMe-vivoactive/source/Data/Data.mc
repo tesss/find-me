@@ -70,7 +70,8 @@ module Data {
 		LAT,
 		LON,
 		HEADING,
-		ACCURACY
+		ACCURACY,
+		TIMESTAMP
 	}
 	
 	enum {

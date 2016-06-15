@@ -30,6 +30,9 @@ module Data{
 			"Custom"
 		];
 		
+		const TIMER_INTERVAL = 1000;
+		const LAST_POSITION_INTERVAL = 10;
+		
 		var app = null;
 		var timer;
 		var currentLocation;
@@ -110,48 +113,54 @@ module Data{
 		
 		hidden function startTimer(interval){
 			timer.stop();
-			if(interval <= 0){
+			Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+			gpsFinding = false;
+			if(interval >= 0){
 				onTimer();
-			} else {
-				timer.start(method(:onTimer), interval * 1000, true);
 			}
+			timer.start(method(:onTimer), TIMER_INTERVAL, true);
 		}
 		
-		function onTimer(){
+		function onTimer(shot){
+			var interval = getInterval();
+			var duration = null;
+			if(currentLocation != null){
+				duration = Time.Time.now().subtract(currentLocation[TIMESTAMP]).value();
+				if(currentLocation[ACCURACY] > Position.QUALITY_LAST_KNOWN && duration >= LAST_POSITION_INTERVAL){
+					currentLocation[ACCURACY] = Position.QUALITY_LAST_KNOWN;
+					invokeTimerCallback(true);
+				}
+			}
 			if(gpsFinding){
 				return;
 			}
-			var interval = getInterval();
-			if(interval == -1){
-				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
-				var accuracyChanged = currentLocation != null;
-				currentLocation = null;
-				invokeTimerCallback(accuracyChanged);
-			} else if(interval == 0){
+			if(interval == 0 || shot == true || (interval > 0 && (duration == null || duration >= interval))) {
 				gpsFinding = true;
 				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
-			} else {
-				gpsFinding = true;
-				//Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:updateCurrentLocation));
-				updateCurrentLocation(Position.getInfo());
 			}
 		}
 		
 		function updateCurrentLocation(info){
-			gpsFinding = false;
-			if(info.accuracy != Position.QUALITY_NOT_AVAILABLE){
-				if(currentLocation == null || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
+			var interval = getInterval();
+			if(interval != 0){
+				gpsFinding = false;
+			}
+			if(info.accuracy > Position.QUALITY_LAST_KNOWN){
+				if(interval != 0){
+					Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+				}
+				if(currentLocation == null || interval == 0 && currentLocation[ACCURACY] <= Position.QUALITY_LAST_KNOWN || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
 					Alert.alert(Alert.GPS_FOUND);
 				}
 			} else {
-				if(currentLocation != null && currentLocation[ACCURACY] != Position.QUALITY_NOT_AVAILABLE){
+				if(currentLocation != null && (interval == 0 || info.accuracy == Position.QUALITY_NOT_AVAILABLE)){
 					Alert.alert(Alert.GPS_LOST);
 				}
 			}
 			
 			var radians = info.position.toRadians();
 			var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
-			currentLocation = [radians[0], radians[1], info.heading, info.accuracy];
+			currentLocation = [radians[0], radians[1], info.heading, info.accuracy, info.when];
 			invokeTimerCallback(accuracyChanged);
 		}
 		
@@ -234,26 +243,31 @@ module Data{
 		
 		// sorting
 		
-		function sortLocationsList(locations, id){ // on load
+		function sortLocationsList(locations){
 			var sortBy = getSortBy();
 			if(currentLocation != null && sortBy == SORTBY_DISTANCE){
 				for(var i = 0; i < locations.size(); i++){
 					locations[i][LOC_DIST] = distance(locations[i][LOC_LAT], locations[i][LOC_LON], currentLocation[LAT], currentLocation[LON]);
 				}
-				locations = ArrayExt.sort(locations, method(:distanceComparer));
+				return ArrayExt.sort(locations, method(:distanceComparer));
 			} else {
-				locations = ArrayExt.sort(locations, method(:nameComparer));
+				return ArrayExt.sort(locations, method(:nameComparer));
 			}
-			if(id == null){
-				return [locations, null];
-			}
-			return [locations, ArrayExt.indexOf(locations, id, method(:idPredicate))];
 		}
 		
 		function nameComparer(a, b){
-			var h1 = a[LOC_NAME].substring(0, 2).hashCode();
-			var h2 = b[LOC_NAME].substring(0, 2).hashCode();
-			return h1 - h2;
+			var t1 = a[LOC_NAME].toLower();
+	    	var t2 = b[LOC_NAME].toLower();
+	    	var i = 0;
+	    	var d = 0;
+			do {
+				if(i >= t1.length() || i >= t2.length()){
+					return t1.length() - t2.length();
+				}
+				d = t1.substring(i, i + 1).hashCode() - t2.substring(i, i + 1).hashCode();
+				i++;
+			} while(d == 0);
+			return d;
 		}
 		
 		function typeComparer(a, b){
@@ -286,6 +300,7 @@ module Data{
 				for(var i = 0; i < locations.size(); i++){
 					if(locations.types[i] == data){
 						locations.remove(i);
+						i--;
 					}
 				}
 				setLocations(locations);
@@ -296,6 +311,7 @@ module Data{
 						if(locations.ids[i] == data[j]){
 							locations.remove(i);
 							data = ArrayExt.removeAt(data, j);
+							i--;
 							break;
 						}
 					}

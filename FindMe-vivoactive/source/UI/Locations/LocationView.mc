@@ -15,6 +15,7 @@ module UI{
 		hidden var interval;
 		hidden var anim;
 		hidden var bearing;
+		hidden var heading;
 		hidden var gpsIcon;
 		hidden var activityIcon;
 		
@@ -94,8 +95,8 @@ module UI{
 				dc.drawLine(drawModel.line1Dis[0], drawModel.line1Dis[1], drawModel.line1Dis[2], drawModel.line1Dis[3]);
 				dc.drawLine(drawModel.line2Dis[0], drawModel.line2Dis[1], drawModel.line2Dis[2], drawModel.line2Dis[3]);
 				
-				var str = "NO GPS";
-				if(interval >= 0){
+				var str = "MANUAL GPS";
+				if(dataStorage.gpsFinding){
 					if(dots.length() < 3){
 						dots = dots + ".";
 					} else {
@@ -261,6 +262,13 @@ module UI{
 		}
 		
 		function onSelect(){
+			if(dataStorage.getInterval() == -1){
+				dataStorage.onTimer(true);
+				Alert.alert(Alert.GPS_MANUAL);
+			}
+		}
+		
+		function onMenu(){
 			var locations = model.get();
 			locations.fullRefresh = true;
 			Ui.pushView(new LocationMenu(locations), new LocationMenuDelegate(model), transition);

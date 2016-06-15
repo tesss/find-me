@@ -16,7 +16,7 @@ module UI{
 			type = Data.ArrayExt.indexOf(TypePickerFactory.values, type, method(:predicate));
 			var sorting = dataStorage.getSortBy();
 			sorting = Data.ArrayExt.indexOf(SortingPickerFactory.values, sorting, method(:predicate));
-			setOptions({
+			Picker.initialize({
 				:title => getText("Settings", {:isSettings => true, :isTitle => true}), 
 				:pattern => [
 					getText("Int.", {:isSettings => true}),
@@ -32,7 +32,8 @@ module UI{
 					new TypePickerFactory(),
 					getText(""),
 					getText("Sort", {:isSettings => true}),
-					new SortingPickerFactory()
+					new SortingPickerFactory(),
+					getText("")
 				],
 				:defaults => [
 					null,
@@ -84,7 +85,7 @@ module UI{
 		function getDrawable(index, isSelected){
 			var value = values[index];
 			if(value == -1){
-				value = "Disable";
+				value = "Manual";
 			} else if(value == 0){
 				value = "Contin.";
 			} else if (value < 60){
