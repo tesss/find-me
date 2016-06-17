@@ -80,7 +80,7 @@ module UI{
 	}
 	
 	class IntervalPickerFactory extends Ui.PickerFactory {
-		static const values = [0, 5, 10, -1];
+		static const values = [0, 1, 5, 10, -1];
 		
 		function getDrawable(index, isSelected){
 			var value = values[index];
