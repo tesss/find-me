@@ -149,7 +149,7 @@ module Data{
 				if(interval != 0){
 					Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 				}
-				if(currentLocation == null || interval == 0 && currentLocation[ACCURACY] <= Position.QUALITY_LAST_KNOWN || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
+				if(currentLocation == null || interval == 0 && currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
 					setCurrentLocation(info);
 					Alert.alert(Alert.GPS_FOUND);
 					return;
