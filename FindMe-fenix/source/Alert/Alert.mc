@@ -12,32 +12,21 @@ module Alert{
 		ZERO_DISTANCE,
 		ERROR
 	}
+	
+	hidden function vibrate(){
+		Attention.vibrate([new Attention.VibeProfile(50, 500)]);
+	}
 
 	function alert(event){
-		var duty = 50;
-		var length = 500;
-		if(event == GPS_FOUND){
-			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
-		} else if(event == GPS_LOST){
-			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
-		} else if(event == GPS_MANUAL){
-			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
-		} else if(event == ACTIVITY_START){
+		vibrate();
+		if(event == ACTIVITY_START){
 			Attention.playTone(Attention.TONE_START);
-			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
 		} else if(event == ACTIVITY_SAVE){
 			Attention.playTone(Attention.TONE_STOP);
-			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
 		} else if(event == ACTIVITY_DISCARD){
 			Attention.playTone(Attention.TONE_STOP);
-			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
 		} else if(event == ACTIVITY_FAILURE){
 			Attention.playTone(Attention.TONE_ERROR);
-			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
-		} else if(event == ZERO_DISTANCE){
-			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
-		} else if(event == ERROR){
-			Attention.vibrate([new Attention.VibeProfile(duty, length)]);
-		}  
+		} 
 	}
 }

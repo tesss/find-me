@@ -150,14 +150,21 @@ module Data{
 					Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 				}
 				if(currentLocation == null || interval == 0 && currentLocation[ACCURACY] <= Position.QUALITY_LAST_KNOWN || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
+					setCurrentLocation(info);
 					Alert.alert(Alert.GPS_FOUND);
+					return;
 				}
 			} else {
 				if(currentLocation != null && (interval == 0 || info.accuracy == Position.QUALITY_NOT_AVAILABLE)){
+					setCurrentLocation(info);
 					Alert.alert(Alert.GPS_LOST);
+					return;
 				}
 			}
-			
+			setCurrentLocation(info);
+		}
+		
+		hidden function setCurrentLocation(info){
 			var radians = info.position.toRadians();
 			var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
 			currentLocation = [radians[0], radians[1], info.heading, info.accuracy, info.when];
