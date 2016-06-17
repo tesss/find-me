@@ -61,7 +61,7 @@ module Data{
 			if(getDistance() == null){ setDistance(0); }
 			if(getFormat() == null){ setFormat(Position.GEO_DEG); }
 			if(getActivityType() == null){ setActivityType(ActivityRecording.SPORT_GENERIC); }
-			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
+			if(getSortBy() == null){ setSortBy(SORTBY_DATE); }
 			
 			locCount = getProp(KEY_LOC_TYPE, true).size();
 		}
@@ -252,7 +252,9 @@ module Data{
 		
 		function sortLocationsList(locations){
 			var sortBy = getSortBy();
-			if(currentLocation != null && sortBy == SORTBY_DISTANCE){
+			if(sortBy == SORTBY_DATE){
+				return locations;
+			} else if(currentLocation != null && sortBy == SORTBY_DISTANCE){
 				for(var i = 0; i < locations.size(); i++){
 					locations[i][LOC_DIST] = distance(locations[i][LOC_LAT], locations[i][LOC_LON], currentLocation[LAT], currentLocation[LON]);
 				}

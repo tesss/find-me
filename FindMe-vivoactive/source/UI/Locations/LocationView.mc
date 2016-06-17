@@ -210,13 +210,12 @@ module UI{
 		}
 		
 		function onShow(){
-			onTimer(true);
 			activityIcon = Ui.loadResource(Rez.Drawables.GpsActivity);
+			onTimer(true);
 			dataStorage.timerCallback = method(:onTimer);
 		}
 		
 		function onHide(){
-			Sensor.enableSensorEvents(null);
 			dataStorage.timerCallback = null;
 			gpsIcon = null;
 			activityIcon = null;

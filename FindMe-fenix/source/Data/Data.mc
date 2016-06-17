@@ -84,6 +84,7 @@ module Data {
 	}
 	
 	enum {
+		SORTBY_DATE,
 		SORTBY_NAME,
 		SORTBY_DISTANCE
 	}

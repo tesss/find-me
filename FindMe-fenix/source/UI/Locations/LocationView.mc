@@ -231,14 +231,15 @@ module UI{
 		}
 		
 		function onShow(){
-			onTimer(true);
 			activityIcon = Ui.loadResource(Rez.Drawables.GpsActivity);
+			onTimer(true);
 			Sensor.enableSensorEvents(method(:onSensor));
 			dataStorage.timerCallback = method(:onTimer);
 		}
 		
 		function onHide(){
 			dataStorage.timerCallback = null;
+			Sensor.enableSensorEvents(null);
 			gpsIcon = null;
 			activityIcon = null;
 		}
