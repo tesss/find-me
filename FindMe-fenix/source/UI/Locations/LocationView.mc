@@ -142,10 +142,12 @@ module UI{
 					) - angle;
 					directionDrawable.draw(dc);
 				} else {
-					if(bearing != null){
+					if(bearing != null && !model.fullRefresh){
 						Alert.alert(Alert.ZERO_DISTANCE);
 					}
 					bearing = null;
+					setColor(dc, COLOR_LOWLIGHT);
+					dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius);
 					setColor(dc, COLOR_SECONDARY);
 					dc.drawCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius);
 					setColor(dc, COLOR_HIGHLIGHT);
@@ -218,6 +220,7 @@ module UI{
 				dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius + 7);
 				directionDrawable.draw(dc);
 			} else {
+				anim = false;
 				var location = model.get();
 				if(location != null){
 					draw(location, dc);
