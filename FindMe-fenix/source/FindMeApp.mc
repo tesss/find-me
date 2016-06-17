@@ -26,7 +26,6 @@ class FindMeApp extends App.AppBase {
     	bridge = null;
     }
 
-
     function getInitialView() {
         return [new UI.MainView()];
     }

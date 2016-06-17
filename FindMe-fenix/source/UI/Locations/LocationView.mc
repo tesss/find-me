@@ -238,7 +238,6 @@ module UI{
 		}
 		
 		function onHide(){
-			Sensor.enableSensorEvents(null);
 			dataStorage.timerCallback = null;
 			gpsIcon = null;
 			activityIcon = null;
