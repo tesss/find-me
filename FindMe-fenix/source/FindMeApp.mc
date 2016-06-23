@@ -22,6 +22,7 @@ class FindMeApp extends App.AppBase {
     function onStop(){
     	UI.dispose();
     	bridge.dispose();
+    	bridge = null;
     }
 
     function getInitialView() {

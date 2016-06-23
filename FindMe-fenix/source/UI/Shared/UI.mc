@@ -124,6 +124,7 @@ module UI{
 	function dispose(){
 		release();
 		dataStorage.dispose();
+		dataStorage = null;
 	}
 	
 	function getMenuIndex(symbol, size){

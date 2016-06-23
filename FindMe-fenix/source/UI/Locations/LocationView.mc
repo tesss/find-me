@@ -297,7 +297,7 @@ module UI{
 		}
 		
 		function onSelect(){
-			if(dataStorage.getInterval() == -1){
+			if(dataStorage.getInterval() == -1 && !dataStorage.gpsFinding){
 				dataStorage.onTimer(true);
 				Alert.alert(Alert.GPS_MANUAL);
 			}
