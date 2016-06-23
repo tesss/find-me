@@ -68,7 +68,9 @@ module Data{
 		
 		function dispose(){
 			timer.stop();
+			timer = null;
 			session = null;
+			timerCallback = null;
 			Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 		}
 		
@@ -151,26 +153,16 @@ module Data{
 			if(interval != 0){
 				gpsFinding = false;
 			}
-			if(info.accuracy > Position.QUALITY_LAST_KNOWN){
-				if(interval != 0){
-					Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
-				}
-				if(currentLocation == null){
-					Alert.alert(Alert.GPS_FOUND);
-				}
+			if(info.accuracy > Position.QUALITY_LAST_KNOWN && interval != 0){
+				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 			}
-			if(info.accuracy == Position.QUALITY_NOT_AVAILABLE){
-				if(currentLocation != null){
-					Alert.alert(Alert.GPS_LOST);
-					currentLocation = null;
-					invokeTimerCallback(true);
-				}
-			} else {
-				var radians = info.position.toRadians();
-				var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
-				currentLocation = [radians[0], radians[1], info.heading, info.accuracy, info.when];
-				invokeTimerCallback(accuracyChanged);
+			if(currentLocation == null && info.accuracy >= Position.QUALITY_LAST_KNOWN){
+				Alert.alert(Alert.GPS_FOUND);
 			}
+			var radians = info.position.toRadians();
+			var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
+			currentLocation = [radians[0], radians[1], info.heading, info.accuracy, info.when];
+			invokeTimerCallback(accuracyChanged);
 		}
 		
 		// locations

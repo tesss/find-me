@@ -94,6 +94,7 @@ module UI{
 						t2 = t2 + sign * Math.PI * 2;
 					}
 				}
+				_.p("from: " + t1 + " to: " + t2);
 				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, t1, t2, 2, method(:animCallback));
 			}
 		}
