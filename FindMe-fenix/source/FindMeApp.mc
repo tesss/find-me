@@ -20,10 +20,8 @@ class FindMeApp extends App.AppBase {
     }
     
     function onStop(){
-    	UI.dataStorage.timer.stop();
-    	Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
-    	UI.dataStorage = null;
-    	bridge = null;
+    	UI.dataStorage.dispose();
+    	bridge.dispose();
     }
 
     function getInitialView() {

@@ -7,7 +7,11 @@ using _;
 module Comm {
 	class Bridge {
 		function initialize(){
-	        Comm.setMailboxListener( method(:onMail) );
+	        Comm.setMailboxListener(method(:onMail));
+	    }
+	    
+	    function dispose(){
+	    	Comm.setMailboxListener(null);
 	    }
 	    
 	    function parseMail(mail){

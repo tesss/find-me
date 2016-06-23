@@ -10,6 +10,10 @@ module Comm {
 	        Comm.setMailboxListener( method(:onMail) );
 	    }
 	    
+	    function dispose(){
+	    	Comm.setMailboxListener(null);
+	    }
+	    
 	    function parseMail(mail){
 	    	// mock
 	    	var l = 10;

@@ -66,6 +66,12 @@ module Data{
 			locCount = getProp(KEY_LOC_TYPE, true).size();
 		}
 		
+		function dispose(){
+			timer.stop();
+			session = null;
+			Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+		}
+		
 		// props
 		
 		hidden function getApp(){ return app.get(); }

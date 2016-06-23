@@ -48,6 +48,13 @@ module UI{
 			getDrawModel();
 		}
 		
+		function dispose(){
+			dataStorage.timerCallback = null;
+			Sensor.enableSensorEvents(null);
+			gpsIcon = null;
+			activityIcon = null;
+		}
+		
 		function onTimer(accuracyChanged){
 			if(accuracyChanged){
 				var accuracy = dataStorage.currentLocation == null ? null : dataStorage.currentLocation[Data.ACCURACY];
@@ -245,10 +252,7 @@ module UI{
 		}
 		
 		function onHide(){
-			dataStorage.timerCallback = null;
-			Sensor.enableSensorEvents(null);
-			gpsIcon = null;
-			activityIcon = null;
+			dispose();
 		}
 	}
 	
