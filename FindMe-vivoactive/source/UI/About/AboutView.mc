@@ -24,8 +24,8 @@ module UI {
 			dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT);
 			dc.drawText(wc, hc - fontPadding(Graphics.FONT_LARGE), Graphics.FONT_LARGE, "FindMe", Graphics.TEXT_JUSTIFY_CENTER);
 			dc.setColor(COLOR_LOWLIGHT, Graphics.COLOR_TRANSPARENT);
-			dc.drawText(wc, d - fontPadding(Graphics.FONT_XTINY), Graphics.FONT_XTINY, "(c) Andriy Babets", Graphics.TEXT_JUSTIFY_CENTER);
-			dc.drawText(wc, h - d - fontPadding(Graphics.FONT_XTINY), Graphics.FONT_XTINY, "STORAGE: " + dataStorage.locCount + "/" + Data.LOC_MAX_COUNT, Graphics.TEXT_JUSTIFY_CENTER);
+			dc.drawText(wc, d - fontPadding(Graphics.FONT_XTINY), Graphics.FONT_SMALL, "(c) Andriy Babets", Graphics.TEXT_JUSTIFY_CENTER);
+			dc.drawText(wc, h - d - fontPadding(Graphics.FONT_XTINY), Graphics.FONT_SMALL, "STORAGE: " + dataStorage.locCount + "/" + Data.LOC_MAX_COUNT, Graphics.TEXT_JUSTIFY_CENTER);
 		}
 	}
 	

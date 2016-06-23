@@ -75,7 +75,11 @@ module UI{
 			} else {
 				heading = Data.heading(info);
 			}
-			if(bearing != null && (directionDrawable.angle * 1000).toNumber() != (bearing * 1000).toNumber()){
+			if(bearing != null){
+				var d = directionDrawable.angle - bearing;
+				if(d.abs() < 0.017){
+					return;
+				}
 				anim = true;
 				var t1 = directionDrawable.angle;
 				var t2 = bearing;
@@ -180,7 +184,7 @@ module UI{
 			
 			setColor(dc, COLOR_SECONDARY);
 			dc.drawText(drawModel.type[0], drawModel.type[1], Graphics.FONT_XTINY, 
-				dataStorage.TYPES[location[Data.LOC_TYPE]], Graphics.TEXT_JUSTIFY_CENTER);
+				dataStorage.TYPES[location[Data.LOC_TYPE]].toUpper(), Graphics.TEXT_JUSTIFY_CENTER);
 			
 			if(model.showArrows()){
 				setColor(dc, COLOR_LOWLIGHT);

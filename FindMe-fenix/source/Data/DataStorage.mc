@@ -149,19 +149,22 @@ module Data{
 				if(interval != 0){
 					Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 				}
-				if(currentLocation == null || interval == 0 && currentLocation[ACCURACY] <= Position.QUALITY_LAST_KNOWN || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
+				if(currentLocation == null){
 					Alert.alert(Alert.GPS_FOUND);
 				}
-			} else {
-				if(currentLocation != null && (interval == 0 || info.accuracy == Position.QUALITY_NOT_AVAILABLE)){
-					Alert.alert(Alert.GPS_LOST);
-				}
 			}
-			
-			var radians = info.position.toRadians();
-			var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
-			currentLocation = [radians[0], radians[1], info.heading, info.accuracy, info.when];
-			invokeTimerCallback(accuracyChanged);
+			if(info.accuracy == Position.QUALITY_NOT_AVAILABLE){
+				if(currentLocation != null){
+					Alert.alert(Alert.GPS_LOST);
+					currentLocation = null;
+					invokeTimerCallback(true);
+				}
+			} else {
+				var radians = info.position.toRadians();
+				var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
+				currentLocation = [radians[0], radians[1], info.heading, info.accuracy, info.when];
+				invokeTimerCallback(accuracyChanged);
+			}
 		}
 		
 		// locations

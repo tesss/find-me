@@ -106,7 +106,7 @@ module UI{
 	}
 	
 	class DistancePickerFactory extends Ui.PickerFactory {
-		static const values = [0, 0.1, 0.5, 1, 10, 50, 100];
+		static const values = [0, 0.5, 1, 5, 10, 100];
 		
 		function getDrawable(index, isSelected){
 			var value = values[index];

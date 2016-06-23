@@ -106,19 +106,6 @@ module UI{
 			}
 			dataStorage.deleteAllLocations(data);
 		}
-		
-		function savePersisted(){
-			var locations = get().locations;
-			for(var i = 0; i < locations.size(); i++){
-				var location = locations[i];
-				PersistedLocations.persistLocation(new Position.Location({
-					:latitude => location[Data.LOC_LAT], 
-					:longitude => location[Data.LOC_LON], 
-					:format => :radians}), {
-					:name => location[Data.LOC_NAME]
-				});
-			}
-		}
 	}
 
 	class LocationsViewModel{

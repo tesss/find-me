@@ -28,7 +28,11 @@ module UI{
 			model = new TypesViewModel(types, true);
 		}
 		if(model.size() == 0){
-			pushInfoView("No locations", false);
+			var str = "No locations";
+			if(dataStorage.getDistance() > 0){
+				str = "No locations (filter on)";
+			}
+			pushInfoView(str, false);
 		} else {
 			// delete/add/import into model
 			Ui.pushView(new TypesMenu(model), new TypesMenuDelegate(model), transition);
@@ -38,7 +42,7 @@ module UI{
 	function pushInfoView(_str, _pop, _error){
 		_pop = _pop == true;
 		_error = _error == true;
-		Ui.pushView(new InfoView(_str, _error), new InfoDelegate(_pop), transition);
+		Ui.pushView(new InfoView(_str.toUpper(), _error), new InfoDelegate(_pop), transition);
 	}
 	
 	function pushNameView(location, format, def){

@@ -128,9 +128,9 @@ module Data{
 				duration = Time.Time.now().subtract(currentLocation[TIMESTAMP]).value();
 				if(currentLocation[ACCURACY] > Position.QUALITY_LAST_KNOWN && duration >= LAST_POSITION_INTERVAL){
 					currentLocation[ACCURACY] = Position.QUALITY_LAST_KNOWN;
-					invokeTimerCallback(true);
 				}
 			}
+			invokeTimerCallback(true);
 			if(gpsFinding){
 				return;
 			}
@@ -149,26 +149,22 @@ module Data{
 				if(interval != 0){
 					Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 				}
-				if(currentLocation == null || interval == 0 && currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
-					setCurrentLocation(info);
+				if(currentLocation == null){
 					Alert.alert(Alert.GPS_FOUND);
-					return;
-				}
-			} else {
-				if(currentLocation != null && (interval == 0 || info.accuracy == Position.QUALITY_NOT_AVAILABLE)){
-					setCurrentLocation(info);
-					Alert.alert(Alert.GPS_LOST);
-					return;
 				}
 			}
-			setCurrentLocation(info);
-		}
-		
-		hidden function setCurrentLocation(info){
-			var radians = info.position.toRadians();
-			var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
-			currentLocation = [radians[0], radians[1], info.heading, info.accuracy, info.when];
-			invokeTimerCallback(accuracyChanged);
+			if(info.accuracy == Position.QUALITY_NOT_AVAILABLE){
+				if(currentLocation != null){
+					Alert.alert(Alert.GPS_LOST);
+					currentLocation = null;
+					invokeTimerCallback(true);
+				}
+			} else {
+				var radians = info.position.toRadians();
+				var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
+				currentLocation = [radians[0], radians[1], info.heading, info.accuracy, info.when];
+				invokeTimerCallback(accuracyChanged);
+			}
 		}
 		
 		// locations

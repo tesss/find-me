@@ -11,13 +11,14 @@ using _;
 module UI{
 	class LocationView extends Ui.View{
 		hidden var model;
-		hidden var dots;
 		hidden var interval;
 		hidden var anim;
 		hidden var bearing;
 		hidden var heading;
 		hidden var gpsIcon;
 		hidden var activityIcon;
+		hidden var clear;
+		hidden var dots;
 		
 		var directionDrawable;
 		
@@ -42,9 +43,10 @@ module UI{
 	
 		function initialize(_model){
 			model = _model;
-			dots = "";
 			interval = dataStorage.getInterval();
 			anim = false;
+			clear = true;
+			dots = "";
 			getDrawModel();
 		}
 		
@@ -67,9 +69,25 @@ module UI{
 				return;
 			}
 			Ui.requestUpdate();
-			if(bearing != null && (directionDrawable.angle * 1000).toNumber() != (bearing * 1000).toNumber()){
-				anim = true;	
-				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 2, method(:animCallback));
+			if(bearing != null){
+				var d = directionDrawable.angle - bearing;
+				if(d.abs() < 0.017){
+					return;
+				}
+				anim = true;
+				var t1 = directionDrawable.angle;
+				var t2 = bearing;
+				var sign;
+				if((t1 - t2).abs() > Math.PI){
+					if(t1.abs() > Math.PI){
+						sign = t1 < 0 ? 1 : -1;
+						t1 = t1 + sign * Math.PI * 2;
+					} else {
+						sign = t2 < 0 ? 1 : -1;
+						t2 = t2 + sign * Math.PI * 2;
+					}
+				}
+				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, t1, t2, 2, method(:animCallback));
 			}
 		}
 		
@@ -107,7 +125,7 @@ module UI{
 					dataStorage.currentLocation[Data.LAT], 
 					dataStorage.currentLocation[Data.LON]);
 				dots = "";
-
+				
 				setColor(dc, COLOR_LOWLIGHT);
 				dc.drawLine(drawModel.line1[0], drawModel.line1[1], drawModel.line1[2], drawModel.line1[3]);
 				dc.drawLine(drawModel.line2[0], drawModel.line2[1], drawModel.line2[2], drawModel.line2[3]);
@@ -159,7 +177,7 @@ module UI{
 			
 			setColor(dc, COLOR_SECONDARY);
 			dc.drawText(drawModel.type[0], drawModel.type[1], Graphics.FONT_XTINY, 
-				Data.DataStorage.TYPES[location[Data.LOC_TYPE]], Graphics.TEXT_JUSTIFY_CENTER);
+				Data.DataStorage.TYPES[location[Data.LOC_TYPE]].toUpper(), Graphics.TEXT_JUSTIFY_CENTER);
 			
 			if(model.showArrows()){
 				setColor(dc, COLOR_LOWLIGHT);
@@ -194,6 +212,11 @@ module UI{
 		}
 	
 		function onUpdate(dc){
+			if(clear){
+				dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
+				dc.clear();
+				clear = false;
+			}
 			if(anim && !model.fullRefresh){
 				dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
 				dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius + 7);
@@ -219,6 +242,7 @@ module UI{
 		}
 		
 		function onHide(){
+			clear = true;
 			dataStorage.timerCallback = null;
 			gpsIcon = null;
 			activityIcon = null;

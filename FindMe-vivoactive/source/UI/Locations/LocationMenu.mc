@@ -19,10 +19,6 @@ module UI{
 				}
 			}
 			addItem("Coordinates", :coord);
-			addItem("Save Persisted", :persisted);
-			if(_model.size() > 1){
-				addItem("Save All Persisted", :persistedAll);
-			}
 			addItem("Delete", :delete);
 			if(_model.size() > 1){
 				addItem("Delete All", :deleteAll);
@@ -66,14 +62,6 @@ module UI{
 	    	} else if(item == :coord){
 	    		popInNotGlobal();
 	    		pushInfoView(getLocationStr(model.get().get()), model.global);
-	    	} else if(item == :persisted){
-	    		popInNotGlobal();
-	    		model.get().savePersisted();
-	    		pushInfoView("Saved successfully", model.global);
-	    	} else if(item == :persistedAll){
-	    		popInNotGlobal();
-	    		model.get().savePersisted();
-	    		pushInfoView("Saved successfully", model.global);
 	    	} else if(item == :delete){
 	    		var fullRefresh = model.delete();
 	    		if(fullRefresh){
