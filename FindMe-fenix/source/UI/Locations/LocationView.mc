@@ -45,6 +45,7 @@ module UI{
 			dots = "";
 			interval = dataStorage.getInterval();
 			anim = false;
+			getDrawModel();
 		}
 		
 		function dispose(){
@@ -52,7 +53,6 @@ module UI{
 			Sensor.enableSensorEvents(null);
 			gpsIcon = null;
 			activityIcon = null;
-			drawModel = null;
 		}
 		
 		function onTimer(accuracyChanged){
@@ -245,7 +245,6 @@ module UI{
 		}
 		
 		function onShow(){
-			getDrawModel();
 			activityIcon = Ui.loadResource(Rez.Drawables.GpsActivity);
 			onTimer(true);
 			Sensor.enableSensorEvents(method(:onSensor));

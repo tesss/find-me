@@ -1,7 +1,13 @@
 <resources>
     <string id="AppName">FindMe</string>
     
-    <bitmap id="LauncherIcon" filename="images/launcher_icon.png"/>
+    <bitmap id="LauncherIcon" filename="images/launcher_icon.png">
+    	<palette disableTransparency="false">
+            <color>FFFFFF</color>
+            <color>AAAAAA</color>
+            <color>000000</color>
+        </palette>
+    </bitmap>
     
     <bitmap id="GpsLast" filename="images/gps.png">
     	<palette disableTransparency="false">

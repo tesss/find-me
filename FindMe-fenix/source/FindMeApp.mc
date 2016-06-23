@@ -20,7 +20,7 @@ class FindMeApp extends App.AppBase {
     }
     
     function onStop(){
-    	UI.dataStorage.dispose();
+    	UI.dispose();
     	bridge.dispose();
     }
 
