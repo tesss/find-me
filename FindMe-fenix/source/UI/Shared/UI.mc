@@ -1,6 +1,7 @@
 using Toybox.WatchUi as Ui;
 using Toybox.System;
 using Toybox.Lang;
+using Toybox.Sensor;
 
 module UI{
 	var dataStorage;
