@@ -197,11 +197,13 @@ module UI{
 	}
 	
 	class SortingPickerFactory extends Ui.PickerFactory {
-		static const values = [Data.SORTBY_DISTANCE, Data.SORTBY_NAME];
+		static const values = [Data.SORTBY_DATE, Data.SORTBY_DISTANCE, Data.SORTBY_NAME];
 		
 		function getDrawable(index, isSelected){
 			var value = values[index];
-			if(value == Data.SORTBY_DISTANCE){
+			if(value == Data.SORTBY_DATE){
+				value = "Date";
+			} else if(value == Data.SORTBY_DISTANCE){
 				value = "Dist.";
 			} else if(value == Data.SORTBY_NAME){
 				value = "Name";

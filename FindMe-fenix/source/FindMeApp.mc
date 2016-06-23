@@ -12,18 +12,23 @@ class FindMeApp extends App.AppBase {
     	UI.dataStorage = new Data.DataStorage();
 		bridge = new Comm.Bridge();
 
-		//var locations = bridge.parseMail();
-		//if(!UI.dataStorage.checkLocCount(locations.size())){
-		//	return;
-		//}
-	    //UI.dataStorage.addLocations(locations);
+		var locations = bridge.parseMail();
+		if(!UI.dataStorage.checkLocCount(locations.size())){
+			return;
+		}
+	    UI.dataStorage.addLocations(locations);
     }
-
+    
+    function onStop(){
+    	UI.dataStorage.timer.stop();
+    	Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+    	UI.dataStorage = null;
+    	bridge = null;
+    }
 
     function getInitialView() {
         return [new UI.MainView()];
     }
-
 }
 
 		// improve character factory

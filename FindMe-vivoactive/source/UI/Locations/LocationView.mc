@@ -73,12 +73,6 @@ module UI{
 			}
 		}
 		
-		function onLayout(){
-			directionDrawable = new DirectionDrawable(drawModel.direction, drawModel.directionCenter, 0);
-			onTimer(true);
-			activityIcon = Ui.loadResource(Rez.Drawables.GpsActivity);
-		}
-		
 		function animCallback(){
 			anim = false;
 			Ui.requestUpdate();
@@ -127,10 +121,12 @@ module UI{
 					) - dataStorage.currentLocation[Data.HEADING];
 					directionDrawable.draw(dc);
 				} else {
-					if(bearing != null){
+					if(bearing != null && !model.fullRefresh){
 						Alert.alert(Alert.ZERO_DISTANCE);
 					}
 					bearing = null;
+					setColor(dc, COLOR_LOWLIGHT);
+					dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius);
 					setColor(dc, COLOR_SECONDARY);
 					dc.drawCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius);
 					setColor(dc, COLOR_HIGHLIGHT);
@@ -203,6 +199,7 @@ module UI{
 				dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius + 7);
 				directionDrawable.draw(dc);
 			} else {
+				anim = false;
 				var location = model.get();
 				if(location != null){
 					draw(location, dc);
@@ -211,12 +208,20 @@ module UI{
 			}
 		}
 		
+		function onLayout(){
+			directionDrawable = new DirectionDrawable(drawModel.direction, drawModel.directionCenter, 0);
+		}
+		
 		function onShow(){
+			activityIcon = Ui.loadResource(Rez.Drawables.GpsActivity);
+			onTimer(true);
 			dataStorage.timerCallback = method(:onTimer);
 		}
 		
 		function onHide(){
 			dataStorage.timerCallback = null;
+			gpsIcon = null;
+			activityIcon = null;
 		}
 	}
 	

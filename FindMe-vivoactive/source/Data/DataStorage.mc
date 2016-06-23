@@ -61,7 +61,7 @@ module Data{
 			if(getDistance() == null){ setDistance(0); }
 			if(getFormat() == null){ setFormat(Position.GEO_DEG); }
 			if(getActivityType() == null){ setActivityType(ActivityRecording.SPORT_GENERIC); }
-			if(getSortBy() == null){ setSortBy(SORTBY_DISTANCE); }
+			if(getSortBy() == null){ setSortBy(SORTBY_DATE); }
 			
 			locCount = getProp(KEY_LOC_TYPE, true).size();
 		}
@@ -149,15 +149,22 @@ module Data{
 				if(interval != 0){
 					Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 				}
-				if(currentLocation == null || interval == 0 && currentLocation[ACCURACY] <= Position.QUALITY_LAST_KNOWN || currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
+				if(currentLocation == null || interval == 0 && currentLocation[ACCURACY] == Position.QUALITY_NOT_AVAILABLE){
+					setCurrentLocation(info);
 					Alert.alert(Alert.GPS_FOUND);
+					return;
 				}
 			} else {
 				if(currentLocation != null && (interval == 0 || info.accuracy == Position.QUALITY_NOT_AVAILABLE)){
+					setCurrentLocation(info);
 					Alert.alert(Alert.GPS_LOST);
+					return;
 				}
 			}
-			
+			setCurrentLocation(info);
+		}
+		
+		hidden function setCurrentLocation(info){
 			var radians = info.position.toRadians();
 			var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
 			currentLocation = [radians[0], radians[1], info.heading, info.accuracy, info.when];
@@ -245,7 +252,9 @@ module Data{
 		
 		function sortLocationsList(locations){
 			var sortBy = getSortBy();
-			if(currentLocation != null && sortBy == SORTBY_DISTANCE){
+			if(sortBy == SORTBY_DATE){
+				return locations;
+			} else if(currentLocation != null && sortBy == SORTBY_DISTANCE){
 				for(var i = 0; i < locations.size(); i++){
 					locations[i][LOC_DIST] = distance(locations[i][LOC_LAT], locations[i][LOC_LON], currentLocation[LAT], currentLocation[LON]);
 				}

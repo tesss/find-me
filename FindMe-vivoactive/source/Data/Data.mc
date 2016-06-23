@@ -3,7 +3,7 @@ using Toybox.Time;
 using _;
 
 module Data {
-	const VERSION = "0.1.0";
+	const VERSION = "1.0.0";
 	const NAME_LIMIT = 15;
 	const ZERO_LIMIT = 0.02;
 	const LOC_MAX_COUNT = 100;
@@ -62,6 +62,7 @@ module Data {
 	}
 	
 	enum {
+		SORTBY_DATE,
 		SORTBY_NAME,
 		SORTBY_DISTANCE
 	}
