@@ -83,10 +83,6 @@ module UI{
 				heading = Data.heading(info);
 			}
 			if(bearing != null){
-				var d = directionDrawable.angle - bearing;
-				if(d.abs() < 0.017){
-					return;
-				}
 				anim = true;
 				var t1 = directionDrawable.angle;
 				var t2 = bearing;
@@ -100,7 +96,10 @@ module UI{
 						t2 = t2 + sign * Math.PI * 2;
 					}
 				}
-				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, t1, t2, 2, method(:animCallback));
+				var d = t1 - t2;
+				if(d.abs() > 0.017){
+					Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, t1, t2, 2, method(:animCallback));
+				}
 			}
 		}
 		
