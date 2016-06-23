@@ -150,11 +150,9 @@ module Data{
 		
 		function updateCurrentLocation(info){
 			var interval = getInterval();
-			if(interval != 0){
-				gpsFinding = false;
-			}
 			if(info.accuracy > Position.QUALITY_LAST_KNOWN && interval != 0){
 				Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+				gpsFinding = false;
 			}
 			if(currentLocation == null && info.accuracy >= Position.QUALITY_LAST_KNOWN){
 				Alert.alert(Alert.GPS_FOUND);
