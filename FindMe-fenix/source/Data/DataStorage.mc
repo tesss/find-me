@@ -93,6 +93,7 @@ module Data{
 				cache[key] = value;
 			}
 			getApp().setProperty(key, value); 
+			getApp().saveProperties();
 		}
 				
 		hidden function initProp(key){ if(getProp(key, true) == null){ setProp(key, [], true); } }
