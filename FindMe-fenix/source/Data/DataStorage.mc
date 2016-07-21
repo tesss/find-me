@@ -92,8 +92,7 @@ module Data{
 			if(noCache != true){
 				cache[key] = value;
 			}
-			getApp().setProperty(key, value); 
-			getApp().saveProperties();
+			getApp().setProperty(key, value);
 		}
 				
 		hidden function initProp(key){ if(getProp(key, true) == null){ setProp(key, [], true); } }
@@ -320,6 +319,15 @@ module Data{
 				}
 				setLocations(locations);
 			}
+		}
+		
+		function reset(){
+			deleteAllLocations();
+			setInterval(0);
+			setDistance(0);
+			setFormat(Position.GEO_DEG);
+			setActivityType(ActivityRecording.SPORT_GENERIC);
+			setSortBy(SORTBY_DATE);
 		}
 	}
 }
