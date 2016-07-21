@@ -320,5 +320,14 @@ module Data{
 				setLocations(locations);
 			}
 		}
+		
+		function reset(){
+			deleteAllLocations();
+			setInterval(0);
+			setDistance(0);
+			setFormat(Position.GEO_DEG);
+			setActivityType(ActivityRecording.SPORT_GENERIC);
+			setSortBy(SORTBY_DATE);
+		}
 	}
 }

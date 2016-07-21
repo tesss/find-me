@@ -17,6 +17,7 @@ class FindMeApp extends App.AppBase {
 		//	return;
 		//}
 	    //UI.dataStorage.addLocations(locations);
+	    //var c = 5/0;
     }
     
     function onStop(){

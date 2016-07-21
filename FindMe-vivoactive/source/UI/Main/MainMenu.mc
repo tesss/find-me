@@ -9,6 +9,7 @@ module UI{
 			addItem("Add Current", :addCurrent);
 			addItem("Add Coordinates", :add);
 			addItem("Settings", :settings);
+			addItem("Reset", :reset);
 			addItem("About", :about); // with connection status
 		}
 	}
@@ -58,8 +59,8 @@ module UI{
 				Ui.pushView(new SettingsPicker(), new SettingsPickerDelegate(), transition);
 			} else if(item == :clear){
 				release();
-				dataStorage.clear();
-				pushInfoView("Cleared", false);
+				dataStorage.reset();
+				pushInfoView("Reset done", false);
 			} else if(item == :about){
 				popMainMenu();
 				Ui.pushView(new AboutView(), new AboutViewDelegate(), transition);

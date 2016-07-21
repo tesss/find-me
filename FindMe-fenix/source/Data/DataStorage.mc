@@ -52,8 +52,7 @@ module Data{
 			
 			var interval = getInterval();
 			if(interval == null){
-				interval = 0; 
-				setInterval(interval);
+				setInterval(0);
 			} else {
 				startTimer(interval);
 			}
