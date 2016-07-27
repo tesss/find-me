@@ -627,619 +627,587 @@
 <entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\UI\\About\\AboutView.mc" lineNum="27" pc="268456074" symbol="onUpdate"/>
 <entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\UI\\About\\AboutView.mc" lineNum="28" pc="268456143" symbol="onUpdate"/>
 <entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\UI\\About\\AboutView.mc" lineNum="34" pc="268456252" symbol="onSelect"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\FindMeApp.mc" lineNum="12" pc="268456280" symbol="onStart"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\FindMeApp.mc" lineNum="13" pc="268456318" symbol="onStart"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\FindMeApp.mc" lineNum="23" pc="268456355" symbol="onStop"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\FindMeApp.mc" lineNum="24" pc="268456377" symbol="onStop"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\FindMeApp.mc" lineNum="28" pc="268456398" symbol="getInitialView"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="9" pc="268456443" symbol="get"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="10" pc="268456446" symbol="get"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="11" pc="268456463" symbol="get"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="13" pc="268456505" symbol="get"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="17" pc="268456611" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="18" pc="268456624" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="19" pc="268456637" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="20" pc="268456650" symbol="set"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="24" pc="268456666" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="25" pc="268456697" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="27" pc="268456701" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="28" pc="268456736" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="29" pc="268456771" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="30" pc="268456806" symbol="remove"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="34" pc="268456844" symbol="size"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="35" pc="268456857" symbol="size"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="37" pc="268456866" symbol="size"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="41" pc="268456887" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="42" pc="268456897" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="43" pc="268456907" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="44" pc="268456917" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="46" pc="268456930" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="47" pc="268456962" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="48" pc="268456996" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="49" pc="268457010" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="51" pc="268457020" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="51" pc="268457040" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="51" pc="268457060" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="51" pc="268457080" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="53" pc="268457100" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="54" pc="268457113" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="55" pc="268457120" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="57" pc="268457140" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="60" pc="268457154" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="60" pc="268457170" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="61" pc="268457190" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="61" pc="268457206" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="62" pc="268457233" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="62" pc="268457249" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="63" pc="268457276" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="63" pc="268457292" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="65" pc="268457315" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="69" pc="268457356" symbol="dispose"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="70" pc="268457374" symbol="dispose"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="71" pc="268457383" symbol="dispose"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="72" pc="268457392" symbol="dispose"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="73" pc="268457401" symbol="dispose"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="78" pc="268457433" symbol="getApp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="81" pc="268457454" symbol="getProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="82" pc="268457462" symbol="getProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="84" pc="268457488" symbol="getProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="85" pc="268457504" symbol="getProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="87" pc="268457540" symbol="getProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="91" pc="268457555" symbol="setProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="92" pc="268457563" symbol="setProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="94" pc="268457579" symbol="setProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="95" pc="268457604" symbol="setProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="98" pc="268457628" symbol="initProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="98" pc="268457648" symbol="initProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="99" pc="268457676" symbol="clearProp"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="103" pc="268457696" symbol="getSortBy"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="104" pc="268457719" symbol="setSortBy"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="105" pc="268457744" symbol="getDistance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="106" pc="268457767" symbol="setDistance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="107" pc="268457792" symbol="getInterval"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="108" pc="268457815" symbol="setInterval"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="108" pc="268457837" symbol="setInterval"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="109" pc="268457854" symbol="getFormat"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="110" pc="268457877" symbol="setFormat"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="111" pc="268457902" symbol="getActivityType"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="112" pc="268457925" symbol="setActivityType"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="117" pc="268457950" symbol="invokeTimerCallback"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="118" pc="268457963" symbol="invokeTimerCallback"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="123" pc="268457989" symbol="startTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="124" pc="268458007" symbol="startTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="125" pc="268458036" symbol="startTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="126" pc="268458046" symbol="startTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="127" pc="268458057" symbol="startTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="129" pc="268458072" symbol="startTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="133" pc="268458119" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="134" pc="268458132" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="135" pc="268458135" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="136" pc="268458148" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="137" pc="268458206" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="138" pc="268458256" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="141" pc="268458291" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="142" pc="268458305" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="143" pc="268458316" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="145" pc="268458320" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="146" pc="268458377" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="147" pc="268458387" symbol="onTimer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="152" pc="268458437" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="153" pc="268458450" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="154" pc="268458488" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="155" pc="268458517" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="157" pc="268458530" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="158" pc="268458570" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="160" pc="268458601" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="161" pc="268458620" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="162" pc="268458664" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="163" pc="268458758" symbol="updateCurrentLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="169" pc="268458775" symbol="getLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="173" pc="268458885" symbol="setLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="174" pc="268458915" symbol="setLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="175" pc="268458945" symbol="setLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="176" pc="268458975" symbol="setLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="177" pc="268459005" symbol="setLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="181" pc="268459027" symbol="checkLocCount"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="185" pc="268459051" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="186" pc="268459064" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="187" pc="268459084" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="189" pc="268459094" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="190" pc="268459102" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="191" pc="268459110" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="192" pc="268459113" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="193" pc="268459116" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="194" pc="268459129" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="195" pc="268459156" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="196" pc="268459175" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="198" pc="268459197" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="199" pc="268459221" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="200" pc="268459234" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="201" pc="268459253" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="202" pc="268459303" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="203" pc="268459319" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="204" pc="268459334" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="205" pc="268459341" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="206" pc="268459359" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="208" pc="268459378" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="210" pc="268459424" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="213" pc="268459443" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="214" pc="268459463" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="216" pc="268459473" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="217" pc="268459476" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="218" pc="268459489" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="219" pc="268459535" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="220" pc="268459563" symbol="getTypesList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="224" pc="268459569" symbol="addLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="225" pc="268459693" symbol="addLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="229" pc="268459710" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="230" pc="268459723" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="231" pc="268459736" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="232" pc="268459777" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="233" pc="268459818" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="234" pc="268459859" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="235" pc="268459900" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="236" pc="268459914" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="237" pc="268459928" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="238" pc="268459952" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="240" pc="268459975" symbol="addLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="246" pc="268459981" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="247" pc="268459994" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="248" pc="268460008" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="250" pc="268460044" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="251" pc="268460068" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="253" pc="268460168" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="255" pc="268460207" symbol="sortLocationsList"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="260" pc="268460246" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="261" pc="268460268" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="262" pc="268460290" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="263" pc="268460297" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="264" pc="268460304" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="265" pc="268460304" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="266" pc="268460341" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="268" pc="268460368" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="269" pc="268460431" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="271" pc="268460452" symbol="nameComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="275" pc="268460458" symbol="typeComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="279" pc="268460497" symbol="distanceComparer"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="283" pc="268460524" symbol="idPredicate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="289" pc="268460542" symbol="deleteLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="290" pc="268460555" symbol="deleteLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="291" pc="268460569" symbol="deleteLocation"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="295" pc="268460586" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="296" pc="268460593" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="296" pc="268460613" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="296" pc="268460633" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="296" pc="268460653" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="297" pc="268460673" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="297" pc="268460693" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="297" pc="268460713" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="297" pc="268460733" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="298" pc="268460753" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="300" pc="268460795" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="301" pc="268460808" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="302" pc="268460832" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="303" pc="268460849" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="304" pc="268460863" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="307" pc="268460889" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="309" pc="268460926" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="310" pc="268460939" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="311" pc="268460963" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="312" pc="268460987" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="313" pc="268461007" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="314" pc="268461021" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="315" pc="268461044" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="316" pc="268461054" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="320" pc="268461086" symbol="deleteAllLocations"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="325" pc="268461106" symbol="reset"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="326" pc="268461118" symbol="reset"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="327" pc="268461135" symbol="reset"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="328" pc="268461152" symbol="reset"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="329" pc="268461176" symbol="reset"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="330" pc="268461200" symbol="reset"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="12" pc="268461223" symbol="toRadians"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="16" pc="268461248" symbol="toDegrees"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="20" pc="268461273" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="21" pc="268461284" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="23" pc="268461308" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="24" pc="268461319" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="26" pc="268461362" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="27" pc="268461373" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="29" pc="268461422" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="30" pc="268461433" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="31" pc="268461447" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="32" pc="268461458" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="34" pc="268461477" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="36" pc="268461500" symbol="atan2"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="40" pc="268461505" symbol="distance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="41" pc="268461512" symbol="distance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="42" pc="268461519" symbol="distance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="44" pc="268461652" symbol="distance"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="48" pc="268461713" symbol="bearing"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="49" pc="268461720" symbol="bearing"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="50" pc="268461757" symbol="bearing"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="52" pc="268461848" symbol="bearing"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="56" pc="268461867" symbol="dateStr"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="57" pc="268461874" symbol="dateStr"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="59" pc="268461909" symbol="dateStr"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="60" pc="268461972" symbol="dateStr"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="61" pc="268462094" symbol="dateStr"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="10" pc="268462100" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="11" pc="268462120" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="13" pc="268462126" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="14" pc="268462140" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="15" pc="268462164" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="17" pc="268462187" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="18" pc="268462225" symbol="sort"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="22" pc="268462231" symbol="quickSortRec"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="23" pc="268462252" symbol="quickSortRec"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="24" pc="268462266" symbol="quickSortRec"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="26" pc="268462295" symbol="quickSortRec"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="27" pc="268462303" symbol="quickSortRec"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="32" pc="268462329" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="33" pc="268462345" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="34" pc="268462353" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="35" pc="268462380" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="37" pc="268462393" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="38" pc="268462420" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="40" pc="268462433" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="41" pc="268462441" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="42" pc="268462459" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="43" pc="268462469" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="46" pc="268462485" symbol="partition"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="50" pc="268462491" symbol="swap"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="51" pc="268462498" symbol="swap"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="52" pc="268462508" symbol="swap"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="56" pc="268462518" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="57" pc="268462538" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="58" pc="268462559" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="60" pc="268462588" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="61" pc="268462595" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="62" pc="268462616" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="64" pc="268462639" symbol="insertAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="68" pc="268462645" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="69" pc="268462665" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="70" pc="268462680" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="72" pc="268462703" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="73" pc="268462724" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="75" pc="268462753" symbol="removeAt"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="79" pc="268462759" symbol="indexOf"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="80" pc="268462783" symbol="indexOf"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="81" pc="268462804" symbol="indexOf"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="84" pc="268462823" symbol="indexOf"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="88" pc="268462828" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="89" pc="268462854" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="90" pc="268462878" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="92" pc="268462901" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="93" pc="268462925" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="95" pc="268462960" symbol="union"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\CommListener.mc" lineNum="11" pc="268462967" symbol="onComplete"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\CommListener.mc" lineNum="15" pc="268462993" symbol="onError"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="10" pc="268463020" symbol="initialize"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="14" pc="268463055" symbol="dispose"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="19" pc="268463075" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="20" pc="268463082" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="21" pc="268463122" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="22" pc="268463137" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="23" pc="268463148" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="25" pc="268463170" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="28" pc="268463189" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="29" pc="268463227" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="30" pc="268463265" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="32" pc="268463332" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="33" pc="268463369" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="34" pc="268463406" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="35" pc="268463443" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="37" pc="268463480" symbol="parseMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="42" pc="268463486" symbol="onMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="43" pc="268463499" symbol="onMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="45" pc="268463506" symbol="onMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Comm\\Bridge.mc" lineNum="48" pc="268463522" symbol="onMail"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Alert\\Alert.mc" lineNum="17" pc="268463541" symbol="vibrate"/>
-<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Alert\\Alert.mc" lineNum="21" pc="268463610" symbol="alert"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\FindMeApp.mc" lineNum="9" pc="268456280" symbol="onStart"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\FindMeApp.mc" lineNum="13" pc="268456321" symbol="onStop"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\FindMeApp.mc" lineNum="17" pc="268456346" symbol="getInitialView"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="9" pc="268456391" symbol="get"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="10" pc="268456394" symbol="get"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="11" pc="268456411" symbol="get"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="13" pc="268456453" symbol="get"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="17" pc="268456559" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="18" pc="268456572" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="19" pc="268456585" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="20" pc="268456598" symbol="set"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="24" pc="268456614" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="25" pc="268456645" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="27" pc="268456649" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="28" pc="268456684" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="29" pc="268456719" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="30" pc="268456754" symbol="remove"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="34" pc="268456792" symbol="size"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="35" pc="268456805" symbol="size"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="37" pc="268456814" symbol="size"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="41" pc="268456835" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="42" pc="268456845" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="43" pc="268456855" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Models.mc" lineNum="44" pc="268456865" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="46" pc="268456878" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="47" pc="268456910" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="48" pc="268456944" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="49" pc="268456958" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="51" pc="268456968" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="51" pc="268456988" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="51" pc="268457008" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="51" pc="268457028" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="53" pc="268457048" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="54" pc="268457061" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="55" pc="268457068" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="57" pc="268457088" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="60" pc="268457102" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="60" pc="268457118" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="61" pc="268457138" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="61" pc="268457154" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="62" pc="268457181" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="62" pc="268457197" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="63" pc="268457224" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="63" pc="268457240" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="65" pc="268457263" symbol="initialize"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="69" pc="268457304" symbol="dispose"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="70" pc="268457322" symbol="dispose"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="71" pc="268457331" symbol="dispose"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="72" pc="268457340" symbol="dispose"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="73" pc="268457349" symbol="dispose"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="78" pc="268457381" symbol="getApp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="81" pc="268457402" symbol="getProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="82" pc="268457410" symbol="getProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="84" pc="268457436" symbol="getProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="85" pc="268457452" symbol="getProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="87" pc="268457488" symbol="getProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="91" pc="268457503" symbol="setProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="92" pc="268457511" symbol="setProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="94" pc="268457527" symbol="setProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="95" pc="268457552" symbol="setProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="98" pc="268457576" symbol="initProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="98" pc="268457596" symbol="initProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="99" pc="268457624" symbol="clearProp"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="103" pc="268457644" symbol="getSortBy"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="104" pc="268457667" symbol="setSortBy"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="105" pc="268457692" symbol="getDistance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="106" pc="268457715" symbol="setDistance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="107" pc="268457740" symbol="getInterval"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="108" pc="268457763" symbol="setInterval"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="108" pc="268457785" symbol="setInterval"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="109" pc="268457802" symbol="getFormat"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="110" pc="268457825" symbol="setFormat"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="111" pc="268457850" symbol="getActivityType"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="112" pc="268457873" symbol="setActivityType"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="117" pc="268457898" symbol="invokeTimerCallback"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="118" pc="268457911" symbol="invokeTimerCallback"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="123" pc="268457937" symbol="startTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="124" pc="268457955" symbol="startTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="125" pc="268457984" symbol="startTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="126" pc="268457994" symbol="startTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="127" pc="268458005" symbol="startTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="129" pc="268458020" symbol="startTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="133" pc="268458067" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="134" pc="268458080" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="135" pc="268458083" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="136" pc="268458096" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="137" pc="268458154" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="138" pc="268458204" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="141" pc="268458239" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="142" pc="268458253" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="143" pc="268458264" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="145" pc="268458268" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="146" pc="268458325" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="147" pc="268458335" symbol="onTimer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="152" pc="268458385" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="153" pc="268458398" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="154" pc="268458436" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="155" pc="268458465" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="157" pc="268458478" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="158" pc="268458518" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="160" pc="268458549" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="161" pc="268458568" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="162" pc="268458612" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="163" pc="268458706" symbol="updateCurrentLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="169" pc="268458723" symbol="getLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="173" pc="268458833" symbol="setLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="174" pc="268458863" symbol="setLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="175" pc="268458893" symbol="setLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="176" pc="268458923" symbol="setLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="177" pc="268458953" symbol="setLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="181" pc="268458975" symbol="checkLocCount"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="185" pc="268458999" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="186" pc="268459012" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="187" pc="268459032" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="189" pc="268459042" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="190" pc="268459050" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="191" pc="268459058" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="192" pc="268459061" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="193" pc="268459064" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="194" pc="268459077" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="195" pc="268459104" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="196" pc="268459123" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="198" pc="268459145" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="199" pc="268459169" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="200" pc="268459182" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="201" pc="268459201" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="202" pc="268459251" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="203" pc="268459267" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="204" pc="268459282" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="205" pc="268459289" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="206" pc="268459307" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="208" pc="268459326" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="210" pc="268459372" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="213" pc="268459391" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="214" pc="268459411" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="216" pc="268459421" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="217" pc="268459424" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="218" pc="268459437" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="219" pc="268459483" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="220" pc="268459511" symbol="getTypesList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="224" pc="268459517" symbol="addLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="225" pc="268459641" symbol="addLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="229" pc="268459658" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="230" pc="268459671" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="231" pc="268459684" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="232" pc="268459725" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="233" pc="268459766" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="234" pc="268459807" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="235" pc="268459848" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="236" pc="268459862" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="237" pc="268459876" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="238" pc="268459900" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="240" pc="268459923" symbol="addLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="246" pc="268459929" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="247" pc="268459942" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="248" pc="268459956" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="250" pc="268459992" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="251" pc="268460016" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="253" pc="268460116" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="255" pc="268460155" symbol="sortLocationsList"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="260" pc="268460194" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="261" pc="268460216" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="262" pc="268460238" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="263" pc="268460245" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="264" pc="268460252" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="265" pc="268460252" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="266" pc="268460289" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="268" pc="268460316" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="269" pc="268460379" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="271" pc="268460400" symbol="nameComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="275" pc="268460406" symbol="typeComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="279" pc="268460445" symbol="distanceComparer"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="283" pc="268460472" symbol="idPredicate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="289" pc="268460490" symbol="deleteLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="290" pc="268460503" symbol="deleteLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="291" pc="268460517" symbol="deleteLocation"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="295" pc="268460534" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="296" pc="268460541" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="296" pc="268460561" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="296" pc="268460581" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="296" pc="268460601" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="297" pc="268460621" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="297" pc="268460641" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="297" pc="268460661" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="297" pc="268460681" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="298" pc="268460701" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="300" pc="268460743" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="301" pc="268460756" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="302" pc="268460780" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="303" pc="268460797" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="304" pc="268460811" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="307" pc="268460837" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="309" pc="268460874" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="310" pc="268460887" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="311" pc="268460911" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="312" pc="268460935" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="313" pc="268460955" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="314" pc="268460969" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="315" pc="268460992" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="316" pc="268461002" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="320" pc="268461034" symbol="deleteAllLocations"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="325" pc="268461054" symbol="reset"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="326" pc="268461066" symbol="reset"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="327" pc="268461083" symbol="reset"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="328" pc="268461100" symbol="reset"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="329" pc="268461124" symbol="reset"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\DataStorage.mc" lineNum="330" pc="268461148" symbol="reset"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="12" pc="268461171" symbol="toRadians"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="16" pc="268461196" symbol="toDegrees"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="20" pc="268461221" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="21" pc="268461232" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="23" pc="268461256" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="24" pc="268461267" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="26" pc="268461310" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="27" pc="268461321" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="29" pc="268461370" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="30" pc="268461381" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="31" pc="268461395" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="32" pc="268461406" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="34" pc="268461425" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="36" pc="268461448" symbol="atan2"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="40" pc="268461453" symbol="distance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="41" pc="268461460" symbol="distance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="42" pc="268461467" symbol="distance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="44" pc="268461600" symbol="distance"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="48" pc="268461661" symbol="bearing"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="49" pc="268461668" symbol="bearing"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="50" pc="268461705" symbol="bearing"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="52" pc="268461796" symbol="bearing"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="56" pc="268461815" symbol="dateStr"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="57" pc="268461822" symbol="dateStr"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="59" pc="268461857" symbol="dateStr"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="60" pc="268461920" symbol="dateStr"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\Data.mc" lineNum="61" pc="268462042" symbol="dateStr"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="10" pc="268462048" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="11" pc="268462068" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="13" pc="268462074" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="14" pc="268462088" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="15" pc="268462112" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="17" pc="268462135" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="18" pc="268462173" symbol="sort"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="22" pc="268462179" symbol="quickSortRec"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="23" pc="268462200" symbol="quickSortRec"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="24" pc="268462214" symbol="quickSortRec"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="26" pc="268462243" symbol="quickSortRec"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="27" pc="268462251" symbol="quickSortRec"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="32" pc="268462277" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="33" pc="268462293" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="34" pc="268462301" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="35" pc="268462328" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="37" pc="268462341" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="38" pc="268462368" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="40" pc="268462381" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="41" pc="268462389" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="42" pc="268462407" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="43" pc="268462417" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="46" pc="268462433" symbol="partition"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="50" pc="268462439" symbol="swap"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="51" pc="268462446" symbol="swap"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="52" pc="268462456" symbol="swap"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="56" pc="268462466" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="57" pc="268462486" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="58" pc="268462507" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="60" pc="268462536" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="61" pc="268462543" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="62" pc="268462564" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="64" pc="268462587" symbol="insertAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="68" pc="268462593" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="69" pc="268462613" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="70" pc="268462628" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="72" pc="268462651" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="73" pc="268462672" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="75" pc="268462701" symbol="removeAt"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="79" pc="268462707" symbol="indexOf"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="80" pc="268462731" symbol="indexOf"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="81" pc="268462752" symbol="indexOf"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="84" pc="268462771" symbol="indexOf"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="88" pc="268462776" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="89" pc="268462802" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="90" pc="268462826" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="92" pc="268462849" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="93" pc="268462873" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Data\\ArrayExt.mc" lineNum="95" pc="268462908" symbol="union"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Alert\\Alert.mc" lineNum="17" pc="268462915" symbol="vibrate"/>
+<entry filename="D:\\Projects\\find-me\\FindMe-vivoactive\\source\\Alert\\Alert.mc" lineNum="21" pc="268462984" symbol="alert"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388644" module="true" symbol="System"/>
-<entry id="110" method="true" symbol="getDistance"/>
-<entry field="true" id="139" symbol="transition"/>
-<entry field="true" id="226" symbol="directionCenter"/>
+<entry id="104" method="true" symbol="getDistance"/>
+<entry field="true" id="132" symbol="transition"/>
+<entry field="true" id="219" symbol="directionCenter"/>
 <entry id="8389308" method="true" symbol="toRadians"/>
-<entry field="true" id="233" symbol="TYPES_BCOLORS"/>
-<entry field="true" id="73" symbol="KEY_LOC_LON"/>
-<entry field="true" id="222" symbol="line2Dis"/>
-<entry field="true" id="141" symbol="model"/>
+<entry field="true" id="226" symbol="TYPES_BCOLORS"/>
+<entry field="true" id="66" symbol="KEY_LOC_LON"/>
+<entry field="true" id="215" symbol="line2Dis"/>
+<entry field="true" id="134" symbol="model"/>
 <entry id="8388987" method="true" symbol="vibrate"/>
-<entry id="197" object="true" symbol="AboutViewDelegate"/>
-<entry id="130" method="true" symbol="typeComparer"/>
+<entry id="190" object="true" symbol="AboutViewDelegate"/>
+<entry id="124" method="true" symbol="typeComparer"/>
 <entry id="8388791" method="true" symbol="remove"/>
 <entry id="8389124" method="true" symbol="onUpdate"/>
 <entry id="8388826" method="true" symbol="next"/>
 <entry id="8389258" method="true" symbol="release"/>
-<entry field="true" id="55" symbol="NAME_LIMIT"/>
-<entry field="true" id="35" symbol="GpsLast"/>
+<entry field="true" id="48" symbol="NAME_LIMIT"/>
+<entry field="true" id="28" symbol="GpsLast"/>
 <entry id="8389349" symbol="justification"/>
-<entry field="true" id="97" symbol="LAST_POSITION_INTERVAL"/>
-<entry field="true" id="59" symbol="SORTBY_DATE"/>
+<entry field="true" id="90" symbol="LAST_POSITION_INTERVAL"/>
+<entry field="true" id="52" symbol="SORTBY_DATE"/>
 <entry id="8389716" method="true" symbol="atan2"/>
 <entry id="8389307" method="true" symbol="toDegrees"/>
 <entry id="8389177" method="true" symbol="clear"/>
-<entry field="true" id="148" symbol="COLOR_SECONDARY"/>
+<entry field="true" id="141" symbol="COLOR_SECONDARY"/>
 <entry id="8389642" symbol="title"/>
 <entry id="8389629" method="true" symbol="getValue"/>
-<entry id="241" symbol="addCurrent"/>
-<entry field="true" id="210" symbol="limit"/>
-<entry field="true" id="225" symbol="direction"/>
-<entry id="204" symbol="newSession"/>
-<entry id="212" method="true" symbol="predicate"/>
-<entry id="22" module="true" symbol="UI"/>
-<entry id="116" method="true" symbol="getActivityType"/>
-<entry field="true" id="136" symbol="TYPES"/>
-<entry field="true" id="201" symbol="arrow"/>
-<entry id="108" method="true" symbol="getSortBy"/>
-<entry id="176" object="true" symbol="MainMenuDelegate"/>
-<entry id="165" object="true" symbol="InfoDelegate"/>
-<entry field="true" id="74" symbol="KEY_LOC_NAME"/>
-<entry field="true" id="60" symbol="SORTBY_NAME"/>
+<entry id="234" symbol="addCurrent"/>
+<entry field="true" id="203" symbol="limit"/>
+<entry field="true" id="218" symbol="direction"/>
+<entry id="197" symbol="newSession"/>
+<entry id="205" method="true" symbol="predicate"/>
+<entry id="21" module="true" symbol="UI"/>
+<entry id="110" method="true" symbol="getActivityType"/>
+<entry field="true" id="130" symbol="TYPES"/>
+<entry field="true" id="194" symbol="arrow"/>
+<entry id="102" method="true" symbol="getSortBy"/>
+<entry id="169" object="true" symbol="MainMenuDelegate"/>
+<entry id="158" object="true" symbol="InfoDelegate"/>
+<entry field="true" id="67" symbol="KEY_LOC_NAME"/>
+<entry field="true" id="53" symbol="SORTBY_NAME"/>
 <entry field="true" id="8389759" symbol="radius"/>
 <entry field="true" id="8388611" module="true" symbol="Toybox"/>
 <entry id="8388645" module="true" symbol="Time"/>
-<entry field="true" id="50" symbol="ERROR"/>
-<entry id="94" method="true" symbol="indexOf"/>
-<entry id="91" method="true" symbol="swap"/>
-<entry field="true" id="47" symbol="ACTIVITY_DISCARD"/>
-<entry id="175" object="true" symbol="MainMenu"/>
-<entry id="128" method="true" symbol="sortLocationsList"/>
+<entry field="true" id="43" symbol="ERROR"/>
+<entry id="87" method="true" symbol="indexOf"/>
+<entry id="84" method="true" symbol="swap"/>
+<entry field="true" id="40" symbol="ACTIVITY_DISCARD"/>
+<entry id="168" object="true" symbol="MainMenu"/>
+<entry id="122" method="true" symbol="sortLocationsList"/>
 <entry id="8389619" method="true" symbol="onSelect"/>
-<entry field="true" id="72" symbol="KEY_LOC_LAT"/>
-<entry id="191" object="true" symbol="NewTypesMenuDelegate"/>
-<entry id="189" object="true" symbol="CharFactory"/>
-<entry id="106" symbol="initProp"/>
-<entry id="185" object="true" symbol="LocationMenuDelegate"/>
-<entry id="25" module="true" symbol="Comm"/>
+<entry field="true" id="65" symbol="KEY_LOC_LAT"/>
+<entry id="184" object="true" symbol="NewTypesMenuDelegate"/>
+<entry id="182" object="true" symbol="CharFactory"/>
+<entry id="100" symbol="initProp"/>
+<entry id="178" object="true" symbol="LocationMenuDelegate"/>
 <entry id="8388770" module="true" symbol="Strings"/>
 <entry id="8388643" module="true" symbol="Sensor"/>
-<entry field="true" id="138" symbol="dataStorage"/>
-<entry field="true" id="143" symbol="openMainMenu"/>
+<entry field="true" id="131" symbol="dataStorage"/>
+<entry field="true" id="136" symbol="openMainMenu"/>
 <entry field="true" id="8388764" method="true" symbol="format"/>
 <entry field="true" id="8388965" symbol="heading"/>
-<entry field="true" id="85" symbol="longitudes"/>
-<entry field="true" id="215" symbol="fullRefresh"/>
-<entry id="173" object="true" symbol="SortingPickerFactory"/>
-<entry field="true" id="86" symbol="types"/>
-<entry id="109" method="true" symbol="setSortBy"/>
-<entry id="52" object="true" symbol="Locations"/>
-<entry id="179" object="true" symbol="TypesMenu"/>
-<entry id="243" symbol="about"/>
-<entry id="160" method="true" symbol="clearPicker"/>
+<entry field="true" id="78" symbol="longitudes"/>
+<entry field="true" id="208" symbol="fullRefresh"/>
+<entry id="166" object="true" symbol="SortingPickerFactory"/>
+<entry field="true" id="79" symbol="types"/>
+<entry id="103" method="true" symbol="setSortBy"/>
+<entry id="45" object="true" symbol="Locations"/>
+<entry id="172" object="true" symbol="TypesMenu"/>
+<entry id="236" symbol="about"/>
+<entry id="153" method="true" symbol="clearPicker"/>
 <entry id="8389280" method="true" symbol="getInitialView"/>
-<entry field="true" id="77" symbol="LOC_NAME"/>
+<entry field="true" id="70" symbol="LOC_NAME"/>
 <entry id="8389275" method="true" symbol="getApp"/>
 <entry field="true" id="8388736" symbol="currentLocation"/>
 <entry id="8389068" method="true" symbol="draw"/>
-<entry id="122" symbol="getLocations"/>
-<entry field="true" id="38" symbol="GpsGood"/>
-<entry id="90" symbol="partition"/>
+<entry id="116" symbol="getLocations"/>
+<entry field="true" id="31" symbol="GpsGood"/>
+<entry id="83" symbol="partition"/>
 <entry id="8388718" method="true" symbol="error"/>
 <entry id="8388640" module="true" symbol="Lang"/>
 <entry id="8388639" module="true" symbol="Graphics"/>
-<entry field="true" id="202" symbol="center"/>
+<entry field="true" id="195" symbol="center"/>
 <entry field="true" id="8388794" method="true" symbol="values"/>
-<entry id="133" method="true" symbol="deleteLocation"/>
-<entry id="196" object="true" symbol="AboutView"/>
-<entry id="192" object="true" symbol="NamePicker"/>
+<entry id="127" method="true" symbol="deleteLocation"/>
+<entry id="189" object="true" symbol="AboutView"/>
+<entry id="185" object="true" symbol="NamePicker"/>
 <entry id="8388769" module="true" symbol="Rez"/>
 <entry id="8389123" method="true" symbol="onShow"/>
-<entry id="95" method="true" symbol="union"/>
-<entry id="237" symbol="isSelected"/>
+<entry id="88" method="true" symbol="union"/>
+<entry id="230" symbol="isSelected"/>
 <entry id="8388782" method="true" symbol="size"/>
-<entry field="true" id="224" symbol="arrow2"/>
-<entry field="true" id="223" symbol="arrow1"/>
+<entry field="true" id="217" symbol="arrow2"/>
+<entry field="true" id="216" symbol="arrow1"/>
 <entry field="true" id="8389314" symbol="latitude"/>
-<entry field="true" id="43" symbol="GPS_LOST"/>
-<entry field="true" id="83" symbol="names"/>
-<entry id="187" object="true" symbol="DirectionFactory"/>
+<entry field="true" id="36" symbol="GPS_LOST"/>
+<entry field="true" id="76" symbol="names"/>
+<entry id="180" object="true" symbol="DirectionFactory"/>
 <entry id="8388638" module="true" symbol="ActivityRecording"/>
-<entry id="163" method="true" symbol="rotate"/>
+<entry id="156" method="true" symbol="rotate"/>
 <entry id="8389626" method="true" symbol="onAccept"/>
-<entry field="true" id="84" symbol="latitudes"/>
+<entry field="true" id="77" symbol="latitudes"/>
 <entry id="8388636" module="true" symbol="Attention"/>
-<entry id="104" symbol="getProp"/>
-<entry field="true" id="227" symbol="gpsIcon"/>
-<entry id="131" method="true" symbol="distanceComparer"/>
-<entry field="true" id="99" symbol="timer"/>
+<entry id="98" symbol="getProp"/>
+<entry field="true" id="220" symbol="gpsIcon"/>
+<entry id="125" method="true" symbol="distanceComparer"/>
+<entry field="true" id="92" symbol="timer"/>
 <entry id="8389131" method="true" symbol="setColor"/>
-<entry field="true" id="102" symbol="cache"/>
+<entry field="true" id="95" symbol="cache"/>
 <entry id="8388702" method="true" symbol="initialize"/>
-<entry field="true" id="147" symbol="COLOR_PRIMARY"/>
-<entry id="51" method="true" symbol="alert"/>
-<entry field="true" id="149" symbol="COLOR_LOWLIGHT"/>
-<entry field="true" id="41" symbol="AppName"/>
-<entry id="172" object="true" symbol="TypePickerFactory"/>
-<entry field="true" id="69" symbol="KEY_INTERVAL"/>
-<entry field="true" id="61" symbol="SORTBY_DISTANCE"/>
-<entry field="true" id="75" symbol="KEY_LOC_TYPE"/>
-<entry field="true" id="63" symbol="LON"/>
-<entry id="159" method="true" symbol="getMenuIndex"/>
+<entry field="true" id="140" symbol="COLOR_PRIMARY"/>
+<entry id="44" method="true" symbol="alert"/>
+<entry field="true" id="142" symbol="COLOR_LOWLIGHT"/>
+<entry field="true" id="34" symbol="AppName"/>
+<entry id="165" object="true" symbol="TypePickerFactory"/>
+<entry field="true" id="62" symbol="KEY_INTERVAL"/>
+<entry field="true" id="54" symbol="SORTBY_DISTANCE"/>
+<entry field="true" id="68" symbol="KEY_LOC_TYPE"/>
+<entry field="true" id="56" symbol="LON"/>
+<entry id="152" method="true" symbol="getMenuIndex"/>
 <entry id="8389602" method="true" symbol="deleteAll"/>
-<entry field="true" id="203" symbol="angle"/>
-<entry id="181" object="true" symbol="LocationView"/>
+<entry field="true" id="196" symbol="angle"/>
+<entry id="174" object="true" symbol="LocationView"/>
 <entry field="true" id="8388890" symbol="sport"/>
-<entry field="true" id="71" symbol="KEY_ACT_TYPE"/>
+<entry field="true" id="64" symbol="KEY_ACT_TYPE"/>
 <entry field="true" id="8388892" symbol="name"/>
 <entry id="8389080" method="true" symbol="onMenu"/>
-<entry id="236" method="true" symbol="getDrawModel"/>
-<entry id="30" method="true" symbol="parseMail"/>
-<entry id="89" symbol="quickSortRec"/>
+<entry id="229" method="true" symbol="getDrawModel"/>
+<entry id="82" symbol="quickSortRec"/>
 <entry id="8389078" method="true" symbol="onNextPage"/>
-<entry field="true" id="48" symbol="ACTIVITY_FAILURE"/>
-<entry field="true" id="144" symbol="openTypesMenu"/>
-<entry field="true" id="140" symbol="screenType"/>
-<entry id="82" object="true" symbol="ArrayExt"/>
-<entry id="182" object="true" symbol="LocationDrawModel"/>
-<entry id="114" method="true" symbol="getFormat"/>
-<entry id="229" symbol="interval"/>
-<entry field="true" id="98" symbol="app"/>
-<entry field="true" id="80" symbol="LOC_TYPE"/>
-<entry id="205" symbol="popInNotGlobal"/>
-<entry field="true" id="232" symbol="directionDrawable"/>
+<entry field="true" id="41" symbol="ACTIVITY_FAILURE"/>
+<entry field="true" id="137" symbol="openTypesMenu"/>
+<entry field="true" id="133" symbol="screenType"/>
+<entry id="75" object="true" symbol="ArrayExt"/>
+<entry id="175" object="true" symbol="LocationDrawModel"/>
+<entry id="108" method="true" symbol="getFormat"/>
+<entry id="222" symbol="interval"/>
+<entry field="true" id="91" symbol="app"/>
+<entry field="true" id="73" symbol="LOC_TYPE"/>
+<entry id="198" symbol="popInNotGlobal"/>
+<entry field="true" id="225" symbol="directionDrawable"/>
 <entry id="8388641" module="true" symbol="Math"/>
 <entry id="8389108" method="true" symbol="onResponse"/>
-<entry id="88" method="true" symbol="sort"/>
-<entry field="true" id="40" symbol="LauncherIcon"/>
-<entry id="134" method="true" symbol="deleteAllLocations"/>
-<entry field="true" id="207" symbol="global"/>
-<entry field="true" id="67" symbol="KEY_SORT"/>
-<entry id="27" object="true" symbol="CommListener"/>
-<entry field="true" id="45" symbol="ACTIVITY_START"/>
-<entry id="118" symbol="invokeTimerCallback"/>
-<entry id="167" object="true" symbol="SettingsPicker"/>
+<entry id="81" method="true" symbol="sort"/>
+<entry field="true" id="33" symbol="LauncherIcon"/>
+<entry id="128" method="true" symbol="deleteAllLocations"/>
+<entry field="true" id="200" symbol="global"/>
+<entry field="true" id="60" symbol="KEY_SORT"/>
+<entry field="true" id="38" symbol="ACTIVITY_START"/>
+<entry id="112" symbol="invokeTimerCallback"/>
+<entry id="160" object="true" symbol="SettingsPicker"/>
 <entry id="8388646" module="true" object="true" symbol="Timer"/>
-<entry id="230" symbol="anim"/>
-<entry id="23" object="true" symbol="FindMeApp"/>
+<entry id="223" symbol="anim"/>
+<entry id="22" object="true" symbol="FindMeApp"/>
 <entry id="8389081" method="true" symbol="onBack"/>
-<entry id="26" module="true" symbol="Alert"/>
-<entry id="235" symbol="drawDynamic"/>
-<entry id="158" method="true" symbol="getText"/>
+<entry id="24" module="true" symbol="Alert"/>
+<entry id="228" symbol="drawDynamic"/>
+<entry id="151" method="true" symbol="getText"/>
 <entry id="8389281" method="true" symbol="onStop"/>
-<entry field="true" id="62" symbol="LAT"/>
-<entry id="8388829" method="true" symbol="onComplete"/>
-<entry id="166" object="true" symbol="ActivityConfirmationDelegate"/>
-<entry id="115" method="true" symbol="setFormat"/>
-<entry id="177" object="true" symbol="TypesViewModel"/>
-<entry field="true" id="39" symbol="GpsActivity"/>
-<entry id="124" method="true" symbol="checkLocCount"/>
+<entry field="true" id="55" symbol="LAT"/>
+<entry id="159" object="true" symbol="ActivityConfirmationDelegate"/>
+<entry id="109" method="true" symbol="setFormat"/>
+<entry id="170" object="true" symbol="TypesViewModel"/>
+<entry field="true" id="32" symbol="GpsActivity"/>
+<entry id="118" method="true" symbol="checkLocCount"/>
 <entry field="true" id="8389065" symbol="locY"/>
 <entry field="true" id="8389064" symbol="locX"/>
-<entry id="180" object="true" symbol="TypesMenuDelegate"/>
+<entry id="173" object="true" symbol="TypesMenuDelegate"/>
 <entry id="8388771" module="true" symbol="Drawables"/>
-<entry id="119" symbol="startTimer"/>
-<entry field="true" id="54" symbol="VERSION"/>
-<entry id="188" object="true" symbol="NumberFactory"/>
+<entry id="113" symbol="startTimer"/>
+<entry field="true" id="47" symbol="VERSION"/>
+<entry id="181" object="true" symbol="NumberFactory"/>
 <entry field="true" id="8389929" method="true" symbol="bearing"/>
-<entry id="217" method="true" symbol="showArrows"/>
+<entry id="210" method="true" symbol="showArrows"/>
 <entry id="8389122" method="true" symbol="onLayout"/>
-<entry id="132" method="true" symbol="idPredicate"/>
-<entry field="true" id="37" symbol="GpsUsable"/>
-<entry id="242" symbol="settings"/>
-<entry field="true" id="42" symbol="GPS_FOUND"/>
+<entry id="126" method="true" symbol="idPredicate"/>
+<entry field="true" id="30" symbol="GpsUsable"/>
+<entry id="235" symbol="settings"/>
+<entry field="true" id="35" symbol="GPS_FOUND"/>
 <entry id="8389279" method="true" symbol="onStart"/>
-<entry id="200" symbol="locationStr"/>
+<entry id="193" symbol="locationStr"/>
 <entry id="8388942" method="true" symbol="add"/>
-<entry field="true" id="56" symbol="ZERO_LIMIT"/>
-<entry id="29" method="true" symbol="dispose"/>
-<entry field="true" id="65" symbol="ACCURACY"/>
-<entry field="true" id="206" symbol="index"/>
-<entry id="125" method="true" symbol="getTypesList"/>
-<entry field="true" id="101" symbol="locCount"/>
+<entry field="true" id="49" symbol="ZERO_LIMIT"/>
+<entry id="97" method="true" symbol="dispose"/>
+<entry field="true" id="58" symbol="ACCURACY"/>
+<entry field="true" id="199" symbol="index"/>
+<entry id="119" method="true" symbol="getTypesList"/>
+<entry field="true" id="94" symbol="locCount"/>
 <entry id="8389348" symbol="font"/>
-<entry id="234" method="true" symbol="animCallback"/>
-<entry id="194" object="true" symbol="LocationPicker"/>
-<entry field="true" id="214" symbol="locations"/>
-<entry field="true" id="46" symbol="ACTIVITY_SAVE"/>
-<entry field="true" id="81" symbol="LOC_DIST"/>
-<entry id="117" method="true" symbol="setActivityType"/>
+<entry id="227" method="true" symbol="animCallback"/>
+<entry id="187" object="true" symbol="LocationPicker"/>
+<entry field="true" id="207" symbol="locations"/>
+<entry field="true" id="39" symbol="ACTIVITY_SAVE"/>
+<entry field="true" id="74" symbol="LOC_DIST"/>
+<entry id="111" method="true" symbol="setActivityType"/>
 <entry id="8389347" symbol="color"/>
-<entry field="true" id="66" symbol="TIMESTAMP"/>
-<entry id="195" object="true" symbol="LocationPickerDelegate"/>
-<entry id="170" object="true" symbol="DistancePickerFactory"/>
-<entry field="true" id="70" symbol="KEY_FORMAT"/>
-<entry id="183" object="true" symbol="LocationDelegate"/>
-<entry field="true" id="68" symbol="KEY_DISTANCE"/>
-<entry id="171" object="true" symbol="FormatPickerFactory"/>
-<entry field="true" id="218" symbol="type"/>
-<entry id="153" method="true" symbol="pushInfoView"/>
-<entry id="129" method="true" symbol="nameComparer"/>
-<entry id="174" object="true" symbol="MainView"/>
-<entry id="113" method="true" symbol="setInterval"/>
-<entry field="true" id="49" symbol="ZERO_DISTANCE"/>
-<entry id="105" symbol="setProp"/>
-<entry id="245" symbol="coord"/>
-<entry id="53" object="true" symbol="DataStorage"/>
-<entry field="true" id="228" symbol="activityIcon"/>
-<entry field="true" id="150" symbol="COLOR_HIGHLIGHT"/>
-<entry id="58" method="true" symbol="dateStr"/>
+<entry field="true" id="59" symbol="TIMESTAMP"/>
+<entry id="188" object="true" symbol="LocationPickerDelegate"/>
+<entry id="163" object="true" symbol="DistancePickerFactory"/>
+<entry field="true" id="63" symbol="KEY_FORMAT"/>
+<entry id="176" object="true" symbol="LocationDelegate"/>
+<entry field="true" id="61" symbol="KEY_DISTANCE"/>
+<entry id="164" object="true" symbol="FormatPickerFactory"/>
+<entry field="true" id="211" symbol="type"/>
+<entry id="146" method="true" symbol="pushInfoView"/>
+<entry id="123" method="true" symbol="nameComparer"/>
+<entry id="167" object="true" symbol="MainView"/>
+<entry id="107" method="true" symbol="setInterval"/>
+<entry field="true" id="42" symbol="ZERO_DISTANCE"/>
+<entry id="99" symbol="setProp"/>
+<entry id="238" symbol="coord"/>
+<entry id="46" object="true" symbol="DataStorage"/>
+<entry field="true" id="221" symbol="activityIcon"/>
+<entry field="true" id="143" symbol="COLOR_HIGHLIGHT"/>
+<entry id="51" method="true" symbol="dateStr"/>
 <entry id="8388789" method="true" symbol="get"/>
 <entry field="true" id="8388651" symbol="session"/>
 <entry id="8389109" method="true" symbol="onMenuItem"/>
-<entry id="156" method="true" symbol="popMainMenu"/>
-<entry id="112" method="true" symbol="getInterval"/>
-<entry id="240" symbol="isSettings"/>
-<entry id="135" method="true" symbol="reset"/>
-<entry field="true" id="221" symbol="line1Dis"/>
-<entry id="157" method="true" symbol="defLocationName"/>
-<entry id="93" method="true" symbol="removeAt"/>
-<entry id="31" method="true" symbol="onMail"/>
+<entry id="149" method="true" symbol="popMainMenu"/>
+<entry id="106" method="true" symbol="getInterval"/>
+<entry id="233" symbol="isSettings"/>
+<entry id="129" method="true" symbol="reset"/>
+<entry field="true" id="214" symbol="line1Dis"/>
+<entry id="150" method="true" symbol="defLocationName"/>
+<entry id="86" method="true" symbol="removeAt"/>
 <entry field="true" id="8388911" method="true" symbol="distance"/>
-<entry id="34" module="true" symbol="Layouts"/>
-<entry field="true" id="64" symbol="HEADING"/>
+<entry id="27" module="true" symbol="Layouts"/>
+<entry field="true" id="57" symbol="HEADING"/>
 <entry id="8389316" symbol="radians"/>
-<entry id="137" symbol="bridge"/>
-<entry id="190" object="true" symbol="NewTypesMenu"/>
-<entry id="152" method="true" symbol="pushTypesMenu"/>
+<entry id="183" object="true" symbol="NewTypesMenu"/>
+<entry id="145" method="true" symbol="pushTypesMenu"/>
 <entry id="8388642" module="true" symbol="Position"/>
 <entry id="8389079" method="true" symbol="onPreviousPage"/>
-<entry id="198" method="true" symbol="checkDegrees"/>
-<entry id="216" method="true" symbol="prev"/>
-<entry id="239" symbol="isTitle"/>
-<entry id="209" method="true" symbol="delete"/>
-<entry id="24" module="true" symbol="Data"/>
-<entry id="155" method="true" symbol="pushIfInsufficientSpace"/>
-<entry id="211" symbol="pop"/>
+<entry id="191" method="true" symbol="checkDegrees"/>
+<entry id="209" method="true" symbol="prev"/>
+<entry id="232" symbol="isTitle"/>
+<entry id="202" method="true" symbol="delete"/>
+<entry id="23" module="true" symbol="Data"/>
+<entry id="148" method="true" symbol="pushIfInsufficientSpace"/>
+<entry id="204" symbol="pop"/>
 <entry id="8389125" method="true" symbol="onHide"/>
-<entry id="154" method="true" symbol="pushNameView"/>
-<entry field="true" id="79" symbol="LOC_LON"/>
-<entry field="true" id="103" symbol="gpsFinding"/>
-<entry id="199" symbol="str"/>
-<entry field="true" id="57" symbol="LOC_MAX_COUNT"/>
-<entry id="238" symbol="isNumber"/>
-<entry id="168" object="true" symbol="SettingsPickerDelegate"/>
-<entry id="126" method="true" symbol="addLocation"/>
-<entry id="107" symbol="clearProp"/>
-<entry field="true" id="76" symbol="LOC_ID"/>
-<entry id="8388828" method="true" symbol="onError"/>
-<entry id="92" method="true" symbol="insertAt"/>
+<entry id="147" method="true" symbol="pushNameView"/>
+<entry field="true" id="72" symbol="LOC_LON"/>
+<entry field="true" id="96" symbol="gpsFinding"/>
+<entry id="192" symbol="str"/>
+<entry field="true" id="50" symbol="LOC_MAX_COUNT"/>
+<entry id="231" symbol="isNumber"/>
+<entry id="161" object="true" symbol="SettingsPickerDelegate"/>
+<entry id="120" method="true" symbol="addLocation"/>
+<entry id="101" symbol="clearProp"/>
+<entry field="true" id="69" symbol="LOC_ID"/>
+<entry id="85" method="true" symbol="insertAt"/>
 <entry id="8389644" symbol="defaults"/>
 <entry id="8389628" method="true" symbol="getDrawable"/>
-<entry field="true" id="100" symbol="timerCallback"/>
-<entry field="true" id="220" symbol="line2"/>
-<entry field="true" id="219" symbol="line1"/>
+<entry field="true" id="93" symbol="timerCallback"/>
+<entry field="true" id="213" symbol="line2"/>
+<entry field="true" id="212" symbol="line1"/>
 <entry id="8389346" symbol="text"/>
 <entry field="true" id="8389066" symbol="width"/>
-<entry field="true" id="145" symbol="drawModel"/>
-<entry field="true" id="96" symbol="TIMER_INTERVAL"/>
-<entry id="184" object="true" symbol="LocationMenu"/>
-<entry id="33" module="true" symbol="Menus"/>
-<entry id="164" object="true" symbol="InfoView"/>
-<entry id="213" method="true" symbol="fontPadding"/>
-<entry id="28" object="true" symbol="Bridge"/>
-<entry id="127" method="true" symbol="addLocations"/>
-<entry id="186" object="true" symbol="DirectionDrawable"/>
-<entry id="121" method="true" symbol="updateCurrentLocation"/>
-<entry field="true" id="36" symbol="GpsPoor"/>
-<entry id="208" method="true" symbol="getTypeName"/>
+<entry field="true" id="138" symbol="drawModel"/>
+<entry field="true" id="89" symbol="TIMER_INTERVAL"/>
+<entry id="177" object="true" symbol="LocationMenu"/>
+<entry id="26" module="true" symbol="Menus"/>
+<entry id="157" object="true" symbol="InfoView"/>
+<entry id="206" method="true" symbol="fontPadding"/>
+<entry id="121" method="true" symbol="addLocations"/>
+<entry id="179" object="true" symbol="DirectionDrawable"/>
+<entry id="115" method="true" symbol="updateCurrentLocation"/>
+<entry field="true" id="29" symbol="GpsPoor"/>
+<entry id="201" method="true" symbol="getTypeName"/>
 <entry id="8389643" symbol="pattern"/>
-<entry field="true" id="78" symbol="LOC_LAT"/>
-<entry id="178" object="true" symbol="LocationsViewModel"/>
-<entry id="161" method="true" symbol="getLocationStr"/>
-<entry id="151" method="true" symbol="pushMainMenu"/>
-<entry id="193" object="true" symbol="NamePickerDelegate"/>
-<entry field="true" id="44" symbol="GPS_MANUAL"/>
-<entry field="true" id="146" symbol="COLOR_BACKGROUND"/>
-<entry id="87" method="true" symbol="set"/>
-<entry id="120" method="true" symbol="onTimer"/>
+<entry field="true" id="71" symbol="LOC_LAT"/>
+<entry id="171" object="true" symbol="LocationsViewModel"/>
+<entry id="154" method="true" symbol="getLocationStr"/>
+<entry id="144" method="true" symbol="pushMainMenu"/>
+<entry id="186" object="true" symbol="NamePickerDelegate"/>
+<entry field="true" id="37" symbol="GPS_MANUAL"/>
+<entry field="true" id="139" symbol="COLOR_BACKGROUND"/>
+<entry id="80" method="true" symbol="set"/>
+<entry id="114" method="true" symbol="onTimer"/>
 <entry id="8388772" module="true" symbol="Fonts"/>
-<entry id="32" method="true" symbol="p"/>
+<entry id="25" method="true" symbol="p"/>
 <entry id="8389630" method="true" symbol="getSize"/>
 <entry field="true" id="8389315" symbol="longitude"/>
-<entry id="123" symbol="setLocations"/>
-<entry id="21" module="true" symbol="_"/>
-<entry field="true" id="142" symbol="keepMainView"/>
-<entry id="244" symbol="activity"/>
+<entry id="117" symbol="setLocations"/>
+<entry id="20" module="true" symbol="_"/>
+<entry field="true" id="135" symbol="keepMainView"/>
+<entry id="237" symbol="activity"/>
 <entry id="8389541" method="true" symbol="onCancel"/>
-<entry id="162" method="true" symbol="getDistanceStr"/>
-<entry id="231" symbol="dots"/>
-<entry id="111" method="true" symbol="setDistance"/>
+<entry id="155" method="true" symbol="getDistanceStr"/>
+<entry id="224" symbol="dots"/>
+<entry id="105" method="true" symbol="setDistance"/>
 <entry id="8388635" module="true" symbol="Application"/>
-<entry id="169" object="true" symbol="IntervalPickerFactory"/>
+<entry id="162" object="true" symbol="IntervalPickerFactory"/>
 </symbolTable>
 <localVars>
 <entry endPc="268435622" name="types" stackId="1" startPc="268435569"/>
@@ -1333,68 +1301,64 @@
 <entry endPc="268456249" name="wc" stackId="3" startPc="268455744"/>
 <entry endPc="268456249" name="d" stackId="5" startPc="268455744"/>
 <entry endPc="268456249" name="hc" stackId="4" startPc="268455744"/>
-<entry endPc="268456608" name="distance" stackId="4" startPc="268456443"/>
-<entry endPc="268457353" name="interval" stackId="1" startPc="268456930"/>
-<entry endPc="268458434" name="interval" stackId="2" startPc="268458119"/>
-<entry endPc="268458434" name="duration" stackId="3" startPc="268458119"/>
-<entry endPc="268458772" name="interval" stackId="2" startPc="268458437"/>
-<entry endPc="268458772" name="accuracyChanged" stackId="4" startPc="268458437"/>
-<entry endPc="268458772" name="radians" stackId="3" startPc="268458437"/>
-<entry endPc="268459427" name="typeLocations" stackId="10" startPc="268459303"/>
-<entry endPc="268459430" name="location" stackId="9" startPc="268459221"/>
-<entry endPc="268459430" name="type" stackId="8" startPc="268459221"/>
-<entry endPc="268459443" name="i" stackId="7" startPc="268459221"/>
-<entry endPc="268459566" name="locations" stackId="1" startPc="268459051"/>
-<entry endPc="268459566" name="types" stackId="2" startPc="268459051"/>
-<entry endPc="268459566" name="all" stackId="3" startPc="268459051"/>
-<entry endPc="268459566" name="lat" stackId="4" startPc="268459051"/>
-<entry endPc="268459566" name="lon" stackId="5" startPc="268459051"/>
-<entry endPc="268459566" name="distance" stackId="6" startPc="268459051"/>
-<entry endPc="268459707" name="newLocations" stackId="2" startPc="268459569"/>
-<entry endPc="268459975" name="i" stackId="5" startPc="268459952"/>
-<entry endPc="268459978" name="locations" stackId="2" startPc="268459710"/>
-<entry endPc="268459978" name="l" stackId="3" startPc="268459710"/>
-<entry endPc="268459978" name="ids" stackId="4" startPc="268459710"/>
-<entry endPc="268460168" name="i" stackId="3" startPc="268460068"/>
-<entry endPc="268460243" name="sortBy" stackId="2" startPc="268459981"/>
-<entry endPc="268460455" name="i" stackId="5" startPc="268460246"/>
-<entry endPc="268460455" name="t2" stackId="4" startPc="268460246"/>
-<entry endPc="268460455" name="t1" stackId="3" startPc="268460246"/>
-<entry endPc="268460455" name="d" stackId="6" startPc="268460246"/>
-<entry endPc="268460583" name="locations" stackId="2" startPc="268460542"/>
-<entry endPc="268460889" name="i" stackId="3" startPc="268460832"/>
-<entry endPc="268460903" name="locations" stackId="2" startPc="268460795"/>
-<entry endPc="268461073" name="j" stackId="6" startPc="268460987"/>
-<entry endPc="268461086" name="i" stackId="5" startPc="268460963"/>
-<entry endPc="268461100" name="locations" stackId="4" startPc="268460926"/>
-<entry endPc="268461497" name="pi" stackId="3" startPc="268461433"/>
-<entry endPc="268461710" name="a" stackId="7" startPc="268461505"/>
-<entry endPc="268461710" name="dLat" stackId="5" startPc="268461505"/>
-<entry endPc="268461710" name="dLon" stackId="6" startPc="268461505"/>
-<entry endPc="268461864" name="x" stackId="7" startPc="268461713"/>
-<entry endPc="268461864" name="dLon" stackId="5" startPc="268461713"/>
-<entry endPc="268461864" name="y" stackId="6" startPc="268461713"/>
-<entry endPc="268462097" name="dateStr" stackId="3" startPc="268461867"/>
-<entry endPc="268462097" name="date" stackId="2" startPc="268461867"/>
-<entry endPc="268462187" name="i" stackId="4" startPc="268462164"/>
-<entry endPc="268462228" name="result" stackId="3" startPc="268462100"/>
-<entry endPc="268462326" name="i" stackId="5" startPc="268462231"/>
-<entry endPc="268462488" name="pivot" stackId="5" startPc="268462329"/>
-<entry endPc="268462515" name="temp" stackId="4" startPc="268462491"/>
-<entry endPc="268462588" name="i" stackId="5" startPc="268462559"/>
-<entry endPc="268462639" name="i" stackId="6" startPc="268462616"/>
-<entry endPc="268462642" name="result" stackId="4" startPc="268462518"/>
-<entry endPc="268462703" name="i" stackId="4" startPc="268462680"/>
-<entry endPc="268462753" name="i" stackId="5" startPc="268462724"/>
-<entry endPc="268462756" name="result" stackId="3" startPc="268462645"/>
-<entry endPc="268462823" name="i" stackId="4" startPc="268462783"/>
-<entry endPc="268462901" name="i" stackId="4" startPc="268462878"/>
-<entry endPc="268462960" name="i" stackId="5" startPc="268462925"/>
-<entry endPc="268462963" name="result" stackId="3" startPc="268462828"/>
-<entry endPc="268463332" name="i" stackId="4" startPc="268463137"/>
-<entry endPc="268463483" name="locations" stackId="3" startPc="268463075"/>
-<entry endPc="268463483" name="l" stackId="2" startPc="268463075"/>
-<entry endPc="268463538" name="mail" stackId="2" startPc="268463486"/>
+<entry endPc="268456556" name="distance" stackId="4" startPc="268456391"/>
+<entry endPc="268457301" name="interval" stackId="1" startPc="268456878"/>
+<entry endPc="268458382" name="interval" stackId="2" startPc="268458067"/>
+<entry endPc="268458382" name="duration" stackId="3" startPc="268458067"/>
+<entry endPc="268458720" name="interval" stackId="2" startPc="268458385"/>
+<entry endPc="268458720" name="accuracyChanged" stackId="4" startPc="268458385"/>
+<entry endPc="268458720" name="radians" stackId="3" startPc="268458385"/>
+<entry endPc="268459375" name="typeLocations" stackId="10" startPc="268459251"/>
+<entry endPc="268459378" name="location" stackId="9" startPc="268459169"/>
+<entry endPc="268459378" name="type" stackId="8" startPc="268459169"/>
+<entry endPc="268459391" name="i" stackId="7" startPc="268459169"/>
+<entry endPc="268459514" name="locations" stackId="1" startPc="268458999"/>
+<entry endPc="268459514" name="types" stackId="2" startPc="268458999"/>
+<entry endPc="268459514" name="all" stackId="3" startPc="268458999"/>
+<entry endPc="268459514" name="lat" stackId="4" startPc="268458999"/>
+<entry endPc="268459514" name="lon" stackId="5" startPc="268458999"/>
+<entry endPc="268459514" name="distance" stackId="6" startPc="268458999"/>
+<entry endPc="268459655" name="newLocations" stackId="2" startPc="268459517"/>
+<entry endPc="268459923" name="i" stackId="5" startPc="268459900"/>
+<entry endPc="268459926" name="locations" stackId="2" startPc="268459658"/>
+<entry endPc="268459926" name="l" stackId="3" startPc="268459658"/>
+<entry endPc="268459926" name="ids" stackId="4" startPc="268459658"/>
+<entry endPc="268460116" name="i" stackId="3" startPc="268460016"/>
+<entry endPc="268460191" name="sortBy" stackId="2" startPc="268459929"/>
+<entry endPc="268460403" name="i" stackId="5" startPc="268460194"/>
+<entry endPc="268460403" name="t2" stackId="4" startPc="268460194"/>
+<entry endPc="268460403" name="t1" stackId="3" startPc="268460194"/>
+<entry endPc="268460403" name="d" stackId="6" startPc="268460194"/>
+<entry endPc="268460531" name="locations" stackId="2" startPc="268460490"/>
+<entry endPc="268460837" name="i" stackId="3" startPc="268460780"/>
+<entry endPc="268460851" name="locations" stackId="2" startPc="268460743"/>
+<entry endPc="268461021" name="j" stackId="6" startPc="268460935"/>
+<entry endPc="268461034" name="i" stackId="5" startPc="268460911"/>
+<entry endPc="268461048" name="locations" stackId="4" startPc="268460874"/>
+<entry endPc="268461445" name="pi" stackId="3" startPc="268461381"/>
+<entry endPc="268461658" name="a" stackId="7" startPc="268461453"/>
+<entry endPc="268461658" name="dLat" stackId="5" startPc="268461453"/>
+<entry endPc="268461658" name="dLon" stackId="6" startPc="268461453"/>
+<entry endPc="268461812" name="x" stackId="7" startPc="268461661"/>
+<entry endPc="268461812" name="dLon" stackId="5" startPc="268461661"/>
+<entry endPc="268461812" name="y" stackId="6" startPc="268461661"/>
+<entry endPc="268462045" name="dateStr" stackId="3" startPc="268461815"/>
+<entry endPc="268462045" name="date" stackId="2" startPc="268461815"/>
+<entry endPc="268462135" name="i" stackId="4" startPc="268462112"/>
+<entry endPc="268462176" name="result" stackId="3" startPc="268462048"/>
+<entry endPc="268462274" name="i" stackId="5" startPc="268462179"/>
+<entry endPc="268462436" name="pivot" stackId="5" startPc="268462277"/>
+<entry endPc="268462463" name="temp" stackId="4" startPc="268462439"/>
+<entry endPc="268462536" name="i" stackId="5" startPc="268462507"/>
+<entry endPc="268462587" name="i" stackId="6" startPc="268462564"/>
+<entry endPc="268462590" name="result" stackId="4" startPc="268462466"/>
+<entry endPc="268462651" name="i" stackId="4" startPc="268462628"/>
+<entry endPc="268462701" name="i" stackId="5" startPc="268462672"/>
+<entry endPc="268462704" name="result" stackId="3" startPc="268462593"/>
+<entry endPc="268462771" name="i" stackId="4" startPc="268462731"/>
+<entry endPc="268462849" name="i" stackId="4" startPc="268462826"/>
+<entry endPc="268462908" name="i" stackId="5" startPc="268462873"/>
+<entry endPc="268462911" name="result" stackId="3" startPc="268462776"/>
 </localVars>
 <annotations/>
 <functions>
@@ -2088,26 +2052,6 @@
 <functionEntry name="union" parent="ArrayExt">
 <param id="array1"/>
 <param id="array2"/>
-<documentation/>
-</functionEntry>
-<functionEntry name="onComplete" parent="CommListener">
-<documentation/>
-</functionEntry>
-<functionEntry name="onError" parent="CommListener">
-<documentation/>
-</functionEntry>
-<functionEntry name="initialize" parent="Bridge">
-<documentation/>
-</functionEntry>
-<functionEntry name="dispose" parent="Bridge">
-<documentation/>
-</functionEntry>
-<functionEntry name="parseMail" parent="Bridge">
-<param id="mail"/>
-<documentation/>
-</functionEntry>
-<functionEntry name="onMail" parent="Bridge">
-<param id="mailIter"/>
 <documentation/>
 </functionEntry>
 <functionEntry name="vibrate" parent="Alert">

@@ -1,4 +1,4 @@
-/* FindMe 0.1 */
+/* FindMe 1.0.0 */
 Friendly application for easy managing and navigation to waypoints.
 
 What you can
@@ -41,11 +41,11 @@ FAQ
 
 Donation
 - If you like app you can support project (which I'm implementing in the gaps of free time) by sending money to bitcoin wallet 3DrK1Hi6bn35qdBo1ZVVswASp77hT6fudy
-- I'll be very thankful for any support, it will speed up developing next versions and mobile app
+- I'll be very appreciated for any support, it will speed up developing next versions and mobile app
 
 Notes & bugs
-- App settings don't save after error
-- Memory leaks after several added locations (I think this is some platform-related bug, investigating)
+- App settings aren't saved after error
+- Memory leaks after several added locations (some platform-related bug, investigating)
 - May crash if locations count is near limit (lack of memory, will be optimised in next versions)
 - Sorting by name takes a lot of time (ConnectIQ limitation of string methods)
 
