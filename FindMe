@@ -1,9 +1,9 @@
 /* FindMe 1.0.0 */
-Friendly application for easy managing and navigation to waypoints.
+Standalone application for easy managing and navigation to waypoints (without access to internet and connecting with phone)
 
 What you can
 - Add waypoint in 3 different formats (ddd.dddddd, dddmm.mmm, dddmmss)
-- Group waypoints up to 16 type categories (Place, Mountain, Hotel...)
+- Group waypoints up to 16 type categories (e.g. Place, Mountain, Hotel...)
 - Navigate with direction and distance info
 - Manage up to 100 waypoints with custom names
 - Recording activity
@@ -36,9 +36,6 @@ Plans
     |- Search by coordinates, type, address
     |- Import from other apps (e.g. Google Maps) and gpx tracks
 
-FAQ
-- Will be added
-
 Donation
 - If you like app you can support project (which I'm implementing in the gaps of free time) by sending money to bitcoin wallet 3DrK1Hi6bn35qdBo1ZVVswASp77hT6fudy
 - I'll be very appreciated for any support, it will speed up developing next versions and mobile app
@@ -51,3 +48,56 @@ Notes & bugs
 
 Contact
 - If you have any questions, suggestions or comments, feel free to contact me by email findme.connectiq@gmail.com
+
+********************************************************
+
+/* FindMe 1.0.0 */
+Зручний додаток для управління та орієнтуванню по збережених локаціях (без потреби доступу до інтернет та телефону)
+
+Дозволяє:
+- Додавати координати у 3 різних форматах (ddd.dddddd, dddmm.mmm, dddmmss)
+- Групувати локації у 16 категоріях (наприклад Place, Mountain, Hotel...)
+- Рухатись до точки за напрямом та інформацією про відстань
+- Зберігати до 100 локацій з заданими назвами
+- Записувати активність
+- Налаштувати інтервал оновлення GPS, фільтр дистанції, формат координат, тип активності та сортування
+
+Структура Меню
+|- Locations
+    |- All
+        |- Location #1 /* відображення локації */
+            |- Start Activity
+            |- Coordinates
+            |- Save Persisted /* якщо підтримується */
+            |- Save All Persisted
+            |- Delete
+            |- Delete All
+        |- Location #2
+    |- Place
+    |- Highway
+    |- ...
+|- Add Current - Name - Type - /* відображення локації */
+|- Add Coordinates - Coordinates - Name - Type - /* відображення локації */
+|- Settings - GPS Interval - Distance Filter - Coord. Format - Activity Type - Sort by
+|- Reset /* скинути до заводських налаштувань */
+|- About
+
+Плани
+- Реліз для Vivoactive та інших пристроїв (зроблено, але потребує тестування на реальних пристроях)
+- Додаток Android та iOS (ключовий функціонал). У планах:
+    |- Додавання локації з OSM карти
+    |- Пошук за координатами, типом, адресою
+    |- Імпорт локації з інших додатків (наприклад Google Maps) та gpx треків
+
+На світі настала, лихая година...
+- Якщо вам сподобався додаток (який я роблю у проміжках вільного часу), Ви можете підтримати проект, відіславши пару гривень на біткойн-гаманець 3DrK1Hi6bn35qdBo1ZVVswASp77hT6fudy
+- Буду вдячний за будь-яку підтримку, це пришвидшить розробку наступних версій
+
+Замітки і баги
+- Налаштування та локації не зберігаються після помилки
+- Memory-leak після додавання точки
+- Може вилітати при наближенні до макс. кількості точок (нестача пам'яті, буде оптимізовано у наступних версіях)
+- Сортування за іменем триває довгий час (обмежений функціонал String методів)
+
+Контакт
+- Якщо у вас є будь-які питання, побажання або коментарі, не встидайтесь писати на email findme.connectiq@gmail.com
