@@ -66,11 +66,11 @@ module Data{
 		}
 		
 		function dispose(){
+			Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 			timer.stop();
 			timer = null;
 			session = null;
 			timerCallback = null;
-			Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 		}
 		
 		// props

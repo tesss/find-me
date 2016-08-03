@@ -53,6 +53,7 @@ module UI{
 			Sensor.enableSensorEvents(null);
 			gpsIcon = null;
 			activityIcon = null;
+			directionDrawable = null;
 		}
 		
 		function onTimer(accuracyChanged){
@@ -240,10 +241,11 @@ module UI{
 		}
 		
 		function onLayout(){
-			directionDrawable = new DirectionDrawable(drawModel.direction, drawModel.directionCenter, 0);
+			
 		}
 		
 		function onShow(){
+			directionDrawable = new DirectionDrawable(drawModel.direction, drawModel.directionCenter, bearing != null ? bearing : 0);
 			activityIcon = Ui.loadResource(Rez.Drawables.GpsActivity);
 			onTimer(true);
 			Sensor.enableSensorEvents(method(:onSensor));

@@ -57,7 +57,7 @@ module UI{
 				release();
 				popMainMenu();
 				Ui.pushView(new SettingsPicker(), new SettingsPickerDelegate(), transition);
-			} else if(item == :clear){
+			} else if(item == :reset){
 				release();
 				dataStorage.reset();
 				pushInfoView("Reset done", false);

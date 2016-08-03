@@ -322,7 +322,7 @@ module Data{
 		}
 		
 		function reset(){
-			deleteAllLocations();
+			deleteAllLocations(null);
 			setInterval(0);
 			setDistance(0);
 			setFormat(Position.GEO_DEG);
