@@ -6,7 +6,7 @@ using _;
 	
 class FindMeApp extends App.AppBase {
     function onStart() {
-    	UI.dataStorage = new Data.DataStorage();
+    	
     }
 
 	function onStop(){

@@ -63,7 +63,7 @@ module UI{
 	}
 	
 	function defLocationName(){
-		return "LOC_" + Data.dateStr();
+		return "loc_" + Data.dateStr();
 	}
 	
 	function getText(str, options){
