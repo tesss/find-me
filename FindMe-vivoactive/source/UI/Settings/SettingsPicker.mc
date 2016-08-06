@@ -6,12 +6,12 @@ using Data;
 module UI{
 	class SettingsPicker extends Ui.Picker {
 		function initialize(){
+			var format = dataStorage.getFormat();
+			format = Data.ArrayExt.indexOf(FormatPickerFactory.values, format, method(:predicate));
 			var interval = dataStorage.getInterval();
 			interval = Data.ArrayExt.indexOf(IntervalPickerFactory.values, interval, method(:predicate));
 			var distance = dataStorage.getDistance();
 			distance = Data.ArrayExt.indexOf(DistancePickerFactory.values, distance, method(:predicate));
-			var format = dataStorage.getFormat();
-			format = Data.ArrayExt.indexOf(FormatPickerFactory.values, format, method(:predicate));
 			var type = dataStorage.getActivityType();
 			type = Data.ArrayExt.indexOf(TypePickerFactory.values, type, method(:predicate));
 			var sorting = dataStorage.getSortBy();
@@ -19,14 +19,14 @@ module UI{
 			Picker.initialize({
 				:title => getText("Settings", {:isSettings => true, :isTitle => true}), 
 				:pattern => [
+					getText("Format", {:isSettings => true}),
+					new FormatPickerFactory(),
+					getText(""),
 					getText("Int.", {:isSettings => true}),
 					new IntervalPickerFactory(),
 					getText(""),
 					getText("Dist.", {:isSettings => true}),
 					new DistancePickerFactory(),
-					getText(""),
-					getText("Format", {:isSettings => true}),
-					new FormatPickerFactory(),
 					getText(""),
 					getText("Type", {:isSettings => true}),
 					new TypePickerFactory(),
@@ -37,13 +37,13 @@ module UI{
 				],
 				:defaults => [
 					null,
+					format,
+					null,
+					null,
 					interval,
 					null,
 					null,
 					distance,
-					null,
-					null,
-					format,
 					null,
 					null,
 					type,
@@ -55,7 +55,7 @@ module UI{
 			});
 		}
 		
-	    function onUpdate(dc) {
+		function onUpdate(dc) {
 	        clearPicker(dc);
 	    }
 		
@@ -66,9 +66,9 @@ module UI{
 	
 	class SettingsPickerDelegate extends Ui.PickerDelegate {
 		function onAccept(values){
-			dataStorage.setInterval(values[1]);
-			dataStorage.setDistance(values[4]);
-			dataStorage.setFormat(values[7]);
+			dataStorage.setFormat(values[1]);
+			dataStorage.setInterval(values[4]);
+			dataStorage.setDistance(values[7]);
 			dataStorage.setActivityType(values[10]);
 			dataStorage.setSortBy(values[13]);
 			pushInfoView("Settings saved", true);

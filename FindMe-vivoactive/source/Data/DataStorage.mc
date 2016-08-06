@@ -123,10 +123,7 @@ module Data{
 			timer.stop();
 			Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
 			gpsFinding = false;
-			if(interval >= 0){
-				onTimer();
-			}
-			timer.start(method(:onTimer), TIMER_INTERVAL, true);
+			onTimer();
 		}
 		
 		function onTimer(shot){
@@ -142,10 +139,11 @@ module Data{
 			if(gpsFinding){
 				return;
 			}
-			if(interval == 0 || shot == true || (interval > 0 && (duration == null || duration >= interval))) {
+			if(!gpsFinding && (interval == 0 || shot == true || (interval > 0 && (duration == null || duration >= interval)))) {
 				gpsFinding = true;
 				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
 			}
+			timer.start(method(:onTimer), TIMER_INTERVAL, true);
 		}
 		
 		function updateCurrentLocation(info){
