@@ -66,7 +66,6 @@ module Data{
 		}
 		
 		function dispose(){
-			timer.stop();
 			timer = null;
 			session = null;
 			timerCallback = null;
@@ -143,7 +142,7 @@ module Data{
 				gpsFinding = true;
 				Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:updateCurrentLocation));
 			}
-			timer.start(method(:onTimer), TIMER_INTERVAL, true);
+			timer.start(method(:onTimer), TIMER_INTERVAL, false);
 		}
 		
 		function updateCurrentLocation(info){

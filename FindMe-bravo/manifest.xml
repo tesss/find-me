@@ -2,8 +2,8 @@
     <iq:application entry="FindMeApp" id="C49BDEB3BCD1425CAA1AE51D337A32F8" launcherIcon="LauncherIcon" name="AppName" type="watch-app">
 
         <iq:products>
-            <iq:product id="fenix3"/>
-            <iq:product id="fenix3_hr"/>
+            <iq:product id="d2bravo"/>
+            <iq:product id="d2bravo_titanium"/>
         </iq:products>
 
         <iq:permissions>

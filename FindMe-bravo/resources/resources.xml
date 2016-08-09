@@ -1,0 +1,33 @@
+<resources>
+    <string id="AppName">FindMe</string>
+    
+    <bitmap id="LauncherIcon" filename="images/launcher_icon.png">
+    	<palette disableTransparency="false">
+            <color>FFFFFF</color>
+            <color>AAAAAA</color>
+            <color>000000</color>
+        </palette>
+    </bitmap>
+    
+    <bitmap id="GpsLast" filename="images/gps.png">
+    	<palette disableTransparency="false">
+            <color>AAAAAA</color>
+        </palette>
+    </bitmap>
+    <bitmap id="GpsPoor" filename="images/gps.png">
+    	<palette disableTransparency="false">
+            <color>FF0000</color>
+        </palette>
+    </bitmap>
+    <bitmap id="GpsUsable" filename="images/gps.png">
+    	<palette disableTransparency="false">
+            <color>FFAA00</color>
+        </palette>
+    </bitmap>
+    <bitmap id="GpsGood" filename="images/gps.png">
+   		<palette disableTransparency="false">
+            <color>00AA00</color>
+        </palette>
+    </bitmap>
+    <bitmap id="GpsActivity" filename="images/activity.png"/>
+</resources>

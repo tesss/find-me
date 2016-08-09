@@ -1,14 +1,15 @@
-﻿/* FindMe 1.0.0 */
-Standalone application for easy managing and navigation to waypoints (without access to internet and connecting with phone)
-
+﻿FindMe 1.0.0
+Frendly application for easy managing and navigation to waypoints (without access to internet and phone connection)
+----------------------------------------------------------
 What you can
-- Add waypoint in 3 different formats (ddd.dddddd, dddmm.mmm, dddmmss)
-- Group waypoints up to 16 type categories ("Place", "Highway", "Sport", "Mountain", "Water", "Tourism", "Natural", "Hotel", "Sight", "Transport", "Shop", "Food", "Entertainment", "Emergency", "Tactical", "Custom")
-- Navigate with direction, distance info and vibro alerts (reach destination)
-- Manage up to 100 waypoints with custom names, types and coordinates
-- Recording activity (with sound alerts)
-- Flexible setup for waypoint format, gps updating interval, distance filter, recorded activity type and sorting
-
+- Add location in 3 different formats (ddd.dddddd, dddmm.mmm, dddmmss)
+- Group locations into 16 type categories ("Place", "Highway", "Sport", "Mountain", "Water", "Tourism", "Natural", "Hotel", "Sight", "Transport", "Shop", "Food", "Entertainment", "Emergency", "Tactical", "Custom")
+- Navigate with direction, distance info and vibro alerts
+- Manage up to 100 locations with custom names, types and coordinates
+- Recording activity
+- Flexible setup for coordinates format, gps updating interval, distance filter, recorded activity type and locations sorting
+- Sound and vibration alerts
+----------------------------------------------------------
 Menu Structure
 |- Locations
     |- All
@@ -28,7 +29,7 @@ Menu Structure
 |- Settings - Coord. Format - GPS Interval - Distance Filter  - Activity Type - Sort by
 |- Reset /* reset all to default */
 |- About
-
+----------------------------------------------------------
 FAQ
 - Indicator for gps signal quality (top left icon on location view)
     |- Hidden: location is unknown
@@ -40,24 +41,30 @@ FAQ
 - Max location name length is 15 characters (if available it uses standart TextPicker, else Picker with limited character set)
 - If location is closer than 20m it shows circle instead of arrow
 - Now it's limited up to 100 locations (lack of memory)
-
+- If distance filter is enabled, it shows only near locations with defined radius (if gps found)
+- Distance units are used from watch settings
+- Use update gps interval settings to reduce battery using (based on devices battery use tesing)
+- Manual update interval hits gps only after pressing Start button in Location view (vibrates)
+- Delete All removes all locations of current type
+- Reset deletes all locations and resets settings to default
+- You can check all locations count in About view
+----------------------------------------------------------
 Plans
-- Release for all other devices (already implemented, but needed more testing on real devices).
+- Release for all other devices (already implemented, needs more testing on real devices).
 - Mobile Android & iOS app-companion (the main key feature). Planned functionality:
     |- Adding location from OSM map
     |- Search by coordinates, type, address
     |- Import from other apps (e.g. Google Maps) and gpx tracks
-
+----------------------------------------------------------
 Donation
 - If you like app you can support project (which I'm implementing in the gaps of free time) with donation to bitcoin wallet 3DrK1Hi6bn35qdBo1ZVVswASp77hT6fudy
 - I'll be very appreciated for any support, it will speed up developing next versions and mobile app
-
+----------------------------------------------------------
 Notes & bugs
-- App settings aren't saved after error
-- Memory leaks after several added locations (some platform-related bug, investigating)
+- Memory leaks after several added locations (some platform-related bug)
 - May crash if locations count is near limit (lack of memory, will be optimised in next versions)
 - Sorting by name takes a lot of time (ConnectIQ limitation of string methods)
-
+----------------------------------------------------------
 Contact
 - If you have any questions, suggestions or comments, feel free to contact me by email findme.connectiq@gmail.com
 
@@ -69,10 +76,11 @@ Contact
 Дозволяє:
 - Додавати координати у 3 різних форматах (ddd.dddddd, dddmm.mmm, dddmmss)
 - Групувати локації у 16 категоріях ("Place", "Highway", "Sport", "Mountain", "Water", "Tourism", "Natural", "Hotel", "Sight", "Transport", "Shop", "Food", "Entertainment", "Emergency", "Tactical", "Custom")
-- Рухатись до точки за напрямом, інформацією про відстань та сповіщеннями про досягнення локації
+- Рухатись до точки за напрямом та інформацією про відстань
 - Зберігати до 100 локацій з заданими назвами, типами та координатами
-- Записувати активність (зі звуковими сповіщеннями)
+- Записувати активність
 - Налаштовувати формат координат, інтервал оновлення GPS, фільтр дистанції, тип активності та сортування локацій
+- Звукові та вібро сповіщення
 
 Структура Меню
 |- Locations
@@ -103,11 +111,18 @@ FAQ
     |- Зелений: хороша якість сигналу
 - Індикатор запису активності (верхня права іконка на відображенні локації)
 - Максимальна довжина імені локації складає 15 символів (якщо доступно, використовується стандартний TextPicker, у іншому випадку Picker з обмеженим набором символів)
-- Якщо локація знаходиться ближче ніж 20 м, показується круг замість стрілки (сповіщення у вигляді вібро)
+- Якщо локація знаходиться ближче ніж 20 м, показується круг замість стрілки (вібрація)
 - Зараз діє обмеження до 100 збережених локацій (нестача пам'яті)
+- Якщо встановлений фільтр дистанції, показуються локації лише в заданому радіусі від поточного місця (якщо координати знайдені)
+- Одиниці дистанції встановлюються відповідно до налаштувань годинника
+- Для зменшення використання батареї можна вибрати відповідний інтервал оновлення gps (залежить від пристроїв)
+- При ручному оновленні gps позиція визначається лише після натискання кнопки Start з відображення локації (після цього додаток вібрує)
+- Delete All видаляє всі локації вибраного типу
+- Reset видаляє всі локації та скидає налаштування по-замовчуванню
+- Інформація про кількість збережених локацій можна подивитись у About
 
 Плани
-- Реліз для Vivoactive та інших пристроїв (зроблено, але потребує тестування на реальних пристроях)
+- Реліз для Vivoactive та інших пристроїв (реалізовано, потребує тестування на реальних пристроях)
 - Додаток Android та iOS (ключовий функціонал). У планах:
     |- Додавання локації з OSM карти
     |- Пошук за координатами, типом, адресою
@@ -121,7 +136,7 @@ FAQ
 - Налаштування та локації не зберігаються після помилки
 - Memory-leak після додавання точки
 - Може вилітати при наближенні до макс. кількості точок (нестача пам'яті, буде оптимізовано у наступних версіях)
-- Сортування за іменем триває довгий час (обмежений функціонал String методів)
+- Сортування за іменем виконується довгий час
 
 Контакт
 - Якщо у вас є будь-які питання, побажання або коментарі, не встидайтесь писати на email findme.connectiq@gmail.com
