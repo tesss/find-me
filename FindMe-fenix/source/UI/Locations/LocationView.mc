@@ -70,6 +70,8 @@ module UI{
 				} else if(accuracy == Position.QUALITY_GOOD){
 					gpsIcon = Ui.loadResource(Rez.Drawables.GpsGood);
 				}
+				model.fullRefresh = true;
+				Ui.requestUpdate();
 			}
 		}
 		
@@ -238,10 +240,6 @@ module UI{
 				}
 				model.fullRefresh = false;
 			}
-		}
-		
-		function onLayout(){
-			
 		}
 		
 		function onShow(){

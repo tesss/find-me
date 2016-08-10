@@ -34,7 +34,7 @@ module UI {
 	}
 	
 	class CharFactory extends Ui.PickerFactory {
-		static const values = " 0987654321#&'-.zyxwvutsrqponmlkjihgfedcba";
+		static const values = " abcdefghijklmnopqrstuvwxyz.-'&#1234567890";
 		function getDrawable(index, isSelected){ return getText(getValue(index), {:isSelected => isSelected}); }
 		function getSize(){ return values.length(); }
 		function getValue(index){ return values.substring(index, index + 1); }

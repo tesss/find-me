@@ -71,11 +71,12 @@ module UI{
 				} else if(accuracy == Position.QUALITY_GOOD){
 					gpsIcon = Ui.loadResource(Rez.Drawables.GpsGood);
 				}
+				model.fullRefresh = true;
+				Ui.requestUpdate();
 			}
 			if(anim){
 				return;
 			}
-			Ui.requestUpdate();
 			if(bearing != null){
 				anim = true;
 				var t1 = directionDrawable.angle;

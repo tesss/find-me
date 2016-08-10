@@ -152,7 +152,7 @@ module Data{
 			}
 			var radians = info.position.toRadians();
 			var accuracyChanged = currentLocation == null || currentLocation[ACCURACY] != info.accuracy;
-			currentLocation = [radians[0], radians[1], info.heading, info.accuracy, info.when];
+			currentLocation = [radians[0], radians[1], info.heading, info.accuracy, Time.Time.now()];
 			invokeTimerCallback(accuracyChanged);
 		}
 		

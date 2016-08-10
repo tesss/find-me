@@ -24,8 +24,8 @@ module UI{
 		const TYPES_BCOLORS = [
 			Graphics.COLOR_WHITE,
 			Graphics.COLOR_LT_GRAY,
-			Graphics.COLOR_DK_RED,
-			Graphics.COLOR_DK_BLUE,
+			Graphics.COLOR_RED,
+			Graphics.COLOR_BLUE,
 			Graphics.COLOR_BLUE,
 			Graphics.COLOR_DK_GREEN,
 			Graphics.COLOR_GREEN,
@@ -48,6 +48,14 @@ module UI{
 			getDrawModel();
 		}
 		
+		function dispose(){
+			dataStorage.timerCallback = null;
+			Sensor.enableSensorEvents(null);
+			gpsIcon = null;
+			activityIcon = null;
+			directionDrawable = null;
+		}
+		
 		function onTimer(accuracyChanged){
 			if(accuracyChanged){
 				var accuracy = dataStorage.currentLocation == null ? null : dataStorage.currentLocation[Data.ACCURACY];
@@ -62,13 +70,9 @@ module UI{
 				} else if(accuracy == Position.QUALITY_GOOD){
 					gpsIcon = Ui.loadResource(Rez.Drawables.GpsGood);
 				}
+				model.fullRefresh = true;
+				Ui.requestUpdate();
 			}
-		}
-		
-		function onLayout(){
-			directionDrawable = new DirectionDrawable(drawModel.direction, drawModel.directionCenter, 0);
-			onTimer(true);
-			activityIcon = Ui.loadResource(Rez.Drawables.GpsActivity);
 		}
 		
 		function onSensor(info){
@@ -76,14 +80,29 @@ module UI{
 				return;
 			}
 			Ui.requestUpdate();
-			if(info != null && info.heading != null && info.heading > 0){
-				heading = info.heading;
-			} else {
+			if(info == null || (info.speed != null && info.speed > Data.SPEED_LIMIT && dataStorage.getInterval() > 0)){
 				heading = null;
+			} else {
+				heading = info.heading;
 			}
-			if(bearing != null && (directionDrawable.angle * 1000).toNumber() != (bearing * 1000).toNumber()){
-				anim = true;	
-				Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, directionDrawable.angle, bearing, 1, method(:animCallback));
+			if(bearing != null){
+				anim = true;
+				var t1 = directionDrawable.angle;
+				var t2 = bearing;
+				var sign;
+				if((t1 - t2).abs() > Math.PI){
+					if(t1.abs() > Math.PI){
+						sign = t1 < 0 ? 1 : -1;
+						t1 = t1 + sign * Math.PI * 2;
+					} else {
+						sign = t2 < 0 ? 1 : -1;
+						t2 = t2 + sign * Math.PI * 2;
+					}
+				}
+				var d = t1 - t2;
+				if(d.abs() > 0.017){
+					Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, t1, t2, 2, method(:animCallback));
+				}
 			}
 		}
 		
@@ -103,8 +122,8 @@ module UI{
 				dc.drawLine(drawModel.line1Dis[0], drawModel.line1Dis[1], drawModel.line1Dis[2], drawModel.line1Dis[3]);
 				dc.drawLine(drawModel.line2Dis[0], drawModel.line2Dis[1], drawModel.line2Dis[2], drawModel.line2Dis[3]);
 				
-				var str = "NO GPS";
-				if(interval >= 0){
+				var str = "MANUAL GPS";
+				if(dataStorage.gpsFinding){
 					if(dots.length() < 3){
 						dots = dots + ".";
 					} else {
@@ -136,10 +155,12 @@ module UI{
 					) - angle;
 					directionDrawable.draw(dc);
 				} else {
-					if(bearing != null){
+					if(bearing != null && !model.fullRefresh){
 						Alert.alert(Alert.ZERO_DISTANCE);
 					}
 					bearing = null;
+					setColor(dc, COLOR_LOWLIGHT);
+					dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius);
 					setColor(dc, COLOR_SECONDARY);
 					dc.drawCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius);
 					setColor(dc, COLOR_HIGHLIGHT);
@@ -172,7 +193,7 @@ module UI{
 			
 			setColor(dc, COLOR_SECONDARY);
 			dc.drawText(drawModel.type[0], drawModel.type[1], Graphics.FONT_XTINY, 
-				Data.DataStorage.TYPES[location[Data.LOC_TYPE]], Graphics.TEXT_JUSTIFY_CENTER);
+				dataStorage.TYPES[location[Data.LOC_TYPE]].toUpper(), Graphics.TEXT_JUSTIFY_CENTER);
 			
 			if(model.showArrows()){
 				setColor(dc, COLOR_LOWLIGHT);
@@ -184,10 +205,10 @@ module UI{
 		}
 		
 		function getDrawModel(){
-			var screenType = :square;
+			var screenType = :tall;
 			if(drawModel == null){
-				var w = 205;
-				var h = 148;
+				var w = 148;
+				var h = 205;
 				var wc = w / 2;
 				var hc = h / 2;
 				var hc3 = hc / 3;
@@ -241,10 +262,10 @@ module UI{
 					c = [wc, hc];
 					p = 15;
 					padding = 5;
-					drawModel.name = [wc, p];
-					drawModel.type = [wc, hc3 + p];
-					drawModel.line1 = [padding, hc + r, wc - r - p, hc];
-					drawModel.line2 = [wc + r + p, hc, w - padding, hc + r];
+					drawModel.name = [wc, 7];
+					drawModel.type = [wc, 38];
+					drawModel.line1 = [padding, hc + r, wc - r - p, hc - r];
+					drawModel.line2 = [wc + r + p, hc - r, w - padding, hc + r];
 					drawModel.line1Dis = [padding, hc + r, wc - r - p, hc + 2 * r];
 					drawModel.line2Dis = [wc + r + p, hc + 2*r, w - padding, hc + r];
 					drawModel.distance = [wc, h - Graphics.getFontHeight(Graphics.FONT_SMALL) - p];
@@ -263,6 +284,11 @@ module UI{
 					drawModel.directionCenter = c;
 					drawModel.radius = getDistance(drawModel.direction[0], drawModel.directionCenter) - dr;
 				}
+				var iconPadding = 10;
+				var iconHeight = 40;
+				drawModel.gpsIcon = [iconPadding, iconHeight];
+				drawModel.activityIcon = [w-iconPadding, iconHeight];
+				_.p(drawModel);
 			}
 			return drawModel;
 		}
@@ -284,6 +310,29 @@ module UI{
 			c[1] = (p1[1] + p2[1] + p4[1]) / 3;
 			return [p1, p2, p3, p4];
 		}
+		
+		function getDrawModel(){
+			if(drawModel == null){
+				drawModel = new LocationDrawModel();
+				drawModel.width = 148;
+				drawModel.name = [74, 7];
+				drawModel.type = [74, 38];
+				drawModel.line1 = [5, 132, 29, 72];
+				drawModel.line2 = [119, 72, 143, 132];
+				drawModel.line1Dis = [5, 132, 29, 162];
+				drawModel.line2Dis = [119, 162, 143, 132];
+				drawModel.arrow1 = [[74, 1], [81.500000, 6], [66.500000, 6]];
+				drawModel.arrow2 = [[74, 204], [81.500000, 199], [66.500000, 199]];
+				drawModel.radius = 35.000000;
+				drawModel.distance = [74, 168];
+				drawModel.bearing = [74, 93];
+				drawModel.direction = [[74, 72], [101.000000, 132], [74, 117.000000], [47.000000, 132]];
+				drawModel.directionCenter = [74.000000, 112];
+				drawModel.gpsIcon = [10, 40];
+				drawModel.activityIcon = [138, 40];
+			}
+			return drawModel;
+		}
 	
 		function onUpdate(dc){
 			if(anim && !model.fullRefresh){
@@ -291,6 +340,7 @@ module UI{
 				dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius + 7);
 				directionDrawable.draw(dc);
 			} else {
+				anim = false;
 				var location = model.get();
 				if(location != null){
 					draw(location, dc);
@@ -299,16 +349,20 @@ module UI{
 			}
 		}
 		
+		function onLayout(){
+			
+		}
+		
 		function onShow(){
+			directionDrawable = new DirectionDrawable(drawModel.direction, drawModel.directionCenter, bearing != null ? bearing : 0);
+			activityIcon = Ui.loadResource(Rez.Drawables.GpsActivity);
+			onTimer(true);
 			Sensor.enableSensorEvents(method(:onSensor));
 			dataStorage.timerCallback = method(:onTimer);
 		}
 		
 		function onHide(){
-			//gpsIcon = null;
-			//activityIcon = null;
-			Sensor.enableSensorEvents(null);
-			dataStorage.timerCallback = null;
+			dispose();
 		}
 	}
 	
@@ -329,7 +383,6 @@ module UI{
 		var directionCenter;
 		var gpsIcon;
 		var activityIcon;
-		
 		function toString(){
 			return "drawModel = new LocationDrawModel();\n"+
 				"drawModel.width = " + drawModel.width + ";\n" +
@@ -369,15 +422,18 @@ module UI{
 		}
 		
 		function onBack(){
-			if(model.global){
-				Ui.popView(transition);
-				return true;
-			}
 			Ui.popView(transition);
-			return false;
+			return true;
 		}
 		
 		function onSelect(){
+			if(dataStorage.getInterval() == -1 && !dataStorage.gpsFinding){
+				dataStorage.onTimer(true);
+				Alert.alert(Alert.GPS_MANUAL);
+			}
+		}
+		
+		function onMenu(){
 			var locations = model.get();
 			locations.fullRefresh = true;
 			Ui.pushView(new LocationMenu(locations), new LocationMenuDelegate(model), transition);

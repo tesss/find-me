@@ -83,7 +83,7 @@ module UI{
 			if(info == null || (info.speed != null && info.speed > Data.SPEED_LIMIT && dataStorage.getInterval() > 0)){
 				heading = null;
 			} else {
-				heading = Data.heading(info);
+				heading = info.heading;
 			}
 			if(bearing != null){
 				anim = true;
@@ -168,7 +168,7 @@ module UI{
 				}
 				
 				setColor(dc, COLOR_HIGHLIGHT);
-				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_NUMBER_MILD, getDistanceStr(distance), Graphics.TEXT_JUSTIFY_CENTER);
+				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_MEDIUM, getDistanceStr(distance), Graphics.TEXT_JUSTIFY_CENTER);
 			}
 		}
 		
@@ -207,22 +207,22 @@ module UI{
 		function getDrawModel(){
 			if(drawModel == null){
 				drawModel = new LocationDrawModel();
-				drawModel.width = 218;
-				drawModel.name = [109, 36];
-				drawModel.type = [109, 72];
-				drawModel.line1 = [20, 139, 59, 109];
-				drawModel.line2 = [159, 109, 198, 139];
-				drawModel.line1Dis = [20, 139, 59, 169];
-				drawModel.line2Dis = [159, 169, 198, 139];
-				drawModel.arrow1 = [[109, 1], [116.500000, 6], [101.500000, 6]];
-				drawModel.arrow2 = [[109, 217], [116.500000, 212], [101.500000, 212]];
-				drawModel.radius = 35;
-				drawModel.distance = [109, 174];
-				drawModel.bearing = [109, 108];
-				drawModel.direction = [[109, 97.000000], [136.000000, 157.000000], [109, 142.000000], [82.000000, 157.000000]];
-				drawModel.directionCenter = [109.000000, 137.000000];
-				drawModel.gpsIcon = [84, 14];
-				drawModel.activityIcon = [120, 14];
+				drawModel.width = 148;
+				drawModel.name = [74, 7];
+				drawModel.type = [74, 38];
+				drawModel.line1 = [5, 132, 29, 72];
+				drawModel.line2 = [119, 72, 143, 132];
+				drawModel.line1Dis = [5, 132, 29, 162];
+				drawModel.line2Dis = [119, 162, 143, 132];
+				drawModel.arrow1 = [[74, 1], [81.500000, 6], [66.500000, 6]];
+				drawModel.arrow2 = [[74, 204], [81.500000, 199], [66.500000, 199]];
+				drawModel.radius = 35.000000;
+				drawModel.distance = [74, 168];
+				drawModel.bearing = [74, 93];
+				drawModel.direction = [[74, 72], [101.000000, 132], [74, 117.000000], [47.000000, 132]];
+				drawModel.directionCenter = [74.000000, 112];
+				drawModel.gpsIcon = [10, 40];
+				drawModel.activityIcon = [122, 40];
 			}
 			return drawModel;
 		}
