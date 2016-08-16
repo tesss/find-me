@@ -239,7 +239,11 @@ module Data{
 		function sortLocationsList(locations){
 			var sortBy = getSortBy();
 			if(sortBy == SORTBY_DATE){
-				return locations;
+				var invArray = new [locations.size()];
+				for(var i = 0; i < locations.size(); i++){
+					invArray[i] = locations[locations.size() - i - 1];
+				}
+				return invArray;
 			} else if(currentLocation != null && sortBy == SORTBY_DISTANCE){
 				for(var i = 0; i < locations.size(); i++){
 					locations[i][LOC_DIST] = distance(locations[i][LOC_LAT], locations[i][LOC_LON], currentLocation[LAT], currentLocation[LON]);
