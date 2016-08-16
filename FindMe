@@ -1,49 +1,56 @@
-﻿FindMe 1.0.0
-Frendly application for easy managing and navigation to waypoints (without access to internet and phone connection)
+﻿FindMe 1.0.2
+Friendly application for easy managing and navigation to waypoints (without access to internet and phone connection)
 ----------------------------------------------------------
 What you can
 - Add location in 3 different formats (ddd.dddddd, dddmm.mmm, dddmmss)
-- Group locations into 16 type categories ("Place", "Highway", "Sport", "Mountain", "Water", "Tourism", "Natural", "Hotel", "Sight", "Transport", "Shop", "Food", "Entertainment", "Emergency", "Tactical", "Custom")
-- Navigate with direction, distance info and vibro alerts
-- Manage up to 100 locations with custom names, types and coordinates
+- Group locations into 16 categories with different color marking ("Place", "Highway", "Sport", "Mountain", "Water", "Tourism", "Natural", "Hotel", "Sight", "Transport", "Shop", "Food", "Entertainment", "Emergency", "Tactical", "Custom")
+- Navigate with direction, distance info and alerts
+- Manage up to 100 locations with custom names, types and coordinates. Save them persisted into device (if supported).
 - Recording activity
-- Flexible setup for coordinates format, gps updating interval, distance filter, recorded activity type and locations sorting
-- Sound and vibration alerts
+- Flexible setup of coordinates format, gps updating interval, distance filter, recorded activity type and locations sorting
 ----------------------------------------------------------
 Menu Structure
-|- Locations
-    |- All
-        |- Location #1 /* location view */
-            |- Start Activity
-            |- Coordinates
-            |- Save Persisted /* if supported */
-            |- Save All Persisted
-            |- Delete
-            |- Delete All
-        |- Location #2
-    |- Place
-    |- Highway
-    |- ...
-|- Add Current - Name - Type - /* location view */
-|- Add Coordinates - Coordinates - Name - Type - /* location view */
-|- Settings - Coord. Format - GPS Interval - Distance Filter  - Activity Type - Sort by
-|- Reset /* reset all to default */
-|- About
+-=| Locations
+----=| All /* initial view */
+-------=| Location #1 /* location view */
+---------=| Start Activity
+---------=| Coordinates
+---------=| Save Persisted /* if supported */
+---------=| Save All Persisted
+---------=| Delete
+---------=| Delete All
+-------=| Location #2
+-------=| ...
+----=| Place
+----=| Highway
+----=| ...
+-=| Add Current - Name - Type - /* location view */
+-=| Add Coordinates - Coordinates - Name - Type - /* location view */
+-=| Settings - Coord. Format - GPS Interval - Distance Filter  - Activity Type - Sort by
+-=| Reset /* reset all to default */
+-=| About
+
+To navigate menu use standard input (up/down, start/back)
 ----------------------------------------------------------
 FAQ
+- To input location name on those device which doesn't support keyboard input (e.g. vivoactive):
+    |- Tap up/down side of screen to change current character (limited to small chars, numbers and a few spec symbols)
+    |- Tap left/right side of screen to move to prev/next character
+    |- Default location name for adding current location is loc_yyMMddhhmm, where yy is current year, MM - month, dd - day, hh - hour, mm - minute
+    |- If you don't want to change default name, just tap 15 times on the right side (location name is limited up to 15 symbols), spaces on the start/end will be truncated 
+    |- If future I'll develop more convenient way of input, but the main idea will be creating waypoints in the future mobile app
+
 - Indicator for gps signal quality (top left icon on location view)
     |- Hidden: location is unknown
-    |- White: using last known position (if last gps fix was more than 10 sec ago, status become last known)
+    |- White: using last known position (if gps fix was more than 10 sec ago, status become last known)
     |- Red: quality poor
     |- Yellow: quality usable
     |- Green: quality good
 - Indicator for activity recording (top right icon on location view)
-- Max location name length is 15 characters (if available it uses standart TextPicker, else Picker with limited character set)
-- If location is closer than 20m it shows circle instead of arrow
-- Now it's limited up to 100 locations (lack of memory)
+- If location is closer than 20m it shows circle instead of arrow and vibrates
 - If distance filter is enabled, it shows only near locations with defined radius (if gps found)
-- Distance units are used from watch settings
-- Use update gps interval settings to reduce battery using (based on devices battery use tesing)
+- Distance units from watch settings
+- Use update gps interval settings to reduce battery using (based on different devices battery use tesing)
 - Manual update interval hits gps only after pressing Start button in Location view (vibrates)
 - Delete All removes all locations of current type
 - Reset deletes all locations and resets settings to default
@@ -66,77 +73,4 @@ Notes & bugs
 - Sorting by name takes a lot of time (ConnectIQ limitation of string methods)
 ----------------------------------------------------------
 Contact
-- If you have any questions, suggestions or comments, feel free to contact me by email findme.connectiq@gmail.com
-
-********************************************************
-
-/* FindMe 1.0.0 */
-Зручний додаток для управління та орієнтуванню по збережених локаціях (без доступу до інтернет та телефону)
-
-Дозволяє:
-- Додавати координати у 3 різних форматах (ddd.dddddd, dddmm.mmm, dddmmss)
-- Групувати локації у 16 категоріях з різними кольоровими схемами ("Place", "Highway", "Sport", "Mountain", "Water", "Tourism", "Natural", "Hotel", "Sight", "Transport", "Shop", "Food", "Entertainment", "Emergency", "Tactical", "Custom")
-- Рухатись до точки за напрямом та інформацією про відстань
-- Зберігати до 100 локацій з заданими назвами, типами та координатами. Зберігати на пристрій локації (якщо підтримується)
-- Записувати активність
-- Налаштовувати формат координат, інтервал оновлення GPS, фільтр дистанції, тип активності та сортування локацій
-- Звукові та вібро сповіщення
-
-Структура Меню
-|- Locations
-    |- All
-        |- Location #1 /* відображення локації */
-            |- Start Activity
-            |- Coordinates
-            |- Save Persisted /* якщо підтримується */
-            |- Save All Persisted
-            |- Delete
-            |- Delete All
-        |- Location #2
-    |- Place
-    |- Highway
-    |- ...
-|- Add Current - Name - Type - /* відображення локації */
-|- Add Coordinates - Coordinates - Name - Type - /* відображення локації */
-|- Settings - Coord. Format - GPS Interval - Distance Filter - Activity Type - Sort by
-|- Reset /* скинути налаштування по-замовчуванню */
-|- About
-
-FAQ
-- Індикатор для якості сигналу gps (верхня ліва іконка на відображенні локації)
-    |- Прихований: позиція невизначена
-    |- Білий: остання відома позиція (якщо останнє визначення gps було більш ніж 10 секунд тому, статус стає білим)
-    |- Червоний: погана якість сигналу
-    |- Жовтий: посередня якість сигналу
-    |- Зелений: хороша якість сигналу
-- Індикатор запису активності (верхня права іконка на відображенні локації)
-- Максимальна довжина імені локації складає 15 символів (якщо доступно, використовується стандартний TextPicker, у іншому випадку Picker з обмеженим набором символів)
-- Якщо локація знаходиться ближче ніж 20 м, показується круг замість стрілки (вібрація)
-- Зараз діє обмеження до 100 збережених локацій (нестача пам'яті)
-- Якщо встановлений фільтр дистанції, показуються локації лише в заданому радіусі від поточного місця (якщо координати знайдені)
-- Одиниці дистанції встановлюються відповідно до налаштувань годинника
-- Для зменшення використання батареї можна вибрати відповідний інтервал оновлення gps (залежить від пристроїв)
-- При ручному оновленні gps позиція визначається лише після натискання кнопки Start з відображення локації (після цього додаток вібрує)
-- Delete All видаляє всі локації вибраного типу
-- Reset видаляє всі локації та скидає налаштування по-замовчуванню
-- Інформація про кількість збережених локацій можна подивитись у About
-
-Плани
-- Реліз для Vivoactive та інших пристроїв (реалізовано, потребує тестування на реальних пристроях)
-- Додаток Android та iOS (ключовий функціонал). У планах:
-    |- Додавання локації з OSM карти
-    |- Пошук за координатами, типом, адресою
-    |- Імпорт локації з інших додатків (наприклад Google Maps) та gpx треків
-
-Підтримати проект
-- Якщо вам сподобався додаток (який я роблю у проміжках вільного часу), Ви можете підтримати проект, відіславши пару гривень на біткойн-гаманець 3DrK1Hi6bn35qdBo1ZVVswASp77hT6fudy
-- Буду вдячний за будь-яку підтримку, це пришвидшить розробку наступних версій
-
-Замітки і баги
-- Налаштування та локації не зберігаються після помилки
-- Memory-leak після додавання точки
-- Може вилітати при наближенні до макс. кількості точок (нестача пам'яті, буде оптимізовано у наступних версіях)
-- Сортування за іменем виконується довгий час
-
-Контакт
-- Якщо у вас є будь-які питання, проблеми або коментарі, не встидайтесь писати на форум http://forums.garmin.com/showthread.php?358184-App-FindMe або емейл findme.connectiq@gmail.com
+- If you have any questions, errors or comments, feel free to contact me on forum https://forums.garmin.com/showthread.php?358184-App-FindMe or by email findme.connectiq@gmail.com
