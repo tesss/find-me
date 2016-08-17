@@ -126,19 +126,19 @@ module UI{
 				setColor(dc, COLOR_HIGHLIGHT);
 				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_TINY, str, Graphics.TEXT_JUSTIFY_CENTER);
 			} else {
-				_.p("location: " + location);
-				_.p("current location: " + dataStorage.currentLocation);
+				//_.p("location: " + location);
+				//_.p("current location: " + dataStorage.currentLocation);
 				var distance = Data.distance(
 					location[Data.LOC_LAT], 
 					location[Data.LOC_LON], 
 					dataStorage.currentLocation[Data.LAT], 
 					dataStorage.currentLocation[Data.LON]);
 				dots = "";
-				_.p("distance: " + Data.distance(
-					location[Data.LOC_LAT], 
-					location[Data.LOC_LON], 
-					dataStorage.currentLocation[Data.LAT], 
-					dataStorage.currentLocation[Data.LON]));
+				//_.p("distance: " + Data.distance(
+				//	location[Data.LOC_LAT], 
+				//	location[Data.LOC_LON], 
+				//	dataStorage.currentLocation[Data.LAT], 
+				//	dataStorage.currentLocation[Data.LON]));
 				
 				setColor(dc, COLOR_LOWLIGHT);
 				dc.drawLine(drawModel.line1[0], drawModel.line1[1], drawModel.line1[2], drawModel.line1[3]);

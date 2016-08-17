@@ -120,6 +120,12 @@ module UI{
 		drawModel = null;
 	}
 	
+	function dispose(){
+		release();
+		dataStorage.dispose();
+		dataStorage = null;
+	}
+	
 	function getMenuIndex(symbol, size){
 		for(var i = 0; i < size; i++){
 			if(symbol == i){

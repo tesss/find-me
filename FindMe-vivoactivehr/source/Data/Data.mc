@@ -3,7 +3,7 @@ using Toybox.Time;
 using _;
 
 module Data {
-	const VERSION = "1.0.3";
+	const VERSION = "1.0.4";
 	const NAME_LIMIT = 10;
 	const ZERO_LIMIT = 0.02;
 	const LOC_MAX_COUNT = 100;

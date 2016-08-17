@@ -5,7 +5,6 @@ module UI{
 	class MainView extends Ui.View {
 		function initialize(){
 			dataStorage = new Data.DataStorage();
-			dataStorage.reset();
 			transition = Ui.SLIDE_IMMEDIATE;
 			keepMainView = false;
 			openMainMenu = false;

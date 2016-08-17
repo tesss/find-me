@@ -37,6 +37,11 @@ module UI{
 					release();
 					var format = dataStorage.getFormat();
 					popMainMenu();
+					//var geoString = new Position.Location({
+					//	:latitude => dataStorage.currentLocation[Data.LAT],
+					//	:longitude => dataStorage.currentLocation[Data.LON],
+					//	:format => :radians}).toGeoString(format);
+					//_.p("geoString: '" + geoString + "'");
 					pushNameView(new Position.Location({
 						:latitude => dataStorage.currentLocation[Data.LAT],
 						:longitude => dataStorage.currentLocation[Data.LON],

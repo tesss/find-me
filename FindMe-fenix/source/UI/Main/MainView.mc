@@ -4,7 +4,7 @@ using Toybox.System;
 module UI{
 	class MainView extends Ui.View {
 		function initialize(){
-			UI.dataStorage = new Data.DataStorage();
+			dataStorage = new Data.DataStorage();
 			transition = Ui.SLIDE_IMMEDIATE;
 			keepMainView = false;
 			openMainMenu = false;
