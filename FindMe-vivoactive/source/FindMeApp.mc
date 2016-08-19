@@ -1,12 +1,12 @@
 using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
+using Toybox.Position as Pos;
 using Data;
 using UI;
 using _;
 	
 class FindMeApp extends App.AppBase {
     function onStart() {
-    	
     }
 
 	function onStop(){

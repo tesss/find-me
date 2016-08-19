@@ -136,7 +136,7 @@ module UI{
 			var z = true;
 			for(var i = 0; i < values.size(); i++){
 				if(z && values[i] == 0 && i != values.size() - 1){
-					str = str + " ";
+					//str = str + " ";
 				} else {
 					z = false;
 					str = str + values[i];
@@ -149,18 +149,18 @@ module UI{
 			var str = null;
 			if(format == Position.GEO_DEG){
 				if(checkDegrees(values[12].toString() + values[13] + values[14].toString())) {
-					str = values[0] + " " + replaceIfZero([values[1], values[2]]) + "." + values[4] + values[5] + values[6] + values[7] + values[8] + values[9] + " " +
-					  	  values[11] + " " + replaceIfZero([values[12], values[13], values[14]]) + "." + values[16] + values[17] + values[18] + values[19] + values[20] + values[21] + " ";
+					str = values[0]+ replaceIfZero([values[1], values[2]]) + "." + values[4] + values[5] + values[6] + values[7] + values[8] + values[9] + "," +
+					  	  values[11]+ replaceIfZero([values[12], values[13], values[14]]) + "." + values[16] + values[17] + values[18] + values[19] + values[20] + values[21];
 				}
 			} else if(format == Position.GEO_DM){
 				if(checkDegrees(values[14].toString() + values[15].toString() + values[16].toString())) {
-					str = values[0] + " " + replaceIfZero([values[1], values[2]]) + " " + replaceIfZero([values[4], values[5]]) + "." + values[7] + values[8] + values[9] + values[10] + "'" +
-					  	  values[13] + " " + replaceIfZero([values[14], values[15], values[16]]) + " " + replaceIfZero([values[18], values[19]]) + "." + values[21] + values[22] + values[23] + values[24] + "'";
+					str = values[0] + replaceIfZero([values[1], values[2]]) + " " + replaceIfZero([values[4], values[5]]) + "." + values[7] + values[8] + values[9] + values[10] + "'" +
+					  	  values[13] + replaceIfZero([values[14], values[15], values[16]]) + " " + replaceIfZero([values[18], values[19]]) + "." + values[21] + values[22] + values[23] + values[24] + "'";
 				}
 			} else if(format == Position.GEO_DMS){
 				if(checkDegrees(values[16].toString() + values[17].toString() + values[18].toString())) {
-					str = values[0] + " " + replaceIfZero([values[1], values[2]]) + " " + replaceIfZero([values[4], values[5]]) + "'" + replaceIfZero([values[8], values[9]]) + "." + values[11] + values[12] + "\"" +
-					  	  values[15] + " " + replaceIfZero([values[16], values[17], values[18]]) + " " + replaceIfZero([values[20], values[21]]) + "'" + replaceIfZero([values[24], values[25]]) + "." + values[27] + values[28] + "\"";
+					str = values[0] + replaceIfZero([values[1], values[2]]) + " " + replaceIfZero([values[4], values[5]]) + "'" + replaceIfZero([values[8], values[9]]) + "." + values[11] + values[12] + "\"" +
+					  	  values[15] + replaceIfZero([values[16], values[17], values[18]]) + " " + replaceIfZero([values[20], values[21]]) + "'" + replaceIfZero([values[24], values[25]]) + "." + values[27] + values[28] + "\"";
 				}
 			}
 			if(str != null){
