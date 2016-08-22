@@ -12,12 +12,10 @@ module UI{
 	class LocationView extends Ui.View{
 		hidden var model;
 		hidden var interval;
-		hidden var anim;
 		hidden var bearing;
 		hidden var heading;
 		hidden var gpsIcon;
 		hidden var activityIcon;
-		hidden var clear;
 		hidden var dots;
 		
 		var directionDrawable;
@@ -44,14 +42,11 @@ module UI{
 		function initialize(_model){
 			model = _model;
 			interval = dataStorage.getInterval();
-			anim = false;
-			clear = true;
 			dots = "";
 			getDrawModel();
 		}
 		
 		function dispose(){
-			clear = true;
 			dataStorage.timerCallback = null;
 			gpsIcon = null;
 			activityIcon = null;
@@ -74,11 +69,7 @@ module UI{
 				model.fullRefresh = true;
 				Ui.requestUpdate();
 			}
-			if(anim){
-				return;
-			}
 			if(bearing != null){
-				anim = true;
 				var t1 = directionDrawable.angle;
 				var t2 = bearing;
 				var sign;
@@ -93,14 +84,9 @@ module UI{
 				}
 				var d = t1 - t2;
 				if(d.abs() > 0.017){
-					Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, t1, t2, 2, method(:animCallback));
+					Ui.animate(directionDrawable, :angle, Ui.ANIM_TYPE_LINEAR, t1, t2, 2);
 				}
 			}
-		}
-		
-		function animCallback(){
-			anim = false;
-			Ui.requestUpdate();
 		}
 		
 		hidden function drawDynamic(location, dc){
@@ -137,6 +123,9 @@ module UI{
 				dc.drawLine(drawModel.line1[0], drawModel.line1[1], drawModel.line1[2], drawModel.line1[3]);
 				dc.drawLine(drawModel.line2[0], drawModel.line2[1], drawModel.line2[2], drawModel.line2[3]);
 				
+				setColor(dc, COLOR_HIGHLIGHT);
+				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_MEDIUM, getDistanceStr(distance), Graphics.TEXT_JUSTIFY_CENTER);
+				
 				if(distance > Data.ZERO_LIMIT){
 					bearing = Data.bearing(
 						dataStorage.currentLocation[Data.LAT], 
@@ -157,9 +146,6 @@ module UI{
 					setColor(dc, COLOR_HIGHLIGHT);
 					dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], 10);
 				}
-				
-				setColor(dc, COLOR_HIGHLIGHT);
-				dc.drawText(drawModel.distance[0], drawModel.distance[1], Graphics.FONT_MEDIUM, getDistanceStr(distance), Graphics.TEXT_JUSTIFY_CENTER);
 			}
 		}
 		
@@ -219,23 +205,11 @@ module UI{
 		}
 	
 		function onUpdate(dc){
-			if(clear){
-				dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
-				dc.clear();
-				clear = false;
+			var location = model.get();
+			if(location != null){
+				draw(location, dc);
 			}
-			if(anim && !model.fullRefresh){
-				dc.setColor(COLOR_BACKGROUND, COLOR_PRIMARY);
-				dc.fillCircle(drawModel.directionCenter[0], drawModel.directionCenter[1], drawModel.radius + 7);
-				directionDrawable.draw(dc);
-			} else {
-				anim = false;
-				var location = model.get();
-				if(location != null){
-					draw(location, dc);
-				}
-				model.fullRefresh = false;
-			}
+			model.fullRefresh = false;
 		}
 		
 		function onLayout(){
