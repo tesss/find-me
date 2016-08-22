@@ -11,7 +11,7 @@ module UI{
 			var pattern = null;
 			var title = null;
 			if(_format == Position.GEO_DEG){
-				title = "DD.DDDDDD";
+				title = "DD.DDDD";
 				pattern = [
 					new DirectionFactory(true), 
 					new NumberFactory(9),
@@ -21,8 +21,6 @@ module UI{
 					new NumberFactory(),
 					new NumberFactory(),
 					new NumberFactory(),
-					new NumberFactory(),
-					new NumberFactory(),
 					getText(" "),
 					
 					new DirectionFactory(false),
@@ -30,15 +28,13 @@ module UI{
 					new NumberFactory(),
 					new NumberFactory(),
 					getText("."),
-					new NumberFactory(),
-					new NumberFactory(),
 					new NumberFactory(),
 					new NumberFactory(),
 					new NumberFactory(),
 					new NumberFactory()
 				];
 			} else if(_format == Position.GEO_DM){
-				title = "DD MM.MMMM'";
+				title = "DD MM.MM'";
 				pattern = [
 					new DirectionFactory(true),
 					new NumberFactory(9),
@@ -47,8 +43,6 @@ module UI{
 					new NumberFactory(6),
 					new NumberFactory(),
 					getText("."),
-					new NumberFactory(),
-					new NumberFactory(),
 					new NumberFactory(),
 					new NumberFactory(),
 					getText("'"),
@@ -64,12 +58,10 @@ module UI{
 					getText("."),
 					new NumberFactory(),
 					new NumberFactory(),
-					new NumberFactory(),
-					new NumberFactory(),
 					getText("'")
 				];
 			} else if(_format == Position.GEO_DMS){
-				title = "DD MM' SS.SS\"";
+				title = "DD MM' SS\"";
 				pattern = [
 					new DirectionFactory(true),
 					new NumberFactory(9),
@@ -80,9 +72,6 @@ module UI{
 					getText("'"),
 					getText(" "),
 					new NumberFactory(6),
-					new NumberFactory(),
-					getText("."),
-					new NumberFactory(),
 					new NumberFactory(),
 					getText("\""),
 					getText(" "),
@@ -97,9 +86,6 @@ module UI{
 					getText("'"),
 					getText(" "),
 					new NumberFactory(6),
-					new NumberFactory(),
-					getText("."),
-					new NumberFactory(),
 					new NumberFactory(),
 					getText("\"")
 				];
@@ -148,19 +134,19 @@ module UI{
 		function onAccept(values){
 			var str = null;
 			if(format == Position.GEO_DEG){
-				if(checkDegrees(values[12].toString() + values[13] + values[14].toString())) {
-					str = values[0]+ replaceIfZero([values[1], values[2]]) + "." + values[4] + values[5] + values[6] + values[7] + values[8] + values[9] + "," +
-					  	  values[11]+ replaceIfZero([values[12], values[13], values[14]]) + "." + values[16] + values[17] + values[18] + values[19] + values[20] + values[21];
+				if(checkDegrees(values[10].toString() + values[11] + values[12].toString())) {
+					str = values[0] + replaceIfZero([values[1], values[2]]) + "." + values[4] + values[5] + values[6] + values[7] + "," +
+					  	  values[9] + replaceIfZero([values[10], values[11], values[12]]) + "." + values[14] + values[15] + values[16] + values[17];
 				}
 			} else if(format == Position.GEO_DM){
-				if(checkDegrees(values[14].toString() + values[15].toString() + values[16].toString())) {
-					str = values[0] + replaceIfZero([values[1], values[2]]) + " " + replaceIfZero([values[4], values[5]]) + "." + values[7] + values[8] + values[9] + values[10] + "'" +
-					  	  values[13] + replaceIfZero([values[14], values[15], values[16]]) + " " + replaceIfZero([values[18], values[19]]) + "." + values[21] + values[22] + values[23] + values[24] + "'";
+				if(checkDegrees(values[12].toString() + values[13].toString() + values[14].toString())) {
+					str = values[0] + replaceIfZero([values[1], values[2]]) + " " + replaceIfZero([values[4], values[5]]) + "." + values[7] + values[8] + "'" +
+					  	  values[11] + replaceIfZero([values[12], values[13], values[14]]) + " " + replaceIfZero([values[16], values[17]]) + "." + values[19] + values[20] + "'";
 				}
 			} else if(format == Position.GEO_DMS){
-				if(checkDegrees(values[16].toString() + values[17].toString() + values[18].toString())) {
-					str = values[0] + replaceIfZero([values[1], values[2]]) + " " + replaceIfZero([values[4], values[5]]) + "'" + replaceIfZero([values[8], values[9]]) + "." + values[11] + values[12] + "\"" +
-					  	  values[15] + replaceIfZero([values[16], values[17], values[18]]) + " " + replaceIfZero([values[20], values[21]]) + "'" + replaceIfZero([values[24], values[25]]) + "." + values[27] + values[28] + "\"";
+				if(checkDegrees(values[13].toString() + values[14].toString() + values[15].toString())) {
+					str = values[0] + replaceIfZero([values[1], values[2]]) + " " + replaceIfZero([values[4], values[5]]) + "'" + replaceIfZero([values[8], values[9]]) + "\"" +
+					  	  values[12] + replaceIfZero([values[13], values[14], values[15]]) + " " + replaceIfZero([values[17], values[18]]) + "'" + replaceIfZero([values[21], values[22]]) + "\"";
 				}
 			}
 			if(str != null){

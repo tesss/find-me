@@ -15,15 +15,15 @@ module UI{
 			line = [[center[0], 0], [center[0], center[1]*2]];
 		}
 		
-		hidden function getRoundCoord(dc, cx, cy, a, r){
+		hidden function getRoundCoord(dc, a){
 			var r = dc.getHeight()/2;
 			var d = center[1] - r;
-			var bb = 2 * d * Math.cos(angle);
+			var bb = 2 * d * Math.cos(a);
 			var cc = d * d - r * r;
 			var descr = bb * bb - 4 * cc;
 			r = (bb + Math.sqrt(descr))/2 - 4;
-	        var x = center[0] + r * Math.sin(angle);
-	        var y = center[1] - r * Math.cos(angle);
+	        var x = center[0] + r * Math.sin(a);
+	        var y = center[1] - r * Math.cos(a);
 	        return [x, y];
 	    }
 		
@@ -34,7 +34,7 @@ module UI{
 			var p2 = rotate(line[1], center, angle);
 			dc.drawLine(p1[0], p1[1], p2[0], p2[1]);
 			
-			p1 = getRoundCoord(dc);
+			p1 = getRoundCoord(dc, angle);
 			UI.setColor(dc, Graphics.COLOR_RED);
 			dc.fillCircle(p1[0], p1[1], 5);
 			

@@ -139,7 +139,7 @@ module UI{
 			} else if(value == Position.GEO_DM){
 				value = "D M.M'";
 			} else if(value == Position.GEO_DMS){
-				value = "D M'S.S\"";
+				value = "D M' S\"";
 			}
 			return getText(value, {:isSelected => isSelected, :isSettings => true});
 		}

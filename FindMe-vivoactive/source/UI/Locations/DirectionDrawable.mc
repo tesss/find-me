@@ -31,21 +31,22 @@ module UI{
 			var r;
 			var a = getAngle();
 			var w = dc.getWidth() / 2;
-			var a1 = Math.atan(w / center[1]);
-			var a2 = Math.PI - Math.atan(w / (dc.getHeight() - center[1]));
+			var h1 = center[1];
+			var h2 = dc.getHeight() - h1;
+			var a1 = Math.atan(w * 1.0 / h1);
+			var a2 = Math.PI - Math.atan(w * 1.0 / h2);
 			var a90 = Math.PI / 2;
-			
-			if(a <= a1){
-				r = w / Math.sin(a);
+			if(a > 0 && a <= a1){
+				r = h1 / Math.cos(a);
 			} else if(a <= a90){
 				r = w / Math.cos(a90 - a);
 			} else if(a <= a2){
 				r = w / Math.cos(a - a90);
 			} else {
-				r = w / Math.sin(Math.PI - a);
+				r = h2 / Math.cos(Math.PI - a);
 			}
 			
-			r -= 4;
+			r -= 3;
 	        var x = center[0] + r * Math.sin(angle);
 	        var y = center[1] - r * Math.cos(angle);
 	        return [x, y];
@@ -60,7 +61,7 @@ module UI{
 			
 			p1 = getRoundCoord(dc);
 			UI.setColor(dc, Graphics.COLOR_RED);
-			dc.fillCircle(p1[0], p1[1], 5);
+			dc.fillCircle(p1[0], p1[1], 4);
 			
 			UI.setColor(dc, COLOR_SECONDARY);
 			p1 = rotate(arrow[0], center, angle);
